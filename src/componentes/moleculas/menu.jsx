@@ -1,4 +1,5 @@
 import React from 'react'
+import RedesSociales from './redesSociales'
 
 
 const Menu = ()=> {
@@ -13,6 +14,9 @@ const Menu = ()=> {
                 </div>
             </div>
         </div>
+        <RedesSociales></RedesSociales>
+
+
         
        
         </>   
