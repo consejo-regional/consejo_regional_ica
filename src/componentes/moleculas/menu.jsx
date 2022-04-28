@@ -1,6 +1,7 @@
 import React from 'react'
 import RedesSociales from './redesSociales'
 import MenuItem from './menuItem'
+import BannerPrincipal from './bannerPrincipal'
 
 
 const Menu = ()=> {
@@ -16,7 +17,8 @@ const Menu = ()=> {
             </div>
         </div>
         <RedesSociales></RedesSociales>
-        <MenuItem></MenuItem>
+        <BannerPrincipal></BannerPrincipal>
+        {/* <MenuItem></MenuItem> */}
 
 
 
