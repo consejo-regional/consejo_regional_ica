@@ -1,5 +1,5 @@
 import React from 'react'
-import Menu from './moleculas/menu'
+import Home from './paginas/home'
 
 import "../estilos/styles.scss"
 
@@ -7,7 +7,7 @@ import "../estilos/styles.scss"
 const App = ()=> {
       return(
         <>
-        <Menu></Menu>
+        <Home></Home>
         </>   
       )  
   }

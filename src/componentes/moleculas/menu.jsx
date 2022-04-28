@@ -16,14 +16,9 @@ const Menu = ()=> {
                 </div>
             </div>
         </div>
-        <RedesSociales></RedesSociales>
-        <BannerPrincipal></BannerPrincipal>
-        {/* <MenuItem></MenuItem> */}
-
-
-
-        
-       
+        {/* <RedesSociales></RedesSociales>
+        <MenuItem></MenuItem>
+        <BannerPrincipal></BannerPrincipal> */}
         </>   
       )  
   }
