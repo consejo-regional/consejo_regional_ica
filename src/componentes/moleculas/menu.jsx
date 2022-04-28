@@ -12,6 +12,7 @@ const Menu = ()=> {
                 <div className='contenedor'>
                     <div className="menu">
                         <div className='logo'></div>
+                        <h1></h1>
                     </div>
                 </div>
             </div>
