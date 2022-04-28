@@ -8,7 +8,6 @@ const App = ()=> {
       return(
         <>
         <Menu></Menu>
-        <h1 className="prueba">hola mundo</h1>
         </>   
       )  
   }
