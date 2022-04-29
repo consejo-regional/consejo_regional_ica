@@ -11,16 +11,12 @@ const BannerPrincipal = ()=> {
         <>
         <div className="contenedor-banner-principal">
          
-            <div className="slider">
-             
-              
-
-            </div>
+            <div className="slider"></div>
             <div className="contenedor-puntos">
                 <div className="punto"></div>
                 <div className="punto"></div>
                 <div className="punto"></div>
-              </div>
+            </div>
             <div className="boton derecho">
               <svg width="2em" height="2em" viewBox="0 0 75 80" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M9.02504 54.4108C-2.25161 47.7703 -2.11097 31.4126 9.27821 24.967L48.9641 2.50717C60.3533 -3.93844 74.4491 4.36219 74.3366 17.4483L73.9444 63.0472C73.8319 76.1333 59.5954 84.1904 48.3188 77.5499L9.02504 54.4108Z" fill="Currentcolor"/>

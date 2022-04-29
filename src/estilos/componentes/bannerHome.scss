@@ -1,0 +1,21 @@
+
+
+.contenedor_Home{
+    margin:5rem 0 5rem 0;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    //background:red;
+}
+
+
+.contenedor-home-imagen{
+    width: 60vw;
+    height: 15rem;
+    background-image: url(../../assets/imagenes/Group20.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size:cover;
+   // border: 1px solid red;
+}
