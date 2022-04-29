@@ -1,7 +1,19 @@
+@font-face {
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 200;
+    font-display: swap;
+    src: local('Raleway') ,local('Raleway'), url('../assets/fuentes/static/Raleway-Medium.ttf');
+}
+
+
+
 *{
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    font-family: 'Raleway';
+
    
 }
 
@@ -10,13 +22,7 @@
 @import "./componentes/redesSociales.scss";
 @import "./componentes/bannerPrincipal.scss";
 @import "./componentes/bannerHome.scss";
+@import "./componentes/serviciosGrig.scss";
 
 
-@font-face {
-    font-family: 'Raleway';
-    font-style: normal;
-    font-weight: 200;
-    font-display: swap;
-    src: local('Raleway') ,local('Raleway'), url('../assets/fuentes/static/Raleway-Medium.ttf');
-}
 

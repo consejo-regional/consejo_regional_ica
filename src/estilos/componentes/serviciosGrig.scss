@@ -1,0 +1,32 @@
+.contenedor_servicios_grid_conteiner{
+    width: 100vw;
+    //background:red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+
+
+.contenedor_servicios_grid{
+
+    width: 75vw;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: 1fr;
+   // border: 1px solid red;
+    gap:4rem;
+
+    
+}
+
+.contenedor_servicios_item{
+   // border: 1px solid red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 1rem;
+}
