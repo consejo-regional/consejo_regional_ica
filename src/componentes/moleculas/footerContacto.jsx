@@ -22,7 +22,7 @@ const FooterContacto = ()=> {
                 </div>
 
 
-                <img src={mapa} className="imgFooter"></img>
+                <img src={mapa} alt="" className="imgFooter"></img>
 
             </div>
            

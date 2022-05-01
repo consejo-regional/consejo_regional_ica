@@ -1,4 +1,5 @@
 import React from 'react'
+import {Link} from 'react-router-dom'
 
 
 const MenuItem = ()=> {
@@ -9,110 +10,110 @@ const MenuItem = ()=> {
         <nav className="nav">
             <ul className="menuu menu2">
                 <li className="item itemMenu">
-                    <a href="#" className="link">INICIO </a>
+                    <Link to="/inicio" className="link">INICIO </Link>
                    
                 </li>
                 <li className="item">
-                    <a href="#" className="link">NOSOTROS</a>
+                    <Link to="/nosotros" className="link">NOSOTROS</Link>
                     <ul className="menuu submenu">
                         <li className="item">
-                            <a href="#" className="link">BIENVENIDA</a>
+                            <Link to="" className="link">BIENVENIDA</Link>
                         </li>
                         <li className="item">
-                            <a href="#" className="link">INSTITUCION</a>
+                            <Link to="" className="link">INSTITUCION</Link>
                         </li>
                         <li className="item">
-                            <a href="#" className="link">JUNTA DIRECTIVA</a>
+                            <Link to="" className="link">JUNTA DIRECTIVA</Link>
                             <ul className="menuu submenu">
-                                <li className="item"><a href="#" className="link">subsubmenu1</a></li>
-                                <li className="item"><a href="#" className="link">subsubmenu1</a></li>
-                                <li className="item"><a href="#" className="link">sub submenu1</a></li>
-                                <li className="item"><a href="#" className="link">subsubmenu1</a></li>
+                                <li className="item"><Link to="" className="link">subsubmenu1</Link></li>
+                                <li className="item"><Link to="" className="link">subsubmenu1</Link></li>
+                                <li className="item"><Link to="" className="link">sub submenu1</Link></li>
+                                <li className="item"><Link to="" className="link">subsubmenu1</Link></li>
                             </ul>
                         </li>
                         
                         <li className="item">
-                            <a href="#" className="link">SOCIEDADES CIENTIFICAS</a>
+                            <Link to="" className="link">SOCIEDADES CIENTIFICAS</Link>
                         </li>
                         <li className="item">
-                            <a href="#" className="link">    COMITES    </a>
+                            <Link to="" className="link">    COMITES    </Link>
                         </li>
                     </ul>
                 </li>
                 <li className="item">
-                    <a href="#" className="link">TRAMITES</a>
+                    <Link to="/tramites" className="link">TRAMITES</Link>
                     <ul className="menuu submenu">
                         <li className="item">
-                            <a href="#" className="link">CONSTANCIA DE HABILIDAD</a>
+                            <Link to="" className="link">CONSTANCIA DE HABILIDAD</Link>
                         </li>
                         <li className="item">
-                            <a href="#" className="link">INICIAR COLEGIATURA</a>
+                            <Link to="" className="link">INICIAR COLEGIATURA</Link>
                         </li>
                         <li className="item">
-                            <a href="#" className="link">RECTIFICACION</a>
+                            <Link to="" className="link">RECTIFICACION</Link>
                         </li>
                         
                         <li className="item">
-                            <a href="#" className="link">ACTUALIZACION DE DATOS</a>
+                            <Link to="" className="link">ACTUALIZACION DE DATOS</Link>
                         </li>
                         <li className="item">
-                            <a href="#" className="link">CONSTANCIA DE ETICA</a>
+                            <Link to="" className="link">CONSTANCIA DE ETICA</Link>
                         </li>
                     </ul>
                 </li>
                 <li className="item">
-                    <a href="#" className="link">SERVICIOS</a>
+                    <Link to="/servicios" className="link">SERVICIOS</Link>
                     <ul className="menuu submenu">
                         <li className="item">
-                            <a href="#" className="link">BOLSA DE TRABAJO</a>
+                            <Link to="" className="link">BOLSA DE TRABAJO</Link>
                         </li>
                         <li className="item">
-                            <a href="#" className="link">DIFUSION</a>
+                            <Link to="" className="link">DIFUSION</Link>
                         </li>
                         <li className="item">
-                            <a href="#" className="link">CONOCE A TU MEDICO</a>
+                            <Link to="" className="link">CONOCE A TU MEDICO</Link>
                         </li>
                     </ul>
                     </li>
                 <li className="item">
-                    <a href="#" className="link">COMUNICACIONES</a>
+                    <Link to="/comunicaciones" className="link">COMUNICACIONES</Link>
                     <ul className="menuu submenu">
                         <li className="item">
-                            <a href="#" className="link">OPINION Y PRONUNCIAMIENTO</a>
+                            <Link to="" className="link">OPINION Y PRONUNCIAMIENTO</Link>
                         </li>
                         <li className="item">
-                            <a href="#" className="link">DIFUSIONES                 </a>
+                            <Link to="" className="link">DIFUSIONES                 </Link>
                         </li>
                         <li className="item">
-                            <a href="#" className="link">BOLETIN INFORMATIVO</a>
+                            <Link to="" className="link">BOLETIN INFORMATIVO</Link>
                         </li>
                         <li className="item">
-                            <a href="#" className="link">NOTICIAS                      </a>
+                            <Link to="" className="link">NOTICIAS                      </Link>
                         </li>
                     </ul>
                 </li>
                 <li className="item">
-                    <a href="#" className="link">EVENTOS</a>
+                    <Link to="/eventos" className="link">EVENTOS</Link>
                     <ul className="menuu submenu">
                         <li className="item">
-                            <a href="#" className="link">CURSOS                </a>
+                            <Link to="" className="link">CURSOS                </Link>
                         </li>
                         <li className="item">
-                            <a href="#" className="link">TALLERES             </a>
+                            <Link to="" className="link">TALLERES             </Link>
                         </li>
                         <li className="item">
-                            <a href="#" className="link">CELEBRACIONES</a>
+                            <Link to="" className="link">CELEBRACIONES</Link>
                         </li>
                         <li className="item">
-                            <a href="#" className="link">CAMPAÑAS MEDICAS</a>
+                            <Link to="" className="link">CAMPAÑAS MEDICAS</Link>
                         </li>
                     </ul>
                 </li>
                 <li className="item">
-                    <a href="#" className="link">BENEFICIOS</a>
+                    <Link to="/beneficios" className="link">BENEFICIOS</Link>
                 </li>
                 <li className="item">
-                    <a href="#" className="link">CENTRO DE RECREACIONES</a>
+                    <Link to="/centroRecreaciones" className="link">CENTRO DE RECREACIONES</Link>
                 </li>
             </ul>
         </nav>
