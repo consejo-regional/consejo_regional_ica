@@ -1,11 +1,11 @@
 .contenedor-eventos{
     margin-top: 5em;
-   // border-top: 1px solid red;
+   //border: 1px solid red;
 }
 .contenedor-evento-titulo{
     display: flex;
     flex-direction: column;
-    width: 100vw;
+    // width: 100vw;
     
     justify-content:center;
     align-items: center;
@@ -38,6 +38,26 @@
     margin: -.6rem;
     // bottom: 0;
     // top: -5%;
+    @include rwd(tablet){
+        
+    }
+
+    @include rwd(celular){
+        margin: -2rem;
+    }
+}
+
+.imagen-evento{
+   // border: 1px solid red;
+
+    @include rwd(tablet){
+        
+    }
+
+    @include rwd(celular){
+        height: 8rem;
+       // border: 1px solid red;
+    }
 }
 
 .evento-noticia{

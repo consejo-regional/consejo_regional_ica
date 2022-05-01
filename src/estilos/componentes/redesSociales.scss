@@ -5,4 +5,9 @@
     position: absolute;
     top: 10%;
     gap: .2rem;
+    @include rwd(celular){
+        top:5%;
+        margin-left: 1rem;
+
+    }
 }

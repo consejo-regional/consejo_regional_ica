@@ -9,10 +9,6 @@ import "../estilos/styles.scss"
 import RedesSociales from '../componentes/moleculas/redesSociales'
 import MenuItem from '../componentes/moleculas/menuItem'
 import Menu from '../componentes/moleculas/menu'
-
-
-
-
 import {
   BrowserRouter as Router,
   Routes,
@@ -38,6 +34,12 @@ const App = ()=> {
             <Route path="/beneficios" element={ <SericiosGrid/>}></Route>
             <Route path="/centroRecreaciones" element={ <SericiosGrid/>}></Route>
             <Route path="/" element={<Home/>}></Route>
+            <Route path="*"  element={
+                <div>
+                <h1>Recurso no encontrado</h1>
+                <span>pagina no encontrada</span>
+                </div>
+              }/>
           </Routes>
 
          

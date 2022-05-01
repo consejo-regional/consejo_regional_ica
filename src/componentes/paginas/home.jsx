@@ -15,12 +15,12 @@ const Home = ()=> {
 
       return(
         <>
-       
+     
         <BannerPrincipal></BannerPrincipal>
         <BannerHome></BannerHome>
-        <SericiosGrid></SericiosGrid>
+        <SericiosGrid></SericiosGrid> 
         <Eventos></Eventos>
-        <FooterContacto></FooterContacto>
+        <FooterContacto></FooterContacto> 
         <Footer></Footer>
 
         </>   

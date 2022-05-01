@@ -6,13 +6,13 @@
     src: local('Raleway') ,local('Raleway'), url('../assets/fuentes/static/Raleway-Medium.ttf');
 }
 
-
-
 *{
     box-sizing: border-box;
     margin: 0;
     padding: 0;
     font-family: 'Raleway';
+    // overflow-x: hidden;
+    // overflow-y: auto;
 
    
 }
@@ -24,6 +24,30 @@ h1,h2 , h3, h4, h5, h6{
 p{
     color:#777777;
 }
+
+$puntosQuiebre:(
+    celular:640px,
+    tablet:1080px,
+    laptop:1200px,
+    escritorio:1440px
+);
+
+@mixin rwd($resolucion){
+    @if map-has-key($puntosQuiebre,$resolucion){
+        @media screen and (max-width: map-get($puntosQuiebre,$resolucion)) {
+            @content ;
+        }
+        
+    }@else{
+        
+        @media screen and (max-width:$resolucion) {
+            @content ;
+        }
+    }
+}
+
+
+
 
 
 @import "./componentes/menu.scss";

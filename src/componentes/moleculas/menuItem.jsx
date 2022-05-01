@@ -8,7 +8,7 @@ const MenuItem = ()=> {
       
     <header classNameN="header">
         <nav className="nav">
-            <ul className="menuu menu2">
+            <ul className="menuu ">
                 <li className="item itemMenu">
                     <Link to="/inicio" className="link">INICIO </Link>
                    

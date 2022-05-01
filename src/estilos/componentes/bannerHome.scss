@@ -2,10 +2,11 @@
 
 .contenedor_Home{
     margin:5rem 0 5rem 0;
-    width: 100vw;
+    // width: 100vw;
     display: flex;
     justify-content: center;
     align-items: center;
+
     //background:red;
 }
 
@@ -18,4 +19,17 @@
     background-position: center center;
     background-size:cover;
    // border: 1px solid red;
+   @include rwd(tablet){
+        width: 70vw;
+        height: 10rem;
+
+  
+    }
+
+    @include rwd(celular){
+        width: 80vw;
+        height: 7rem;
+    
+    }
+
 }

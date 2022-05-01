@@ -26,7 +26,7 @@ const SericiosItem = ({imagen,description})=> {
   return(
     <>
     <div className="eventos-clase">
-      <img className="" src={imagen} alt={imagen}></img>
+      <img className="imagen-evento" src={imagen} alt={imagen}></img>
       <div className="evento-noticia">
         <div className="evento-noticia-descripccion colors">EVENTOS / NOTICIAS</div>
         <div className="evento-noticia-descripccion">{description}</div>
