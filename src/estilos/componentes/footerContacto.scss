@@ -1,0 +1,35 @@
+.contenedor_footer_contacto{
+    margin-top: 2rem;
+    width: 100vw;
+    // border: 1px solid red;
+  
+}
+
+.footerContacto{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    justify-items: center;
+    align-items: center;
+}
+
+.footerContactoDescripccion{
+    width: 70%;
+    // border: 2px solid blue;
+    text-align: justify;
+    //justify-self: stretch;
+    align-self: stretch;
+    display:flex;
+    flex-direction:column;
+    flex-grow: 1;
+    gap:1rem;
+}
+.imgFooter{
+    justify-self: start;
+}
+
+.footerContactoDescripccion h3:nth-of-type(1) {
+    margin-top: 1rem;
+    // color: red;
+  }
+
+  

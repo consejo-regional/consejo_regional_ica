@@ -16,6 +16,15 @@
 
    
 }
+h1,h2 , h3, h4, h5, h6{
+        font-weight: normal;
+        color: #333333;
+}
+
+p{
+    color:#777777;
+}
+
 
 @import "./componentes/menu.scss";
 @import "./componentes/menuItem.scss";
@@ -23,6 +32,8 @@
 @import "./componentes/bannerPrincipal.scss";
 @import "./componentes/bannerHome.scss";
 @import "./componentes/serviciosGrig.scss";
-
+@import "./componentes/eventos.scss";
+@import "./componentes/footerContacto.scss";
+@import "./componentes/footer.scss";
 
 

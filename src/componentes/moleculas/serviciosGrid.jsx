@@ -12,7 +12,7 @@ const SericiosGrid = ()=> {
       return(
         <>
         <div className="contenedor_servicios_grid_conteiner">
-          <h2>NUESTROS SERVICIOS</h2>
+          <h1>NUESTROS SERVICIOS</h1>
           <div className="contenedor_servicios_grid">
               <SericiosItem imagen={imagen1} nombre="BOLSA DE TRABAJO" description="Educación Médica"></SericiosItem>
               <SericiosItem imagen={imagen2} nombre="BOLSA DE TRABAJO" description="Educación Médica"></SericiosItem>

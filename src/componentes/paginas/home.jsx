@@ -5,6 +5,9 @@ import BannerPrincipal from '../moleculas/bannerPrincipal'
 import Menu from '../moleculas/menu'
 import BannerHome from '../moleculas/bannerHome'
 import SericiosGrid from '../moleculas/serviciosGrid'
+import Eventos from '../moleculas/eventos'
+import FooterContacto from '../moleculas/footerContacto'
+import Footer from '../moleculas/footer'
 
 const Home = ()=> {
 
@@ -18,6 +21,10 @@ const Home = ()=> {
         <BannerPrincipal></BannerPrincipal>
         <BannerHome></BannerHome>
         <SericiosGrid></SericiosGrid>
+        <Eventos></Eventos>
+        <FooterContacto></FooterContacto>
+        <Footer></Footer>
+
         </>   
       )  
   }
