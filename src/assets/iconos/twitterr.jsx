@@ -1,3 +1,13 @@
+
+import React from 'react'
+
+
+const Face = ()=> {
+      return(
+        <>
+        
+
+
 <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" width="512" height="512" x="0" y="0" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512" xml:space="preserve" class=""><g><link type="text/css" rel="stylesheet" id="dark-mode-custom-link"></link><link type="text/css" rel="stylesheet" id="dark-mode-general-link"></link><style lang="en" type="text/css" id="dark-mode-custom-style"></style><style lang="en" type="text/css" id="dark-mode-native-style"></style>
 <g xmlns="http://www.w3.org/2000/svg">
 	<g>
@@ -35,3 +45,12 @@
 <g xmlns="http://www.w3.org/2000/svg">
 </g>
 </g></svg>
+        
+        </>   
+      )  
+  }
+  
+  
+  export default Face
+
+

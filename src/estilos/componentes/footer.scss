@@ -1,8 +1,24 @@
 .contenedor_footer{
     margin-top:2rem;
     width: 100vw;
-    height: 15rem;
     background-color:black;
-}
+    padding: 4rem;
+    display:flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: center;
+    gap:1.5rem;
 
+}
+.imagen_footer{
+    height:4rem;
+    width: 4rem;
+}
+.contenedor_imagen_footer{
+    display:flex;
+    margin:1rem;
+}
+.description_footer{
+    color:white;
+}
 

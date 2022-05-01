@@ -1,13 +1,17 @@
 import React from 'react'
-import faces from '../../assets/iconos/facebook.svg'
-import twitters from '../../assets/iconos/twitter.svg'
+import faces from '../../assets/iconos/facebook.png'
+// import twitters from '../../assets/iconos/twitterr'
 
 const Footer = ()=> {
       return(
         <>
         <div className="contenedor_footer">
-            <img src={faces}></img>
-            <img src={twitters}></img>
+            <div className="description_footer">MANTENTE ACTUALIZADO</div>
+            <div>
+                <img src={faces} className="imagen_footer"></img>
+                <img src={faces} className="imagen_footer"></img>
+
+            </div>
 
            
         </div>
