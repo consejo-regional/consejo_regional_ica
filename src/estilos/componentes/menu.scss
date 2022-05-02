@@ -44,7 +44,7 @@
     background: linear-gradient(90deg, #7D7D7D 0%, #E6DADA 47.92%, #868686 100%);
     clip-path: polygon(0 0, 85% 0, 100% 100%, 0% 100%);
     position: absolute;
-    @include rwd(celular){
+    @include rwd(medio){
         width: 15rem;
     }
     .logo{
