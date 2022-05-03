@@ -1,17 +1,20 @@
 .container-slider {
-  max-width: 700px;
+  max-width: 100vw;
   height: 500px;
-  margin: 100px auto 0;
+  margin: 15px auto 0;
   position: relative;
+  
+
   overflow: hidden;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 @media screen and (max-width: 700px){
   .container-slider {
-    margin: 100px 10px 0;
+    margin: 15px 10px 0;
   }
 }
 .slide {
+  z-index: -10;
   width: 100%;
   height: 100%;
   position: absolute;
@@ -34,6 +37,9 @@
   background: #f1f1f1;
   border: 1px solid rgba(34, 34, 34, 0.287);
   position: absolute;
+  pointer-events:initial;
+  /* z-index: -1; */
+
   display: flex;
   justify-content: center;
   align-items: center;

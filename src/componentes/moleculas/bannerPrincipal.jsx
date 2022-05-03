@@ -1,7 +1,7 @@
-import React ,{useEffect} from 'react'
-import imagenOne from '../../assets/imagenes/bannerc.jpg'
-import imagenTwo from '../../assets/imagenes/bannerc3.jpg'
-import imagenTree from '../../assets/imagenes/bannerc5.jpg'
+import React  from 'react'
+// import imagenOne from '../../assets/imagenes/bannerc.jpg'
+// import imagenTwo from '../../assets/imagenes/bannerc3.jpg'
+// import imagenTree from '../../assets/imagenes/bannerc5.jpg'
 
 //  const slider=useRef()
 // const botonIzquierda=useRef()

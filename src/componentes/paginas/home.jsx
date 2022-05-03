@@ -1,5 +1,5 @@
 import React  from 'react'
-import BannerPrincipal from '../moleculas/bannerPrincipal'
+//import BannerPrincipal from '../moleculas/bannerPrincipal'
 import BannerHome from '../moleculas/bannerHome'
 import SericiosGrid from '../moleculas/serviciosGrid'
 import Eventos from '../moleculas/eventos'
