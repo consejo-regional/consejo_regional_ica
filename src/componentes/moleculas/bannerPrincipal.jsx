@@ -9,7 +9,8 @@ const BannerPrincipal = ()=> {
 
       return(
         <>
-        <div className="contenedor-banner-principal">
+       
+ <div className="contenedor-banner-principal">
          
             <div className="slider"></div>
             <div className="contenedor-puntos">

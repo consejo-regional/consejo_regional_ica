@@ -3,6 +3,7 @@ import {Link} from 'react-router-dom'
 
 
 
+
 const MenuItem = ()=> {
 
     const boton=useRef()
@@ -34,10 +35,12 @@ const MenuItem = ()=> {
 
         <div className="header-conteiner">
         
-        <div   onClick={click} className="boton-menu-hamburguesa show"></div>
+        <div   onClick={click} className="boton-menu-hamburguesa show">
+       
+        </div>
         <nav className="nav " ref={boton}>
             <ul className="menuu ">
-                <div   onClick={click} className="boton-menu-hamburguesa show"></div>
+                <div   onClick={click} className="boton-menu-hamburguesa boton-menu-hamburguesa-cerrar show"></div>
 
                 <li className="item itemMenu">
                     <Link to="/inicio"  onClick={click}  className="link">INICIO </Link>

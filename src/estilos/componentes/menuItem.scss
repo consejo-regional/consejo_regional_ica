@@ -1,5 +1,6 @@
 
 
+
 .nav{
 
 
@@ -155,12 +156,26 @@
       }
       
       .boton-menu-hamburguesa{
-          width: 2rem;
-          height: 2rem;
-          background-color:red;
+          width: 3rem;
+          height: 3rem;
+         // background-color:red;
+          background-image: url(../../assets//iconos/menu.png);
+          background-repeat: no-repeat;
+          background-size: contain;
+          background-position: center center;
           cursor: pointer;
+          margin: 1rem;
+          margin-left:2rem
         //   position:absolute;
           
+      }
+      .boton-menu-hamburguesa-cerrar{
+        width: 2rem;
+        height: 2rem;
+        background-image: url(../../assets//iconos/cerrar.png);
+        margin: 1.5rem;
+        margin-left:1.5rem
+
       }
 
 

@@ -1,8 +1,6 @@
 .contenedor-banner-principal{
   
-    //position: relative;
     position:static;
-   // border: 1px solid red;
     display:flex;
     flex-direction: column;
     justify-content: center;
@@ -31,7 +29,6 @@
         color: white;
         top: 65%;
         margin: 2rem;
-        //border: 1px solid red;
 
     }
     .izquierdo{
@@ -50,7 +47,6 @@
     background-size: cover;
     background-position: center center;
     position:static;
-    //border: 1px solid red;
 
 }
 
