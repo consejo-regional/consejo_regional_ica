@@ -5,6 +5,7 @@ import SericiosGrid from '../moleculas/serviciosGrid'
 import Eventos from '../moleculas/eventos'
 import FooterContacto from '../moleculas/footerContacto'
 import Footer from '../moleculas/footer'
+import  Slider from '../moleculas/Slider'
 
 
 
@@ -16,7 +17,8 @@ const Home = ()=> {
       return(
         <>
      
-        <BannerPrincipal></BannerPrincipal>
+        {/* <BannerPrincipal></BannerPrincipal> */}
+        <Slider></Slider>
         <BannerHome></BannerHome>
         <SericiosGrid></SericiosGrid> 
         <Eventos></Eventos>
