@@ -9,6 +9,10 @@ import "../estilos/styles.scss"
 import RedesSociales from '../componentes/moleculas/redesSociales'
 import MenuItem from '../componentes/moleculas/menuItem'
 import Menu from '../componentes/moleculas/menu'
+import Biemvenida from './paginas/biemvenida';
+import Institucion from './paginas/institucion'
+
+
 import {
   BrowserRouter as Router,
   Routes,
@@ -26,7 +30,15 @@ const App = ()=> {
           <MenuItem></MenuItem>
           < Routes>
             <Route path="/inicio" element={ <Home/>}></Route>
-            <Route path="/nosotros" element={ <SericiosGrid/>}></Route>
+
+            <Route path="/nosotros" element={ <Biemvenida/>}></Route>
+            <Route path="/nosotros/bienvenida" element={ <Biemvenida/>}></Route>
+            <Route path="/nosotros/institucion" element={ <Institucion/>}></Route>
+            <Route path="/nosotros/juntaDirectiva" element={ <Biemvenida/>}></Route>
+            <Route path="/nosotros/sociedadesCientificas" element={ <Biemvenida/>}></Route>
+            <Route path="/nosotros/comite" element={ <Biemvenida/>}></Route>
+
+
             <Route path="/tramites" element={ <SericiosGrid/>}></Route>
             <Route path="/servicios" element={ <SericiosGrid/>}></Route>
             <Route path="/comunicaciones" element={ <SericiosGrid/>}></Route>

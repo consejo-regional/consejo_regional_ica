@@ -50,13 +50,13 @@ const MenuItem = ()=> {
                     <Link to="/nosotros" onClick={click} className="link">NOSOTROS</Link>
                     <ul className="menuu submenu">
                         <li className="item">
-                            <Link to="" onClick={click} className="link linkSubmenu">BIENVENIDA</Link>
+                            <Link to="/nosotros/bienvenida" onClick={click} className="link linkSubmenu">BIENVENIDA</Link>
                         </li>
                         <li className="item">
-                            <Link to="" className="link linkSubmenu">INSTITUCION</Link>
+                            <Link to="/nosotros/institucion" className="link linkSubmenu">INSTITUCION</Link>
                         </li>
                         <li className="item">
-                            <Link to="" className="link linkSubmenu">JUNTA DIRECTIVA</Link>
+                            <Link to="/nosotros/juntaDirectiva" className="link linkSubmenu">JUNTA DIRECTIVA</Link>
                             {/* <ul className="menuu submenu">
                                 <li className="item"><Link to="" className="link">subsubmenu1</Link></li>
                                 <li className="item"><Link to="" className="link">subsubmenu1</Link></li>
@@ -66,10 +66,10 @@ const MenuItem = ()=> {
                         </li>
                         
                         <li className="item">
-                            <Link to="" className="link linkSubmenu">SOCIEDADES CIENTIFICAS</Link>
+                            <Link to="/nosotros/sociedadesCientificas" className="link linkSubmenu">SOCIEDADES CIENTIFICAS</Link>
                         </li>
                         <li className="item">
-                            <Link to="" className="link linkSubmenu">    COMITES    </Link>
+                            <Link to="/nosotros/comite" className="link linkSubmenu">COMITES      </Link>
                         </li>
                     </ul>
                 </li>
