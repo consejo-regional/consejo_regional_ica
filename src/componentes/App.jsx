@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState,useEffect} from 'react'
 import Home from './paginas/home'
 import SericiosGrid from './moleculas/serviciosGrid';
 
@@ -8,6 +8,7 @@ import RedesSociales from '../componentes/moleculas/redesSociales'
 import MenuItem from '../componentes/moleculas/menuItem'
 import Menu from '../componentes/moleculas/menu'
 import Footer from '../componentes/moleculas/footer'
+import Loader from '../componentes/moleculas/loader'
 
 
 import Biemvenida from './paginas/biemvenida';
@@ -20,6 +21,7 @@ import Rectificacion from './paginas/rectificacion'
 import ConstanciaEtica from './paginas/constanciaEtica'
 
 
+
 import {
   BrowserRouter as Router,
   Routes,
@@ -30,8 +32,31 @@ import {
 
 
 const App = ()=> {
+
+  const[loader,setLoader]=useState(false)
+
+  useEffect(()=>{
+
+    setTimeout(()=>{
+      
+    },2000)
+    setLoader(true)
+    console.log("loader")
+  
+ 
+  },[])
+
+
+
       return(
-        <Router>
+        <>
+       
+
+        {
+          !loader ? <Loader></Loader>
+          
+          :
+          <Router>
            <Menu></Menu>
           <RedesSociales></RedesSociales>
           <MenuItem></MenuItem>
@@ -77,6 +102,10 @@ const App = ()=> {
          
          
         </Router>   
+        }
+
+        
+        </>
       )  
   }
   
