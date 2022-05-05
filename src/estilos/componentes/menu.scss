@@ -6,8 +6,10 @@
     justify-content: flex-end;
     align-items: center;
     margin-bottom: 2rem;
+    //border: 1px solid red;
     @include rwd(celular){
         margin-bottom: 2.5rem;
+       
     }
     
 }
@@ -18,7 +20,8 @@
     position: relative;
     right: 0;
     background-image: url(../../assets/imagenes/menuBanner.png);
-    
+    //border: 1px solid red;
+
     @include rwd(tablet){
         width: 92vw;
     }
