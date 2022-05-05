@@ -37,12 +37,12 @@ const App = ()=> {
 
   useEffect(()=>{
 
-    setTimeout(()=>{
-      
-    },2000)
+    // setTimeout(()=>{
+ 
+    // },2000)
     setLoader(true)
     console.log("loader")
-  
+   
  
   },[])
 
