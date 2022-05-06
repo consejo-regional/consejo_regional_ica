@@ -21,6 +21,9 @@ import Rectificacion from './paginas/rectificacion'
 import ConstanciaEtica from './paginas/constanciaEtica'
 import Anuncios from './moleculas/anuncios';
 
+import SitioConstruccion from './moleculas/sitioConstruccion';
+import NoEncontrado from './moleculas/noEncontrado'
+
 
 
 import {
@@ -87,16 +90,13 @@ const App = ()=> {
             <Route path="/servicios/conoceAtuMedico" element={ <SericiosGrid/>}></Route>
 
 
-            <Route path="/comunicaciones" element={ <SericiosGrid/>}></Route>
-            <Route path="/eventos" element={ <SericiosGrid/>}></Route>
-            <Route path="/beneficios" element={ <SericiosGrid/>}></Route>
-            <Route path="/centroRecreaciones" element={ <SericiosGrid/>}></Route>
+            <Route path="/comunicaciones" element={ <SitioConstruccion/>}></Route>
+            <Route path="/eventos" element={ <SitioConstruccion/>}></Route>
+            <Route path="/beneficios" element={ <SitioConstruccion/>}></Route>
+            <Route path="/centroRecreaciones" element={ <SitioConstruccion/>}></Route>
             <Route path="/" element={<Home/>}></Route>
             <Route path="*"  element={
-                <div>
-                <h1>Recurso no encontrado</h1>
-                <span>pagina no encontrada</span>
-                </div>
+                <NoEncontrado/>
               }/>
           </Routes>
           <Footer></Footer>

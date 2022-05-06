@@ -112,16 +112,16 @@ const MenuItem = ()=> {
                     <Link to="/comunicaciones"   className="link">COMUNICACIONES</Link>
                     <ul className="menuu submenu">
                         <li className="item">
-                            <Link to="" onClick={click} className="link linkSubmenu">OPINION Y PRONUNCIAMIENTO</Link>
+                            <Link to="/comunicaciones" onClick={click} className="link linkSubmenu">OPINION Y PRONUNCIAMIENTO</Link>
                         </li>
                         <li className="item">
-                            <Link to="" onClick={click} className="link linkSubmenu">DIFUSIONES                 </Link>
+                            <Link to="/comunicaciones" onClick={click} className="link linkSubmenu">DIFUSIONES                 </Link>
                         </li>
                         <li className="item">
-                            <Link to="" onClick={click} className="link linkSubmenu">BOLETIN INFORMATIVO</Link>
+                            <Link to="/comunicaciones" onClick={click} className="link linkSubmenu">BOLETIN INFORMATIVO</Link>
                         </li>
                         <li className="item">
-                            <Link to="" onClick={click} className="link linkSubmenu">NOTICIAS                      </Link>
+                            <Link to="/comunicaciones" onClick={click} className="link linkSubmenu">NOTICIAS                      </Link>
                         </li>
                     </ul>
                 </li>
@@ -129,16 +129,16 @@ const MenuItem = ()=> {
                     <Link to="/eventos"    className="link">EVENTOS</Link>
                     <ul className="menuu submenu">
                         <li className="item">
-                            <Link to="" onClick={click} className="link linkSubmenu">CURSOS                </Link>
+                            <Link to="/eventos" onClick={click} className="link linkSubmenu">CURSOS                </Link>
                         </li>
                         <li className="item">
-                            <Link to="" onClick={click} className="link linkSubmenu">TALLERES             </Link>
+                            <Link to="/eventos" onClick={click} className="link linkSubmenu">TALLERES             </Link>
                         </li>
                         <li className="item">
-                            <Link to="" onClick={click} className="link linkSubmenu">CELEBRACIONES</Link>
+                            <Link to="/eventos" onClick={click} className="link linkSubmenu">CELEBRACIONES</Link>
                         </li>
                         <li className="item">
-                            <Link to="" onClick={click} className="link linkSubmenu">CAMPAÑAS MEDICAS</Link>
+                            <Link to="/eventos" onClick={click} className="link linkSubmenu">CAMPAÑAS MEDICAS</Link>
                         </li>
                     </ul>
                 </li>

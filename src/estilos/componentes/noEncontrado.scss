@@ -1,0 +1,40 @@
+.contenedorNoEncontrado{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    //background-color:red;
+    pointer-events: none;
+
+    @include rwd(tablet){
+
+    }
+
+    @include rwd(celular){
+     
+        width: 100vw;
+        height: 50vh;
+    
+    }
+}
+
+.imagenNoEncontrado{
+    width: 50vw;
+    height: 50vh;
+    background-image: url(../../assets/imagenes/404.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center center;
+    @include rwd(tablet){
+
+    }
+
+    @include rwd(celular){
+     
+        width: 80vw;
+        height: 80vh;
+    
+    }
+
+}

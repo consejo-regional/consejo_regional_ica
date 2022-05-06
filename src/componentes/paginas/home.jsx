@@ -16,7 +16,7 @@ const Home = ()=> {
 
       return(
         <>
-     
+        
         {/* <BannerPrincipal></BannerPrincipal> */}
         <Slider></Slider>
         <BannerHome></BannerHome>
