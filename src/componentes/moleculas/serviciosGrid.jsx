@@ -12,7 +12,10 @@ const SericiosGrid = ()=> {
       return(
         <>
         <div className="contenedor_servicios_grid_conteiner">
-          <h1>NUESTROS SERVICIOS</h1>
+        <div className="contenedor-evento-titulo">
+                <h4>Consejo Regional IX – ICA </h4>
+                <h1>NUESTROS SERVICIOS</h1>
+            </div>
           <div className="contenedor_servicios_grid">
               <SericiosItem imagen={imagen1} nombre="BOLSA DE TRABAJO" description="Educación Médica"></SericiosItem>
               <SericiosItem imagen={imagen2} nombre="DIFUSIÓN" description="Educación Médica"></SericiosItem>

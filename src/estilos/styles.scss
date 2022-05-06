@@ -22,13 +22,15 @@
 /* estilos del svg con animacion */
 
 .loader_svg {
-    background-image: url(../assets/iconos/three-dots.svg);
+    background-image: url(../assets/imagenes/loderImagen.gif);
     background-repeat: no-repeat;
-    height: 3em;
-    width: 8em;
+    height: 15rem;
+    width: 20rem;
     display: flex;
     align-items: center;
     justify-content: center;
+   // border: 1px solid red;
+    background-size: contain;
 }
 
 
@@ -91,6 +93,7 @@ $puntosQuiebre:(
 @import "./componentes/footerContacto.scss";
 @import "./componentes/footer.scss";
 @import "./componentes/cartsSubmenu.scss";
+@import "./componentes/anuncios.scss";
 
 
 

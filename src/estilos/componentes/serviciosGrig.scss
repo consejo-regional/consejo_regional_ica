@@ -17,14 +17,15 @@
     display: grid;
     grid-template-columns: repeat(3,1fr);
     grid-template-rows: 1fr;
-   // border: 1px solid red;
+    //border: 1px solid red;
     gap:4rem;
     @include rwd(tablet){
-        
+        grid-template-columns: repeat(2,1fr);
+
     }
 
     @include rwd(celular){
-        grid-template-columns: repeat(2,1fr);
+        grid-template-columns: repeat(1,1fr);
 
     }
 
@@ -33,7 +34,7 @@
 }
 
 .contenedor_servicios_item{
-   // border: 1px solid red;
+    //border: 1px solid red;
     display: flex;
     justify-content: center;
     align-items: center;

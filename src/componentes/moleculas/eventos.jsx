@@ -6,7 +6,7 @@ const Eventos = ()=> {
         <>
         <div className="contenedor-eventos">
             <div className="contenedor-evento-titulo">
-                <h5>Consejo Regional III - Lima</h5>
+                <h4>Consejo Regional IX – ICA </h4>
                 <h1>CURSOS / EVENTOS</h1>
             </div>
             <div className="contenedor_eventos_grid">

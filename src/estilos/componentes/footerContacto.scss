@@ -48,6 +48,8 @@
         
     }
     @include rwd(celular){
+        //border: 1px solid red;
+        width: 15rem;
         margin-top: 2rem;
         justify-self: center;
 

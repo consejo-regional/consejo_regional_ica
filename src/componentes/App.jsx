@@ -19,6 +19,7 @@ import Comite from './paginas/comite'
 import ConstanciaHabilidad from './paginas/constanciaHabilidad'
 import Rectificacion from './paginas/rectificacion'
 import ConstanciaEtica from './paginas/constanciaEtica'
+import Anuncios from './moleculas/anuncios';
 
 
 
@@ -57,6 +58,7 @@ const App = ()=> {
           
           :
           <Router>
+           <Anuncios></Anuncios>
            <Menu></Menu>
           <RedesSociales></RedesSociales>
           <MenuItem></MenuItem>

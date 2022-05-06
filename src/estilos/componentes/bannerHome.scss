@@ -6,6 +6,17 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    @include rwd(tablet){
+
+
+  
+    }
+
+    @include rwd(celular){
+        margin:3rem 0 3rem 0;
+    
+    }
+
 
     //background:red;
 }
@@ -27,8 +38,10 @@
     }
 
     @include rwd(celular){
-        width: 80vw;
-        height: 7rem;
+        background-size:c;
+
+        width: 90vw;
+        height: 6rem;
     
     }
 
