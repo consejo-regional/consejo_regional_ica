@@ -80,14 +80,14 @@ const MenuItem = ()=> {
                             <Link to="/tramites/constanciahabilidad" onClick={click} className="link linkSubmenu">CONSTANCIA DE HABILIDAD</Link>
                         </li>
                         <li className="item">
-                            <Link to="/tramites/iniciarColegiatura" onClick={click} className="link linkSubmenu">INICIAR COLEGIATURA</Link>
+                            <a href="https://cipvirtual.cip.org.pe/sicecolegiacionweb/externo/consultaCol/" onClick={click} className="link linkSubmenu">INICIAR COLEGIATURA</a>
                         </li>
                         <li className="item">
                             <Link to="/tramites/rectificacion" onClick={click} className="link linkSubmenu">RECTIFICACION</Link>
                         </li>
                         
                         <li className="item">
-                            <Link to="tramites/actualizacionDatos" onClick={click} className="link linkSubmenu">ACTUALIZACION DE DATOS</Link>
+                            <a href="https://www.zona.cmp.org.pe/index.php/ayuda/101-actualizacion-de-datos" onClick={click} className="link linkSubmenu">ACTUALIZACION DE DATOS</a>
                         </li>
                         <li className="item">
                             <Link to="/tramites/constanciaEtica"  onClick={click} className="link linkSubmenu">CONSTANCIA DE ETICA</Link>

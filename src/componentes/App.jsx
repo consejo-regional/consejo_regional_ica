@@ -91,7 +91,9 @@ const App = ()=> {
 
 
             <Route path="/comunicaciones" element={ <SitioConstruccion/>}></Route>
+            
             <Route path="/eventos" element={ <SitioConstruccion/>}></Route>
+            
             <Route path="/beneficios" element={ <SitioConstruccion/>}></Route>
             <Route path="/centroRecreaciones" element={ <SitioConstruccion/>}></Route>
             <Route path="/" element={<Home/>}></Route>
