@@ -2,6 +2,9 @@
 npm install -D node-sass
 npm i -D sass
 
+# ejecutar api
+json-server --watch db.json --port 3050
+
 
 
 # Getting Started with Create React App
