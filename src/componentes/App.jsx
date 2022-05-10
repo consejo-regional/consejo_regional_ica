@@ -19,8 +19,10 @@ import Comite from './paginas/comite'
 import ConstanciaHabilidad from './paginas/constanciaHabilidad'
 import Rectificacion from './paginas/rectificacion'
 import ConstanciaEtica from './paginas/constanciaEtica'
-import Anuncios from './moleculas/anuncios';
 
+
+
+import Anuncios from './moleculas/anuncios';
 import SitioConstruccion from './moleculas/sitioConstruccion';
 import NoEncontrado from './moleculas/noEncontrado'
 
@@ -32,6 +34,10 @@ import {
   Route,
   //Link
 } from "react-router-dom";
+import Comunicaciones from './paginas/comunicaciones';
+import ComunicacionesNoticia from './paginas/comunicacionesNoticia';
+import EventosPage from './paginas/eventosPage';
+import Eventos from './moleculas/eventos';
 
 
 
@@ -90,9 +96,10 @@ const App = ()=> {
             <Route path="/servicios/conoceAtuMedico" element={ <SericiosGrid/>}></Route>
 
 
-            <Route path="/comunicaciones" element={ <SitioConstruccion/>}></Route>
+            <Route path="/comunicaciones" element={ <Comunicaciones/>}></Route>
+            <Route path="/comunicaciones/noticias" element={ <ComunicacionesNoticia/>}></Route>
             
-            <Route path="/eventos" element={ <SitioConstruccion/>}></Route>
+            <Route path="/eventos" element={ <EventosPage/>}></Route>
             
             <Route path="/beneficios" element={ <SitioConstruccion/>}></Route>
             <Route path="/centroRecreaciones" element={ <SitioConstruccion/>}></Route>

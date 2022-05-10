@@ -21,6 +21,7 @@
 }
 
 .eventos-clase{
+    text-decoration: none;
     margin-left: 2rem;
     //border: 1px solid blue;
     display: flex;
@@ -89,6 +90,9 @@
 }
 .evento-noticia-descripccion{
     margin-bottom: .5rem;
+    width: 70%;
+    text-align: justify;
+    text-decoration: none;
 }
 .colors{
     color: #03C4EB;

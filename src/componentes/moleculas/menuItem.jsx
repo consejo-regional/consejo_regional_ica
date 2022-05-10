@@ -121,7 +121,7 @@ const MenuItem = ()=> {
                             <Link to="/comunicaciones" onClick={click} className="link linkSubmenu">BOLETIN INFORMATIVO</Link>
                         </li>
                         <li className="item">
-                            <Link to="/comunicaciones" onClick={click} className="link linkSubmenu">NOTICIAS                      </Link>
+                            <Link to="/comunicaciones/noticias" onClick={click} className="link linkSubmenu">NOTICIAS                      </Link>
                         </li>
                     </ul>
                 </li>

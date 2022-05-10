@@ -1,46 +1,57 @@
-import React from 'react'
+import React , {useEffect} from 'react'
 import imagen1 from '../../assets/imagenes/eventos/IMAGE-1.png'
 import imagen2 from '../../assets/imagenes/eventos/IMAGE-2.png'
 import imagen3 from '../../assets/imagenes/eventos/IMAGE-3.png'
 import imagen4 from '../../assets/imagenes/eventos/IMAGE-4.png'
+import imagen5 from '../../assets/imagenes/eventos/EVENTO1.png'
+import {Link} from 'react-router-dom'
+
+
 
 
 
 
 
 const informacion=[{
-  imagen:imagen1,
-  description:"Habla con tu médico – 20 abril",
-  fecha:"2022/03/16"
+  imagen:imagen5,
+  description:"Reunion Multisectorial – 09 mayo",
+  fecha:"2022/05/09",
+  tipo:"NOTICIA"
 },{
   imagen:imagen2,
   description:"Habla con tu médico – 20 abril",
-  fecha:"2002/15/14"
+  fecha:"2002/15/14",
+  tipo:"EVENTO"
 },{
   imagen:imagen3,
   description:"Habla con tu médico – 20 abril",
-  fecha:"2021/15/24"
+  fecha:"2021/15/24",
+  tipo:"EVENTO"
 },{
   imagen:imagen4,
   description:"Habla con tu médico – 20 abril",
-  fecha:"2015/30/15"
+  fecha:"2015/30/15",
+  tipo:"EVENTO"
 }]
 
 
 
 const Eventos = ()=> {
+
       return(
+
+       
         <>
-        <div className="contenedor-eventos">
+        <div className="contenedor-eventos"  >
             <div className="contenedor-evento-titulo">
                 <h4>Consejo Regional IX – ICA </h4>
-                <h1>CURSOS / EVENTOS</h1>
+                <h1>NOTICIAS / EVENTOS</h1>
             </div>
             <div className="contenedor_eventos_grid">
                 {
 
                   informacion.map(c=>(
-                    <SericiosItem  imagen={c.imagen} description={c.description} fecha={c.fecha} ></SericiosItem>
+                    <SericiosItem  imagen={c.imagen} description={c.description} fecha={c.fecha} tipo={c.tipo} ></SericiosItem>
                   ))
 
                   
@@ -52,19 +63,40 @@ const Eventos = ()=> {
   }
 
 
-  const SericiosItem = ({imagen,description,fecha})=> {
+  const SericiosItem = ({imagen,description,fecha,tipo})=> {
+
+
+      if(tipo=="NOTICIA"){
         return(
           <>
-          <div className="eventos-clase">
+         
+          <Link className="eventos-clase"  to="/comunicaciones/noticias">
             <img className="imagen-evento" src={imagen} alt={imagen}></img>
             <div className="evento-noticia">
-              <div className="evento-noticia-descripccion colors">EVENTOS / NOTICIAS</div>
+              <div className="evento-noticia-descripccion colors">{tipo}</div>
               <div className="evento-noticia-descripccion">{description}</div>
               <div className="evento-noticia-descripccion">{fecha}</div>
             </div>
-          </div>
+          </Link>
           </>   
         )  
+
+      } if(tipo=="EVENTO"){
+        return(
+          <>
+          <Link className="eventos-clase"  to="/eventos">
+            <img className="imagen-evento" src={imagen} alt={imagen}></img>
+            <div className="evento-noticia">
+              <div className="evento-noticia-descripccion colors">{tipo}</div>
+              <div className="evento-noticia-descripccion">{description}</div>
+              <div className="evento-noticia-descripccion">{fecha}</div>
+            </div>
+          </Link>
+          </>   
+        )  
+
+      }
+       
 }
 
 
