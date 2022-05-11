@@ -17,7 +17,7 @@ const informacion=[{
     tipo:"NOTICIA"
   },{
     imagen:imagen2,
-    description:"Habla con tu médico – 20 abril",
+    description:"Situación actual y Prospectiva de la pandemia del COVID19 en el Perú",
     fecha:"2002/15/14",
     tipo:"EVENTO"
   },{

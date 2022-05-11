@@ -10,6 +10,9 @@ import imagen5 from '../../assets/imagenes/IMAGE-5.png'
 import imagen6 from '../../assets/imagenes/IMAGE-6.png'
 import imagen7 from '../../assets/imagenes/IMAGE-7.png'
 
+import hombre from '../../assets/imagenes/hombre.png'
+import mujer from '../../assets/imagenes/mujer.png'
+
 
 
 
@@ -36,13 +39,13 @@ const JuntaDirectiva = ()=> {
 
         </div>
         <div className="contenedor_servicios_grid">
-              <SericiosItem imagen={imagen1} nombre="Luis Felipe Muñante Aparcana." description="Decano"></SericiosItem>
-              <SericiosItem imagen={imagen2} nombre="Alexander Humberto pecho peche." description="Secretario"></SericiosItem>
-              <SericiosItem imagen={imagen3} nombre="Flor Elizabeth aviles Bonifaz" description="Tesoresa"></SericiosItem>
-              <SericiosItem imagen={imagen4} nombre="Audiaz Perez Aguirre" description="Vocal"></SericiosItem>
-              <SericiosItem imagen={imagen5} nombre="Flor de maría mejia escate" description="vocal"></SericiosItem>
-              <SericiosItem imagen={imagen6} nombre="Roberto laos Olaechea" description="Accesitario"></SericiosItem>
-              <SericiosItem imagen={imagen7} nombre="Carlos Cagna Puppi " description="Accesitario"></SericiosItem>
+              <SericiosItem imagen={hombre} nombre="Luis Felipe Muñante Aparcana." description="Decano"></SericiosItem>
+              <SericiosItem imagen={hombre} nombre="Alexander Humberto pecho peche." description="Secretario"></SericiosItem>
+              <SericiosItem imagen={mujer} nombre="Flor Elizabeth aviles Bonifaz" description="Tesoresa"></SericiosItem>
+              <SericiosItem imagen={hombre} nombre="Audiaz Perez Aguirre" description="Vocal"></SericiosItem>
+              <SericiosItem imagen={mujer} nombre="Flor de maría mejia escate" description="vocal"></SericiosItem>
+              <SericiosItem imagen={hombre} nombre="Roberto laos Olaechea" description="Accesitario"></SericiosItem>
+              <SericiosItem imagen={hombre} nombre="Carlos Cagna Puppi " description="Accesitario"></SericiosItem>
            
            
           </div>
