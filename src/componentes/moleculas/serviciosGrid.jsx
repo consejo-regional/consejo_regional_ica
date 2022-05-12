@@ -22,10 +22,6 @@ const servicios=[{
   imagen:imagen3,
   nombre:"CONOCE A TU MEDICO",
   description:"Educación Médica"
-},{
-  imagen:imagen4,
-  nombre:"CONOCE A TU MEDICO",
-  description:"Educación Médica"
 }
 ]
 
@@ -37,7 +33,7 @@ const SericiosGrid = ()=> {
         <div className="contenedor-evento-titulo">
                 <h4>Consejo Regional IX – ICA </h4>
                 <h1>NUESTROS SERVICIOS</h1>
-            </div>
+        </div>
           <div className="contenedor_servicios_grid">
             {
               servicios.map(c=>(

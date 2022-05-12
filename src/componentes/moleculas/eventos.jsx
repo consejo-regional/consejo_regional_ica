@@ -1,8 +1,8 @@
 import React , {useEffect} from 'react'
 import imagen1 from '../../assets/imagenes/eventos/IMAGE-1.png'
-import imagen2 from '../../assets/imagenes/eventos/IMAGE-2.png'
-import imagen3 from '../../assets/imagenes/eventos/IMAGE-3.png'
-import imagen4 from '../../assets/imagenes/eventos/IMAGE-4.png'
+import imagen2 from '../../assets/imagenes/eventos/CARDIOLOGIA.png'
+import imagen3 from '../../assets/imagenes/eventos/LA BIOETICA Y EL CASO TUSKEE.png'
+import imagen4 from '../../assets/imagenes/eventos/Group 32.png'
 import imagen5 from '../../assets/imagenes/eventos/EVENTO1.png'
 import {Link} from 'react-router-dom'
 
@@ -19,18 +19,18 @@ const informacion=[{
   tipo:"NOTICIA"
 },{
   imagen:imagen2,
-  description:"Habla con tu médico – 20 abril",
-  fecha:"2002/15/14",
+  description:"Modulo Cardiologia",
+  fecha:"2002/05/13; 2002/05/20  ;2002/05/13 ",
   tipo:"EVENTO"
 },{
   imagen:imagen3,
-  description:"Habla con tu médico – 20 abril",
-  fecha:"2021/15/24",
+  description:"Teleconferencia Bioetica y el caso Tuskegee",
+  fecha:"2021/04/29",
   tipo:"EVENTO"
 },{
   imagen:imagen4,
-  description:"Habla con tu médico – 20 abril",
-  fecha:"2015/30/15",
+  description:"Seminario Busqueda Eficiencia de Informacion Cientifica en Medicina",
+  fecha:"2015/04/22",
   tipo:"EVENTO"
 }]
 

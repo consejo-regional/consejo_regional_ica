@@ -9,10 +9,15 @@ const RedesSociales = ()=> {
       return(
         <>
         <div className="contenedor_redes">
-          <Face></Face>
-          <Sms></Sms>
+          <a href="https://www.facebook.com/ConsejoRegionalIca" target="_blank">
+              <Face></Face>
+          </a>
+   
+          {/* <Sms></Sms> */}
+          <a href="https://twitter.com/cmpregionalica?lang=en" target="_blank">
           <Twitter></Twitter>
-          <Watsup></Watsup>
+          </a>
+          {/* <Watsup></Watsup> */}
             
         </div>
 
