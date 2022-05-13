@@ -47,13 +47,24 @@ const MenuItem = ()=> {
                    
                 </li>
                 <li className="item">
-                    <Link to="/nosotros"  className="link">NOSOTROS</Link>
+                    <Link to="/nosotros"  className="link">  NOSOTROS  </Link>
                     <ul className="menuu submenu">
-                        <li className="item">
+                        {/* <li className="item">
                             <Link to="/nosotros/bienvenida" onClick={click} className="link linkSubmenu">BIENVENIDA</Link>
+                        </li> */}
+                        <li className="item">
+                            <Link to="/nosotros/colegioMedico" onClick={click} className="link linkSubmenu">EL COLEGIO MEDICO</Link>
                         </li>
                         <li className="item">
+                            <Link to="/nosotros/quienesSomos" onClick={click} className="link linkSubmenu">QUIENES SOMOS</Link>
+                        </li>
+                        
+                        {/* <li className="item">
                             <Link to="/nosotros/institucion" onClick={click} className="link linkSubmenu">INSTITUCION</Link>
+                        </li> */}
+
+                        <li className="item">
+                            <Link to="/nosotros/documentoNormativo" onClick={click} className="link linkSubmenu">DOCUMENTO NORMATIVO</Link>
                         </li>
                         <li className="item">
                             <Link to="/nosotros/juntaDirectiva" onClick={click} className="link linkSubmenu">JUNTA DIRECTIVA</Link>

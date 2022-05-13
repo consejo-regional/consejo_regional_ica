@@ -19,6 +19,9 @@ import Comite from './paginas/comite'
 import ConstanciaHabilidad from './paginas/constanciaHabilidad'
 import Rectificacion from './paginas/rectificacion'
 import ConstanciaEtica from './paginas/constanciaEtica'
+import ColegioMedico from '../componentes/moleculas/colegioMedico'
+import QuienesSomos from '../componentes/moleculas/quienesSomos';
+import DocumentoNormativo from '../componentes/moleculas/documentoNormativo';
 
 
 
@@ -76,6 +79,10 @@ const App = ()=> {
 
             <Route path="/nosotros" element={ <Biemvenida/>}></Route>
             <Route path="/nosotros/bienvenida" element={ <Biemvenida/>}></Route>
+            <Route path="/nosotros/colegiomedico" element={ <ColegioMedico/>}></Route>
+            <Route path="/nosotros/quienesSomos" element={ <QuienesSomos/>}></Route>
+            <Route path="/nosotros/documentoNormativo" element={ <DocumentoNormativo/>}></Route>
+
             <Route path="/nosotros/institucion" element={ <Institucion/>}></Route>
             <Route path="/nosotros/juntaDirectiva" element={ <JuntaDirectiva/>}></Route>
             <Route path="/nosotros/sociedadesCientificas" element={ <SociedadCientifica/>}></Route>

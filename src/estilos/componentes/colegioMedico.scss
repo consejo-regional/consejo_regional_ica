@@ -1,0 +1,95 @@
+.container-imagen-colegio{
+    width: 100%;
+    height: 50vh;
+    background-image: url(../../assets/imagenes/estetoscopio.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size:cover;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap:.9rem;
+}
+
+.logo-colegio{
+    width: 3.5rem; 
+    height:3.5rem;
+    background-color:rgba(105, 41, 102, 1);
+    border-radius: 50%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    .logo-colegio-svg{
+        width: 40%;
+        height: 40%;
+        background-image: url(../../assets/iconos/temple.svg);
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size:contain;
+       
+    }
+    
+}
+
+.titulo-contenido-colegio{
+        //border: 1px solid red;
+        display:flex;
+        display:static
+
+}
+.titulo-contenido-colegio::after{
+    content: " ";
+    height: .1rem;
+    width: 2rem;
+    display: relative;
+    margin: auto .4rem auto .4rem;
+    
+    background-color: white;
+    border-radius:1px;
+}
+.titulo-contenido-colegio::before{
+    content: " ";
+    height: .1rem;
+    width: 2rem;
+    display: relative;
+    margin: auto .4rem auto .4rem;
+    border-radius:1px;
+    background-color: white;
+}
+
+
+.titulo-contenido-colegio1{
+    display:flex;
+    padding:.5rem;
+    gap: .5rem;
+    color:white;
+    //font-weight: bold;
+    font-size:1.3rem;
+}
+.titulo-contenido-colegio2{
+    //border: 1px solid red;
+    font-size:1.3rem;
+    background-color: rgba(105, 41, 102, 1);
+    color:white;
+    padding:.5rem;
+    border-radius: 3px;
+}
+
+
+.container-descripccion-colegio{
+    //border: 1px solid red;
+    //margin: 10rem;
+    display: flex;
+    gap:1rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top:4rem;
+
+}
+.container-descripccion-colegio h4{
+    //border: 1px solid red;
+    width: 70vw;
+    text-align: justify;
+}
