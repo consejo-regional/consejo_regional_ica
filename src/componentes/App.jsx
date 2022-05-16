@@ -86,7 +86,7 @@ const App = ()=> {
             <Route path="/nosotros/comite" element={ <Comite/>}></Route>
 
 
-            <Route path="/tramites" element={ <ConstanciaHabilidad/>}></Route>
+            <Route path="/tramites" element={ <></>}></Route>
             <Route path="/tramites/constanciahabilidad" element={ <ConstanciaHabilidad/>}></Route>
             <Route path="/tramites/iniciarColegiatura" element={ <ConstanciaHabilidad/>}></Route>
             <Route path="/tramites/rectificacion" element={ <Rectificacion/>}></Route>

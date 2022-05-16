@@ -26,27 +26,40 @@ const DocumentoNormativo = ()=> {
                     <div className="grid-documentos-contenidos">
                         <h3>1. Estatuto del Colegio Médico del Perú (CMP)</h3>
                         <h5>Descargar</h5>
-                        <div className="imagen-grid-contenidos-contenidos"></div>
+                        <a href="https://www.cmp.org.pe/wp-content/uploads/2020/01/ESTATUTO-DEL-COLEGIO-MEDICO-DEL-PERU.pdf">
+                            <div className="imagen-grid-contenidos-contenidos"></div>
+                        </a>
+                      
                     </div>
                     <div className="grid-documentos-contenidos">
-                        <h3>Emblema colegio medico</h3>
+                        <h3>2. Emblema colegio medico</h3>
                         <h5>Descargar</h5>
-                        <div className="imagen-grid-contenidos-contenidos"></div>
+                        <a href="https://www.cmp.org.pe/wp-content/uploads/2020/01/ESTATUTO-DEL-COLEGIO-MEDICO-DEL-PERU.pdf">
+                            <div className="imagen-grid-contenidos-contenidos"></div>
+                        </a>
                     </div>
                     <div className="grid-documentos-contenidos">
-                        <h3>1. Estatuto del Colegio Médico del Perú (CMP)</h3>
+                        <h3>3. Himno del Colegio Médico del Perú</h3>
                         <h5>Descargar</h5>
-                        <div className="imagen-grid-contenidos-contenidos"></div>
+                        <a href="https://www.youtube.com/watch?v=7IqKmHifTAM">
+                            <div className="imagen-grid-contenidos-contenidos"></div>
+                        </a>
                     </div>
                     <div className="grid-documentos-contenidos">
-                        <h3>1. Estatuto del Colegio Médico del Perú (CMP)</h3>
+                        <h3>4. Reglamento del Colegio Médico del Perú (CMP).</h3>
+                        <h3> Actualizado
+                             con la resolución N°071 – CN – CMP – 2020</h3>
                         <h5>Descargar</h5>
-                        <div className="imagen-grid-contenidos-contenidos"></div>
+                        <a href="https://www.cmp.org.pe/wp-content/uploads/2022/05/REGLAMENTO-DEL-COLEGIO-MEDICO-DEL-PERU-03-05-2022.pdf">
+                            <div className="imagen-grid-contenidos-contenidos"></div>
+                        </a>
                     </div>
                     <div className="grid-documentos-contenidos">
-                        <h3>1. Estatuto del Colegio Médico del Perú (CMP)</h3>
+                        <h3>5. Resolución 9406 Reglamento Interno de trabajo CMP 2011.</h3>
                         <h5>Descargar</h5>
-                        <div className="imagen-grid-contenidos-contenidos"></div>
+                        <a href="https://www.cmp.org.pe/wp-content/uploads/2020/01/Resolucion-9406-Reglamento-Interno-de-trabajo-CMP-2011.pdf">
+                            <div className="imagen-grid-contenidos-contenidos"></div>
+                        </a>
                     </div>
                 </div>
             </div>

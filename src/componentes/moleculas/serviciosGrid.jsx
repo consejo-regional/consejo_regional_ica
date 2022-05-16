@@ -12,16 +12,29 @@ import imagen4 from '../../assets/imagenes/IMAGE-4.png'
 
 const servicios=[{
   imagen:imagen1,
-  nombre:"BOLSA DE TRABAJO",
-  description:"Educación Médica"
+  nombre:"SISTCERE",
+  description:"",
+  enlace:"https://www.cmp.org.pe/sistcere-2/"
 },{
   imagen:imagen2,
-  nombre:"DIFUSIÓN",
-  description:"Educación Médica"
+  nombre:"SEMEFE",
+  description:"",
+  enlace:"https://www.cmp.org.pe/semefa/"
+},{
+  imagen:imagen2,
+  nombre:"FOSEMED",
+  description:"",
+  enlace:"https://www.cmp.org.pe/fosemed/"
+},{
+  imagen:imagen2,
+  nombre:"DEFENSORIA DEL MEDICO",
+  description:"",
+  enlace:"https://www.cmp.org.pe/defensoria-del-medico/"
 },{
   imagen:imagen3,
   nombre:"CONOCE A TU MEDICO",
-  description:"Educación Médica"
+  description:"",
+  enlace:"https://www.cmp.org.pe/conoce-a-tu-medico/"
 }
 ]
 
@@ -37,7 +50,7 @@ const SericiosGrid = ()=> {
           <div className="contenedor_servicios_grid">
             {
               servicios.map(c=>(
-                <SericiosItem imagen={c.imagen} nombre={c.nombre} description={c.description}></SericiosItem>
+                <SericiosItem imagen={c.imagen} nombre={c.nombre} description={c.description} enlace={c.enlace}></SericiosItem>
               ))
             }
             
@@ -47,14 +60,14 @@ const SericiosGrid = ()=> {
       )  
   }
 
-  const SericiosItem = ({imagen,nombre,description})=> {
+  const SericiosItem = ({imagen,nombre,description,enlace})=> {
     return(
       <>
-      <div className="contenedor_servicios_item">
+      <a href={enlace} target="_blank" className="contenedor_servicios_item">
         <img className="servicios imagen" src={imagen} alt={imagen}></img>
         <div className="servicios-nombre">{nombre}</div>
         <div className="servicios-description">{description}</div>
-      </div>
+      </a>
       </>   
     )  
 }

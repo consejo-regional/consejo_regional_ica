@@ -1,5 +1,6 @@
 import React,{useEffect,useRef} from 'react'
 import {Link} from 'react-router-dom'
+///import doc from '../../../public/documentos/POLITICA-DE-CALIDAD-Y-CERTIFICADO.pdf'
 
 
 
@@ -43,11 +44,11 @@ const MenuItem = ()=> {
                 <div   onClick={click} className="boton-menu-hamburguesa boton-menu-hamburguesa-cerrar show"></div>
 
                 <li className="item itemMenu">
-                    <a to="/inicio"  onClick={click}  className="link">INICIO </a>
+                    <Link to="/inicio"  onClick={click}  className="link">INICIO </Link>
                    
                 </li>
                 <li className="item">
-                    <Link to="/nosotros"  className="link">  NOSOTROS  </Link>
+                    <Link to="/nosotros"  className="link">NOSOTROS</Link>
                     <ul className="menuu submenu">
                         {/* <li className="item">
                             <Link to="/nosotros/bienvenida" onClick={click} className="link linkSubmenu">BIENVENIDA</Link>
@@ -85,8 +86,13 @@ const MenuItem = ()=> {
                         {/* <li className="item">
                             <Link to="/nosotros/sociedadesCientificas" onClick={click} className="link linkSubmenu">SOCIEDADES CIENTIFICAS</Link>
                         </li> */}
-                        <li className="item">
+                        {/* <li className="item">
                             <Link to="/nosotros/comite" onClick={click} className="link linkSubmenu">COMITES      </Link>
+                        </li> */}
+
+
+                        <li className="item">
+                            <a href={process.env.PUBLIC_URL+"documentos/POLITICA-DE-CALIDAD-Y-CERTIFICADO.pdf"} target="_blank" onClick={click}  rel="noopener noreferrer" className="link linkSubmenu">POLITICA DE CALIDAD</a>
                         </li>
                     </ul>
                 </li>
@@ -96,33 +102,48 @@ const MenuItem = ()=> {
                         <li className="item">
                             <Link to="/tramites/constanciahabilidad" onClick={click} className="link linkSubmenu">CONSTANCIA DE HABILIDAD</Link>
                         </li>
+                       
                         <li className="item">
-                            <a href="https://cipvirtual.cip.org.pe/sicecolegiacionweb/externo/consultaCol/" onClick={click} className="link linkSubmenu">INICIAR COLEGIATURA</a>
+                            <a href="https://cipvirtual.cip.org.pe/sicecolegiacionweb/externo/consultaCol/" target="_blank" onClick={click} className="link linkSubmenu">INICIAR COLEGIATURA</a>
                         </li>
                         <li className="item">
-                            <Link to="/tramites/rectificacion" onClick={click} className="link linkSubmenu">RECTIFICACION</Link>
+                            <a href="https://www.cmp.org.pe/registro-de-especialidad-o-sub-especialidad/"  target="_blank" onClick={click} className="link linkSubmenu">REGISTRO DE ESPECIALIDAD </a>
                         </li>
+                        <li className="item">
+                            <a href="https://www.cmp.org.pe/proceso-para-tramite-de-carne-de-colegiado/" target="_blank" onClick={click} className="link linkSubmenu">CARNET   DE COLEGIADO</a>
+                        </li>
+                        {/* <li className="item">
+                            <Link to="/tramites/rectificacion" onClick={click} className="link linkSubmenu">RECERTIFICACION</Link>
+                        </li> */}
                         
                         <li className="item">
-                            <a href="https://www.zona.cmp.org.pe/index.php/ayuda/101-actualizacion-de-datos" onClick={click} className="link linkSubmenu">ACTUALIZACION DE DATOS</a>
+                            <a href="https://www.zona.cmp.org.pe/index.php/ayuda/101-actualizacion-de-datos" target="_blank" onClick={click} className="link linkSubmenu">ACTUALIZACION DE DATOS</a>
                         </li>
-                        <li className="item">
+                        {/* <li className="item">
                             <Link to="/tramites/constanciaEtica"  onClick={click} className="link linkSubmenu">CONSTANCIA DE ETICA</Link>
-                        </li>
+                        </li> */}
                     </ul>
                 </li>
                 <li className="item">
                     <Link to="/servicios"    className="link">SERVICIOS</Link>
                     <ul className="menuu submenu">
+                        
                         <li className="item">
-                            <Link to="/servicios/bolsaTrabajo"  onClick={click} className="link linkSubmenu">BOLSA DE TRABAJO</Link>
+                            <a href="https://www.cmp.org.pe/sistcere-2/"  target="_blank" onClick={click} className="link linkSubmenu">SISTCERE</a>
                         </li>
                         <li className="item">
-                            <Link to="/servicios/difusion"  onClick={click} className="link linkSubmenu">DIFUSION</Link>
+                            <a href="https://www.cmp.org.pe/semefa/"  target="_blank" onClick={click} className="link linkSubmenu">SEMEFA</a>
                         </li>
                         <li className="item">
-                            <Link to="/servicios/conoceAtuMedico"  onClick={click} className="link linkSubmenu">CONOCE A TU MEDICO</Link>
+                            <a href="https://www.cmp.org.pe/defensoria-del-medico/"  target="_blank" onClick={click} className="link linkSubmenu">FOSEMED</a>
                         </li>
+                        <li className="item">
+                            <a href="https://www.cmp.org.pe/fosemed/"  target="_blank" onClick={click} className="link linkSubmenu">DEFENSORIA AL MEDICO</a>
+                        </li>
+                        <li className="item">
+                            <a href="https://www.cmp.org.pe/conoce-a-tu-medico/"  target="_blank" onClick={click} className="link linkSubmenu">CONOCE A TU MEDICO</a>
+                        </li>
+                        
                     </ul>
                     </li>
                 <li className="item">
@@ -131,12 +152,12 @@ const MenuItem = ()=> {
                         <li className="item">
                             <Link to="/comunicaciones/pronunciamiento" onClick={click} className="link linkSubmenu">OPINION Y PRONUNCIAMIENTO</Link>
                         </li>
-                        <li className="item">
+                        {/* <li className="item">
                             <Link to="/comunicaciones" onClick={click} className="link linkSubmenu">DIFUSIONES                 </Link>
-                        </li>
-                        <li className="item">
+                        </li> */}
+                        {/* <li className="item">
                             <Link to="/comunicaciones" onClick={click} className="link linkSubmenu">BOLETIN INFORMATIVO</Link>
-                        </li>
+                        </li> */}
                         <li className="item">
                             <Link to="/comunicaciones/noticias" onClick={click} className="link linkSubmenu">NOTICIAS                      </Link>
                         </li>
@@ -145,7 +166,7 @@ const MenuItem = ()=> {
                 <li className="item">
                     <Link to="/eventos"    className="link">EVENTOS</Link>
                     <ul className="menuu submenu">
-                        <li className="item">
+                        {/* <li className="item">
                             <Link to="/eventos" onClick={click} className="link linkSubmenu">CURSOS                </Link>
                         </li>
                         <li className="item">
@@ -156,15 +177,15 @@ const MenuItem = ()=> {
                         </li>
                         <li className="item">
                             <Link to="/eventos" onClick={click} className="link linkSubmenu">CAMPAÑAS MEDICAS</Link>
-                        </li>
+                        </li> */}
                     </ul>
                 </li>
-                <li className="item">
+                {/* <li className="item">
                     <Link to="/beneficios"  onClick={click}  className="link">BENEFICIOS</Link>
                 </li>
                 <li className="item">
                     <Link to="/centroRecreaciones"  onClick={click}  className="link">CENTRO DE RECREACIONES</Link>
-                </li>
+                </li> */}
             </ul>
         </nav>
         </div>
