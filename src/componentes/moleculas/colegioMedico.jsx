@@ -1,5 +1,11 @@
 import React from 'react'
 
+
+const informacion_colegio_grid=[
+
+]
+
+
 const ColegioMedico = ()=> {
       return(
         <>
@@ -25,6 +31,36 @@ const ColegioMedico = ()=> {
                 <h4>Actualmente el Colegio Médico del Perú se encuentra a la vanguardia como ente rector de la doctrina, y de la ética y deontología de la profesión médica, del fortalecimiento de la profesión y presencia nacional e internacional, participando en la Asociación Médica Mundial, en la Confederación Médica Latinoamericana y otras instituciones profesionales.</h4>
             </div>
 
+            <div className="container-descripccion-colegio">
+                <h2>El Colegio Médico del Perú desarrolla su trabajo en las siguientes áreas:</h2>
+                <br></br>
+                <br></br>
+                
+                 <div className="contenedor_servicios_grid">
+         
+                    <div className="contenedor_grid_colegio">
+                        <div className="contenedor_grid_colegio_titulo">01 . ÉTICA Y DEONTOLOGIA MÉDICA</div>
+                        <div className="contenedor_grid_colegio_descripccion">Promueve y vigila el ejercicio profesional en el marco del Código de Ética y Deontología, siguiendo los principios de autonomía, beneficencia, no maleficencia, justicia y confidencialidad..</div>
+                    </div>
+                    <div className="contenedor_grid_colegio">
+                        <div className="contenedor_grid_colegio_titulo">02. DESARROLLO PROFESIONAL CONTINUO</div>
+                        <div className="contenedor_grid_colegio_descripccion">Fomenta la calidad de la formación profesional a través de mecanismos como la acreditación de instituciones formadoras, favorece y desarrolla la educación continua, desarrolla procesos de recertificación médica hacia la excelencia del ejercicio de nuestra querida profesión.</div>
+                    </div>
+                    <div className="contenedor_grid_colegio">
+                        <div className="contenedor_grid_colegio_titulo">03. BIENESTAR MÉDICO</div>
+                        <div className="contenedor_grid_colegio_descripccion">Brinda servicios sociales a los médicos y médicas en las áreas de atención de salud, bienestar social y asesoría legal, favorece el desarrollo de la infraestructura institucional a través de la construcción de sedes institucionales y recreacionales para los médicos y sus familias. Promueve en las instituciones de salud el desarrollo de oportunidades laborales y de capacitación para los médicos jóvenes.</div>
+                    </div>
+                    <div className="contenedor_grid_colegio">
+                        <div className="contenedor_grid_colegio_titulo">04. INSTITUCIONAL ORGANIZATIVAL</div>
+                        <div className="contenedor_grid_colegio_descripccion">Promueve la generación de de capacidades de los integrantes de sus órganos directivos (Consejo Nacional y Consejos Regionales), así como de sus Comisiones Asesoras (Permanentes y Transitorias) para fortalecer la presencia política y técnica del CMP en asuntos de interés profesional, sanitario y nacional.</div>
+                    </div>
+                    <div className="contenedor_grid_colegio">
+                        <div className="contenedor_grid_colegio_titulo">05. ATENCIÓN DE SALUD DE CALIDAD Y SEGURIDAD DEL PACIENTE</div>
+                        <div className="contenedor_grid_colegio_descripccion">Promueve y vigila el ejercicio profesional en el marco del Código de Ética y Deontología, siguiendo los principios de autonomía, beneficencia, no maleficencia, justicia y confidencialidad..</div>
+                    </div>
+                </div>
+                
+            </div>
         </div>
         </>   
       )  
@@ -32,4 +68,3 @@ const ColegioMedico = ()=> {
   
   
   export default ColegioMedico;
-  

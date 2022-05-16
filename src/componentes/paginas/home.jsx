@@ -19,7 +19,7 @@ const Home = ()=> {
         
         {/* <BannerPrincipal></BannerPrincipal> */}
         <Slider></Slider>
-        <BannerHome></BannerHome>
+        {/* <BannerHome></BannerHome> */}
         <SericiosGrid></SericiosGrid> 
         <Eventos></Eventos>
         <FooterContacto></FooterContacto> 

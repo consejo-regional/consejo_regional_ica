@@ -12,10 +12,11 @@
     gap:.9rem;
 }
 
+
 .logo-colegio{
     width: 3.5rem; 
     height:3.5rem;
-    background-color:rgba(105, 41, 102, 1);
+    background-color:rgba(139, 71, 137, 1);
     border-radius: 50%;
     display:flex;
     justify-content: center;
@@ -70,7 +71,7 @@
 .titulo-contenido-colegio2{
     //border: 1px solid red;
     font-size:1.3rem;
-    background-color: rgba(105, 41, 102, 1);
+    background-color: rgba(139, 71, 137, 1);
     color:white;
     padding:.5rem;
     border-radius: 3px;
@@ -93,3 +94,50 @@
     width: 70vw;
     text-align: justify;
 }
+.container-descripccion-colegio h4:nth-child(1){
+    font-size:1.8rem;
+    color:  rgba(105, 41, 102, 1);
+    //background-color:red
+}
+.container-descripccion-colegio h2:nth-child(1){
+    font-size:1.5rem;
+    color:  rgba(105, 41, 102, 1);
+
+    //background-color:red
+}
+
+.contenedor_grid_colegio{
+    display:grid;
+    gap:1rem;
+}
+
+.contenedor_grid_colegio_titulo{
+    color: white;
+    background-color:rgba(139, 71, 137, 1);
+    padding:1rem .5rem;
+    border-radius:.2em;
+    text-transform: uppercase;
+}
+
+.contenedor_grid_colegio_descripccion{
+    border-radius:.2em;
+    padding: 1rem;
+    border-left: 1px solid rgba(105, 41, 102, 1);
+    border-right: 1px solid rgba(105, 41, 102, 1);
+    border-bottom: 1px solid rgba(105, 41, 102, 1);
+    padding-bottom:3rem ;
+}
+
+
+/////////////////
+.container-imagen-colegio1{
+    width: 100%;
+    height: 20vh;
+    background-image: none;
+
+}
+.titulo-contenido-colegio11{
+    color: rgb(59, 59, 59);
+
+}
+

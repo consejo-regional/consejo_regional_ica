@@ -4,6 +4,7 @@ import imagen2 from '../../assets/imagenes/eventos/CARDIOLOGIA.png'
 import imagen3 from '../../assets/imagenes/eventos/LA BIOETICA Y EL CASO TUSKEE.png'
 import imagen4 from '../../assets/imagenes/eventos/Group 32.png'
 import imagen5 from '../../assets/imagenes/eventos/EVENTO1.png'
+import imagen6 from '../../assets/imagenes/noticias/OZONOTERAPIA (1).png'
 import {Link} from 'react-router-dom'
 
 
@@ -17,6 +18,11 @@ const informacion=[{
   description:"Reunion Multisectorial – 09 mayo",
   fecha:"2022/05/09",
   tipo:"NOTICIA"
+},{
+  imagen:imagen6,
+  description:"ozonoterapia en medicina",
+  fecha:"2002/05/13; 2002/05/20  ;2002/05/13 ",
+  tipo:"EVENTO"
 },{
   imagen:imagen2,
   description:"Modulo Cardiologia",

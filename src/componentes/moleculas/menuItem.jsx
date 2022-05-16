@@ -43,7 +43,7 @@ const MenuItem = ()=> {
                 <div   onClick={click} className="boton-menu-hamburguesa boton-menu-hamburguesa-cerrar show"></div>
 
                 <li className="item itemMenu">
-                    <Link to="/inicio"  onClick={click}  className="link">INICIO </Link>
+                    <a to="/inicio"  onClick={click}  className="link">INICIO </a>
                    
                 </li>
                 <li className="item">
@@ -67,18 +67,24 @@ const MenuItem = ()=> {
                             <Link to="/nosotros/documentoNormativo" onClick={click} className="link linkSubmenu">DOCUMENTO NORMATIVO</Link>
                         </li>
                         <li className="item">
+                            <Link to="/nosotros/consejosDistritales" onClick={click} className="link linkSubmenu">CONSEJOS DISTRITALES</Link>
+                        </li>
+                        <li className="item">
+                            <Link to="/nosotros/pastDecanos" onClick={click} className="link linkSubmenu">PAST DECANOS</Link>
+                        </li>
+                        {/* <li className="item">
                             <Link to="/nosotros/juntaDirectiva" onClick={click} className="link linkSubmenu">JUNTA DIRECTIVA</Link>
-                            {/* <ul className="menuu submenu">
+                            <ul className="menuu submenu">
                                 <li className="item"><Link to="" className="link">subsubmenu1</Link></li>
                                 <li className="item"><Link to="" className="link">subsubmenu1</Link></li>
                                 <li className="item"><Link to="" className="link">sub submenu1</Link></li>
                                 <li className="item"><Link to="" className="link">subsubmenu1</Link></li>
-                            </ul> */}
+                            </ul>
                         </li>
-                        
-                        <li className="item">
+                         */}
+                        {/* <li className="item">
                             <Link to="/nosotros/sociedadesCientificas" onClick={click} className="link linkSubmenu">SOCIEDADES CIENTIFICAS</Link>
-                        </li>
+                        </li> */}
                         <li className="item">
                             <Link to="/nosotros/comite" onClick={click} className="link linkSubmenu">COMITES      </Link>
                         </li>
@@ -123,7 +129,7 @@ const MenuItem = ()=> {
                     <Link to="/comunicaciones"   className="link">COMUNICACIONES</Link>
                     <ul className="menuu submenu">
                         <li className="item">
-                            <Link to="/comunicaciones" onClick={click} className="link linkSubmenu">OPINION Y PRONUNCIAMIENTO</Link>
+                            <Link to="/comunicaciones/pronunciamiento" onClick={click} className="link linkSubmenu">OPINION Y PRONUNCIAMIENTO</Link>
                         </li>
                         <li className="item">
                             <Link to="/comunicaciones" onClick={click} className="link linkSubmenu">DIFUSIONES                 </Link>

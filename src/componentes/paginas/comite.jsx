@@ -295,6 +295,21 @@ const Comite = ()=> {
       return(
         
         <>
+         <div className="contenedor_colegio">
+            <div className="container-imagen-colegio">
+                <div className="logo-colegio">
+                    <div className="logo-colegio-svg"></div>
+                </div>
+                <div className="titulo-contenido-colegio">
+                    <div className="titulo-contenido-colegio1">DIVERSOS</div>
+                    <div className="titulo-contenido-colegio2">COMITES</div>
+                </div>
+
+            </div>
+
+            <div className="container-descripccion-colegio">
+            </div>
+        </div>
         <div className="datos">
         <h2>{contenido.titulo}</h2>
         <div className="conteiner-datos">

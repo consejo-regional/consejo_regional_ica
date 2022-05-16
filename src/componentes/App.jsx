@@ -22,6 +22,9 @@ import ConstanciaEtica from './paginas/constanciaEtica'
 import ColegioMedico from '../componentes/moleculas/colegioMedico'
 import QuienesSomos from '../componentes/moleculas/quienesSomos';
 import DocumentoNormativo from '../componentes/moleculas/documentoNormativo';
+import ConsejosDistritales from '../componentes/moleculas/consejosDistritales';
+import PastDecanos from '../componentes/moleculas/pastDecanos';
+import Pronunciamiento from '../componentes/moleculas/pronunciamiento';
 
 
 
@@ -32,7 +35,7 @@ import NoEncontrado from './moleculas/noEncontrado'
 
 
 import {
-  BrowserRouter as Router,
+  HashRouter as Router,
   Routes,
   Route,
   //Link
@@ -49,22 +52,13 @@ const App = ()=> {
   const[loader,setLoader]=useState(false)
 
   useEffect(()=>{
-
     setTimeout(()=>{
       setLoader(true)
       console.log("loader")
     },1000)
-   
-   
- 
   },[])
-
-
-
       return(
         <>
-       
-
         {
           !loader ? <Loader></Loader>
           
@@ -74,6 +68,7 @@ const App = ()=> {
            <Menu></Menu>
           <RedesSociales></RedesSociales>
           <MenuItem></MenuItem>
+         
           < Routes>
             <Route path="/inicio" element={ <Home/>}></Route>
 
@@ -82,6 +77,8 @@ const App = ()=> {
             <Route path="/nosotros/colegiomedico" element={ <ColegioMedico/>}></Route>
             <Route path="/nosotros/quienesSomos" element={ <QuienesSomos/>}></Route>
             <Route path="/nosotros/documentoNormativo" element={ <DocumentoNormativo/>}></Route>
+            <Route path="/nosotros/consejosDistritales" element={ <ConsejosDistritales/>}></Route>
+            <Route path="/nosotros/pastDecanos" element={ <PastDecanos/>}></Route>
 
             <Route path="/nosotros/institucion" element={ <Institucion/>}></Route>
             <Route path="/nosotros/juntaDirectiva" element={ <JuntaDirectiva/>}></Route>
@@ -105,6 +102,7 @@ const App = ()=> {
 
             <Route path="/comunicaciones" element={ <Comunicaciones/>}></Route>
             <Route path="/comunicaciones/noticias" element={ <ComunicacionesNoticia/>}></Route>
+            <Route path="/comunicaciones/pronunciamiento" element={ <Pronunciamiento/>}></Route>
             
             <Route path="/eventos" element={ <EventosPage/>}></Route>
             
