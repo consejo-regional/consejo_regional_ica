@@ -22,6 +22,14 @@
 .detalle-noticias-contenido-imagem{
     width:30vw;
     // height: 15rem;
+    @include rwd(tablet){
+        width:55vw;
+    }
+
+    @include rwd(celular){
+        width:70vw;
+       
+    }
 }
 .detalle-cart-contenido{
     width: 50vw;
@@ -31,6 +39,15 @@
     justify-content: center;
     align-items: center;
     gap:.7rem;
+    text-align: justify;
+    @include rwd(tablet){
+        width:50vw;
+    }
+
+    @include rwd(celular){
+        width:70vw;
+       
+    }
 
 }
 .detalle-cart-contenido-titulo{

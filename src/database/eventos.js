@@ -14,7 +14,8 @@ const Eventos=[
         imgenDetalle:imagen6,
         description:"ozonoterapia en medicina",
         contenido:"",
-        fecha:"2002/05/13; 2002/05/20  ;2002/05/13 ",
+        //fecha:"2002/05/13; 2002/05/20  ;2002/05/13 ",
+        fecha:" ",
         tipo:"EVENTO"
       },{
         id:"2",
@@ -22,7 +23,8 @@ const Eventos=[
         imgenDetalle:imagen2,
         description:"Modulo Cardiologia",
         contenido:"",
-        fecha:"2002/05/13; 2002/05/20  ;2002/05/13 ",
+       // fecha:"2022/05/13; 2022/05/20  ;2022/05/13 ",
+        fecha:" ",
         tipo:"EVENTO"
       },{
         id:"3",
@@ -30,7 +32,8 @@ const Eventos=[
         imgenDetalle:imagen3,
         contenido:"",
         description:"Teleconferencia Bioetica y el caso Tuskegee",
-        fecha:"2021/04/29",
+        //fecha:"2021/04/29",
+        fecha:"",
         tipo:"EVENTO"
       },{
         id:"4",
@@ -38,7 +41,8 @@ const Eventos=[
         imgenDetalle:imagen4,
         description:"Seminario Busqueda Eficiencia de Informacion Cientifica en Medicina",
         contenido:"",
-        fecha:"2015/04/22",
+       // fecha:"2015/04/22",
+        fecha:"",
         tipo:"EVENTO"
       }
     
