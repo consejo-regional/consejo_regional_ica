@@ -6,6 +6,8 @@ import Eventos from '../moleculas/eventos'
 import FooterContacto from '../moleculas/footerContacto'
 
 import  Slider from '../moleculas/Slider'
+import EventosPage from './eventosPage'
+import Comunicaciones from './comunicaciones'
 
 
 
@@ -21,7 +23,11 @@ const Home = ()=> {
         <Slider></Slider>
         {/* <BannerHome></BannerHome> */}
         <SericiosGrid></SericiosGrid> 
-        <Eventos></Eventos>
+
+
+        {/* <Eventos></Eventos> */}
+        {/* <EventosPage></EventosPage> */}
+        <Comunicaciones></Comunicaciones>
         <FooterContacto></FooterContacto> 
       
 

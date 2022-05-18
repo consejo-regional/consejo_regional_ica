@@ -41,9 +41,12 @@ import {
   //Link
 } from "react-router-dom";
 import Comunicaciones from './paginas/comunicaciones';
+import ComunicacionesDetalle from '../componentes/moleculas/comunicacionesDetalle';
+import EventoDetalle from '../componentes/moleculas/eventoDetalle';
 import ComunicacionesNoticia from './paginas/comunicacionesNoticia';
 import EventosPage from './paginas/eventosPage';
 import Eventos from './moleculas/eventos';
+import TramitesGrid from './moleculas/tramitesGrid';
 
 
 
@@ -86,7 +89,7 @@ const App = ()=> {
             <Route path="/nosotros/comite" element={ <Comite/>}></Route>
 
 
-            <Route path="/tramites" element={ <></>}></Route>
+            <Route path="/tramites" element={ <TramitesGrid></TramitesGrid>}></Route>
             <Route path="/tramites/constanciahabilidad" element={ <ConstanciaHabilidad/>}></Route>
             <Route path="/tramites/iniciarColegiatura" element={ <ConstanciaHabilidad/>}></Route>
             <Route path="/tramites/rectificacion" element={ <Rectificacion/>}></Route>
@@ -101,10 +104,12 @@ const App = ()=> {
 
 
             <Route path="/comunicaciones" element={ <Comunicaciones/>}></Route>
+            <Route path="/comunicaciones/:id" element={ <ComunicacionesDetalle/>}></Route>
             <Route path="/comunicaciones/noticias" element={ <ComunicacionesNoticia/>}></Route>
             <Route path="/comunicaciones/pronunciamiento" element={ <Pronunciamiento/>}></Route>
             
             <Route path="/eventos" element={ <EventosPage/>}></Route>
+            <Route path="/eventos/:id" element={ <EventoDetalle/>}></Route>
             
             <Route path="/beneficios" element={ <SitioConstruccion/>}></Route>
             <Route path="/centroRecreaciones" element={ <SitioConstruccion/>}></Route>

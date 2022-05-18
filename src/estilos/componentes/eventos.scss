@@ -73,6 +73,8 @@
 .imagen-evento{
    //border: 1px solid red;
     height: 14rem;
+    width: 30rem;
+    object-fit: cover;
     @include rwd(tablet){
         
     }

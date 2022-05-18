@@ -104,7 +104,7 @@ const MenuItem = ()=> {
                         </li>
                        
                         <li className="item">
-                            <a href="https://cipvirtual.cip.org.pe/sicecolegiacionweb/externo/consultaCol/" target="_blank" onClick={click} className="link linkSubmenu">INICIAR COLEGIATURA</a>
+                            <a href="https://200.48.13.39/prematricula/index.php" target="_blank" onClick={click} className="link linkSubmenu">INICIAR COLEGIATURA</a>
                         </li>
                         <li className="item">
                             <a href="https://www.cmp.org.pe/registro-de-especialidad-o-sub-especialidad/"  target="_blank" onClick={click} className="link linkSubmenu">REGISTRO DE ESPECIALIDAD </a>
