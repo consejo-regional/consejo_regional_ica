@@ -9,7 +9,7 @@ const Tramites=[{
   imagen:imagen1,
   nombre:"CONSTANCIA DE HABILIDAD",
   description:"",
-  enlace:"/tramites/constanciahabilidad"
+  enlace:"/#/tramites/constanciahabilidad"
 },{
   imagen:imagen2,
   nombre:"INICIAR COLEGIATURA",

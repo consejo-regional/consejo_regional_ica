@@ -23,7 +23,7 @@ const informacion=Eventos
                   {
   
                     informacion.map(c=>(
-                      <SericiosItem id={c.id} imagen={c.imagen} description={c.description} fecha={c.fecha} tipo={c.tipo} ></SericiosItem>
+                      <SericiosItem id={c.id} imagen={c.imagen} description={c.description} fecha={c.fecha} tipo={c.tipo} estado={c.estado}></SericiosItem>
                     ))
   
                     
@@ -35,7 +35,7 @@ const informacion=Eventos
     }
   
   
-    const SericiosItem = ({ id,imagen,description,fecha,tipo})=> {
+    const SericiosItem = ({ id,imagen,description,fecha,tipo,estado})=> {
   
   
         if(tipo=="EVENTO"){
@@ -48,6 +48,7 @@ const informacion=Eventos
                 <div className="evento-noticia-descripccion colors">{tipo}</div>
                 <div className="evento-noticia-descripccion">{description}</div>
                 <div className="evento-noticia-descripccion">{fecha}</div>
+                <div className="evento-noticia-estado">{estado}</div>
               </div>
             </Link>
             </>   

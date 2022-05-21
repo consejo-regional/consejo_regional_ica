@@ -1,0 +1,15 @@
+
+.chatbot{
+    width: 4rem;
+    height: 4rem;
+    //background-color: red;
+    background-image: url(../../assets/iconos/wsp.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center center;
+    position:fixed;
+    bottom:2rem;
+    right: 2rem;
+    z-index: 100;
+
+}

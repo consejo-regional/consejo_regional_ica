@@ -34,15 +34,16 @@ const informacion=Eventos
           return(
             <>
             <div className="detalle-noticias">
-                <h2>NOTICIAS</h2>
+                <h2>EVENTOS</h2>
                 <div className="detalle-noticias-contenido" >
-                  <img className="detalle-noticias-contenido-imagem" src={imagen} alt={imagen}></img>
-                  <div className="detalle-cart-contenido">
+                <div className="detalle-cart-contenido">
                     <div className="detalle-cart-contenido-titulo">{description}</div>
                     <div className="detalle-cart-contenido-fecha">{fecha}</div>
                     <div className="">{contenido}</div>
                   
                   </div>
+                  <img className="detalle-noticias-contenido-imagem detalle-noticias-contenido-imagem1" src={imagen} alt={imagen}></img>
+                  
                 </div>
             </div>
             

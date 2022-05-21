@@ -47,6 +47,7 @@ import ComunicacionesNoticia from './paginas/comunicacionesNoticia';
 import EventosPage from './paginas/eventosPage';
 import Eventos from './moleculas/eventos';
 import TramitesGrid from './moleculas/tramitesGrid';
+import Watsap from './moleculas/watsap';
 
 
 
@@ -70,6 +71,7 @@ const App = ()=> {
            <Anuncios></Anuncios>
            <Menu></Menu>
           <RedesSociales></RedesSociales>
+          <Watsap></Watsap>
           <MenuItem></MenuItem>
          
           < Routes>

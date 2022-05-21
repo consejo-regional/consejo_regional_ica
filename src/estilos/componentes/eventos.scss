@@ -53,7 +53,7 @@
     // display: block;
     width: 90vw;
     height: .15rem;
-    background-color:#E9E9E9;
+    background-color:#a6a4a4;
     position: absolute;
     margin-top: -1rem;
     // bottom: 0;
@@ -95,7 +95,19 @@
     width: 70%;
     text-align: justify;
     text-decoration: none;
+    //border: 1px solid red;
+    color: rgb(47, 47, 47);
 }
 .colors{
     color: #03C4EB;
+}
+
+.evento-noticia-estado{
+       // border: 1px solid red;
+        background-color:gray;
+        color: white;
+        padding: .5rem;
+        border-radius:.4em;
+        width: 6rem;
+
 }

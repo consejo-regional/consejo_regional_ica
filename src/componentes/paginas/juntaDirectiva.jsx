@@ -7,6 +7,7 @@ import imagen2 from '../../assets/directivos/DSC_7042.png'
 import imagen3 from '../../assets/directivos/DSC_7045.png'
 import imagen4 from '../../assets/directivos/DSC_7048.png'
 import imagen5 from '../../assets/directivos/DSC_7052.png'
+import imagen6 from '../../assets/directivos/DECANO.png'
 // import imagen6 from '../../assets/directivos/DSC_7035.png'
 // import imagen7 from '../../assets/directivos/DSC_7035.png'
 
@@ -41,6 +42,8 @@ const JuntaDirectiva = ()=> {
 
         </div>
         <div className="contenedor_servicios_grid">
+              <SericiosItem imagen={imagen6} nombre="Luis Felipe Muñante Aparcana." description="Decano"></SericiosItem>
+
               <SericiosItem imagen={imagen1} nombre="" description=""></SericiosItem>
               <SericiosItem imagen={imagen2} nombre="" description=""></SericiosItem>
               <SericiosItem imagen={imagen3} nombre="" description=""></SericiosItem>
@@ -51,7 +54,8 @@ const JuntaDirectiva = ()=> {
               
               
 
-              {/* <SericiosItem imagen={imagen1} nombre="Luis Felipe Muñante Aparcana." description="Decano"></SericiosItem>
+              {/* 
+              <SericiosItem imagen={imagen1} nombre="Luis Felipe Muñante Aparcana." description="Decano"></SericiosItem>
               <SericiosItem imagen={imagen2} nombre="Alexander Humberto pecho peche." description="Secretario"></SericiosItem>
               <SericiosItem imagen={imagen3} nombre="Flor Elizabeth aviles Bonifaz" description="Tesoresa"></SericiosItem>
               <SericiosItem imagen={imagen4} nombre="Audiaz Perez Aguirre" description="Vocal"></SericiosItem>
