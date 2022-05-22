@@ -2,7 +2,7 @@ import React from 'react'
 import mapa from '../../assets/imagenes/mapa.png'
 import Mapa from './mapa';
 
-import { GoogleMap, LoadScript } from '@react-google-maps/api';
+import { GoogleMap, LoadScript, Marker  } from '@react-google-maps/api';
 
 
 
@@ -13,11 +13,11 @@ const containerStyle = {
   
   const center = {
     lat: -14.0740718,
-    lng: -75.7325524
+    lng: -75.732524
   };
   
   
-
+const LIBRARIES = ["places"];
 
 const FooterContacto = ()=> {
       return(
@@ -39,6 +39,7 @@ const FooterContacto = ()=> {
 
                 <LoadScript
                         googleMapsApiKey="AIzaSyCV89KUJoSBf7KoQOX8-qXAfHn_KXnlb2w"
+                        libraries={LIBRARIES}
                     >
                         <GoogleMap
                         mapContainerStyle={containerStyle}
@@ -46,7 +47,10 @@ const FooterContacto = ()=> {
                         zoom={17}
                         >
                         { /* Child components, such as markers, info windows, etc. */ }
-                        <></>
+                        <>
+                        <Marker position={center}  />
+                        </>
+                        
                         </GoogleMap>
                 </LoadScript>
                 <img src={mapa} alt="" className="imgFooter"></img>
