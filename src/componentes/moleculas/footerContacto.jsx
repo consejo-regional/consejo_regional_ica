@@ -1,5 +1,6 @@
 import React from 'react'
 import mapa from '../../assets/imagenes/mapa.png'
+import Mapa from './mapa';
 
 
 const FooterContacto = ()=> {
@@ -20,8 +21,13 @@ const FooterContacto = ()=> {
                     <h4>consejo.regional@cmpica.org.pe</h4>
                 </div>
 
-
-                <img src={mapa} alt="" className="imgFooter"></img>
+                <Mapa
+                googleMapURL="https://maps.googleapis.com/maps/api/js?v=3.exp&key=AIzaSyCV89KUJoSBf7KoQOX8-qXAfHn_KXnlb2w"
+                conteinerElement={<div style={{height:'400px'}}/>}
+                mapElement={<div style={{height:'100%'}}/>}
+                loadingElement={<p>hola mundo</p>}
+                />
+                {/* <img src={mapa} alt="" className="imgFooter"></img> */}
 
             </div>
            
