@@ -13,7 +13,7 @@ const containerStyle = {
   
   const center = {
     lat: -14.0740718,
-    lng: -75.732524
+    lng: -75.7325524
   };
   
   
@@ -38,21 +38,20 @@ const FooterContacto = ()=> {
                 </div>
 
                 <LoadScript
-                        googleMapsApiKey="AIzaSyCV89KUJoSBf7KoQOX8-qXAfHn_KXnlb2w"
-                        libraries={LIBRARIES}
+                      googleMapsApiKey="AIzaSyCV89KUJoSBf7KoQOX8-qXAfHn_KXnlb2w"
                     >
-                        <GoogleMap
+                      <GoogleMap
                         mapContainerStyle={containerStyle}
                         center={center}
                         zoom={17}
-                        >
+                      >
                         { /* Child components, such as markers, info windows, etc. */ }
                         <>
-                        <Marker position={center}  />
+                        <Marker position={center} label="colegio medico de ica" />
                         </>
-                        
-                        </GoogleMap>
-                </LoadScript>
+                      </GoogleMap>
+                    </LoadScript>
+
                 <img src={mapa} alt="" className="imgFooter"></img>
 
             </div>
