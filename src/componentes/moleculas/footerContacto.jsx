@@ -2,6 +2,22 @@ import React from 'react'
 import mapa from '../../assets/imagenes/mapa.png'
 import Mapa from './mapa';
 
+import { GoogleMap, LoadScript } from '@react-google-maps/api';
+
+
+
+const containerStyle = {
+    width: '400px',
+    height: '400px'
+  };
+  
+  const center = {
+    lat: -14.0740718,
+    lng: -75.7325524
+  };
+  
+  
+
 
 const FooterContacto = ()=> {
       return(
@@ -21,13 +37,19 @@ const FooterContacto = ()=> {
                     <h4>consejo.regional@cmpica.org.pe</h4>
                 </div>
 
-                <Mapa
-                googleMapURL="https://maps.googleapis.com/maps/api/js?v=3.exp&key=AIzaSyCV89KUJoSBf7KoQOX8-qXAfHn_KXnlb2w"
-                conteinerElement={<div style={{height:'400px'}}/>}
-                mapElement={<div style={{height:'100%'}}/>}
-                loadingElement={<p>hola mundo</p>}
-                />
-                {/* <img src={mapa} alt="" className="imgFooter"></img> */}
+                <LoadScript
+                        googleMapsApiKey="AIzaSyCV89KUJoSBf7KoQOX8-qXAfHn_KXnlb2w"
+                    >
+                        <GoogleMap
+                        mapContainerStyle={containerStyle}
+                        center={center}
+                        zoom={17}
+                        >
+                        { /* Child components, such as markers, info windows, etc. */ }
+                        <></>
+                        </GoogleMap>
+                </LoadScript>
+                <img src={mapa} alt="" className="imgFooter"></img>
 
             </div>
            
