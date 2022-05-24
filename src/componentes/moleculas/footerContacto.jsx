@@ -1,5 +1,4 @@
 import React from 'react'
-import mapa from '../../assets/imagenes/mapa.png'
 import Mapa from './mapa';
 
 import { GoogleMap, LoadScript, Marker  } from '@react-google-maps/api';
@@ -37,22 +36,8 @@ const FooterContacto = ()=> {
                     <h4>consejo.regional@cmpica.org.pe</h4>
                 </div>
 
-                <LoadScript
-                      googleMapsApiKey="AIzaSyCV89KUJoSBf7KoQOX8-qXAfHn_KXnlb2w"
-                    >
-                      <GoogleMap
-                        mapContainerStyle={containerStyle}
-                        center={center}
-                        zoom={17}
-                      >
-                        { /* Child components, such as markers, info windows, etc. */ }
-                        <>
-                        <Marker position={center} label="colegio medico de ica" />
-                        </>
-                      </GoogleMap>
-                    </LoadScript>
-
-                <img src={mapa} alt="" className="imgFooter"></img>
+           
+                <img src={process.env.PUBLIC_URL + `/imagenes/mapa.png`} alt="" className="imgFooter"></img>
 
             </div>
            

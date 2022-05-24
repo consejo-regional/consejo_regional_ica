@@ -2,8 +2,6 @@ import React from 'react'
 import Cart from '../moleculas/cart';
 
 
-import hombre from '../../assets/imagenes/hombre.png'
-import mujer from '../../assets/imagenes/mujer.png'
 
 const comitesArray=[
     {
@@ -11,15 +9,15 @@ const comitesArray=[
         presidente:"DR. AUDIAS JOSUE PEREZ AGUIRRE	",
         miembro1:{
             nombre:"DRA. MARIA DEL CARMEN VARGAS GARCIA",
-            foto:mujer
+            foto:process.env.PUBLIC_URL + `/imagenes/mujer.png`
         },
         miembro2:{
             nombre:"DR. CARLOS HUGO GUERRERO CHACALTANA",
-            foto:hombre
+            foto:process.env.PUBLIC_URL + `/imagenes/hombre.png`
         },
         miembro3:{
             nombre:"DR. ADRIAN RODOLFO PALOMINO HERENCIA",
-            foto:hombre
+            foto:process.env.PUBLIC_URL + `/imagenes/hombre.png`
         },
     },
     {
@@ -27,15 +25,15 @@ const comitesArray=[
         presidente:"DRA. FLOR DE MARÍA MEJÍA ESCATE	",
         miembro1:{
             nombre:"DRA. TERESA DE LOS MILAGROS ANDRADE SOTIL",
-            foto:mujer
+            foto:process.env.PUBLIC_URL + `/imagenes/mujer.png`
         },
         miembro2:{
             nombre:"DR. JONY HUBER HUARIPAUCAR MISAICO",
-            foto:hombre
+            foto:process.env.PUBLIC_URL + `/imagenes/hombre.png`
         },
         miembro3:{
             nombre:"DR. RAÚL SANTA MARIA RÍOS",
-            foto:hombre
+            foto:process.env.PUBLIC_URL + `/imagenes/hombre.png`
         },
     },
     {
@@ -43,15 +41,15 @@ const comitesArray=[
         presidente:"DR. ALEXANDER HUMBERTO PECHO PECHE",
         miembro1:{
             nombre:"DR. ROGGER ANTONIO ABREGU AGUADO",
-            foto:hombre
+            foto:process.env.PUBLIC_URL + `/imagenes/hombre.png`
         },
         miembro2:{
             nombre:"DR. LUIS GIANCARLO SARAVIA HUARCA",
-            foto:hombre
+            foto:process.env.PUBLIC_URL + `/imagenes/hombre.png`
         },
         miembro3:{
             nombre:"DR. MANUEL JOSE JHONG CASTRO",
-            foto:hombre
+            foto:process.env.PUBLIC_URL + `/imagenes/hombre.png`
         },
     },
     {
@@ -59,59 +57,59 @@ const comitesArray=[
         presidente:"DR. LUÍS CARLOS OLIVERA RAMOS ",
         miembro1:{
             nombre:"DR. PATRICIA CAROLINA HUAMAN OROSCO",
-            foto:mujer
+            foto:process.env.PUBLIC_URL + `/imagenes/mujer.png`
         },
         miembro2:{
             nombre:"DR. JAVIER EDUARDO URIBE GODOY ",
-            foto:hombre
+            foto:process.env.PUBLIC_URL + `/imagenes/hombre.png`
         },
         miembro3:{
             nombre:"DR. JESUS ANDREE NEYRA LEÓN",
-            foto:hombre
+            foto:process.env.PUBLIC_URL + `/imagenes/hombre.png`
         },
         miembro4:{
             nombre:"CANDY MILAGROS CORNEJO CHACALTANA",
-            foto:mujer
+            foto:process.env.PUBLIC_URL + `/imagenes/mujer.png`
         },
         miembro5:{
             nombre:"DR. CARLOS ALBERTO DÁVILA HERNANDEZ",
-            foto:hombre
+            foto:process.env.PUBLIC_URL + `/imagenes/hombre.png`
         },
         miembro6:{
             nombre:"DRA. GIANNY DENISSE GALAGARZA GUTIÉRREZ",
-            foto:mujer
+            foto:process.env.PUBLIC_URL + `/imagenes/mujer.png`
         },
         miembro7:{
             nombre:"DR. JAVIER ALFREDO GRADOS TELLO",
-            foto:hombre
+            foto:process.env.PUBLIC_URL + `/imagenes/hombre.png`
         },
         miembro8:{
             nombre:"DR. LUIS GIANCARLO SARAVIA HUARCA",
-            foto:hombre
+            foto:process.env.PUBLIC_URL + `/imagenes/hombre.png`
         },
         miembro9:{
             nombre:"DR. JOHN ALBERTO PALOMINO MONTEROLA ",
-            foto:hombre
+            foto:process.env.PUBLIC_URL + `/imagenes/hombre.png`
         },
         miembro10:{
             nombre:"DR. JUAN CARLOS DÍAZ MONGE",
-            foto:hombre
+            foto:process.env.PUBLIC_URL + `/imagenes/hombre.png`
         },
         miembro11:{
             nombre:"DR. CARLOS ANDRÉS CARRASCO FARFAN ",
-            foto:hombre
+            foto:process.env.PUBLIC_URL + `/imagenes/hombre.png`
         },
         miembro12:{
             nombre:"ATOCHE MENDOZA JOSE ALEXANDER",
-            foto:hombre
+            foto:process.env.PUBLIC_URL + `/imagenes/hombre.png`
         },
         miembro13:{
             nombre:"VIVANCO RAMOS LUIS GUILLERMO VLADIMIR",
-            foto:hombre
+            foto:process.env.PUBLIC_URL + `/imagenes/hombre.png`
         },
         miembro14:{
             nombre:"YAURI GARAVITO DIANA",
-            foto:hombre
+            foto:process.env.PUBLIC_URL + `/imagenes/hombre.png`
         }
     },
     {
@@ -119,15 +117,15 @@ const comitesArray=[
         presidente:"DR. ALEX ALBERTO GUIBOVICH MESINAS	",
         miembro1:{
             nombre:"DRA. FRANCESCA ALICE DUARTE PORTUGAL	",
-            foto:mujer
+            foto:process.env.PUBLIC_URL + `/imagenes/mujer.png`
         },
         miembro2:{
             nombre:"DR. ALAN MARCO CHAVESTA CUSTODIO",
-            foto:hombre
+            foto:process.env.PUBLIC_URL + `/imagenes/hombre.png`
         },
         miembro3:{
             nombre:"DR. MARCO ANTONIO GUERRERO ANGULO",
-            foto:hombre
+            foto:process.env.PUBLIC_URL + `/imagenes/hombre.png`
         },
     }
     ,
@@ -136,23 +134,23 @@ const comitesArray=[
         presidente:"DR. ALEXANDER HUMBERTO PECHO PECHE	",
         miembro1:{
             nombre:"DRA. JULIANA MARIA APARCANA MACHADO	",
-            foto:mujer
+            foto:process.env.PUBLIC_URL + `/imagenes/mujer.png`
         },
         miembro2:{
             nombre:"DR. ROGGER ANTONIO ABREGU AGUADO",
-            foto:hombre
+            foto:process.env.PUBLIC_URL + `/imagenes/hombre.png`
         },
         miembro3:{
             nombre:"DR. LUIS GIANCARLO SARAVIA HUARCA",
-            foto:hombre
+            foto:process.env.PUBLIC_URL + `/imagenes/hombre.png`
         },
         miembro4:{
             nombre:"DR. MANUEL JOSE JHONG CASTROA",
-            foto:hombre
+            foto:process.env.PUBLIC_URL + `/imagenes/hombre.png`
         },
         miembro5:{
             nombre:"DR. FRANCO EDGARD MIO PALACIOS",
-            foto:hombre
+            foto:process.env.PUBLIC_URL + `/imagenes/hombre.png`
         },
     }
     ,
@@ -161,19 +159,19 @@ const comitesArray=[
         presidente:"DRA. JUANA MARÍA VEGA CARLOS	",
         miembro1:{
             nombre:"DRA. ZOILA AURORA LENGUA KUAN	",
-            foto:mujer
+            foto:process.env.PUBLIC_URL + `/imagenes/mujer.png`
         },
         miembro2:{
             nombre:"DRA. PETRONILA AURORA CASTRO ROJO",
-            foto:mujer
+            foto:process.env.PUBLIC_URL + `/imagenes/mujer.png`
         },
         miembro3:{
             nombre:"DRA. NIEVES ETHEL MORALES MEZA ",
-            foto:mujer
+            foto:process.env.PUBLIC_URL + `/imagenes/mujer.png`
         },
         miembro4:{
             nombre:"DR. PEDRO CESAR ARANZABAL NAVARRETE",
-            foto:hombre
+            foto:process.env.PUBLIC_URL + `/imagenes/hombre.png`
         }
     }
     ,
@@ -182,51 +180,51 @@ const comitesArray=[
         presidente:"DR. FELIX ENRIQUE MARTINEZ PAUCAR ",
         miembro1:{
             nombre:"DR. CRISTHIAN RAUL PALACIOS NEYRA",
-            foto:mujer
+            foto:process.env.PUBLIC_URL + `/imagenes/mujer.png`
         },
         miembro2:{
             nombre:"DRA. SONIA CHOQUE GUTIERREZ",
-            foto:mujer
+            foto:process.env.PUBLIC_URL + `/imagenes/mujer.png`
         },
         miembro3:{
             nombre:"DRA. JULIANA MARIA APARCANA MACHADO ",
-            foto:mujer
+            foto:process.env.PUBLIC_URL + `/imagenes/mujer.png`
         },
         miembro4:{
             nombre:"DR. JESUS ROBERTO CASTILLO HUASASQUICHE ",
-            foto:hombre
+            foto:process.env.PUBLIC_URL + `/imagenes/hombre.png`
         },
         miembro5:{
             nombre:"DR. ANDRES GUIDO BENDEZU MARTINEZ",
-            foto:hombre
+            foto:process.env.PUBLIC_URL + `/imagenes/hombre.png`
         },
         miembro6:{
             nombre:"DR. PEDRO PABLO ZEVALLOS TORRES",
-            foto:hombre
+            foto:process.env.PUBLIC_URL + `/imagenes/hombre.png`
         },
         miembro7:{
             nombre:"DR. VICTOR PERCY DE LA CRUZ TORREALVA",
-            foto:hombre
+            foto:process.env.PUBLIC_URL + `/imagenes/hombre.png`
         },
         miembro8:{
             nombre:"DR. SANDRO JAVIER MUÑOZ BENDEZU ",
-            foto:hombre
+            foto:process.env.PUBLIC_URL + `/imagenes/hombre.png`
         },
         miembro9:{
             nombre:"DR. FRANCO FAJARDO HAROLD CHRISTIAN ",
-            foto:hombre
+            foto:process.env.PUBLIC_URL + `/imagenes/hombre.png`
         },
         miembro10:{
             nombre:"DR. MIJAIL VLADIMIR LLONA GARCIA",
-            foto:hombre
+            foto:process.env.PUBLIC_URL + `/imagenes/hombre.png`
         },
         miembro11:{
             nombre:"DRA. EDITH PAREJA MALDONADO ",
-            foto:mujer
+            foto:process.env.PUBLIC_URL + `/imagenes/mujer.png`
         },
         miembro12:{
             nombre:"DRA. CECILIA PARDO ALEJO",
-            foto:mujer
+            foto:process.env.PUBLIC_URL + `/imagenes/mujer.png`
         }
     } ,
     {
@@ -234,35 +232,35 @@ const comitesArray=[
         presidente:"DR. LUIS FELIPE MUÑANTE APARCANA",
         miembro1:{
             nombre:"DR. RICARDO MIGUEL CABRERA CASTILLO",
-            foto:mujer
+            foto:process.env.PUBLIC_URL + `/imagenes/mujer.png`
         },
         miembro2:{
             nombre:"DR. JOSE DANIEL HERNÁNDEZ ZÚÑIGA",
-            foto:mujer
+            foto:process.env.PUBLIC_URL + `/imagenes/mujer.png`
         },
         miembro3:{
             nombre:"DR. ROLANDO MANUEL ANICAMA ZAPATA ",
-            foto:mujer
+            foto:process.env.PUBLIC_URL + `/imagenes/mujer.png`
         },
         miembro4:{
             nombre:"DRA. LITA SILVIA DEL RIO MUÑIZ",
-            foto:hombre
+            foto:process.env.PUBLIC_URL + `/imagenes/hombre.png`
         },
         miembro5:{
             nombre:"DR. RÓMULO DANIEL CAHUA VALDIVIESO",
-            foto:hombre
+            foto:process.env.PUBLIC_URL + `/imagenes/hombre.png`
         },
         miembro6:{
             nombre:"DR. JUAN ALBERTO BORJAS LENGUA",
-            foto:hombre
+            foto:process.env.PUBLIC_URL + `/imagenes/hombre.png`
         },
         miembro7:{
             nombre:"DR. MARCOS RUPERTO CABRERA PIMENTEL",
-            foto:hombre
+            foto:process.env.PUBLIC_URL + `/imagenes/hombre.png`
         },
         miembro8:{
             nombre:"DR. JORGE ENRRIQUE TORRES MELGAR",
-            foto:hombre
+            foto:process.env.PUBLIC_URL + `/imagenes/hombre.png`
         }
     },
     {
@@ -270,15 +268,15 @@ const comitesArray=[
         presidente:"DRA. FLOR ELIZABETH AVILES BONIFAZ",
         miembro1:{
             nombre:"DRA. YEIMING MARTINELLY ROJAS VENTURA ",
-            foto:hombre
+            foto:process.env.PUBLIC_URL + `/imagenes/hombre.png`
         },
         miembro2:{
             nombre:"DR. WALTER MILTON FUENTES TANG",
-            foto:hombre
+            foto:process.env.PUBLIC_URL + `/imagenes/hombre.png`
         },
         miembro3:{
             nombre:"DR. JESÚS GABRIEL TOVAR HINOSTROZA",
-            foto:hombre
+            foto:process.env.PUBLIC_URL + `/imagenes/hombre.png`
         },
     }
 ]
@@ -351,7 +349,7 @@ const Comite = ()=> {
                     <br />
                     <br />
                     <div className="contenedor_servicios_grid">
-                        <SericiosItem imagen={hombre} nombre={c.presidente} description="PRESIDENTE"></SericiosItem>
+                        <SericiosItem imagen={process.env.PUBLIC_URL + `/imagenes/hombre.png`} nombre={c.presidente} description="PRESIDENTE"></SericiosItem>
 
                        {c.miembro1? 
                         <SericiosItem imagen={c.miembro1.foto} nombre={c.miembro1.nombre} description="MIEMBRO"></SericiosItem>

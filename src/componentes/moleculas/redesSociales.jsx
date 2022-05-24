@@ -1,8 +1,6 @@
 import React from 'react'
 import Face from '../../assets/iconos/face'
-import Sms from '../../assets/iconos/sms'
 import Twitter from '../../assets/iconos/twitter'
-import Watsup from '../../assets/iconos/watsup'
 import YouTube from '../../assets/iconos/youtube'
 
 

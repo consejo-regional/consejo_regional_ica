@@ -28,7 +28,7 @@
 /* estilos del svg con animacion */
 
 .loader_svg {
-    background-image: url(../assets/imagenes/loderImagen.gif);
+    background-image: url(../../public/imagenes/loderImagen.gif);
     background-repeat: no-repeat;
     height: 15rem;
     width: 20rem;
@@ -46,7 +46,7 @@
     font-style: normal;
     font-weight: 200;
     font-display: swap;
-    src: local('Raleway') ,local('Raleway'), url('../assets/fuentes/static/Raleway-Medium.ttf');
+    src: local('Raleway') ,local('Raleway'), url('../../public/fuentes/static/Raleway-Medium.ttf');
 }
 
 *{

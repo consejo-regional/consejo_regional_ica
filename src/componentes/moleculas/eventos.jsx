@@ -1,34 +1,25 @@
 import React , {useEffect} from 'react'
-import imagen1 from '../../assets/imagenes/eventos/IMAGE-1.png'
-import imagen2 from '../../assets/imagenes/eventos/CARDIOLOGIA.png'
-import imagen3 from '../../assets/imagenes/eventos/LA BIOETICA Y EL CASO TUSKEE.png'
-import imagen4 from '../../assets/imagenes/eventos/Group 32.png'
-import imagen5 from '../../assets/imagenes/eventos/EVENTO1.png'
+
 import {Link} from 'react-router-dom'
 
 
-
-
-
-
-
 const informacion=[{
-  imagen:imagen5,
+  imagen: process.env.PUBLIC_URL + `/imagenes/eventos/EVENTO1.png`,
   description:"Reunion Multisectorial – 09 mayo",
   fecha:"2022/05/09",
   tipo:"NOTICIA"
 },{
-  imagen:imagen2,
+  imagen: process.env.PUBLIC_URL + `/imagenes/eventos/CARDIOLOGIA.png`,
   description:"Modulo Cardiologia",
   fecha:"2002/05/13; 2002/05/20  ;2002/05/13 ",
   tipo:"EVENTO"
 },{
-  imagen:imagen3,
+  imagen:process.env.PUBLIC_URL + `/imagenes/eventos/LA BIOETICA Y EL CASO TUSKEE.png`,
   description:"Teleconferencia Bioetica y el caso Tuskegee",
   fecha:"2021/04/29",
   tipo:"EVENTO"
 },{
-  imagen:imagen4,
+  imagen:process.env.PUBLIC_URL + `/imagenes/eventos/Group 32.png`,
   description:"Seminario Busqueda Eficiencia de Informacion Cientifica en Medicina",
   fecha:"2015/04/22",
   tipo:"EVENTO"

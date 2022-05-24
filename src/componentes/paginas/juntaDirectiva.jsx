@@ -2,22 +2,6 @@ import React from 'react'
 import Cart from '../moleculas/cart';
 
 
-import imagen1 from '../../assets/directivos/DSC_7035.png'
-import imagen2 from '../../assets/directivos/DSC_7042.png'
-import imagen3 from '../../assets/directivos/DSC_7045.png'
-import imagen4 from '../../assets/directivos/DSC_7048.png'
-import imagen5 from '../../assets/directivos/DSC_7052.png'
-import imagen6 from '../../assets/directivos/DECANO.png'
-// import imagen6 from '../../assets/directivos/DSC_7035.png'
-// import imagen7 from '../../assets/directivos/DSC_7035.png'
-
-import hombre from '../../assets/imagenes/hombre.png'
-import mujer from '../../assets/imagenes/mujer.png'
-
-
-
-
-
 
 
 
@@ -42,15 +26,15 @@ const JuntaDirectiva = ()=> {
 
         </div>
         <div className="contenedor_servicios_grid">
-              <SericiosItem imagen={imagen6} nombre="Luis Felipe Muñante Aparcana." description="Decano"></SericiosItem>
+              <SericiosItem imagen={process.env.PUBLIC_URL + `/directivos/DECANO.png`} nombre="Luis Felipe Muñante Aparcana." description="Decano"></SericiosItem>
 
-              <SericiosItem imagen={imagen1} nombre="" description=""></SericiosItem>
-              <SericiosItem imagen={imagen2} nombre="" description=""></SericiosItem>
-              <SericiosItem imagen={imagen3} nombre="" description=""></SericiosItem>
-              <SericiosItem imagen={imagen4} nombre="" description=""></SericiosItem>
-              <SericiosItem imagen={mujer} nombre="" description=""></SericiosItem>
-              <SericiosItem imagen={hombre} nombre="" description=""></SericiosItem>
-              <SericiosItem imagen={hombre} nombre="" description=""></SericiosItem>
+              <SericiosItem imagen={process.env.PUBLIC_URL + `/directivos/DSC_7035.png`} nombre="" description=""></SericiosItem>
+              <SericiosItem imagen={process.env.PUBLIC_URL + `/directivos/DSC_7042.png`} nombre="" description=""></SericiosItem>
+              <SericiosItem imagen={process.env.PUBLIC_URL + `/directivos/DSC_7045.png`} nombre="" description=""></SericiosItem>
+              <SericiosItem imagen={process.env.PUBLIC_URL + `/directivos/DSC_7048.png`} nombre="" description=""></SericiosItem>
+              <SericiosItem imagen={process.env.PUBLIC_URL + `/imagenes/mujer.png`} nombre="" description=""></SericiosItem>
+              <SericiosItem imagen={process.env.PUBLIC_URL + `/imagenes/hombre.png`} nombre="" description=""></SericiosItem>
+              <SericiosItem imagen={process.env.PUBLIC_URL + `/imagenes/hombre.png`} nombre="" description=""></SericiosItem>
               
               
 

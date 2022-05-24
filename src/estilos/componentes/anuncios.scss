@@ -18,7 +18,7 @@
     height: 90vh;
     background-color: white;
     position: relative;
-    background-image: url(../../assets/imagenes/Pronunciamiento.jpg);
+    background-image: url(../../../public/imagenes/Pronunciamiento.jpg);
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center center;
@@ -46,7 +46,7 @@
         top: 0;
         right: 0;
         transform: translate(50%,-50%);
-        background-image: url(../../assets/iconos/cerrar.png);
+        background-image: url(../../../public/iconos/cerrar.png);
         border: .7rem solid white;
         background-size: contain;
 

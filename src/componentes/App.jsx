@@ -71,7 +71,7 @@ const App = ()=> {
            <Anuncios></Anuncios>
            <Menu></Menu>
           <RedesSociales></RedesSociales>
-          {/* <Watsap></Watsap> */}
+          <Watsap></Watsap>
           <MenuItem></MenuItem>
          
           < Routes>
