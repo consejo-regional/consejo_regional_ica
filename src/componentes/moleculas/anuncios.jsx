@@ -18,7 +18,7 @@ const Anuncios = ()=> {
         <>
         <div className="contenedor_anuncios" ref={botonEsconder}>
             <div className='anuncios_banner'>
-                <div className="anuncios_banner_boton"  onClick={clickAnuncio}  re></div>
+                <div className="anuncios_banner_boton"  onClick={clickAnuncio}  ></div>
             </div>
         </div>
         </>   

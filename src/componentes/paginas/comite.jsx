@@ -333,7 +333,6 @@ const Comite = ()=> {
             <h4 className="contenido_cart_descripccion">72.8. Absolver las consultas sobre asuntos de ética y deontología profesional que en vía de apelación, sean puestas en su conocimiento por el Consejo Nacional o los Consejos Regionales soliciten en su caso, vía su propio Comité de Vigilancia Ética y Deontológica.</h4> 
             <h4 className="contenido_cart_descripccion">72.9. Coordinar con los Consejos Regionales la difusión y conocimiento del Código de Ética, así como de los principios bioéticos y deontológicos.</h4> 
             <h4 className="contenido_cart_descripccion">72.10. Cumplir con los encargos del Comité Ejecutivo y del Consejo Nacional.</h4> 
-            <h4 className="contenido_cart_descripccion"></h4> 
             
             <div className="contenido-izquierda">
                 <Cart></Cart>

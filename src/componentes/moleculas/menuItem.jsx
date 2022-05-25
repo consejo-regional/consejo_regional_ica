@@ -92,7 +92,7 @@ const MenuItem = ()=> {
 
 
                         <li className="item">
-                            <a href={process.env.PUBLIC_URL+"documentos/POLITICA-DE-CALIDAD-Y-CERTIFICADO.pdf"} target="_blank" onClick={click}  rel="noopener noreferrer" className="link linkSubmenu">POLITICA DE CALIDAD</a>
+                            <a  href={process.env.PUBLIC_URL+"documentos/POLITICA-DE-CALIDAD-Y-CERTIFICADO.pdf"} target="_blank" onClick={click}  rel="noopener noreferrer" className="link linkSubmenu">POLITICA DE CALIDAD</a>
                         </li>
                     </ul>
                 </li>
@@ -104,20 +104,20 @@ const MenuItem = ()=> {
                         </li>
                        
                         <li className="item">
-                            <a href="https://200.48.13.39/prematricula/index.php" target="_blank" onClick={click} className="link linkSubmenu">INICIAR COLEGIATURA</a>
+                            <a rel="noreferrer" href="https://200.48.13.39/prematricula/index.php" target="_blank" onClick={click} className="link linkSubmenu">INICIAR COLEGIATURA</a>
                         </li>
                         <li className="item">
-                            <a href="https://www.cmp.org.pe/registro-de-especialidad-o-sub-especialidad/"  target="_blank" onClick={click} className="link linkSubmenu">REGISTRO DE ESPECIALIDAD </a>
+                            <a  rel="noreferrer" href="https://www.cmp.org.pe/registro-de-especialidad-o-sub-especialidad/"  target="_blank" onClick={click} className="link linkSubmenu">REGISTRO DE ESPECIALIDAD </a>
                         </li>
                         <li className="item">
-                            <a href="https://www.cmp.org.pe/proceso-para-tramite-de-carne-de-colegiado/" target="_blank" onClick={click} className="link linkSubmenu">CARNET   DE COLEGIADO</a>
+                            <a rel="noreferrer" href="https://www.cmp.org.pe/proceso-para-tramite-de-carne-de-colegiado/" target="_blank" onClick={click} className="link linkSubmenu">CARNET   DE COLEGIADO</a>
                         </li>
                         {/* <li className="item">
                             <Link to="/tramites/rectificacion" onClick={click} className="link linkSubmenu">RECERTIFICACION</Link>
                         </li> */}
                         
                         <li className="item">
-                            <a href="https://www.zona.cmp.org.pe/index.php/ayuda/101-actualizacion-de-datos" target="_blank" onClick={click} className="link linkSubmenu">ACTUALIZACION DE DATOS</a>
+                            <a rel="noreferrer" href="https://www.zona.cmp.org.pe/index.php/ayuda/101-actualizacion-de-datos" target="_blank" onClick={click} className="link linkSubmenu">ACTUALIZACION DE DATOS</a>
                         </li>
                         {/* <li className="item">
                             <Link to="/tramites/constanciaEtica"  onClick={click} className="link linkSubmenu">CONSTANCIA DE ETICA</Link>
@@ -129,19 +129,19 @@ const MenuItem = ()=> {
                     <ul className="menuu submenu">
                         
                         <li className="item">
-                            <a href="https://www.cmp.org.pe/sistcere-2/"  target="_blank" onClick={click} className="link linkSubmenu">SISTCERE</a>
+                            <a rel="noreferrer" href="https://www.cmp.org.pe/sistcere-2/"  target="_blank" onClick={click} className="link linkSubmenu">SISTCERE</a>
                         </li>
                         <li className="item">
-                            <a href="https://www.cmp.org.pe/semefa/"  target="_blank" onClick={click} className="link linkSubmenu">SEMEFA</a>
+                            <a rel="noreferrer" href="https://www.cmp.org.pe/semefa/"  target="_blank" onClick={click} className="link linkSubmenu">SEMEFA</a>
                         </li>
                         <li className="item">
-                            <a href="https://www.cmp.org.pe/defensoria-del-medico/"  target="_blank" onClick={click} className="link linkSubmenu">FOSEMED</a>
+                            <a rel="noreferrer" href="https://www.cmp.org.pe/defensoria-del-medico/"  target="_blank" onClick={click} className="link linkSubmenu">FOSEMED</a>
                         </li>
                         <li className="item">
-                            <a href="https://www.cmp.org.pe/fosemed/"  target="_blank" onClick={click} className="link linkSubmenu">DEFENSORIA AL MEDICO</a>
+                            <a rel="noreferrer" href="https://www.cmp.org.pe/fosemed/"  target="_blank" onClick={click} className="link linkSubmenu">DEFENSORIA AL MEDICO</a>
                         </li>
                         <li className="item">
-                            <a href="https://www.cmp.org.pe/conoce-a-tu-medico/"  target="_blank" onClick={click} className="link linkSubmenu">CONOCE A TU MEDICO</a>
+                            <a rel="noreferrer" href="https://www.cmp.org.pe/conoce-a-tu-medico/"  target="_blank" onClick={click} className="link linkSubmenu">CONOCE A TU MEDICO</a>
                         </li>
                         
                     </ul>
@@ -188,6 +188,9 @@ const MenuItem = ()=> {
                 </li> */}
                 <li className="item">
                     <Link to="/nosotros/comite"  onClick={click}  className="link">COMITES</Link>
+                </li>
+                <li className="item">
+                    <Link to="/biblioteca"  onClick={click}  className="link">BIBLIOTECA</Link>
                 </li>
             </ul>
         </nav>

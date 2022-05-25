@@ -4,12 +4,21 @@
 .nav{
 
 
+
 }
 .header{
    
     //border: 2px solid blue;
    // z-index: 1000;
-    position:static
+    // position:static
+    background:rgb(255, 255, 255);
+
+    position:sticky;
+    top: 0;
+    z-index: 100;
+    padding: .5rem 0 .5rem 0;
+    //border: 2px solid blue;
+   // box-shadow:  0px 50px 80px rgba(17, 14, 14, 0.185), 0px 69.2711px 50.7988px rgba(0, 0, 0, 0.055102), 0px 45.1895px 30.5539px rgba(0, 0, 0, 0.045102), 0px 27.0554px 17.4461px rgba(0, 0, 0, 0.0380408), 0px 14.1691px 9.65598px rgba(0, 0, 0, 0.0319592), 0px 5.8309px 5.36443px rgba(0, 0, 0, 0.024898), 0px 1.34111px 2.75219px rgba(0, 0, 0, 0.014898);
 
 }
 .menuu{
@@ -108,6 +117,8 @@
         .header{
             // display: flex;
            // z-index: 1000;
+           padding: .1rem 0 .1rem 0;
+
 
         }
         .menuu{
@@ -154,6 +165,7 @@
           height: 100vh;
           width: 60vw;
           z-index: 1000;
+         // border: 1px solid red;
 
 
           background-color: rgb(255, 255, 255);

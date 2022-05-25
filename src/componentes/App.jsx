@@ -48,6 +48,7 @@ import EventosPage from './paginas/eventosPage';
 import Eventos from './moleculas/eventos';
 import TramitesGrid from './moleculas/tramitesGrid';
 import Watsap from './moleculas/watsap';
+import Biblioteca from './paginas/biblioteca';
 
 
 
@@ -115,6 +116,11 @@ const App = ()=> {
             
             <Route path="/beneficios" element={ <SitioConstruccion/>}></Route>
             <Route path="/centroRecreaciones" element={ <SitioConstruccion/>}></Route>
+
+            <Route path="/biblioteca" element={ <Biblioteca></Biblioteca>}></Route>
+
+
+
             <Route path="/" element={<Home/>}></Route>
             <Route path="*"  element={
                 <NoEncontrado/>

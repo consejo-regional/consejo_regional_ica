@@ -8,17 +8,33 @@
     justify-content:center;
     align-items: center;
     gap:1.5rem;
+    //border: 1px solid red;
+ 
+    @include rwd(tablet){
+     
+
+  
+    }
+
+    @include rwd(celular){
+
+        height:15rem;
+    }
 
 }
 .imagen_footer{
     height:4rem;
     width: 4rem;
     margin:1rem;
+    //border: 1px solid red;
+
 }
 .imagen_footer1{
     height:4rem;
     width: 5rem;
     margin:1rem;
+    //border: 1px solid rgb(41, 6, 6);
+
 }
 .contenedor_imagen_footer{
     display:flex;

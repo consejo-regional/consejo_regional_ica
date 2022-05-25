@@ -1,0 +1,52 @@
+.libros-biblioteca{
+   // border: 1px solid red;
+    width: 20rem;
+    height: 18rem;
+    object-fit:cover;
+    margin-bottom: .4rem;
+}
+
+.contenedor_biblioteca_grid{
+    //border: 1px solid rebeccapurple;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    place-items: center;
+    gap:2rem;
+    @include rwd(tablet){
+     
+
+  
+    }
+
+    @include rwd(celular){
+        grid-template-columns: repeat(1,1fr);
+
+    
+    }
+}
+
+.libros_cart{
+    // height:15rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow:  0px 50px 80px rgba(17, 14, 14, 0.185), 0px 69.2711px 50.7988px rgba(0, 0, 0, 0.055102), 0px 45.1895px 30.5539px rgba(0, 0, 0, 0.045102), 0px 27.0554px 17.4461px rgba(0, 0, 0, 0.0380408), 0px 14.1691px 9.65598px rgba(0, 0, 0, 0.0319592), 0px 5.8309px 5.36443px rgba(0, 0, 0, 0.024898), 0px 1.34111px 2.75219px rgba(0, 0, 0, 0.014898);
+}
+
+.botonDescarga{
+    background-color: rgb(107, 107, 107);
+    padding: .5rem; 
+    text-align: center;
+    border-radius:.3rem;
+    color:white;
+    margin-bottom:1rem;
+    margin-top:1rem;
+
+}
+.titulos-libro{
+    padding: 1.5rem;
+}
+.autor-libro{
+    margin-top:1rem;
+}

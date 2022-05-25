@@ -55,6 +55,11 @@
     padding: 0;
     font-family: 'Raleway';
 }
+a{
+    text-decoration: none;
+    color: #333333;
+
+}
 h1,h2 , h3, h4, h5, h6{
         font-weight: normal;
         color: #333333;
@@ -106,6 +111,7 @@ $puntosQuiebre:(
 @import "./componentes/juntaDirectiva.scss";
 @import "./componentes/comunicacionesDetalle.scss";
 @import "./componentes/chatbot.scss";
+@import "./componentes/biblioteca.scss";
 
 
 
