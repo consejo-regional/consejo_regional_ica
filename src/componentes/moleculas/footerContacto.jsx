@@ -1,10 +1,10 @@
 import React from 'react'
-import Mapa from './mapa';
+//import Mapa from './mapa';
 
-import { GoogleMap, LoadScript, Marker  } from '@react-google-maps/api';
+//import { GoogleMap, LoadScript, Marker  } from '@react-google-maps/api';
 
 
-
+/*
 const containerStyle = {
     width: '400px',
     height: '400px'
@@ -14,9 +14,10 @@ const containerStyle = {
     lat: -14.0740718,
     lng: -75.7325524
   };
+  */
   
   
-const LIBRARIES = ["places"];
+//const LIBRARIES = ["places"];
 
 const FooterContacto = ()=> {
       return(

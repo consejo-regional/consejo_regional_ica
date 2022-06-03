@@ -1,6 +1,34 @@
 import React from 'react'
 
 
+
+const biblioteca=[
+  {
+    titulo:'titulo',
+    fecha:'20-252-35',
+    autor:'autor',
+    recurso:'recurso',
+    enlace:'enlace'
+  },
+  {
+    titulo:'titulo',
+    fecha:'20-252-35',
+    autor:'autor',
+    recurso:'recurso',
+    enlace:'enlace'
+  },
+  {
+    titulo:'titulo',
+    fecha:'20-252-35',
+    autor:'autor',
+    recurso:'recurso',
+    enlace:'enlace'
+  }
+]
+
+
+
+
 const Biblioteca = ()=> {
 
     
@@ -14,10 +42,14 @@ const Biblioteca = ()=> {
         </div>
       
         <div className="contenedor_biblioteca_grid">
-            <Libro></Libro>
-            <Libro></Libro>
-            <Libro></Libro>
-            <Libro></Libro>
+
+        {
+
+        biblioteca.map(c=>(
+          <Libro titulo={c.titulo} fecha={c.fecha} autor={c.autor} recurso={c.recurso} enlace={c.enlace}></Libro>
+
+        ))
+        }      
 
         </div>
          
@@ -26,17 +58,18 @@ const Biblioteca = ()=> {
 
      }
 
-     const Libro = ()=> {
+     const Libro = ({titulo,fecha,autor,recurso,enlace}) => {
   
           return(
             <>
             <div className="libros_cart">
-            <h3 className="titulos-libro">TITULO:</h3>
+            <h3 className="titulos-libro">{titulo}</h3>
             <img alt="" src={process.env.PUBLIC_URL + `/libros/libro.png`} className="libros-biblioteca"></img>
             
-            <h5 className="autor-libro">AUTOR:</h5>
-            <h5>FECHA:</h5>
-            <div className="botonDescarga">DESCARGA</div>
+            <h5 className="autor-libro">{autor}</h5>
+            <h5 className="autor-libro">{recurso}</h5>
+            <h5>{fecha}</h5>
+            <div className="botonDescarga">{enlace}</div>
 
             </div>
 
