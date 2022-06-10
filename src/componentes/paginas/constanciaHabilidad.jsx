@@ -1,5 +1,5 @@
 import React from 'react'
-import Cart from '../moleculas/cart';
+//import Cart from '../moleculas/cart';
 
 
 const ConstanciaHabilidad = ()=> {
@@ -31,7 +31,7 @@ Previa carta de presentación de la misma institución privada
 
             <h4 className="contenido_cart_descripccion"></h4> 
             <div className="contenido-izquierda">
-                <Cart></Cart>
+              
             </div>
 
         </div>

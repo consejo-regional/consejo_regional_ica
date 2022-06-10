@@ -1,5 +1,5 @@
 import React from 'react'
-import Cart from '../moleculas/cart';
+//import Cart from '../moleculas/cart';
 
 
 const Biemvenida = ()=> {
@@ -16,7 +16,7 @@ const Biemvenida = ()=> {
         <div className="conteiner-datos">
             <h4 className="contenido_cart_descripccion">{contenido.descripccion}</h4> 
             <div className="contenido-izquierda">
-                <Cart></Cart>
+              
             </div>
 
         </div>

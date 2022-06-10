@@ -1,5 +1,5 @@
 import React from 'react'
-import Cart from '../moleculas/cart';
+//import Cart from '../moleculas/cart';
 
 
 const Rectificacion = ()=> {
@@ -37,7 +37,7 @@ Nota: El expediente será escaneado y archivado en formato digital. Los document
 
             <h4 className="contenido_cart_descripccion"></h4> 
             <div className="contenido-izquierda">
-                <Cart></Cart>
+
             </div>
 
         </div>

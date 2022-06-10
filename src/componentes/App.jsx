@@ -1,12 +1,12 @@
 import React, {useState,useEffect} from 'react'
 import Home from './paginas/home'
-import SericiosGrid from './moleculas/serviciosGrid';
+import SericiosGrid from './paginas/serviciosGrid';
 
 import "../estilos/styles.scss"
 
-import RedesSociales from '../componentes/moleculas/redesSociales'
-import MenuItem from '../componentes/moleculas/menuItem'
-import Menu from '../componentes/moleculas/menu'
+import RedesSociales from '../componentes/moleculas/menu/redesSociales'
+import MenuItem from '../componentes/moleculas/menu/menuItem'
+import Menu from '../componentes/moleculas/menu/menu'
 import Footer from '../componentes/moleculas/footer'
 import Loader from '../componentes/moleculas/loader'
 
@@ -19,16 +19,16 @@ import Comite from './paginas/comite'
 import ConstanciaHabilidad from './paginas/constanciaHabilidad'
 import Rectificacion from './paginas/rectificacion'
 import ConstanciaEtica from './paginas/constanciaEtica'
-import ColegioMedico from '../componentes/moleculas/colegioMedico'
-import QuienesSomos from '../componentes/moleculas/quienesSomos';
-import DocumentoNormativo from '../componentes/moleculas/documentoNormativo';
-import ConsejosDistritales from '../componentes/moleculas/consejosDistritales';
-import PastDecanos from '../componentes/moleculas/pastDecanos';
-import Pronunciamiento from '../componentes/moleculas/pronunciamiento';
+import ColegioMedico from './paginas/colegioMedico'
+import QuienesSomos from './paginas/quienesSomos';
+import DocumentoNormativo from './paginas/documentoNormativo';
+import ConsejosDistritales from './paginas/consejosDistritales';
+import PastDecanos from './paginas/pastDecanos';
+import Opinion from './paginas/opinion';
 
 
 
-import Anuncios from './moleculas/anuncios';
+import Anuncios from './moleculas/pronunciamientos';
 import SitioConstruccion from './moleculas/sitioConstruccion';
 import NoEncontrado from './moleculas/noEncontrado'
 
@@ -45,8 +45,8 @@ import ComunicacionesDetalle from '../componentes/moleculas/comunicacionesDetall
 import EventoDetalle from '../componentes/moleculas/eventoDetalle';
 import ComunicacionesNoticia from './paginas/comunicacionesNoticia';
 import EventosPage from './paginas/eventosPage';
-import Eventos from './moleculas/eventos';
-import TramitesGrid from './moleculas/tramitesGrid';
+//import Eventos from './moleculas/eventos';
+import TramitesGrid from './paginas/tramitesGrid';
 import Watsap from './moleculas/watsap';
 import Biblioteca from './paginas/biblioteca';
 
@@ -109,7 +109,7 @@ const App = ()=> {
             <Route path="/comunicaciones" element={ <Comunicaciones/>}></Route>
             <Route path="/comunicaciones/:id" element={ <ComunicacionesDetalle/>}></Route>
             <Route path="/comunicaciones/noticias" element={ <ComunicacionesNoticia/>}></Route>
-            <Route path="/comunicaciones/pronunciamiento" element={ <Pronunciamiento/>}></Route>
+            <Route path="/comunicaciones/pronunciamiento" element={ <Opinion/>}></Route>
             
             <Route path="/eventos" element={ <EventosPage/>}></Route>
             <Route path="/eventos/:id" element={ <EventoDetalle/>}></Route>

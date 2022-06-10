@@ -1,5 +1,15 @@
 
-const Informacion=[{
+const Informacion=[
+  {
+    id:'13',
+    imagen:process.env.PUBLIC_URL + `/imagenes/noticias/efemerides.png`,
+    imgenDetalles:[process.env.PUBLIC_URL + `/imagenes/noticias/efemerides.png`],
+    description:"EFEMERIDES",
+    contenido:"",
+    fecha:"2022/06/10",
+    tipo:"NOTICIA"
+  },
+  {
     id:'12',
     imagen:process.env.PUBLIC_URL + `/imagenes/noticias/vacunacion.png`,
     imgenDetalles:[process.env.PUBLIC_URL + `/imagenes/noticias/vacunacion.png`],

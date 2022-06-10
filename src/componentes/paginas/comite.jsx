@@ -1,5 +1,5 @@
 import React from 'react'
-import Cart from '../moleculas/cart';
+//import Cart from '../moleculas/cart';
 import ComitesArray from '../../database/comite';
 
 
@@ -56,7 +56,7 @@ const Comite = ()=> {
             <h4 className="contenido_cart_descripccion">72.10. Cumplir con los encargos del Comité Ejecutivo y del Consejo Nacional.</h4> 
             
             <div className="contenido-izquierda">
-                <Cart></Cart>
+             
             </div>
 
             {

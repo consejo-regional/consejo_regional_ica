@@ -1,8 +1,4 @@
 import React from 'react'
-import Cart from '../moleculas/cart';
-
-
-
 
 
 const JuntaDirectiva = ()=> {
@@ -21,7 +17,7 @@ const JuntaDirectiva = ()=> {
             <h4></h4>
             <h4 className="contenido_cart_descripccion">{contenido.descripccion}</h4> 
             <div className="contenido-izquierda">
-                <Cart></Cart>
+               
             </div>
 
         </div>

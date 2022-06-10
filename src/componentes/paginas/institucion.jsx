@@ -1,5 +1,5 @@
 import React from 'react'
-import Cart from '../moleculas/cart';
+//import Cart from '../moleculas/cart';
 
 
 const Institucion = ()=> {
@@ -39,7 +39,7 @@ const Institucion = ()=> {
 
 
             <div className="contenido-izquierda">
-                <Cart></Cart>
+           
             </div>
 
         </div>
