@@ -1,4 +1,4 @@
-const biblioteca=[
+const BibliotecaLibros=[
     {
       titulo:'titulo',
       fecha:'20-252-35',
@@ -21,4 +21,6 @@ const biblioteca=[
       enlace:'enlace'
     }
   ]
+
+  export default BibliotecaLibros
   

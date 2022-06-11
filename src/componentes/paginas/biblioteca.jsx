@@ -1,33 +1,7 @@
 import React from 'react'
+import BibliotecaLibros from '../../database/biblioteca'
 
-
-
-const biblioteca=[
-  {
-    titulo:'titulo',
-    fecha:'20-252-35',
-    autor:'autor',
-    recurso:'recurso',
-    enlace:'enlace'
-  },
-  {
-    titulo:'titulo',
-    fecha:'20-252-35',
-    autor:'autor',
-    recurso:'recurso',
-    enlace:'enlace'
-  },
-  {
-    titulo:'titulo',
-    fecha:'20-252-35',
-    autor:'autor',
-    recurso:'recurso',
-    enlace:'enlace'
-  }
-]
-
-
-
+const biblioteca=BibliotecaLibros
 
 const Biblioteca = ()=> {
 
