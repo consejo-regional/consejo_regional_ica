@@ -21,8 +21,8 @@
 
 .detalle-noticias-contenido-imagem{
     width:30vw;
-    height:15rem;
-    object-fit: cover;
+    height:20rem;
+    object-fit: contain;
     // height: 15rem;
     
     //border: 1px solid red;
@@ -40,7 +40,9 @@
 }
 
 .detalle-noticias-contenido-imagem1{
+
     height:35rem;
+    object-fit: contain;
 }
 
 

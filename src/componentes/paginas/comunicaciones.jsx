@@ -1,7 +1,9 @@
-import React , {useEffect} from 'react'
+import React  from 'react'
 
 import {Link} from 'react-router-dom'
 import Informacion from  "../../database/noticia"
+//import Slider from '../moleculas/slider/Slider'
+import SliderNoticias from '../moleculas/slider/sliderNoticias'
 
 const informacion=Informacion
 
@@ -15,7 +17,15 @@ const informacion=Informacion
               <div className="contenedor-evento-titulo">
                   <h4>Consejo Regional IX – ICA </h4>
                   <h1>NOTICIAS</h1>
-              </div>
+
+
+
+                  <div>hola mundo</div>
+           </div>
+           <SliderNoticias></SliderNoticias>
+           <br/>
+           <br/>
+           <br/>
               <div className="contenedor_eventos_grid">
                   {
   
@@ -35,16 +45,18 @@ const informacion=Informacion
     const SericiosItem = ({id,imagen,description,fecha,tipo})=> {
   
   
-        if(tipo=="NOTICIA"){
+        if(tipo==="NOTICIA"){
           return(
             <>
            
             <Link className="eventos-clase"  to={`/comunicaciones/${id}`} >
               <img className="imagen-evento" src={imagen} alt={imagen}></img>
+              <div className="colors">{tipo}</div>
               <div className="evento-noticia">
-                <div className="evento-noticia-descripccion colors">{tipo}</div>
                 <div className="evento-noticia-descripccion">{description}</div>
                 <div className="evento-noticia-descripccion">{fecha}</div>
+                <div className="evento-noticia-estado">Leer Mas</div>
+
               </div>
             </Link>
             </>   

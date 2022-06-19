@@ -1,4 +1,4 @@
-import React , {useEffect} from 'react'
+import React  from 'react'
 import {Link} from 'react-router-dom'
 
 
@@ -38,14 +38,14 @@ const informacion=Eventos
     const SericiosItem = ({ id,imagen,description,fecha,tipo,estado})=> {
   
   
-        if(tipo=="EVENTO"){
+        if(tipo==="EVENTO"){
           return(
             <>
            
-            <Link className="eventos-clase" to={`/eventos/${id}`} >
-              <img className="imagen-evento" src={imagen} alt={imagen}></img>
+            <Link className="eventos-clase-evento" to={`/eventos/${id}`} >
+              <img className="imagen-evento-evento" src={imagen} alt={imagen}></img>
               <div className="evento-noticia">
-                <div className="evento-noticia-descripccion colors">{tipo}</div>
+                <div className="evento-noticia-descripccion ">{tipo}</div>
                 <div className="evento-noticia-descripccion">{description}</div>
                 <div className="evento-noticia-descripccion">{fecha}</div>
                 <div className="evento-noticia-estado">{estado}</div>

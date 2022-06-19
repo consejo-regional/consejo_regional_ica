@@ -1,5 +1,30 @@
 
 const Informacion=[
+
+  {
+    id:'15',
+    imagen:process.env.PUBLIC_URL + `/noticias/download.png`,
+    imgenDetalles:[
+      process.env.PUBLIC_URL + `/noticias/WhatsApp Image 2022-06-16 at 7.56.13 AM (1).jpeg`,
+      process.env.PUBLIC_URL + `/noticias/WhatsApp Image 2022-06-16 at 7.56.13 AM (2).jpeg`,
+      process.env.PUBLIC_URL + `/noticias/WhatsApp Image 2022-06-16 at 7.56.13 AM (3).jpeg`,
+      process.env.PUBLIC_URL + `/noticias/WhatsApp Image 2022-06-16 at 7.56.13 AM.jpeg`,
+      process.env.PUBLIC_URL + `/noticias/WhatsApp Image 2022-06-16 at 7.56.14 AM (1).jpeg`,
+    ],
+    description:"ENTREGA DE PRESENTES",
+    contenido:"",
+    fecha:"2022/06/14",
+    tipo:"NOTICIA"
+  },
+  {
+    id:'14',
+    imagen:process.env.PUBLIC_URL + `/noticias/WhatsApp Image 2022-06-14 at 10.48 2.png`,
+    imgenDetalles:[process.env.PUBLIC_URL + `/noticias/WhatsApp Image 2022-06-14 at 10.48 2.png`],
+    description:"EFEMERIDES",
+    contenido:"",
+    fecha:"2022/06/14",
+    tipo:"NOTICIA"
+  },
   {
     id:'13',
     imagen:process.env.PUBLIC_URL + `/noticias/efemerides.png`,

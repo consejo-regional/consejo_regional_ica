@@ -1,7 +1,6 @@
-import React , {useEffect} from 'react'
+import React  from 'react'
 
 
-import {Link} from 'react-router-dom'
 
 
 const informacion=[{
@@ -25,6 +24,9 @@ const informacion=[{
        
                   <h1>NOTICIAS</h1>
               </div>
+
+            <div></div>
+
               <div className="contenedor_eventos_grid">
                   {
   
@@ -35,6 +37,7 @@ const informacion=[{
                     
                   }   
               </div>
+              
           </div>
           </>   
         )  
@@ -44,17 +47,19 @@ const informacion=[{
     const SericiosItem = ({imagen,description,fecha,tipo,contenido})=> {
   
   
-        if(tipo=="NOTICIA"){
+        if(tipo==="NOTICIA"){
           return(
             <>
            
             <div className="eventos-clase" >
+              <div className="colors">{tipo}</div>
               <img className="imagen-evento" src={imagen} alt={imagen}></img>
               <div className="evento-noticia">
-                <div className="evento-noticia-descripccion colors">{tipo}</div>
                 <div className="evento-noticia-descripccion">{description}</div>
                 <div className="evento-noticia-descripccion">{fecha}</div>
-                <div className="evento-noticia-descripccion">{contenido}</div>
+                {/* <div className="">{contenido}</div> */}
+                <div className="evento-noticia-estado">Leer Mas</div>
+
               </div>
             </div>
             </>   
