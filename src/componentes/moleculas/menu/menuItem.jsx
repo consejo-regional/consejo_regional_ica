@@ -1,5 +1,6 @@
-import React,{useEffect,useRef} from 'react'
+import React,{useEffect,useRef,useState} from 'react'
 import {Link} from 'react-router-dom'
+import CmpDiguital from '../cmpDiguital'
 
 
 
@@ -7,6 +8,16 @@ import {Link} from 'react-router-dom'
 const MenuItem = ()=> {
 
     const boton=useRef()
+
+    const [color,establecerColor]=useState(false)
+    const cambiarColor=()=>{
+
+        if(window.scrollY >= 50){
+            establecerColor(true)
+        }else{
+            establecerColor(false)
+        }
+    }
 
 
     const click=()=>{
@@ -27,10 +38,16 @@ const MenuItem = ()=> {
         // })
 
     },[])
+
+
+    window.addEventListener("scroll",cambiarColor)
+
+
+    
       return(
         <>
       
-    <header className="header">
+    <header className={color?"header header-color ":"header" }>
         {/* <div>dvsdfvdfsdf</div> */}
 
         <div className="header-conteiner">
@@ -160,6 +177,12 @@ const MenuItem = ()=> {
                         <li className="item">
                             <Link to="/comunicaciones/noticias" onClick={click} className="link linkSubmenu">NOTICIAS                      </Link>
                         </li>
+                        <li className="item">
+                            <Link to="/comunicaciones/efemerides" onClick={click} className="link linkSubmenu">EFEMERIDES                     </Link>
+                        </li>
+                        <li className="item">
+                            <Link to="/comunicaciones/normativo" onClick={click} className="link linkSubmenu">NORMATIVO                     </Link>
+                        </li>
                     </ul>
                 </li>
                 <li className="item">
@@ -188,12 +211,19 @@ const MenuItem = ()=> {
                 <li className="item">
                     <Link to="/nosotros/comite"  onClick={click}  className="link">COMITES</Link>
                 </li>
-                <li className="item">
+                {/* <li className="item">
                     <Link to="/biblioteca"  onClick={click}  className="link">BIBLIOTECA</Link>
+                </li> */}
+                 <li className="item-cmpDiguital">
+                 <CmpDiguital></CmpDiguital>
                 </li>
+               
             </ul>
+            
         </nav>
         </div>
+        
+
     </header>
 
         </>   

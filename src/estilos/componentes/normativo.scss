@@ -1,0 +1,100 @@
+// *{
+//     font-family:sans-serif;
+//   }
+  
+
+.contenedor-table{
+display: flex;
+justify-content: center;
+align-items: center;
+
+
+}
+
+
+  :root{
+    --colorHead:rgb(139, 103, 143);
+    --filaPar:#fcfcfc;
+    --filaImpar:#c3cdff;
+    --colorBorde:#c2c2c4;
+    --hover:rgb(236, 236, 236);
+    
+  }
+  
+  table tr td,th:not(.th-head){
+    border-right: 1px solid var(--colorBorde);
+  }
+  
+  table,tfoot{
+    border:1px solid var(--colorBorde);
+    word-break: break-all;
+  
+  }
+  
+  table:nth-of-type(1) caption {
+    font-weight: 800;
+  }
+  
+  
+caption{
+padding-bottom: 1rem;
+font-weight: normal;
+
+}
+
+table:nth-of-type(1) caption {
+    font-weight: normal;
+}
+
+
+  table {
+    border-collapse: collapse;
+    border-spacing:1rem 0.1rem;
+    table-layout:fixed;/*auto viene por defecto*/
+    width: 50%;
+    empty-cells: hide;
+  }
+  
+  thead{
+    color:white;
+    background:var(--colorHead) ;
+  }
+  thead th{
+    /* border: none; */
+  }
+  
+  table tbody tr:not(tfoot):nth-child(odd) {
+      background: var(--filaPar);
+  }
+  table tbody tr:nth-child(even) {
+      background: var(--filaImpar);
+  }
+  
+  tr:not(.tr-head):hover{
+    background:var(--hover);
+  }
+  td:hover{
+    background:var(--hover);
+  
+  }
+  
+  td{
+  text-align: center;
+ //padding: .2rem;
+
+
+  }
+
+  
+  th{
+    text-align:center;
+    padding: .4rem;
+    font-weight: normal;
+  }
+  .letras{
+    text-align:center;
+
+  }
+//   tr:hover{
+//     transform:scale(0.95);
+//   }

@@ -40,15 +40,16 @@ import {
   Route,
   //Link
 } from "react-router-dom";
-import Comunicaciones from './paginas/comunicaciones';
-import ComunicacionesDetalle from '../componentes/moleculas/comunicacionesDetalle';
+import Comunicaciones from './paginas/noticiasPage';
+import ComunicacionesDetalle from './moleculas/noticiasDetalle';
 import EventoDetalle from '../componentes/moleculas/eventoDetalle';
-import ComunicacionesNoticia from './paginas/comunicacionesNoticia';
 import EventosPage from './paginas/eventosPage';
-//import Eventos from './moleculas/eventos';
 import TramitesGrid from './paginas/tramitesGrid';
 import Watsap from './moleculas/watsap';
 import Biblioteca from './paginas/biblioteca';
+import Efemerides from './paginas/efemeridesPage';
+import Normativo from './moleculas/normativo';
+import CmpDiguital from './moleculas/cmpDiguital';
 
 
 
@@ -73,6 +74,7 @@ const App = ()=> {
            <Menu></Menu>
           <RedesSociales></RedesSociales>
           <Watsap></Watsap>
+          {/* <CmpDiguital></CmpDiguital> */}
           <MenuItem></MenuItem>
          
           < Routes>
@@ -107,9 +109,16 @@ const App = ()=> {
 
 
             <Route path="/comunicaciones" element={ <Comunicaciones/>}></Route>
-            <Route path="/comunicaciones/:id" element={ <ComunicacionesDetalle/>}></Route>
-            <Route path="/comunicaciones/noticias" element={ <ComunicacionesNoticia/>}></Route>
+            <Route path="/noticias/:id" element={ <ComunicacionesDetalle/>}></Route>
+            <Route path="/comunicaciones/noticias" element={ <Comunicaciones/>}></Route>
+            <Route path="/efemerides/:id" element={ <ComunicacionesDetalle/>}></Route>
+            <Route path="/comunicaciones/efemerides" element={ <Efemerides></Efemerides>}></Route>
             <Route path="/comunicaciones/pronunciamiento" element={ <Opinion/>}></Route>
+            <Route path="/comunicaciones/normativo" element={ <Normativo></Normativo>}></Route>
+
+
+
+
             
             <Route path="/eventos" element={ <EventosPage/>}></Route>
             <Route path="/eventos/:id" element={ <EventoDetalle/>}></Route>

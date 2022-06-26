@@ -17,24 +17,6 @@ const Informacion=[
     tipo:"NOTICIA"
   },
   {
-    id:'14',
-    imagen:process.env.PUBLIC_URL + `/noticias/WhatsApp Image 2022-06-14 at 10.48 2.png`,
-    imgenDetalles:[process.env.PUBLIC_URL + `/noticias/WhatsApp Image 2022-06-14 at 10.48 2.png`],
-    description:"EFEMERIDES",
-    contenido:"",
-    fecha:"2022/06/14",
-    tipo:"NOTICIA"
-  },
-  {
-    id:'13',
-    imagen:process.env.PUBLIC_URL + `/noticias/efemerides.png`,
-    imgenDetalles:[process.env.PUBLIC_URL + `/noticias/efemerides.png`],
-    description:"EFEMERIDES",
-    contenido:"",
-    fecha:"2022/06/10",
-    tipo:"NOTICIA"
-  },
-  {
     id:'12',
     imagen:process.env.PUBLIC_URL + `/noticias/vacunacion.png`,
     imgenDetalles:[process.env.PUBLIC_URL + `/noticias/vacunacion.png`],

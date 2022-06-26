@@ -7,7 +7,7 @@ import FooterContacto from '../moleculas/footerContacto'
 
 import  Slider from '../moleculas/slider/Slider'
 import EventosPage from './eventosPage'
-import Comunicaciones from './comunicaciones'
+import Comunicaciones from './noticiasPage'
 
 
 

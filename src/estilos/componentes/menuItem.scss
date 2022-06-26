@@ -1,28 +1,42 @@
 
 
+// .header-conteiner{
+//    // background-color: red;
+// }
+
+
 
 .nav{
 
+    //background-color: red;
 
 
 }
 .header{
-   
-    //border: 2px solid blue;
-   // z-index: 1000;
-    // position:static
-    background:rgb(255, 255, 255);
-
+    
     position:sticky;
     top: 0;
     z-index: 100;
     padding: .5rem 0 .5rem 0;
-    //border: 2px solid blue;
-   // box-shadow:  0px 50px 80px rgba(17, 14, 14, 0.185), 0px 69.2711px 50.7988px rgba(0, 0, 0, 0.055102), 0px 45.1895px 30.5539px rgba(0, 0, 0, 0.045102), 0px 27.0554px 17.4461px rgba(0, 0, 0, 0.0380408), 0px 14.1691px 9.65598px rgba(0, 0, 0, 0.0319592), 0px 5.8309px 5.36443px rgba(0, 0, 0, 0.024898), 0px 1.34111px 2.75219px rgba(0, 0, 0, 0.014898);
-
-}
-.menuu{
     background:rgb(255, 255, 255);
+}
+
+.header-color{
+    background:rgba(255, 255, 255, 0.637);
+    backdrop-filter: blur(4px);
+    
+   
+}
+
+
+
+
+
+
+
+.menuu{
+    //background:rgb(63, 5, 5);
+   //background:rgb(71, 13, 13);
     width: 100%;
     display: flex;
   //  z-index: 1000;
@@ -47,7 +61,19 @@
 
     flex-direction: column;
     top: 100%;
-    display:none;
+    //display:none;
+    transform-origin: top center;
+
+    transform: scale(1,0);
+    opacity: 0;
+    transition: transform  .2s,opacity .8s;
+    //transition: opacity 2s;
+
+    ul{
+        top: 0;
+        left: 100%;
+
+    }
 }
 .submenu .submenu{
      left: 100%;
@@ -66,7 +92,10 @@
 
 
 .item:hover > .submenu{
-    display: flex;
+   // display: flex;
+    transform: scale(1,1);
+    opacity: 1;
+
 }
 
 .link:hover{
@@ -143,7 +172,7 @@
         }
 
         .item:hover{
-            background-color: rgb(122, 20, 20);
+            //background-color: rgb(122, 20, 20);
             background:rgb(183, 183, 183);
 
             display:block;
@@ -169,6 +198,7 @@
 
 
           background-color: rgb(255, 255, 255);
+          //background-color: rgb(44, 3, 3);
           transition: right .3s;
          
           &.show{
@@ -204,5 +234,13 @@
 
 
         
+    }
+
+
+    ////////////////////////////////////////////////////////////////
+    .item-cmpDiguital{
+        display:flex;
+        justify-content: center;
+        align-items: center;
     }
     
