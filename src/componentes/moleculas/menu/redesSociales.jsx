@@ -9,7 +9,7 @@ const RedesSociales = ()=> {
         <>
         <div className="contenedor_redes">
           <a href="https://www.facebook.com/ConsejoRegionalIca" target="_blank">
-              <Face></Face>
+            <Face></Face>
           </a>
    
           {/* <Sms></Sms> */}
@@ -17,6 +17,8 @@ const RedesSociales = ()=> {
           <Twitter></Twitter>
           </a>
           <a href="https://www.youtube.com/channel/UCXq7g8PacKGuv9hR76AklYw" target="_blank">
+
+
           <YouTube></YouTube>
           </a>
           {/* <Watsup></Watsup> */}

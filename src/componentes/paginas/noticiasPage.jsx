@@ -1,14 +1,22 @@
-import React  from 'react'
+import React,{useEffect}  from 'react'
 
 import {Link} from 'react-router-dom'
 import Informacion from  "../../database/noticia"
 //import Slider from '../moleculas/slider/Slider'
 import SliderNoticias from '../moleculas/slider/sliderNoticias'
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const informacion=Informacion
 
   const Comunicaciones = ()=> {
   
+
+
+    useEffect(()=>{
+      AOS.init({duration: 800})
+     },[])
+
         return(
   
          
@@ -49,7 +57,7 @@ const informacion=Informacion
           return(
             <>
            
-            <Link className="eventos-clase"  to={`/comunicaciones/${id}`} >
+            <Link className="eventos-clase"  to={`/comunicaciones/${id}`} data-aos="fade-up" data-aos-anchor-placement="top-center" >
               <img className="imagen-evento" src={imagen} alt={imagen}></img>
               <div className="colors">{tipo}</div>
               <div className="evento-noticia">

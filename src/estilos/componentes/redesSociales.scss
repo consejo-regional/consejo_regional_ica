@@ -2,10 +2,12 @@
     margin-left: .5rem;
     display: grid;
     flex-direction: column;
-    position: absolute;
-    top: 10%;
+    position: fixed;
+    top: 40%;
     gap: .2rem;
+
     //border:1px solid red;
+    //height: 15rem;
     z-index: 1000;
     @include rwd(tablet){
         top:1%;

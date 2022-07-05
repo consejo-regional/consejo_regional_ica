@@ -49,20 +49,23 @@ import Watsap from './moleculas/watsap';
 import Biblioteca from './paginas/biblioteca';
 import Efemerides from './paginas/efemeridesPage';
 import Normativo from './moleculas/normativo';
-import CmpDiguital from './moleculas/cmpDiguital';
+//import CmpDiguital from './moleculas/cmpDiguital';
 
-
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const App = ()=> {
 
   const[loader,setLoader]=useState(false)
 
   useEffect(()=>{
+    AOS.init({duration: 2000})
     setTimeout(()=>{
       setLoader(true)
       console.log("loader")
     },1000)
   },[])
+
       return(
         <>
         {
@@ -135,7 +138,12 @@ const App = ()=> {
                 <NoEncontrado/>
               }/>
           </Routes>
-          <Footer></Footer>
+          <div data-aos="fade-up">
+
+            <Footer></Footer>
+
+          </div>
+
 
          
          

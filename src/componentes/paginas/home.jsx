@@ -6,15 +6,19 @@ import SericiosGrid from './serviciosGrid'
 import FooterContacto from '../moleculas/footerContacto'
 
 import  Slider from '../moleculas/slider/Slider'
-import EventosPage from './eventosPage'
+//import EventosPage from './eventosPage'
 import Comunicaciones from './noticiasPage'
 
-
+import {useEffect} from "react"
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 
 const Home = ()=> {
 
-   
+   useEffect(()=>{
+    AOS.init({duration: 2000})
+   },[])
 
       return(
         <>
@@ -22,14 +26,23 @@ const Home = ()=> {
         {/* <BannerPrincipal></BannerPrincipal> */}
         <Slider></Slider>
         {/* <BannerHome></BannerHome> */}
+
+        <div data-aos="fade-up">
+
         <SericiosGrid></SericiosGrid> 
+        </div>
 
 
         {/* <Eventos></Eventos> */}
         {/* <EventosPage></EventosPage> */}
+
+        <div data-aos="fade-up">
         <Comunicaciones></Comunicaciones>
+        </div>
+        <div data-aos="fade-up">
         <FooterContacto></FooterContacto> 
-      
+        </div>
+        
 
         </>   
       )  
