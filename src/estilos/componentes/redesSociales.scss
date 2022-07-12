@@ -10,12 +10,12 @@
     //height: 15rem;
     z-index: 1000;
     @include rwd(tablet){
-        top:1%;
+        top:40%;
         margin-left: .5rem;
 
     }
     @include rwd(celular){
-        top:1%;
+        top:40%;
         margin-left: 1rem;
 
     }
