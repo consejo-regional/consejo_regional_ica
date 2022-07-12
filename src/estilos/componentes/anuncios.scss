@@ -38,6 +38,32 @@
     
     }
 }
+.anuncios_banner{
+    width: 33vw;
+    height: 90vh;
+    background-color: white;
+    // position: relative;
+    // background-image: url(../../../public/imagenes/Pronunciamiento.jpg);
+    // background-size: contain;
+    // background-repeat: no-repeat;
+    // background-position: center center;
+    border:.7rem solid white;
+    //border:1px solid red;
+    object-fit: contain;
+    padding: 1rem;
+    @include rwd(tablet){
+     
+
+  
+    }
+
+    @include rwd(celular){
+        width: 80vw;
+        height: 60vh;
+    
+    }
+}
+
 
 .anuncios_conteiner{
     position: relative;

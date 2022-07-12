@@ -17,7 +17,7 @@ const SericiosGrid = ()=> {
         <>
         <div className="contenedor_servicios_grid_conteiner">
         <div className="contenedor-evento-titulo">
-                <h4>Consejo Regional IX – ICA </h4>
+                <h4>Consejo Regional IX – ICA ... </h4>
                 <h1>NUESTROS SERVICIOS</h1>
         </div>
           <div className="contenedor_servicios_grid">

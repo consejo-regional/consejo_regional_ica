@@ -7,7 +7,7 @@ const Servicios=[{
   enlace:"https://www.cmp.org.pe/sistcere-2/"
 },{
   imagen:process.env.PUBLIC_URL + `/imagenes/IMAGE-2.png`,
-  nombre:"SEMEFE",
+  nombre:"SEMEFA",
   description:"",
   enlace:"https://www.cmp.org.pe/semefa/"
 },{
