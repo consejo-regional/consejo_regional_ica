@@ -14,6 +14,11 @@ const Pronunciamiento = ()=> {
                 <div className="contenedor_promunciamiento_cart">
                     <img src={process.env.PUBLIC_URL + `/opinion/FALLECIMIENTO DR ALBUQUERQUE FRANCO 1.png`}></img>
                 </div>
+
+                <div className="contenedor_promunciamiento_cart">
+                    <img src={process.env.PUBLIC_URL + `/opinion/CONDOLENCIA DR. BULEJE.jpg`}></img>
+                </div>
+
             </div>
 
            
