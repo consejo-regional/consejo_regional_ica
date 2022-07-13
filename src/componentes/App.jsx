@@ -28,7 +28,7 @@ import Opinion from './paginas/opinion';
 
 
 
-import Anuncios from './moleculas/pronunciamientos';
+import Anuncios from './moleculas/anuncios';
 import SitioConstruccion from './moleculas/sitioConstruccion';
 import NoEncontrado from './moleculas/noEncontrado'
 

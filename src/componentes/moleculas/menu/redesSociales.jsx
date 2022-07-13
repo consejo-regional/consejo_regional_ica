@@ -3,7 +3,6 @@ import Face from '../../../assets/iconos/face'
 import Twitter from '../../../assets/iconos/twitter'
 import YouTube from '../../../assets/iconos/youtube'
 
-import Imstagram from '../../../assets/iconos/instagran'
 
 
 const RedesSociales = ()=> {
@@ -11,26 +10,17 @@ const RedesSociales = ()=> {
         <>
         <div className="contenedor_redes">
           <a href="https://www.facebook.com/ConsejoRegionalIca" target="_blank">
-            <Face></Face>
+            <img className='icono' src={process.env.PUBLIC_URL +'/iconos/facebook1.png'}></img>
           </a>
-   
-          {/* <Sms></Sms> */}
           <a href="https://twitter.com/cmpregionalica?lang=en" target="_blank">
-
-          <Twitter></Twitter>
+            <img className='icono' src={process.env.PUBLIC_URL +'/iconos/twitter1.png'}></img>
           </a>
           <a href="https://www.youtube.com/channel/UCXq7g8PacKGuv9hR76AklYw" target="_blank">
-          <YouTube></YouTube>
+            <img className='icono' src={process.env.PUBLIC_URL +'/iconos/youtube1.png'}></img>
           </a>
-
           <a href="https://www.instagram.com/consejo_regional_ix_ica/" target="_blank">
-
-            <Imstagram></Imstagram>
+            <img className='icono' src={process.env.PUBLIC_URL +'/iconos/instagram.png'}></img>
           </a>
-
-
-
-          {/* <Watsup></Watsup> */}
             
         </div>
 

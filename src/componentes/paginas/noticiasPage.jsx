@@ -14,7 +14,8 @@ const informacion=Informacion
 
 
     useEffect(()=>{
-      AOS.init({duration: 800})
+     // AOS.init({duration: 400  })
+
      },[])
 
         return(
@@ -30,8 +31,8 @@ const informacion=Informacion
 
                   <div>hola mundo</div>
            </div>
-           
-           <SliderNoticias></SliderNoticias>
+{/* 
+           <SliderNoticias></SliderNoticias> */}
            <br/>
            <br/>
            <br/>
@@ -58,7 +59,7 @@ const informacion=Informacion
           return(
             <>
            
-            <Link className="eventos-clase"  to={`/comunicaciones/${id}`} data-aos="fade-up" data-aos-anchor-placement="top-center" >
+            <Link className="eventos-clase"  to={`/noticias/${id}`} data-aos="fade-up" data-aos-anchor-placement="top-center" >
               <img className="imagen-evento" src={imagen} alt={imagen}></img>
               <div className="colors">{tipo}</div>
               <div className="evento-noticia">

@@ -18,7 +18,7 @@ const informacion=Eventos
           <>
             {
             informacion.map(c=>(     
-                id==c.id? <SericiosItem  imagen={c.imgenDetalle}  tipo={c.tipo} description={c.description} contenido={c.contenido} fecha={c.fecha} ></SericiosItem>:null
+                id==c.id? <SericiosItem  imagen={c.imgenDetalle}  tipo={c.tipo} description={c.description} contenido={c.contenido} fecha={c.fecha}  enlace={c.enlace}></SericiosItem>:null
             )) 
             }  
           </>   
@@ -27,7 +27,7 @@ const informacion=Eventos
  
 
 
-    const SericiosItem = ({imagen,description, tipo,contenido,fecha})=> {
+    const SericiosItem = ({imagen,description, tipo,contenido,enlace,fecha})=> {
   
   
         if(tipo=="EVENTO"){
@@ -40,6 +40,10 @@ const informacion=Eventos
                     <div className="detalle-cart-contenido-titulo">{description}</div>
                     <div className="detalle-cart-contenido-fecha">{fecha}</div>
                     <div className="">{contenido}</div>
+                    <span className="detalle-cart-contenido-enlace-conteiner">Link de Participación 👇
+                    <a href={enlace} className="detalle-cart-contenido-enlace"> {enlace}</a>
+                    </span>
+
                   
                   </div>
                   <img className="detalle-noticias-contenido-imagem detalle-noticias-contenido-imagem1" src={imagen} alt={imagen}></img>
