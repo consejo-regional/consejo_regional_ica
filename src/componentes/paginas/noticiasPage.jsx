@@ -30,6 +30,7 @@ const informacion=Informacion
 
                   <div>hola mundo</div>
            </div>
+           
            <SliderNoticias></SliderNoticias>
            <br/>
            <br/>
