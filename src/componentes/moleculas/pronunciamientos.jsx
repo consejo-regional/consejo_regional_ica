@@ -1,5 +1,5 @@
 import React,{useRef} from 'react'
-
+import SliderNoticias from './slider/sliderNoticias'
 
 
 const Anuncios = ()=> {
@@ -17,14 +17,20 @@ const Anuncios = ()=> {
       return(
         <>
         <div className="contenedor_anuncios" ref={botonEsconder}>
-            <div className="anuncios_conteiner">
-                <img alt='' className='anuncios_banner' src={process.env.PUBLIC_URL+`/pronunciamiento/Pronunciamiento.jpeg`}></img>
-                <div className="anuncios_banner_boton"  onClick={clickAnuncio}  ></div>
+           
+
+
+             <div className="anuncios_conteiner">
+                <div className="anuncios_banner_boton"  onClick={clickAnuncio}  ></div> 
+                           <SliderNoticias></SliderNoticias>
+
+                {/* <img alt='' className='anuncios_banner' src={process.env.PUBLIC_URL+`/pronunciamiento/Pronunciamiento.jpeg`}></img>
                 <img alt='' className='anuncios_banner' src={process.env.PUBLIC_URL+`/pronunciamiento/Pronunciamiento12.jpeg`}></img>
-                <div className="anuncios_banner_boton"  onClick={clickAnuncio}  ></div>
-            </div>
+                <div className="anuncios_banner_boton"  onClick={clickAnuncio}  ></div> */}
+            </div> 
+
+
         </div>
-        
         </>   
       )  
   }
