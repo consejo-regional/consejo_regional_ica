@@ -1,6 +1,22 @@
 
 const Informacion=[
 
+  
+  {
+    id:'225',
+    imagen:process.env.PUBLIC_URL + `/noticias/292592382_1101297600500437_3815529889352148646_n.jpg`,
+    imgenDetalles:[
+      process.env.PUBLIC_URL + `/noticias/WhatsApp Image 2022-06-16 at 7.56.13 AM (1).jpeg`,
+      process.env.PUBLIC_URL + `/noticias/WhatsApp Image 2022-06-16 at 7.56.13 AM (2).jpeg`,
+      process.env.PUBLIC_URL + `/noticias/WhatsApp Image 2022-06-16 at 7.56.13 AM (3).jpeg`,
+      process.env.PUBLIC_URL + `/noticias/WhatsApp Image 2022-06-16 at 7.56.13 AM.jpeg`,
+      process.env.PUBLIC_URL + `/noticias/WhatsApp Image 2022-06-16 at 7.56.14 AM (1).jpeg`,
+    ],
+    description:"OLIMPIADAS CONREDES 2022",
+    contenido:"",
+    fecha:"2022/07/",
+    tipo:"NOTICIA"
+  },
   {
     id:'15',
     imagen:process.env.PUBLIC_URL + `/noticias/download.png`,
