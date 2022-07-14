@@ -6,10 +6,13 @@ const Informacion=[
     id:'225',
     imagen:process.env.PUBLIC_URL + `/noticias/292592382_1101297600500437_3815529889352148646_n.jpg`,
     imgenDetalles:[
-      process.env.PUBLIC_URL + `/noticias/292592382_1101297600500437_3815529889352148646_n.jpg`,
+      process.env.PUBLIC_URL + `/noticias/FUTBOL MUJERES IMG 1.jpg`,
+      process.env.PUBLIC_URL + `/noticias/FUTBOL MUJERES IMG 2.jpg`,
+      process.env.PUBLIC_URL + `/noticias/FUTBOL MUJERES IMG 3.jpg`,
+      process.env.PUBLIC_URL + `/noticias/FUTBOL MUJERES IMG 4.jpg`,
     ],
     description:"OLIMPIADAS CONREDES 2022",
-    contenido:"",
+    contenido:"FUTBITO MUJERES",
     fecha:"2022/07/",
     tipo:"NOTICIA"
   },
