@@ -3,7 +3,7 @@ import React from 'react'
 
 
 
-const Pronunciamiento = ()=> {
+const Condolencias = ()=> {
       return(
         <>
         <div className="contenedor_promunciamiento">
@@ -12,27 +12,27 @@ const Pronunciamiento = ()=> {
                     <img src={process.env.PUBLIC_URL + `/opinion/COMUNICADO 1.jpeg`}></img>
                 </div>
                 <div className="contenedor_promunciamiento_cart">
-                    <img src={process.env.PUBLIC_URL + `/opinion/PRONUNCIAMIENTO 6.jpeg`}></img>
+                    <img src={process.env.PUBLIC_URL + `/opinion/Pronunciamiento 6.jpeg`}></img>
                 </div>
 
                 <div className="contenedor_promunciamiento_cart">
-                    <img src={process.env.PUBLIC_URL + `/opinion/PRONUNCIAMIENTO 5.jpeg`}></img>
+                    <img src={process.env.PUBLIC_URL + `/opinion/Pronunciamiento 5.jpeg`}></img>
                 </div>
 
                 <div className="contenedor_promunciamiento_cart">
-                    <img src={process.env.PUBLIC_URL + `/opinion/PRONUNCIAMIENTO 4.jpeg`}></img>
+                    <img src={process.env.PUBLIC_URL + `/opinion/Pronunciamiento 4.jpeg`}></img>
                 </div>
 
                 <div className="contenedor_promunciamiento_cart">
-                    <img src={process.env.PUBLIC_URL + `/opinion/PRONUNCIAMIENTO 3.jpeg`}></img>
+                    <img src={process.env.PUBLIC_URL + `/opinion/Pronunciamiento 3.jpeg`}></img>
                 </div>
 
                 <div className="contenedor_promunciamiento_cart">
-                    <img src={process.env.PUBLIC_URL + `/opinion/PRONUNCIAMIENTO 2.jpeg`}></img>
+                    <img src={process.env.PUBLIC_URL + `/opinion/Pronunciamiento 2.jpeg`}></img>
                 </div>
 
                 <div className="contenedor_promunciamiento_cart">
-                    <img src={process.env.PUBLIC_URL + `/opinion/PRONUNCIAMIENTO 1.jpeg`}></img>
+                    <img src={process.env.PUBLIC_URL + `/opinion/Pronunciamiento 1.jpeg`}></img>
                 </div>
 
             </div>
@@ -44,5 +44,5 @@ const Pronunciamiento = ()=> {
   }
   
   
-  export default Pronunciamiento;
+  export default Condolencias;
   

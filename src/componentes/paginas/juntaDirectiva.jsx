@@ -21,32 +21,30 @@ const JuntaDirectiva = ()=> {
             </div>
 
         </div>
-        <div className="contenedor_servicios_grid">
+        <div className="contenedor_junta_grid">
               <SericiosItem imagen={process.env.PUBLIC_URL + `/directivos/DECANO.png`} nombre="Luis Felipe Muñante Aparcana." description="Decano"></SericiosItem>
 
-              <SericiosItem imagen={process.env.PUBLIC_URL + `/directivos/DSC_7035.png`} nombre="" description=""></SericiosItem>
-              <SericiosItem imagen={process.env.PUBLIC_URL + `/directivos/DSC_7042.png`} nombre="" description=""></SericiosItem>
-              <SericiosItem imagen={process.env.PUBLIC_URL + `/directivos/DSC_7045.png`} nombre="" description=""></SericiosItem>
-              <SericiosItem imagen={process.env.PUBLIC_URL + `/directivos/DSC_7048.png`} nombre="" description=""></SericiosItem>
-              <SericiosItem imagen={process.env.PUBLIC_URL + `/imagenes/mujer.png`} nombre="" description=""></SericiosItem>
-              <SericiosItem imagen={process.env.PUBLIC_URL + `/imagenes/hombre.png`} nombre="" description=""></SericiosItem>
-              <SericiosItem imagen={process.env.PUBLIC_URL + `/imagenes/hombre.png`} nombre="" description=""></SericiosItem>
               
-              
-
-              {/* 
-              <SericiosItem imagen={imagen1} nombre="Luis Felipe Muñante Aparcana." description="Decano"></SericiosItem>
-              <SericiosItem imagen={imagen2} nombre="Alexander Humberto pecho peche." description="Secretario"></SericiosItem>
-              <SericiosItem imagen={imagen3} nombre="Flor Elizabeth aviles Bonifaz" description="Tesoresa"></SericiosItem>
-              <SericiosItem imagen={imagen4} nombre="Audiaz Perez Aguirre" description="Vocal"></SericiosItem>
-              <SericiosItem imagen={mujer} nombre="Flor de maría mejia escate" description="vocal"></SericiosItem>
-              <SericiosItem imagen={hombre} nombre="Roberto laos Olaechea" description="Accesitario"></SericiosItem>
-              <SericiosItem imagen={hombre} nombre="Carlos Cagna Puppi " description="Accesitario"></SericiosItem>
-               */}
-              
-           
-           
           </div>
+         <div className="contenedor_junta1_grid">
+
+              <SericiosItem imagen={process.env.PUBLIC_URL + `/directivos/DSC_7035.png`} nombre="" description="Tesorero"></SericiosItem>
+              <SericiosItem imagen={process.env.PUBLIC_URL + `/directivos/DSC_7042.png`} nombre="" description="Secretario"></SericiosItem>
+              
+          </div>
+          <div className="contenedor_junta1_grid">
+              <SericiosItem imagen={process.env.PUBLIC_URL + `/directivos/DSC_7045.png`} nombre="" description="Vocal1"></SericiosItem>
+              <SericiosItem imagen={process.env.PUBLIC_URL + `/directivos/DSC_7048.png`} nombre="" description="Vocal2"></SericiosItem>
+              
+          </div>
+          <div className="contenedor_junta1_grid">
+              <SericiosItem imagen={process.env.PUBLIC_URL + `/imagenes/mujer.png`} nombre="" description="Accesitario1"></SericiosItem>
+              <SericiosItem imagen={process.env.PUBLIC_URL + `/imagenes/hombre.png`} nombre="" description="Accesitario2"></SericiosItem>
+      
+          </div>
+
+
+          
 
         </div>
         

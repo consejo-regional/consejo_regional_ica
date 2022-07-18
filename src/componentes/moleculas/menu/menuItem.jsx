@@ -165,15 +165,14 @@ const MenuItem = ()=> {
                 <li className="item">
                     <Link to="/comunicaciones"   className="link">COMUNICACIONES</Link>
                     <ul className="menuu submenu">
+
                         <li className="item">
                             <Link to="/comunicaciones/pronunciamiento" onClick={click} className="link linkSubmenu">OPINION Y PRONUNCIAMIENTO</Link>
                         </li>
-                        {/* <li className="item">
-                            <Link to="/comunicaciones" onClick={click} className="link linkSubmenu">DIFUSIONES                 </Link>
-                        </li> */}
-                        {/* <li className="item">
-                            <Link to="/comunicaciones" onClick={click} className="link linkSubmenu">BOLETIN INFORMATIVO</Link>
-                        </li> */}
+                        <li className="item">
+                            <Link to="/comunicaciones/condolencias" onClick={click} className="link linkSubmenu">CONDOLENCIAS       </Link>
+                        </li>
+                       
                         <li className="item">
                             <Link to="/comunicaciones/noticias" onClick={click} className="link linkSubmenu">NOTICIAS                      </Link>
                         </li>

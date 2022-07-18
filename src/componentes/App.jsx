@@ -24,7 +24,8 @@ import QuienesSomos from './paginas/quienesSomos';
 import DocumentoNormativo from './paginas/documentoNormativo';
 import ConsejosDistritales from './paginas/consejosDistritales';
 import PastDecanos from './paginas/pastDecanos';
-import Opinion from './paginas/opinion';
+import OpinionPronunciamiento from './paginas/OpinionPronunciamiento';
+import Condolencias from './paginas/OpinionPronunciamiento';
 
 
 
@@ -116,8 +117,9 @@ const App = ()=> {
             <Route path="/comunicaciones/noticias" element={ <Comunicaciones/>}></Route>
             <Route path="/efemerides/:id" element={ <ComunicacionesDetalle/>}></Route>
             <Route path="/comunicaciones/efemerides" element={ <Efemerides></Efemerides>}></Route>
-            <Route path="/comunicaciones/pronunciamiento" element={ <Opinion/>}></Route>
+            <Route path="/comunicaciones/pronunciamiento" element={ <OpinionPronunciamiento/>}></Route>
             <Route path="/comunicaciones/normativo" element={ <Normativo></Normativo>}></Route>
+            <Route path="/comunicaciones/condolencias" element={ <Condolencias/>}></Route>
 
 
 

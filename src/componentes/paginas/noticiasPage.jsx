@@ -26,10 +26,6 @@ const informacion=Informacion
               <div className="contenedor-evento-titulo">
                   <h4>Consejo Regional IX – ICA </h4>
                   <h1>NOTICIAS</h1>
-
-
-
-                  <div>hola mundo</div>
            </div>
 {/* 
            <SliderNoticias></SliderNoticias> */}
