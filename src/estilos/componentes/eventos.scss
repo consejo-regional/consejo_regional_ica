@@ -15,161 +15,87 @@
 
 .contenedor_eventos_grid{
     display: grid;
-    grid-template-columns: repeat(3,1fr);
-    //border: 1px solid blue;
+    //border: 1px solid red;
     //height:60rem;
-    margin: 1rem;
-    gap:2rem;
-    @include rwd(tablet){
-     grid-template-columns: repeat(2,1fr);
-
-    }
-    @include rwd(celular){
-        grid-template-columns: repeat(1,1fr);
-
-    }
-
-
-
+    gap:.5rem;
 }
 
 .eventos-clase{
-    border:2px solid #E6E8EC;
-    //border:2px solid red;
-    box-shadow: 0px 4px 4px 0px rgba(167, 161, 161, 0.25);
-    //height:15rem;
-    //border:1px solid red;
     text-decoration: none;
-    //margin-left: 2rem;
+    margin-left: 2rem;
+    //border: 1px solid blue;
     display: flex;
-    flex-direction: column;
+//     height:12rem;
+//    width: 90vw;
     margin-bottom: 1.5rem;
     position:relative;
-    border-radius: 1rem;
-    // @include rwd(tablet){
+    @include rwd(tablet){
+       
 
-    // }
-    // @include rwd(celular){
+  
+    }
+
+    @include rwd(celular){
+        //border: 10px solid rgb(50, 161, 6);
+
+        margin: auto auto 1.5rem auto;
+        //margin-bottom: 1.5rem;
+
+        display: grid;
  
-    // }
+    
+    }
     
 }
 
+.eventos-clase::before{
+    content: "";
+    // display: block;
+    width: 90vw;
+    height: .15rem;
+    background-color:#E9E9E9;
+    position: absolute;
+    margin-top: -1rem;
+    // bottom: 0;
+    // top: -5%;
+    @include rwd(tablet){
+        
+    }
 
-.eventos-clase-evento{
-    border:2px solid #E6E8EC;
-    //border:2px solid red;
-    box-shadow: 0px 4px 4px 0px rgba(167, 161, 161, 0.25);
-    height:30rem;
-    //border:1px solid red;
-    text-decoration: none;
-    //margin-left: 2rem;
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 1.5rem;
-    position:relative;
-    border-radius: 1rem;
-    // @include rwd(tablet){
+    @include rwd(celular){
 
-    // }
-    // @include rwd(celular){
- 
-    // }
-    
+        width: 83vw;
+        margin: 0;
+        margin-top: -1.1rem;
+    }
 }
-
-
-
-
 
 .imagen-evento{
+   //border: 1px solid red;
+    height: 14rem;
+    width: 30rem;
+    object-fit: cover;
+    @include rwd(tablet){
+        
+    }
+
+    @include rwd(celular){
+        height: 85%;
+        width: 100%;
+        margin-bottom: .5rem
  
-    width: 100%;
-    height:100%;
-    border-radius:1rem 1rem 0 0 ;
-    object-fit: cover;
-    position: relative;
-    // @include rwd(tablet){
-    // }
-
-    // @include rwd(celular){
-    // }
+    }
 }
 
-
-.imagen-evento-evento{
-    //border: 1px solid red;
-    width: 100%;
-    height:50%;
-    border-radius:1rem 1rem 0 0 ;
-    object-fit: cover;
-    position: relative;
-    // @include rwd(tablet){
-    // }
-
-    // @include rwd(celular){
-    // }
+.evento-noticia{
+    margin-left: 2em;
 }
-
-// .evento-noticia{
-//     margin-left: 2em;
-// }
-
-
-
 .evento-noticia-descripccion{
-    margin: 1rem;
     margin-bottom: .5rem;
     width: 70%;
-    text-align: left;
-    text-transform: uppercase;
+    text-align: justify;
     text-decoration: none;
-    //border: 1px solid red;
-    color: rgb(47, 47, 47);
 }
 .colors{
-    font-weight: bold;
-
-    color: rgb(14, 14, 14);
-    position: absolute;
-    top: 4%;
-    right: 4%;
-    border-radius: .5rem;
-    backdrop-filter: blur(4px);
-    background-color: rgba(228, 226, 226, 0.76);
-    display:flex;
-    width: auto;
-
-    padding: 0.5rem;
-
-}
-
-.evento-noticia-estado{
-       // border: 1px solid red;
-        background-color:gray;
-        color: white;
-        padding: .5rem;
-        border-radius:.4em;
-        width: 6rem;
-
-}
-
-.evento-noticia-estado{
-    // border: 1px solid red;
-     background-color:gray;
-     color: white;
-     padding: .5rem;
-     border-radius:.4em;
-     width: 6rem;
-     margin: auto;
-     margin-bottom: 1rem;
-
-}
-.evento-noticia-estado:hover{
-    background-color:rgb(219, 217, 217);
-    color: rgb(56, 56, 56);
-    transform:scale(1.2);
-    transition: transform 1.5s;
-    transition: color 1.5s;
-
+    color: #03C4EB;
 }
