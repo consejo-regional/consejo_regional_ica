@@ -25,7 +25,7 @@ import DocumentoNormativo from './paginas/documentoNormativo';
 import ConsejosDistritales from './paginas/consejosDistritales';
 import PastDecanos from './paginas/pastDecanos';
 import OpinionPronunciamiento from './paginas/OpinionPronunciamiento';
-import Condolencias from './paginas/OpinionPronunciamiento';
+import Condolencias from './paginas/condolencias';
 
 
 
