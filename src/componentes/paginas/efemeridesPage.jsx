@@ -23,6 +23,9 @@ const informacion=EfemeridesInformacion
          
            <br/>
            <br/>
+           <div className="contenedor_separador">
+              <hr className="separador"></hr> 
+            </div>
               <div className="contenedor_eventos_grid">
                   {
   
@@ -45,7 +48,8 @@ const informacion=EfemeridesInformacion
         if(tipo==="EFEMERIDES"){
           return(
             <>
-           
+           <div className="contenedor_separador">
+
             <Link className="eventos-clase"  to={`/efemerides/${id}`} >
               <img className="imagen-evento" src={imagen} alt={imagen}></img>
               <div className="colors">{tipo}</div>
@@ -56,6 +60,10 @@ const informacion=EfemeridesInformacion
 
               </div>
             </Link>
+
+            <hr className="separador"></hr> 
+            </div>
+
             </>   
           )  
   

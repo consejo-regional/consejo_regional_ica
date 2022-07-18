@@ -36,7 +36,7 @@ const Home = ()=> {
         {/* <Eventos></Eventos> */}
         {/* <EventosPage></EventosPage> */}
 
-        <div data-aos="fade-up">
+        <div >
         <Comunicaciones></Comunicaciones>
         </div>
         <div data-aos="fade-up">
