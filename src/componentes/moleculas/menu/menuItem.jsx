@@ -210,13 +210,27 @@ const MenuItem = ()=> {
                 <li className="item">
                     <Link to="/nosotros/comite"  onClick={click}  className="link">COMITES</Link>
                 </li>
+                <li className="item">
+                    <Link to="/galeriaVideos"  onClick={click}  className="link">GALERIA</Link>
+                    <ul className="menuu submenu">
+                        {/* <li className="item">
+                            <Link to="/galeriafotos" onClick={click} className="link linkSubmenu">GALERIA DE FOTOS                </Link>
+                        </li> */}
+                        <li className="item">
+                            <Link to="/galeriavideos" onClick={click} className="link linkSubmenu">CURSOS                        </Link>
+                        </li>
+                        
+                    </ul>
+                </li>
                 {/* <li className="item">
                     <Link to="/biblioteca"  onClick={click}  className="link">BIBLIOTECA</Link>
                 </li> */}
-                 <li className="item-cmpDiguital">
+
+
+                 {/* <li className="item-cmpDiguital">
                  <CmpDiguital></CmpDiguital>
                 </li>
-               
+                */}
             </ul>
             
         </nav>

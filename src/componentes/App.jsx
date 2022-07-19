@@ -26,6 +26,9 @@ import ConsejosDistritales from './paginas/consejosDistritales';
 import PastDecanos from './paginas/pastDecanos';
 import OpinionPronunciamiento from './paginas/OpinionPronunciamiento';
 import Condolencias from './paginas/condolencias';
+import GaleriaFotos from './paginas/galeriaFotos';
+import GaleriaVideos from './paginas/galeriaVideos';
+
 
 
 
@@ -132,6 +135,11 @@ const App = ()=> {
             <Route path="/centroRecreaciones" element={ <SitioConstruccion/>}></Route>
 
             <Route path="/biblioteca" element={ <Biblioteca></Biblioteca>}></Route>
+
+
+            <Route path="/galeriafotos" element={<GaleriaFotos></GaleriaFotos>}></Route>
+            <Route path="/galeriavideos" element={ <GaleriaVideos></GaleriaVideos>}></Route>
+
 
 
 

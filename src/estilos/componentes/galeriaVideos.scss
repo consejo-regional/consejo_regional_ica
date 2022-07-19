@@ -1,0 +1,48 @@
+.contenedor_videos_central{
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: center;
+    width: 100vw;
+    //border:1px solid red;
+
+
+}
+
+.contenedor_videos{
+    display:grid;
+    grid-template-columns: repeat(2,1fr);
+    
+    //border:1px solid red;
+    align-items: center;
+    gap: 3rem;
+    
+}
+
+
+
+.contenedor_videos_individual{
+    width: 25rem;
+    height: 15rem;
+    align-self: center;
+    justify-self: center;
+    margin:1rem;
+
+}
+
+.contenedor_videos_central_titulo{
+    margin: 1rem;
+    padding:1rem;
+    background-color:rgb(221, 221, 221);
+    width: 100vw;
+    text-align: center;
+
+}
+
+
+.contenedor_videos_individual_titulo{
+    margin: .5rem;
+    font-size:.8rem;
+    color: gray;
+
+}
