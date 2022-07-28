@@ -31,10 +31,11 @@ const FooterContacto = ()=> {
 
             <div className="footerContacto">
                 <div className="footerContactoDescripccion">
-                    <h4>El Colegio Médico del Perú (CMP) es una institución autónoma de derecho público interno, representativa de la profesión médica en todo el territorio de la República. Consejo Regional IX – ICA  es el órgano directivo del CMP en Lima Metropolitana y representa a más del 50% de los médicos colegiados del Perú.</h4>
+                    <h4>El Colegio Médico del Perú (CMP) es una institución autónoma de derecho público interno, representativa de la profesión médica en todo el territorio de la República. Consejo Regional IX de ICA. (CR IX)  es el órgano directivo del CMP en la Región Ica.</h4>
                     <h4>Contáctenos</h4>
                     <h4>los, Ca. Nardos 158, Ica</h4>
                     <h4>consejo.regional.ica@cmp.org.pe</h4>
+                    <h4>Telefono: 056234217</h4>
                 </div>
 
            

@@ -1,3 +1,7 @@
+# parar el servidor en un puerto determinado
+
+npx kill-port 8080
+
 # instalar sass
 npm install -D node-sass
 npm i -D sass

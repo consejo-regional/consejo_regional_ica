@@ -22,24 +22,24 @@ const JuntaDirectiva = ()=> {
 
         </div>
         <div className="contenedor_junta_grid">
-              <SericiosItem imagen={process.env.PUBLIC_URL + `/directivos/DECANO.png`} nombre="Luis Felipe Muñante Aparcana." description="Decano"></SericiosItem>
+              <SericiosItem imagen={process.env.PUBLIC_URL + `/directivos/DECANO.png`} nombre="Dr. Luis Felipe Muñante Aparcana." description="Decano"></SericiosItem>
 
               
           </div>
          <div className="contenedor_junta1_grid">
 
-              <SericiosItem imagen={process.env.PUBLIC_URL + `/directivos/DSC_7035.png`} nombre="" description="Tesorero"></SericiosItem>
-              <SericiosItem imagen={process.env.PUBLIC_URL + `/directivos/DSC_7042.png`} nombre="" description="Secretario"></SericiosItem>
+              <SericiosItem imagen={process.env.PUBLIC_URL + `/directivos/DSC_7045.png`} nombre="Dra. FLor Elizabeth Aviles Bonifaz" description="Tesorero"></SericiosItem>
+              <SericiosItem imagen={process.env.PUBLIC_URL + `/directivos/DSC_7052.png`} nombre="Dr. ALexander Humberto Pecho Peche" description="Secretario"></SericiosItem>
               
           </div>
           <div className="contenedor_junta1_grid">
-              <SericiosItem imagen={process.env.PUBLIC_URL + `/directivos/DSC_7045.png`} nombre="" description="Vocal1"></SericiosItem>
-              <SericiosItem imagen={process.env.PUBLIC_URL + `/directivos/DSC_7048.png`} nombre="" description="Vocal2"></SericiosItem>
+              <SericiosItem imagen={process.env.PUBLIC_URL + `/imagenes/hombre.png`} nombre="Dr.Audias Josué Pérez Aguirre" description="Vocal I"></SericiosItem>
+              <SericiosItem imagen={process.env.PUBLIC_URL + `/directivos/DSC_7042.png`} nombre="Dra. Flor de Maria Mejia Escate" description="Vocal II"></SericiosItem>
               
           </div>
           <div className="contenedor_junta1_grid">
-              <SericiosItem imagen={process.env.PUBLIC_URL + `/imagenes/mujer.png`} nombre="" description="Accesitario1"></SericiosItem>
-              <SericiosItem imagen={process.env.PUBLIC_URL + `/imagenes/hombre.png`} nombre="" description="Accesitario2"></SericiosItem>
+              <SericiosItem imagen={process.env.PUBLIC_URL + `/directivos/DSC_7035.png`} nombre="Dr. Roberto Augusto Laos Olaechea" description="Accesitario I"></SericiosItem>
+              <SericiosItem imagen={process.env.PUBLIC_URL + `/directivos/DSC_7048.png`} nombre="Dr. Carlos Fernando Cagna Puppi" description="Accesitario II"></SericiosItem>
       
           </div>
 
