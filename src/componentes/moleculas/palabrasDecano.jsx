@@ -12,9 +12,12 @@ const PalabrasDecano = ()=> {
                     <div className="logo-colegio-svg"></div>
                 </div>
                 <div className="contenedor-serviciosGrid-contenido">
-                    <div className="contenedor-serviciosGrid-contenido1">PALABRAS DEL</div>
-                    <div className="contenedor-serviciosGrid-contenido2">DECANO</div>
+                    <div className="contenedor-serviciosGrid-contenido-conteiner">
+                        <div className="contenedor-serviciosGrid-contenido1">PALABRAS DEL</div>
+                        <div className="contenedor-serviciosGrid-contenido2">DECANO</div>
+                    </div>
                 </div>
+
 
             </div>
 

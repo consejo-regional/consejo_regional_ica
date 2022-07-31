@@ -40,9 +40,27 @@
 .contenedor-serviciosGrid-contenido{
         //border: 1px solid red;
         display:flex;
-        display:static
+        display:static;
+
 
 }
+
+
+.contenedor-serviciosGrid-contenido-conteiner{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    @include rwd(tablet){
+        flex-direction: column;
+    }
+
+    @include rwd(celular){
+
+    }
+
+
+}
+
 .contenedor-serviciosGrid-contenido::after{
     content: " ";
     height: .1rem;
