@@ -1,0 +1,48 @@
+
+
+
+
+main {
+	max-width: 25rem;
+	/* width: 100%; */
+	margin: 50px auto;
+	overflow: hidden;
+	// border: 1px solid red;
+    // background:rebeccapurple;
+
+    
+}
+
+
+
+.contenedor-publicaciones{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.contendor-slider-varios{
+
+
+
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 1rem;
+    @include rwd(tablet){
+     
+        grid-template-columns: repeat(2,1fr);
+
+
+    }
+    
+    @include rwd(celular){
+    
+
+        grid-template-columns: repeat(1,1fr);
+
+    }
+
+}
+
+

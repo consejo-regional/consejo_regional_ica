@@ -3,8 +3,16 @@ import React from "react";
 //import leftArrow from "../../../../public/iconos/left-arrow.svg";
 //import rightArrow from "./icons/right-arrow.svg";
 
+
+
+
+
 export default function BtnSlider({ direction, moveSlide }) {
+
   console.log(direction, moveSlide);
+  console.log('hola mundo');
+
+
   return (
     <button
       onClick={moveSlide}

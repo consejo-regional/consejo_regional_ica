@@ -3,6 +3,15 @@ import React, {useState} from 'react'
 import BtnSlider from './BtnSlider'
 import dataSlider from './dataSlider'
 
+
+
+
+
+
+
+
+
+
 export default function Slider() {
 
     const [slideIndex, setSlideIndex] = useState(1)

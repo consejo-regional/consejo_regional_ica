@@ -66,6 +66,20 @@
 
 
 
+.contenedor-separador-bloque{
+    margin: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.separador-bloque{
+    width: 80vw;
+    background-color: rgb(140, 30, 30);
+    color: red;
+}
+
 @font-face {
     font-family: 'Raleway';
     font-style: normal;
@@ -117,6 +131,10 @@ $puntosQuiebre:(
 
 
 
+
+
+
+
 @import "./componentes/menu.scss";
 @import "./componentes/menuItem.scss";
 @import "./componentes/redesSociales.scss";
@@ -142,6 +160,9 @@ $puntosQuiebre:(
 @import "./componentes/normativo.scss";
 @import "./componentes/cmpDiguital.scss";
 @import "./componentes/galeriaVideos.scss";
+@import "./componentes/publiaciones.scss";
+@import "./componentes/palabrasDecano.scss";
+ 
 
 
 

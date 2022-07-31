@@ -1,17 +1,16 @@
 import React  from 'react'
-//import BannerPrincipal from '../moleculas/bannerPrincipal'
-//import BannerHome from '../moleculas/bannerHome'
+
 import SericiosGrid from './serviciosGrid'
-//import Eventos from '../moleculas/eventos'
 import FooterContacto from '../moleculas/footerContacto'
 
 import  Slider from '../moleculas/slider/Slider'
-//import EventosPage from './eventosPage'
-import Comunicaciones from './noticiasPage'
+
 
 import {useEffect} from "react"
-import AOS from "aos";
+// import AOS from "aos";
 import "aos/dist/aos.css";
+import Publicaciones from '../moleculas/publicaciones'
+import PalabrasDecano from '../moleculas/palabrasDecano'
 
 
 const Home = ()=> {
@@ -23,22 +22,39 @@ const Home = ()=> {
       return(
         <>
         
-        {/* <BannerPrincipal></BannerPrincipal> */}
         <Slider></Slider>
-        {/* <BannerHome></BannerHome> */}
-
+ 
         <div data-aos="fade-up">
 
         <SericiosGrid></SericiosGrid> 
         </div>
 
-
-        {/* <Eventos></Eventos> */}
-        {/* <EventosPage></EventosPage> */}
-
-        <div >
-        <Comunicaciones></Comunicaciones>
+        <div className="contenedor-separador-bloque">
+            <hr className="separador-bloque"></hr>
         </div>
+
+        <div data-aos="fade-up">
+
+
+          <Publicaciones></Publicaciones>
+        </div>
+
+
+
+
+        <div className="contenedor-separador-bloque">
+            <hr className="separador-bloque"></hr>
+        </div>
+
+        <PalabrasDecano></PalabrasDecano>
+
+        <div className="contenedor-separador-bloque">
+            <hr className="separador-bloque"></hr>
+        </div>
+
+
+
+
         <div data-aos="fade-up">
         <FooterContacto></FooterContacto> 
         </div>

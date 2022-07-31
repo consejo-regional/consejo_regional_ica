@@ -1,0 +1,66 @@
+.container-palabras-decano{
+
+// height: 25rem ;
+background-image: url(../../../public/imagenes/medical-563427_640.jpg);
+background-repeat: no-repeat;
+background-size: cover;
+background-position: center center;
+display: flex;
+justify-content: center;
+align-items: center;
+
+
+
+
+
+}
+
+.container-palabras-decano-contenido{
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    width: 70%;
+    background-color: rgba(84, 84, 84, 0.459);
+    height:90%;
+    color: rgb(255, 255, 255);
+    text-align:justify;
+    border-radius:.5rem;
+    // font-weight: bold;
+    // border: 1px solid red;
+    @include rwd(tablet){
+     
+        grid-template-columns: repeat(1,1fr);
+
+
+    }
+    
+    @include rwd(celular){
+    
+        grid-template-columns: repeat(1,1fr);
+
+    
+    }
+
+}
+
+
+
+
+.container-palabras-decano-blur{
+    z-index: 100;
+    // border: 1px solid red;
+    align-self: center;
+    justify-self: center;
+    padding:2rem;
+
+
+}
+
+.bienvenida_decano-palabras-imagen{
+
+    align-self: center;
+    justify-self: center;
+    width: 60%;
+    margin-left:2rem;
+}
+

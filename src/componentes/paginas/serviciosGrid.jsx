@@ -16,10 +16,25 @@ const SericiosGrid = ()=> {
       return(
         <>
         <div className="contenedor_servicios_grid_conteiner">
-        <div className="contenedor-evento-titulo">
-                <h4>Consejo Regional IX – ICA ... </h4>
-                <h1>NUESTROS SERVICIOS</h1>
-        </div>
+
+
+
+
+          <div className="contenedor-serviciosGrid-titulo">
+                <div className="contenedor-serviciosGrid-logo">
+                    <div className="logo-colegio-svg"></div>
+                </div>
+                <div className="contenedor-serviciosGrid-contenido">
+                    <div className="contenedor-serviciosGrid-contenido1">SERVICIOS</div>
+                    <div className="contenedor-serviciosGrid-contenido2">DESTACADOS</div>
+                </div>
+
+            </div>
+
+
+
+
+
           <div className="contenedor_servicios_grid">
             {
               servicios.map(c=>(

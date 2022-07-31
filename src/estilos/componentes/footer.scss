@@ -7,17 +7,20 @@
     grid-template-columns: repeat(4,1fr);
    
     gap:1.5rem;
-    //border: 1px solid red;
+    // border: 1px solid red;
  
     @include rwd(tablet){
      
 
-  
+        grid-template-columns: repeat(2,1fr);
+
     }
 
     @include rwd(celular){
 
-        height:15rem;
+  
+        grid-template-columns: repeat(1,1fr);
+
     }
 
 }
@@ -25,20 +28,21 @@
     height:4rem;
     width: 4rem;
     margin:1rem;
-    //border: 1px solid red;
+    border: 1px solid red;
 
 }
 .imagen_footer1{
     height:4rem;
     width: 5rem;
     margin:1rem;
-    //border: 1px solid rgb(41, 6, 6);
 
 }
 .contenedor_imagen_footer{
     display:flex;
 
     margin:1rem;
+
+
 }
 .description_footer{
     color:white;
@@ -47,9 +51,10 @@
 .item_contenedor_footer{
     display:flex;
     flex-direction:column;
-    align-items:center;
+    align-items:flex-start;
     justify-content: flex-start;
     gap:.3rem;
+    // border: 1px solid red;
 
 }
 
@@ -67,6 +72,7 @@
 .item_contenedor_footer_bloque{
     margin-top:.5rem;
     margin-bottom:1.5rem;
+    // border: 1px solid red;
 }
 
 .item_contenedor_footer_final{
