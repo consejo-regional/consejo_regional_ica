@@ -11,6 +11,7 @@ import {useEffect} from "react"
 import "aos/dist/aos.css";
 import Publicaciones from '../moleculas/publicaciones'
 import PalabrasDecano from '../moleculas/palabrasDecano'
+import NoticiasDestacadas from '../moleculas/noticiasDestacadas'
 
 
 const Home = ()=> {
@@ -53,6 +54,8 @@ const Home = ()=> {
         </div>
 
 
+
+        <NoticiasDestacadas></NoticiasDestacadas>
 
 
         <div data-aos="fade-up">

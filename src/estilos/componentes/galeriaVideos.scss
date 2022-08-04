@@ -16,6 +16,16 @@
     //border:1px solid red;
     align-items: center;
     gap: 3rem;
+
+    @include rwd(medio){
+        grid-template-columns: repeat(1,1fr);
+
+    }
+    @include rwd(celular){
+        grid-template-columns: repeat(1,1fr);
+
+    }
+    // color:rgb(189, 189, 189)
     
 }
 
@@ -28,6 +38,15 @@
     justify-self: center;
     margin:1rem;
 
+
+    @include rwd(medio){
+        width: 25rem;
+        height: 15rem;
+    }
+    @include rwd(celular){
+        width: 25rem;
+        height: 15rem;
+    }
 }
 
 .contenedor_videos_central_titulo{
