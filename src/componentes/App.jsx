@@ -1,40 +1,40 @@
 import React, {useState,useEffect} from 'react'
-import Home from './paginas/home'
-import SericiosGrid from './paginas/serviciosGrid';
+import Home from './paginas/inicio/home'
+import SericiosGrid from './paginas/servicios/serviciosGrid';
 
 import "../estilos/styles.scss"
 
-import RedesSociales from '../componentes/moleculas/menu/redesSociales'
-import MenuItem from '../componentes/moleculas/menu/menuItem'
-import Menu from '../componentes/moleculas/menu/menu'
-import Footer from '../componentes/moleculas/footer'
-import Loader from '../componentes/moleculas/loader'
+import RedesSociales from './componente/redesSociales/redesSociales'
+import MenuItem from '../componentes/componente/menu/menuItem'
+import Menu from '../componentes/componente/menu/menu'
+import Footer from './componente/footer/footer'
+import Loader from './componente/loader/loader'
 
 
-import Biemvenida from './paginas/biemvenida';
-import Institucion from './paginas/institucion'
-import JuntaDirectiva from './paginas/juntaDirectiva'
-import SociedadCientifica from './paginas/sociedadCientifica'
-import Comite from './paginas/comite'
-import ConstanciaHabilidad from './paginas/constanciaHabilidad'
-import Rectificacion from './paginas/rectificacion'
-import ConstanciaEtica from './paginas/constanciaEtica'
-import ColegioMedico from './paginas/colegioMedico'
-import QuienesSomos from './paginas/quienesSomos';
-import DocumentoNormativo from './paginas/documentoNormativo';
-import ConsejosDistritales from './paginas/consejosDistritales';
-import PastDecanos from './paginas/pastDecanos';
-import OpinionPronunciamiento from './paginas/OpinionPronunciamiento';
-import Condolencias from './paginas/condolencias';
-import GaleriaFotos from './paginas/galeriaFotos';
-import GaleriaVideos from './paginas/galeriaVideos';
+import Biemvenida from './paginas/nosotros/biemvenida';
+import Institucion from './paginas/nosotros/institucion'
+import JuntaDirectiva from './paginas/nosotros/juntaDirectiva'
+import SociedadCientifica from './paginas/nosotros/sociedadCientifica'
+import Comite from './paginas/comites/comite'
+import ConstanciaHabilidad from './paginas/tramites/constanciaHabilidad'
+import Rectificacion from './paginas/tramites/rectificacion'
+import ConstanciaEtica from './paginas/tramites/constanciaEtica'
+import ColegioMedico from './paginas/nosotros/colegioMedico'
+import QuienesSomos from './paginas/nosotros/quienesSomos';
+import DocumentoNormativo from './paginas/nosotros/documentoNormativo';
+import ConsejosDistritales from './paginas/nosotros/consejosDistritales';
+import PastDecanos from './paginas/nosotros/pastDecanos';
+import OpinionPronunciamiento from './paginas/comunicaciones/OpinionPronunciamiento';
+import Condolencias from './paginas/comunicaciones/condolencias';
+import GaleriaFotos from './paginas/galeria/galeriaFotos';
+import GaleriaVideos from './paginas/galeria/galeriaVideos';
 
 
 
 
-import Anuncios from './moleculas/anuncios';
-import SitioConstruccion from './moleculas/sitioConstruccion';
-import NoEncontrado from './moleculas/noEncontrado'
+import Anuncios from './componente/pronunciamientoInicio/anuncios';
+import SitioConstruccion from './componente/sitioConstruccion/sitioConstruccion';
+import NoEncontrado from './componente/404/noEncontrado'
 
 
 
@@ -44,16 +44,16 @@ import {
   Route,
   //Link
 } from "react-router-dom";
-import Comunicaciones from './paginas/noticiasPage';
-import ComunicacionesDetalle from './moleculas/noticiasDetalle';
-import EventoDetalle from '../componentes/moleculas/eventoDetalle';
-import EventosPage from './paginas/eventosPage';
-import TramitesGrid from './paginas/tramitesGrid';
-import Watsap from './moleculas/watsap';
-import Biblioteca from './paginas/biblioteca';
-import Efemerides from './paginas/efemeridesPage';
-import Normativo from './moleculas/normativo';
-//import CmpDiguital from './moleculas/cmpDiguital';
+import Comunicaciones from './paginas/comunicaciones/noticiasPage';
+import ComunicacionesDetalle from './paginas/comunicaciones/noticiasDetalle';
+import EventoDetalle from './paginas/eventos/eventoDetalle';
+import EventosPage from './paginas/eventos/eventosPage';
+import TramitesGrid from './paginas/tramites/tramitesGrid';
+import Watsap from './componente/redesSociales/watsap';
+import Biblioteca from './paginas/biblioteca/biblioteca';
+import Efemerides from './paginas/comunicaciones/efemeridesPage';
+import Normativo from './paginas/comunicaciones/normativo';
+//import CmpDiguital from './componente/cmpDiguital';
 
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -98,14 +98,12 @@ const App = ()=> {
             <Route path="/nosotros/institucion" element={ <Institucion/>}></Route>
             <Route path="/nosotros/juntaDirectiva" element={ <JuntaDirectiva/>}></Route>
             <Route path="/nosotros/sociedadesCientificas" element={ <SociedadCientifica/>}></Route>
-            <Route path="/nosotros/comite" element={ <Comite/>}></Route>
+
 
 
             <Route path="/tramites" element={ <TramitesGrid></TramitesGrid>}></Route>
             <Route path="/tramites/constanciahabilidad" element={ <ConstanciaHabilidad/>}></Route>
-            <Route path="/tramites/iniciarColegiatura" element={ <ConstanciaHabilidad/>}></Route>
             <Route path="/tramites/rectificacion" element={ <Rectificacion/>}></Route>
-            <Route path="/tramites/actualizacionDatos" element={ <SericiosGrid/>}></Route>
             <Route path="/tramites/constanciaEtica" element={ <ConstanciaEtica/>}></Route>
 
 
@@ -118,12 +116,14 @@ const App = ()=> {
             <Route path="/comunicaciones" element={ <Comunicaciones/>}></Route>
             <Route path="/noticias/:id" element={ <ComunicacionesDetalle/>}></Route>
             <Route path="/comunicaciones/noticias" element={ <Comunicaciones/>}></Route>
-            <Route path="/efemerides/:id" element={ <ComunicacionesDetalle/>}></Route>
+            <Route path="/comunicaciones/efemerides/:id" element={ <ComunicacionesDetalle/>}></Route>
             <Route path="/comunicaciones/efemerides" element={ <Efemerides></Efemerides>}></Route>
             <Route path="/comunicaciones/pronunciamiento" element={ <OpinionPronunciamiento/>}></Route>
             <Route path="/comunicaciones/normativo" element={ <Normativo></Normativo>}></Route>
             <Route path="/comunicaciones/condolencias" element={ <Condolencias/>}></Route>
 
+
+            <Route path="/comite" element={ <Comite/>}></Route>
 
 
 
