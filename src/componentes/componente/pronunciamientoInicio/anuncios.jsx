@@ -18,7 +18,7 @@ const Anuncios = ()=> {
         <div className="contenedor_anuncios" ref={botonEsconder}>
              <div className="anuncios_conteiner">
                 <div className="anuncios_banner_boton"  onClick={clickAnuncio}  ></div> 
-                <img alt='' className='anuncios_banner' src={process.env.PUBLIC_URL+`/pronunciamiento/COMUNICADO 8.png`}></img>
+                <img alt='' className='anuncios_banner' src={process.env.PUBLIC_URL+`/pronunciamiento/img3.png`}></img>
             </div> 
         </div>
         </>   
