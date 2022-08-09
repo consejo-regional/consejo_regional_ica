@@ -11,6 +11,13 @@ import NoticiasDestacadas from './noticiasDestacadas'
 import AnimatedNumbers from "react-animated-numbers";
 import {Slideshow, Slide} from '../../componente/slider/sliderautoplayinicio'
 import SliderPrincipal from '../../../data/sliderPrincipal';
+import GaleriaVideosInicio from './galeriaVideosInicio';
+
+import ReactImageVideoLightbox from "react-image-video-lightbox";
+
+
+import FsLightbox from 'fslightbox-react';
+
 
 
 
@@ -18,7 +25,13 @@ const informacion=SliderPrincipal
 
 
 const Home = ()=> {
+
   const[contador,setContador]=useState()
+
+
+  const [toggler, setToggler] = useState(false);
+
+
    useEffect(()=>{
    AOS.init({duration: 1000})
    fetch("https://api.countapi.xyz/update/cmpica.org.pe/llavereact/?amount=1")
@@ -29,7 +42,7 @@ const Home = ()=> {
 
       return(
         <>
-        
+
         <main className="slider-principal">
           <Slideshow controles={true} autoplay={true} velocidad="6000" intervalo="3000">
                   {
@@ -77,6 +90,15 @@ const Home = ()=> {
         <div data-aos="fade-up">
           <Publicaciones></Publicaciones>
         </div>
+
+
+        <div className="contenedor-separador-bloque">
+            <hr className="separador-bloque"></hr>
+        </div>
+
+      
+          <GaleriaVideosInicio></GaleriaVideosInicio>
+
 
         <div className="contenedor-separador-bloque">
             <hr className="separador-bloque"></hr>
