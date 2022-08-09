@@ -34,6 +34,20 @@
     overflow: hidden;
     border-radius: 6px;
     box-shadow: 0px 15px 25px rgba(0,0,0,0.50);
+    @include rwd(tablet){
+     
+        // grid-template-columns: repeat(2,1fr);
+        width: 100%;
+
+
+    }
+    
+    @include rwd(celular){
+    
+
+
+    }
+    
 }
 .contenedor-video-inicio figure img{
     width: 100%;
@@ -98,23 +112,7 @@
     background-color: rgb(147, 66, 137);
     border: none;
 
-
     
-    @include rwd(tablet){
-     
-        // grid-template-columns: repeat(2,1fr);
-        width: 100%;
-
-
-
-    }
-    
-    @include rwd(celular){
-    
-
-
-    }
-}
 }
 
 // .btn-vert {
