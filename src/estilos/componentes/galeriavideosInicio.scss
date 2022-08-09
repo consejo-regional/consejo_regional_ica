@@ -97,6 +97,24 @@
     padding: .5rem;
     background-color: rgb(147, 66, 137);
     border: none;
+
+
+    
+    @include rwd(tablet){
+     
+        // grid-template-columns: repeat(2,1fr);
+        width: 100%;
+
+
+
+    }
+    
+    @include rwd(celular){
+    
+
+
+    }
+}
 }
 
 // .btn-vert {
