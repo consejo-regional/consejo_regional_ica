@@ -1,12 +1,13 @@
-.contenedorNoEncontrado{
+.contenedorConstruccion{
+    margin-top: 4rem;
     width: 100vw;
-    height: 100vh;
+    height: 70vh;
     display: flex;
     justify-content: center;
     align-items: center;
     //background-color:red;
     pointer-events: none;
-
+    //border: 1px solid red;
     @include rwd(tablet){
 
     }
@@ -14,15 +15,16 @@
     @include rwd(celular){
      
         width: 100vw;
-        height: 50vh;
+        height: 55vh;
+        transform: translateY(-5%);
     
     }
 }
 
-.imagenNoEncontrado{
+.imagenConstruccion{
     width: 50vw;
     height: 50vh;
-    background-image: url(../../../public/imagenes/404.png);
+    background-image: url(../../../../public/imagenes/sitioConstruccion.png);
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center center;

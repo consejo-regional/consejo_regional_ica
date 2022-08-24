@@ -6,8 +6,7 @@ const Footer = ()=> {
       return(
         <>
         <div className="contenedor_footer">
-
-
+            
             <div className="item_contenedor_footer">
                 <img src={process.env.PUBLIC_URL + `iconos/doctor.png`}/>
                 <div className="item_contenedor_footer_bloque">

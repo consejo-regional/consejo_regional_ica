@@ -33,9 +33,9 @@ const informacion=Eventos
         if(tipo==="EVENTO"){
           return(
             <>
-            <div className="detalle-noticias">
+            <div className="detalle-grid">
                 <h2>EVENTOS</h2>
-                <div className="detalle-noticias-contenido" >
+                <div className="detalle-grid-contenido" >
                 <div className="detalle-cart-contenido">
                     <div className="detalle-cart-contenido-titulo">{description}</div>
                     <div className="detalle-cart-contenido-fecha">{fecha}</div>
@@ -46,7 +46,7 @@ const informacion=Eventos
 
                   
                   </div>
-                  <img className="detalle-noticias-contenido-imagem detalle-noticias-contenido-imagem1" src={imagen} alt={imagen}></img>
+                  <img className="detalle-grid-contenido-imagem detalle-noticias-contenido-imagem1" src={imagen} alt={imagen}></img>
                   
                 </div>
             </div>

@@ -14,21 +14,19 @@ const Comite = ()=> {
       return(
         
         <>
-         <div className="contenedor_colegio">
-            <div className="container-imagen-colegio">
-                <div className="logo-colegio">
-                    <div className="logo-colegio-svg"></div>
+         <div className="">
+            <div className="container-imagen-banner">
+                <div className="logo-banner">
+                    <div className="logo-banner-svg"></div>
                 </div>
-                <div className="titulo-contenido-colegio">
-                    <div className="titulo-contenido-colegio1">DIVERSOS</div>
-                    <div className="titulo-contenido-colegio2">COMITES</div>
+                <div className="titulo-contenido-banner">
+                    <div className="titulo-contenido-banner-izquierda">DIVERSOS</div>
+                    <div className="titulo-contenido-banner-derecha">COMITES</div>
                 </div>
-
-            </div>
-
-            <div className="container-descripccion-colegio">
             </div>
         </div>
+
+
         <div className="datos">
         <h2>{contenido.titulo}</h2>
         <div className="conteiner-datos">
@@ -68,63 +66,63 @@ const Comite = ()=> {
                     <br />
                     <br />
                     <br />
-                    <div className="contenedor_servicios_grid">
-                        <SericiosItem imagen={process.env.PUBLIC_URL + `/imagenes/hombre.png`} nombre={c.presidente} description="PRESIDENTE"></SericiosItem>
+                    <div className="contenedor_comite_grid">
+                        <ComiteItem imagen={process.env.PUBLIC_URL + `/imagenes/hombre.png`} nombre={c.presidente} description="PRESIDENTE"></ComiteItem>
 
                        {c.miembro1? 
-                        <SericiosItem imagen={c.miembro1.foto} nombre={c.miembro1.nombre} description="MIEMBRO"></SericiosItem>
+                        <ComiteItem imagen={c.miembro1.foto} nombre={c.miembro1.nombre} description="MIEMBRO"></ComiteItem>
                        :null
                        }
                        {c.miembro2? 
-                        <SericiosItem imagen={c.miembro2.foto} nombre={c.miembro2.nombre} description="MIEMBRO"></SericiosItem>
+                        <ComiteItem imagen={c.miembro2.foto} nombre={c.miembro2.nombre} description="MIEMBRO"></ComiteItem>
                        :null
                        }
                        {c.miembro3? 
-                        <SericiosItem imagen={c.miembro3.foto} nombre={c.miembro3.nombre} description="MIEMBRO"></SericiosItem>
+                        <ComiteItem imagen={c.miembro3.foto} nombre={c.miembro3.nombre} description="MIEMBRO"></ComiteItem>
                        :null
                        }
                        {c.miembro4? 
-                        <SericiosItem imagen={c.miembro4.foto} nombre={c.miembro4.nombre} description="MIEMBRO"></SericiosItem>
+                        <ComiteItem imagen={c.miembro4.foto} nombre={c.miembro4.nombre} description="MIEMBRO"></ComiteItem>
                        :null
                        }
                        {c.miembro5? 
-                        <SericiosItem imagen={c.miembro5.foto} nombre={c.miembro5.nombre} description="MIEMBRO"></SericiosItem>
+                        <ComiteItem imagen={c.miembro5.foto} nombre={c.miembro5.nombre} description="MIEMBRO"></ComiteItem>
                        :null
                        }
                        {c.miembro6? 
-                        <SericiosItem imagen={c.miembro6.foto} nombre={c.miembro6.nombre} description="MIEMBRO"></SericiosItem>
+                        <ComiteItem imagen={c.miembro6.foto} nombre={c.miembro6.nombre} description="MIEMBRO"></ComiteItem>
                        :null
                        }
                        {c.miembro7? 
-                        <SericiosItem imagen={c.miembro7.foto} nombre={c.miembro7.nombre} description="MIEMBRO"></SericiosItem>
+                        <ComiteItem imagen={c.miembro7.foto} nombre={c.miembro7.nombre} description="MIEMBRO"></ComiteItem>
                        :null
                        }
                        {c.miembro8? 
-                        <SericiosItem imagen={c.miembro8.foto} nombre={c.miembro8.nombre} description="MIEMBRO"></SericiosItem>
+                        <ComiteItem imagen={c.miembro8.foto} nombre={c.miembro8.nombre} description="MIEMBRO"></ComiteItem>
                        :null
                        }
                        {c.miembro9? 
-                        <SericiosItem imagen={c.miembro9.foto} nombre={c.miembro9.nombre} description="MIEMBRO"></SericiosItem>
+                        <ComiteItem imagen={c.miembro9.foto} nombre={c.miembro9.nombre} description="MIEMBRO"></ComiteItem>
                        :null
                        }
                        {c.miembro10? 
-                        <SericiosItem imagen={c.miembro10.foto} nombre={c.miembro10.nombre} description="MIEMBRO"></SericiosItem>
+                        <ComiteItem imagen={c.miembro10.foto} nombre={c.miembro10.nombre} description="MIEMBRO"></ComiteItem>
                        :null
                        }
                        {c.miembro11? 
-                        <SericiosItem imagen={c.miembro11.foto} nombre={c.miembro11.nombre} description="MIEMBRO"></SericiosItem>
+                        <ComiteItem imagen={c.miembro11.foto} nombre={c.miembro11.nombre} description="MIEMBRO"></ComiteItem>
                        :null
                        }
                        {c.miembro12? 
-                        <SericiosItem imagen={c.miembro12.foto} nombre={c.miembro12.nombre} description="MIEMBRO"></SericiosItem>
+                        <ComiteItem imagen={c.miembro12.foto} nombre={c.miembro12.nombre} description="MIEMBRO"></ComiteItem>
                        :null
                        }
                        {c.miembro13? 
-                        <SericiosItem imagen={c.miembro13.foto} nombre={c.miembro13.nombre} description="MIEMBRO"></SericiosItem>
+                        <ComiteItem imagen={c.miembro13.foto} nombre={c.miembro13.nombre} description="MIEMBRO"></ComiteItem>
                        :null
                        }
                        {c.miembro14? 
-                        <SericiosItem imagen={c.miembro14.foto} nombre={c.miembro14.nombre} description="MIEMBRO"></SericiosItem>
+                        <ComiteItem imagen={c.miembro14.foto} nombre={c.miembro14.nombre} description="MIEMBRO"></ComiteItem>
                        :null
                        }
                        
@@ -143,13 +141,13 @@ const Comite = ()=> {
       )  
   }
 
-  const SericiosItem = ({imagen,nombre,description})=> {
+  const ComiteItem = ({imagen,nombre,description})=> {
     return(
       <>
-      <div className="contenedor_servicios_item">
-        <img className="servicios imagen" src={imagen} alt={imagen}></img>
-        <div className="servicios-nombre">{nombre}</div>
-        <div className="servicios-description">{description}</div>
+      <div className="contenedor_comite_item">
+        <img className="comite imagen" src={imagen} alt={imagen}></img>
+        <div className="">{nombre}</div>
+        <div className="">{description}</div>
       </div>
       </>   
     )  

@@ -1,84 +1,3 @@
-// .loader{
-
-//     width: 100vw;
-//     height: 100vh;
-//     display: flex;
-//     justify-content: center;
-//     align-items: center;
-  
-//   }
-
-.bienvenida_decano{
-    height: 15rem;
-    width: 15rem;
-    margin: 1rem;
-   // background-color: ;
-}
-
-.contenedor_separador{
-    display: flex;
-    flex-direction: column;
-    justify-content:center;
-    align-items: center;
-
-    .separador{
-        width: 80vw;
-        //color: rgb(113, 13, 13);
-       // background-color: red;
-        // border-color:gray;
-        // background-color: gray;
-        color: gray;
-    }
-}
-
-
-
-
-.marcador {
-    background-color: red;
-    padding: 10px;
-}
-
-
-.loader {
-    background: white;
-    height: 100vh;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: fixed;
-    z-index: 10000;
-}
-/* estilos del svg con animacion */
-
-.loader_svg {
-    background-image: url(../../public/imagenes/loderImagen.gif);
-    background-repeat: no-repeat;
-    height: 15rem;
-    width: 20rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-   // border: 1px solid red;
-    background-size: contain;
-}
-
-
-
-.contenedor-separador-bloque{
-    margin: 4rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    
-}
-
-.separador-bloque{
-    width: 80vw;
-    background-color: rgb(140, 30, 30);
-    color: red;
-}
 
 @font-face {
     font-family: 'Raleway';
@@ -130,44 +49,77 @@ $puntosQuiebre:(
 }
 
 
+////////COMPONENTES
+@import "./componentes/404/noEncontrado.scss";
+@import "./componentes/footer/footerContacto.scss";
+@import "./componentes/footer/footer.scss";
+@import "./componentes/loader/loader.scss";
+@import "./componentes/menu/menu.scss";
+@import "./componentes/menu/menuItem.scss";
+@import "./componentes/menu/cmpDiguital.scss";
+@import "./componentes/pronunciamiento_inicio.scss/anuncios.scss";
+@import "./componentes/redes_sociales/redesSociales.scss";
+@import "./componentes/redes_sociales/watsap.scss";
+@import "./componentes/sitio_construccion/sitioConstruccion.scss";
+@import "./componentes/silder/slider.scss";
+@import "./componentes/silder/sliderNoticias.scss";
+
+////////PAGINAS
+
+@import "./paginas/biblioteca/biblioteca.scss";
+
+@import "./paginas/banner.scss";
+@import "./paginas/comite/comite.scss";
+
+@import "./paginas/comunicaciones/pronunciamiento.scss";
+@import "./paginas/comunicaciones/condolencias.scss";
+
+
+@import "./paginas/ruta_parametro/gridDetalle.scss";
+@import "./paginas/ruta_parametro/gridPage.scss";
+
+@import "./paginas/comunicaciones/normativo.scss";
+
+@import "./paginas/galeria/galeriaVideos.scss";
+
+@import "./paginas/inicio/galeriavideosInicio.scss";
+@import "./paginas/inicio/palabrasDecano.scss";
+@import "./paginas/inicio/noticiasDestacadas.scss";
+@import "./paginas/inicio/contador.scss";
+@import "./paginas/inicio/publiacionesDestacadas.scss";
+@import "./paginas/inicio/bannerPrincipal.scss";
+
+
+@import "./paginas/nosotros/biembenida.scss";
+@import "./paginas/nosotros/colegioMedico.scss";
+@import "./paginas/nosotros/juntaDirectiva.scss";
+@import "./paginas/nosotros/documentoNormativo.scss";
+
+@import "./paginas/servicios/serviciosGrig.scss";
 
 
 
 
 
-@import "./componentes/menu.scss";
-@import "./componentes/menuItem.scss";
-@import "./componentes/redesSociales.scss";
-@import "./componentes/bannerPrincipal.scss";
-@import "./componentes/bannerHome.scss";
-@import "./componentes/serviciosGrig.scss";
-@import "./componentes/eventos.scss";
-@import "./componentes/footerContacto.scss";
-@import "./componentes/footer.scss";
-@import "./componentes/cartsSubmenu.scss";
-@import "./componentes/anuncios.scss";
-@import "./componentes/noEncontrado.scss";
-@import "./componentes/sitioConstruccion.scss";
-@import "./componentes/colegioMedico.scss";
-@import "./componentes/documentoNormativo.scss";
-@import "./componentes/pronunciamiento.scss";
-@import "./componentes/juntaDirectiva.scss";
-@import "./componentes/comunicacionesDetalle.scss";
-@import "./componentes/chatbot.scss";
-@import "./componentes/biblioteca.scss";
-@import "./componentes/slider.scss";
-@import "./componentes/sliderNoticias.scss";
-@import "./componentes/normativo.scss";
-@import "./componentes/cmpDiguital.scss";
-@import "./componentes/galeriaVideos.scss";
-@import "./componentes/publiaciones.scss";
-@import "./componentes/palabrasDecano.scss";
-@import "./componentes/noticiasDestacadas.scss";
 
-@import "./componentes/galeriavideosInicio.scss";
+// .marcador {
+//     background-color: red;
+//     padding: 10px;
+// }
 
+// .contenedor-separador-bloque{
+//     margin: 4rem;
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+    
+// }
 
-@import "./componentes/contador.scss";
+// .separador-bloque{
+//     width: 80vw;
+//     background-color: rgb(140, 30, 30);
+//     color: red;
+// }
 
  
 

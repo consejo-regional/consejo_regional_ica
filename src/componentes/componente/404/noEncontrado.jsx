@@ -1,7 +1,5 @@
 import React from "react"
 
-
-
 const NoEncontrado=()=>(
     <>
     <div className="contenedorNoEncontrado">

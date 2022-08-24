@@ -20,7 +20,7 @@
     width: 94vw;
     position: relative;
     right: 0;
-    background-image: url(../../../public/imagenes/menuBanner.png);
+    background-image: url(../../../../public/imagenes/menuBanner.png);
    // border: 1px solid red;
 
     @include rwd(tablet){
@@ -60,7 +60,7 @@
     .logo{
         width: 100%;
         height: 92%;
-        background-image: url(../../../public/imagenes/logo.png);
+        background-image: url(../../../../public/imagenes/logo.png);
         background-repeat: no-repeat;
         background-size:contain;
         background-position: center center;

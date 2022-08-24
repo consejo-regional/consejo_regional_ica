@@ -11,8 +11,8 @@ const informacion=EfemeridesInformacion
   
          
           <>
-          <div className="contenedor-eventos"  >
-              <div className="contenedor-evento-titulo">
+          <div className="contenedor-page"  >
+              <div className="contenedor-page-titulo">
                   <h4>Consejo Regional IX – ICA </h4>
                   <h1>NOTICIAS</h1>
 
@@ -23,7 +23,7 @@ const informacion=EfemeridesInformacion
            <div className="contenedor_separador">
               <hr className="separador"></hr> 
             </div>
-              <div className="contenedor_eventos_grid">
+              <div className="contenedor_page_grid">
                   {
   
                     informacion.map(c=>(
@@ -47,13 +47,13 @@ const informacion=EfemeridesInformacion
             <>
            <div className="contenedor_separador">
 
-            <Link className="eventos-clase"  to={`/comunicaciones/efemerides/${id}`} >
-              <img className="imagen-evento" src={imagen} alt={imagen}></img>
+            <Link className="page-clase"  to={`/comunicaciones/efemerides/${id}`} >
+              <img className="imagen-page" src={imagen} alt={imagen}></img>
               <div className="colors">{tipo}</div>
-              <div className="evento-noticia">
-                <div className="evento-noticia-descripccion">{description}</div>
-                <div className="evento-noticia-descripccion">{fecha}</div>
-                <div className="evento-noticia-estado">Leer Mas</div>
+              <div className="page">
+                <div className="page-descripccion">{description}</div>
+                <div className="page-descripccion">{fecha}</div>
+                <div className="page-estado">Leer Mas</div>
 
               </div>
             </Link>

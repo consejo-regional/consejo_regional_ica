@@ -58,3 +58,38 @@
 
 }
 
+
+.contenedor_comite_grid{
+
+    width: 75vw;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: 1fr;
+    //border: 1px solid red;
+    gap:4rem;
+    @include rwd(tablet){
+        grid-template-columns: repeat(2,1fr);
+
+    }
+
+    @include rwd(celular){
+        grid-template-columns: repeat(1,1fr);
+
+    }
+
+
+    
+}
+
+
+.comite{
+    object-fit: contain;
+    width: 100% !important;
+    // border: 1px solid red;
+}
+.contenedor_comite_item{
+    flex-direction: column;
+    display: flex;
+    justify-items: center;
+    align-items: center;
+}

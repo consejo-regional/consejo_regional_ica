@@ -32,19 +32,19 @@ const informacion=Informacion
         if(tipo==="NOTICIA"){
           return(
             <>
-            <div className="detalle-noticias">
+            <div className="detalle-grid">
                 <h2>NOTICIAS</h2>
-                <div className="detalle-noticias-contenido" >
+                <div className="detalle-grid-contenido" >
                 <div className="detalle-cart-contenido">
                     <div className="detalle-cart-contenido-titulo">{description}</div>
                     <div className="detalle-cart-contenido-fecha">{fecha}</div>
                     <div className="">{contenido}</div>
                   
                   </div>
-                  <div className="detalle-noticias-contenido-imagenes">
+                  <div className="detalle-grid-contenido-imagenes">
                     {
                       imagen.map(c=>(
-                            <img className="detalle-noticias-contenido-imagem" src={c} alt={c}></img> 
+                            <img className="detalle-grid-contenido-imagem" src={c} alt={c}></img> 
 
                       ))
                     }

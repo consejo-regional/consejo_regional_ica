@@ -19,8 +19,8 @@ const informacion=Informacion
   
          
           <>
-          <div className="contenedor-eventos"  >
-              <div className="contenedor-evento-titulo">
+          <div className="contenedor-page"  >
+              <div className="contenedor-page-titulo">
                   <h4>Consejo Regional IX – ICA </h4>
                   <h1>NOTICIAS</h1>
            </div>
@@ -33,11 +33,11 @@ const informacion=Informacion
            <div className="contenedor_separador">
               <hr className="separador"></hr> 
             </div>
-              <div className="contenedor_eventos_grid">
+              <div className="contenedor_page_grid">
                   {
   
                     informacion.map(c=>(
-                      <SericiosItem id={c.id} imagen={c.imagen} description={c.description} fecha={c.fecha} tipo={c.tipo} ></SericiosItem>
+                      <NoticiasItem id={c.id} imagen={c.imagen} description={c.description} fecha={c.fecha} tipo={c.tipo} ></NoticiasItem>
                       ))
   
                     
@@ -49,20 +49,20 @@ const informacion=Informacion
     }
   
   
-    const SericiosItem = ({id,imagen,description,fecha,tipo})=> {
+    const NoticiasItem = ({id,imagen,description,fecha,tipo})=> {
   
   
         if(tipo==="NOTICIA"){
           return(
             <>
             <div className="contenedor_separador">
-            <Link className="eventos-clase"  to={`/noticias/${id}`}   >
-              <img className="imagen-evento" src={imagen} alt={imagen}></img>
-              <div className="evento-noticia">
+            <Link className="page-clase"  to={`/noticias/${id}`}   >
+              <img className="imagen-page" src={imagen} alt={imagen}></img>
+              <div className="page">
                 <div className="colors">{tipo}</div>
-                <div className="evento-noticia-descripccion">{description}</div>
-                <div className="evento-noticia-descripccion">{fecha}</div>
-                <div className="evento-noticia-estado">Leer Mas</div>
+                <div className="page-descripccion">{description}</div>
+                <div className="page-descripccion">{fecha}</div>
+                <div className="page-estado">Leer Mas</div>
 
               </div>
             </Link>

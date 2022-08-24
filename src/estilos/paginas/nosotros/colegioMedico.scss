@@ -1,44 +1,44 @@
-.container-imagen-colegio{
-    width: 100%;
-    height: 50vh;
-    background-image: url(../../../public/imagenes/estetoscopio.jpg);
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size:cover;
-    display:flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    gap:.9rem;
-}
+// .container-imagen-colegio{
+//     width: 100%;
+//     height: 50vh;
+//     background-image: url(../../../public/imagenes/estetoscopio.jpg);
+//     background-repeat: no-repeat;
+//     background-position: center center;
+//     background-size:cover;
+//     display:flex;
+//     justify-content: center;
+//     align-items: center;
+//     flex-direction: column;
+//     gap:.9rem;
+// }
 
 
-.logo-colegio{
-    width: 3.5rem; 
-    height:3.5rem;
-    background-color:rgba(139, 71, 137, 1);
-    border-radius: 50%;
-    display:flex;
-    justify-content: center;
-    align-items: center;
-    .logo-colegio-svg{
-        width: 40%;
-        height: 40%;
-        background-image: url(../../../public/iconos/temple.svg);
-        background-repeat: no-repeat;
-        background-position: center center;
-        background-size:contain;
+// .logo-colegio{
+//     width: 3.5rem; 
+//     height:3.5rem;
+//     background-color:rgba(139, 71, 137, 1);
+//     border-radius: 50%;
+//     display:flex;
+//     justify-content: center;
+//     align-items: center;
+//     .logo-colegio-svg{
+//         width: 40%;
+//         height: 40%;
+//         background-image: url(../../../public/iconos/temple.svg);
+//         background-repeat: no-repeat;
+//         background-position: center center;
+//         background-size:contain;
        
-    }
+//     }
     
-}
+// }
 
-.titulo-contenido-colegio{
-        //border: 1px solid red;
-        display:flex;
-        display:static
+// .titulo-contenido-colegio{
+//         //border: 1px solid red;
+//         display:flex;
+//         display:static
 
-}
+// }
 .titulo-contenido-colegio::after{
     content: " ";
     height: .1rem;
@@ -60,22 +60,22 @@
 }
 
 
-.titulo-contenido-colegio1{
-    display:flex;
-    padding:.5rem;
-    gap: .5rem;
-    color:white;
-    //font-weight: bold;
-    font-size:1.3rem;
-}
-.titulo-contenido-colegio2{
-    //border: 1px solid red;
-    font-size:1.3rem;
-    background-color: rgba(139, 71, 137, 1);
-    color:white;
-    padding:.5rem;
-    border-radius: 3px;
-}
+// .titulo-contenido-colegio1{
+//     display:flex;
+//     padding:.5rem;
+//     gap: .5rem;
+//     color:white;
+//     //font-weight: bold;
+//     font-size:1.3rem;
+// }
+// .titulo-contenido-colegio2{
+//     //border: 1px solid red;
+//     font-size:1.3rem;
+//     background-color: rgba(139, 71, 137, 1);
+//     color:white;
+//     padding:.5rem;
+//     border-radius: 3px;
+// }
 
 
 .container-descripccion-colegio{

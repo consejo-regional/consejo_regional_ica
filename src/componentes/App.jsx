@@ -1,15 +1,21 @@
 import React, {useState,useEffect} from 'react'
+import AOS from "aos";
+import "aos/dist/aos.css";
+import {
+  HashRouter as Router,
+  Routes,
+  Route,
+} from "react-router-dom";
+import "../estilos/styles.scss"
+
 import Home from './paginas/inicio/home'
 import SericiosGrid from './paginas/servicios/serviciosGrid';
 
-import "../estilos/styles.scss"
-
-import RedesSociales from './componente/redesSociales/redesSociales'
+import RedesSociales from './componente/redes_sociales/redesSociales'
 import MenuItem from '../componentes/componente/menu/menuItem'
 import Menu from '../componentes/componente/menu/menu'
 import Footer from './componente/footer/footer'
 import Loader from './componente/loader/loader'
-
 
 import Biemvenida from './paginas/nosotros/biemvenida';
 import Institucion from './paginas/nosotros/institucion'
@@ -28,46 +34,34 @@ import OpinionPronunciamiento from './paginas/comunicaciones/OpinionPronunciamie
 import Condolencias from './paginas/comunicaciones/condolencias';
 import GaleriaFotos from './paginas/galeria/galeriaFotos';
 import GaleriaVideos from './paginas/galeria/galeriaVideos';
-
-
-
-
-import Anuncios from './componente/pronunciamientoInicio/anuncios';
-import SitioConstruccion from './componente/sitioConstruccion/sitioConstruccion';
+import Anuncios from './componente/pronunciamiento_inicio/anuncios';
+import SitioConstruccion from './componente/sitio_construccion/sitioConstruccion';
 import NoEncontrado from './componente/404/noEncontrado'
 
 
-
-import {
-  HashRouter as Router,
-  Routes,
-  Route,
-  //Link
-} from "react-router-dom";
 import Comunicaciones from './paginas/comunicaciones/noticiasPage';
 import ComunicacionesDetalle from './paginas/comunicaciones/noticiasDetalle';
 import EventoDetalle from './paginas/eventos/eventoDetalle';
 import EventosPage from './paginas/eventos/eventosPage';
 import TramitesGrid from './paginas/tramites/tramitesGrid';
-import Watsap from './componente/redesSociales/watsap';
+import Watsap from './componente/redes_sociales/watsap';
 import Biblioteca from './paginas/biblioteca/biblioteca';
 import Efemerides from './paginas/comunicaciones/efemeridesPage';
 import Normativo from './paginas/comunicaciones/normativo';
-//import CmpDiguital from './componente/cmpDiguital';
+import EfemeridesDetalle from './paginas/comunicaciones/efemeridesDetalles';
 
-import AOS from "aos";
-import "aos/dist/aos.css";
 
 const App = ()=> {
 
   const[loader,setLoader]=useState(false)
 
   useEffect(()=>{
+
     AOS.init({duration: 2000})
     setTimeout(()=>{
       setLoader(true)
-      console.log("loader")
     },1000)
+
   },[])
 
       return(
@@ -81,7 +75,6 @@ const App = ()=> {
            <Menu></Menu>
           <RedesSociales></RedesSociales>
           <Watsap></Watsap>
-          {/* <CmpDiguital></CmpDiguital> */}
           <MenuItem></MenuItem>
          
           < Routes>
@@ -116,7 +109,7 @@ const App = ()=> {
             <Route path="/comunicaciones" element={ <Comunicaciones/>}></Route>
             <Route path="/noticias/:id" element={ <ComunicacionesDetalle/>}></Route>
             <Route path="/comunicaciones/noticias" element={ <Comunicaciones/>}></Route>
-            <Route path="/comunicaciones/efemerides/:id" element={ <ComunicacionesDetalle/>}></Route>
+            <Route path="/comunicaciones/efemerides/:id" element={ <EfemeridesDetalle></EfemeridesDetalle>}></Route>
             <Route path="/comunicaciones/efemerides" element={ <Efemerides></Efemerides>}></Route>
             <Route path="/comunicaciones/pronunciamiento" element={ <OpinionPronunciamiento/>}></Route>
             <Route path="/comunicaciones/normativo" element={ <Normativo></Normativo>}></Route>
@@ -125,9 +118,6 @@ const App = ()=> {
 
             <Route path="/comite" element={ <Comite/>}></Route>
 
-
-
-            
             <Route path="/eventos" element={ <EventosPage/>}></Route>
             <Route path="/eventos/:id" element={ <EventoDetalle/>}></Route>
             
@@ -136,31 +126,21 @@ const App = ()=> {
 
             <Route path="/biblioteca" element={ <Biblioteca></Biblioteca>}></Route>
 
-
             <Route path="/galeriafotos" element={<GaleriaFotos></GaleriaFotos>}></Route>
             <Route path="/galeriavideos" element={ <GaleriaVideos></GaleriaVideos>}></Route>
-
-
-
 
             <Route path="/" element={<Home/>}></Route>
             <Route path="*"  element={
                 <NoEncontrado/>
               }/>
           </Routes>
+
           <div data-aos="fade-up">
-
             <Footer></Footer>
-
           </div>
 
-
-         
-         
         </Router>   
         }
-
-        
         </>
       )  
   }
