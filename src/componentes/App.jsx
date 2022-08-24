@@ -135,9 +135,7 @@ const App = ()=> {
               }/>
           </Routes>
 
-          <div data-aos="fade-up">
             <Footer></Footer>
-          </div>
 
         </Router>   
         }

@@ -3,6 +3,20 @@ import {Link} from 'react-router-dom'
 
 
 import Eventos from  "../../../data/eventos"
+import { useEffect } from "react";
+
+
+
+
+function ScrollToTopOnMount() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
+  return null;
+}
+
+
 
 const informacion=Eventos
 
@@ -14,6 +28,9 @@ const informacion=Eventos
   
          
           <>
+
+<ScrollToTopOnMount />
+
           <div className="contenedor-page"  >
               <div className="contenedor-page-titulo">
                   <h4>Consejo Regional IX – ICA </h4>

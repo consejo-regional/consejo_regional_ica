@@ -4,6 +4,17 @@ import {useParams} from 'react-router-dom'
 import Informacion from  "../../../data/noticia"
 
 
+import { useEffect } from "react";
+
+function ScrollToTopOnMount() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
+  return null;
+}
+
+
 
 const informacion=Informacion
 
@@ -15,6 +26,9 @@ const informacion=Informacion
   
         return(
           <>
+
+            <ScrollToTopOnMount />
+
             {
             informacion.map(c=>(     
                 id===c.id? <SericiosItem  imagen={c.imgenDetalles}  tipo={c.tipo} description={c.description} contenido={c.contenido} fecha={c.fecha} ></SericiosItem>:null
@@ -33,7 +47,7 @@ const informacion=Informacion
           return(
             <>
             <div className="detalle-grid">
-                <h2>NOTICIAS</h2>
+                <h2 id="the-hash" name="the-hash">NOTICIAS.</h2>
                 <div className="detalle-grid-contenido" >
                 <div className="detalle-cart-contenido">
                     <div className="detalle-cart-contenido-titulo">{description}</div>

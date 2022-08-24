@@ -1,5 +1,6 @@
 
-  const SliderPrincipal=[{
+  const SliderPrincipal=[
+  {
     ruta:"Slider/img1.jpg"
   },{
     ruta:"Slider/img2.jpg"

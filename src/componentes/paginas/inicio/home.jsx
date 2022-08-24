@@ -13,10 +13,10 @@ import {Slideshow, Slide} from '../../componente/slider/sliderautoplayinicio'
 import SliderPrincipal from '../../../data/sliderPrincipal';
 import GaleriaVideosInicio from './galeriaVideosInicio';
 
-import ReactImageVideoLightbox from "react-image-video-lightbox";
+// import ReactImageVideoLightbox from "react-image-video-lightbox";
 
 
-import FsLightbox from 'fslightbox-react';
+// import FsLightbox from 'fslightbox-react';
 
 
 
@@ -55,28 +55,7 @@ const Home = ()=> {
           </Slideshow>
 		   </main>
 
-        <br></br>
-        <br></br>
-
-        <div className="contenedorContadorVisitas">
-              <div className="countdown">
-                      <div className="box">
-                          <span className="text">Esta pagina ha sido vista</span>
-                          <span className="num" id="day-box">
-                                <AnimatedNumbers
-                                      animateToNumber={contador}
-                                      fontStyle={{ fontSize: 55 }}
-                                      configs={
-                                        [{"mass":1,"tension":30,"friction":10},{"mass":2,"tension":40,"friction":10},{"mass":3,"tension":30,"friction":10}]
-                                      }   
-                                    >
-                              </AnimatedNumbers>   
-                          </span>
-                          <span className="text">VECES</span>
-                      </div> 
-              </div>
-        </div>
-
+      
  
         <div data-aos="fade-up">
           <SericiosGrid></SericiosGrid> 
@@ -97,7 +76,7 @@ const Home = ()=> {
         </div>
 
       
-          <GaleriaVideosInicio></GaleriaVideosInicio>
+        <GaleriaVideosInicio></GaleriaVideosInicio>
 
 
         <div className="contenedor-separador-bloque">
@@ -112,9 +91,29 @@ const Home = ()=> {
 
         <NoticiasDestacadas></NoticiasDestacadas>
 
-        <div data-aos="fade-up">
-        <FooterContacto></FooterContacto> 
+        <div className="contenedorContadorVisitas">
+              <div className="countdown">
+                      <div className="box">
+                          <span className="text">Esta pagina ha sido vista</span>
+                          <span className="num" id="day-box">
+                                <AnimatedNumbers
+                                      animateToNumber={contador}
+                                      fontStyle={{ fontSize: 55 }}
+                                      configs={
+                                        [{"mass":1,"tension":30,"friction":10},{"mass":2,"tension":40,"friction":10},{"mass":3,"tension":30,"friction":10}]
+                                      }   
+                                    >
+                              </AnimatedNumbers>   
+                          </span>
+                          <span className="text">VECES</span>
+                      </div> 
+              </div>
         </div>
+
+
+        {/* <div data-aos="fade-up"> */}
+        <FooterContacto></FooterContacto> 
+        {/* </div> */}
         
 
         </>   

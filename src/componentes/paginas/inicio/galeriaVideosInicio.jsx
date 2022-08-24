@@ -49,14 +49,14 @@ const GaleriaVideosInicio = ()=> {
                             <img src="https://elcomercio.pe/resizer/kB4YyQ2x8WFmaPe-cIysakiR7HQ=/1200x800/smart/filters:format(jpeg):quality(75)/cloudfront-us-east-1.images.arcpublishing.com/elcomercio/VCWG5NGFOFBJ3L7SQVQ3ZV7GYM.jpg"/>
                             <div class="capa">
                                 <h3>GALERIA DE CURSOS</h3>
-                                <div className="boton-contenedor-video"> 
+                                {/* <div className="boton-contenedor-video"> 
                                     <button class="boton-video-inicio" onClick={ () => setToggler(!toggler) }> VER </button>
-                                </div>
+                                </div> */}
 
                             </div>
                         </figure>
                 </div>
-                <button class="boton-video-inicio" > VER CURSOS </button>
+                <button class="boton-video-inicio" onClick={ () => setToggler(!toggler) }> VER CURSOS </button>
 
                 </div>
 

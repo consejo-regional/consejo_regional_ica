@@ -24,7 +24,7 @@ const FooterContacto = ()=> {
         <>
         <div className="contenedor_footer_contacto">
 
-            <div className="contenedor-evento-titulo">
+            <div className="contenedor-footer-titulo">
                 <h4>Consejo Regional IX – ICA </h4>
                 <h1>CONTACTENOS</h1>
             </div>

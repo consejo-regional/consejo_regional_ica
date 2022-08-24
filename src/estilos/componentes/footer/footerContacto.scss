@@ -1,7 +1,7 @@
 .contenedor_footer_contacto{
     margin-top: 2rem;
     // width: 100vw;
-     //border: 1px solid red;
+    //  border: 1px solid red;
   
 }
 
@@ -61,4 +61,11 @@
     // color: red;
   }
 
+  .contenedor-footer-titulo{
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    flex-direction: column;
+    margin: 1rem;
+  }
   

@@ -1,4 +1,15 @@
 import React from 'react'
+import { useEffect } from "react";
+
+function ScrollToTopOnMount() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
+  return null;
+}
+
+
 
 
 
@@ -6,6 +17,9 @@ import React from 'react'
 const Condolencias = ()=> {
       return(
         <>
+
+<ScrollToTopOnMount />
+
         <div className="contenedor_promunciamiento">
             <div className="contenedor_promunciamiento-grid">
                 <div className="contenedor_promunciamiento_cart">

@@ -1,6 +1,19 @@
-import React,{useEffect}  from 'react'
+import React  from 'react'
 import {Link} from 'react-router-dom'
 import Informacion from  "../../../data/noticia"
+
+import { useEffect } from "react";
+
+function ScrollToTopOnMount() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
+  return null;
+}
+
+
+
 // import AOS from "aos";
 // import "aos/dist/aos.css";
 
@@ -10,15 +23,18 @@ const informacion=Informacion
   
 
 
-    useEffect(()=>{
-     // AOS.init({duration: 400  })
+    // useEffect(()=>{
+    //  // AOS.init({duration: 400  })
 
-     },[])
+    //  },[])
 
         return(
   
          
           <>
+
+                      <ScrollToTopOnMount />
+
           <div className="contenedor-page"  >
               <div className="contenedor-page-titulo">
                   <h4>Consejo Regional IX – ICA </h4>
