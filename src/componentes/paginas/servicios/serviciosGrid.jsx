@@ -42,7 +42,7 @@ const SericiosGrid = ()=> {
           <div className="contenedor_servicios_grid">
             {
               servicios.map(c=>(
-                <SericiosItem imagen={c.imagen} nombre={c.nombre} description={c.description} enlace={c.enlace}></SericiosItem>
+                <SericiosItem key={c.id} imagen={c.imagen} nombre={c.nombre} description={c.description} enlace={c.enlace}></SericiosItem>
               ))
             }
             

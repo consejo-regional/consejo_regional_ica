@@ -49,6 +49,8 @@ import Biblioteca from './paginas/biblioteca/biblioteca';
 import Efemerides from './paginas/comunicaciones/efemeridesPage';
 import Normativo from './paginas/comunicaciones/normativo';
 import EfemeridesDetalle from './paginas/comunicaciones/efemeridesDetalles';
+import BolsaTrabajo from './paginas/bolsa_trabajo/bolsaPage';
+import BolsaDetalle from './paginas/bolsa_trabajo/bolsaDetalle';
 
 
 const App = ()=> {
@@ -128,6 +130,10 @@ const App = ()=> {
 
             <Route path="/galeriafotos" element={<GaleriaFotos></GaleriaFotos>}></Route>
             <Route path="/galeriavideos" element={ <GaleriaVideos></GaleriaVideos>}></Route>
+
+            <Route path="/bolsatrabajo" element={ <BolsaTrabajo></BolsaTrabajo>}></Route>
+            <Route path="/bolsatrabajo/:id" element={ <BolsaDetalle></BolsaDetalle>}></Route>
+
 
             <Route path="/" element={<Home/>}></Route>
             <Route path="*"  element={

@@ -46,8 +46,8 @@ const GaleriaVideosInicio = ()=> {
                 <div>
                         <figure>
 
-                            <img src="https://elcomercio.pe/resizer/kB4YyQ2x8WFmaPe-cIysakiR7HQ=/1200x800/smart/filters:format(jpeg):quality(75)/cloudfront-us-east-1.images.arcpublishing.com/elcomercio/VCWG5NGFOFBJ3L7SQVQ3ZV7GYM.jpg"/>
-                            <div class="capa">
+                            <img alt='' src="https://elcomercio.pe/resizer/kB4YyQ2x8WFmaPe-cIysakiR7HQ=/1200x800/smart/filters:format(jpeg):quality(75)/cloudfront-us-east-1.images.arcpublishing.com/elcomercio/VCWG5NGFOFBJ3L7SQVQ3ZV7GYM.jpg"/>
+                            <div className="capa">
                                 <h3>GALERIA DE CURSOS</h3>
                                 {/* <div className="boton-contenedor-video"> 
                                     <button class="boton-video-inicio" onClick={ () => setToggler(!toggler) }> VER </button>
@@ -56,7 +56,7 @@ const GaleriaVideosInicio = ()=> {
                             </div>
                         </figure>
                 </div>
-                <button class="boton-video-inicio" onClick={ () => setToggler(!toggler) }> VER CURSOS </button>
+                <button className="boton-video-inicio" onClick={ () => setToggler(!toggler) }> VER CURSOS </button>
 
                 </div>
 

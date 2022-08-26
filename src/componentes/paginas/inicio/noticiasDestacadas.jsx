@@ -11,7 +11,7 @@ import {
 
 import "react-vertical-timeline-component/style.min.css";
 
-import {Link,NavLink} from 'react-router-dom'
+import {Link} from 'react-router-dom'
 
 
 
@@ -56,7 +56,7 @@ const NoticiasDestacadas=()=>(
 
           return (
             <VerticalTimelineElement
-              key={element.key}
+              key={element.id}
               date={element.date}
               dateClassName="date"
               iconStyle={isWorkIcon ? workIconStyles : schoolIconStyles}
@@ -76,23 +76,16 @@ const NoticiasDestacadas=()=>(
 
 
               {showButton && (
-                <NavLink 
+                <Link 
                 target={"_top"}
                   className={`button ${
                     isWorkIcon ? "workButton" : "schoolButton"
                   }`}
                   to={`/noticias/${element.id}`} 
-                  // to={{
-                  //   pathname: `/noticias/${element.id}`,
-                  //   hash: "#the-hash",
-                  //   // className:'detalle-grid'
-                  //   // state: { fromDashboard: true }
-                  // }}
-
-
+         
                 >
                   {element.buttonText}
-                </NavLink>
+                </Link>
               )}
             </VerticalTimelineElement>
           );

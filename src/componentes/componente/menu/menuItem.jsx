@@ -1,6 +1,5 @@
 import React,{useEffect,useRef,useState} from 'react'
 import {Link} from 'react-router-dom'
-import CmpDiguital from './cmpDiguital'
 
 
 
@@ -222,9 +221,9 @@ const MenuItem = ()=> {
                         
                     </ul>
                 </li>
-                {/* <li className="item">
-                    <Link to="/biblioteca"  onClick={click}  className="link">BIBLIOTECA</Link>
-                </li> */}
+                <li className="item">
+                    <Link to="/bolsatrabajo"  onClick={click}  className="link">BOLSA DE TRABAJO</Link>
+                </li>
 
 
                  {/* <li className="item-cmpDiguital">

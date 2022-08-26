@@ -29,7 +29,7 @@ const Home = ()=> {
   const[contador,setContador]=useState()
 
 
-  const [toggler, setToggler] = useState(false);
+  // const [toggler, setToggler] = useState(false);
 
 
    useEffect(()=>{
@@ -47,8 +47,8 @@ const Home = ()=> {
           <Slideshow controles={true} autoplay={true} velocidad="6000" intervalo="3000">
                   {
                      informacion.map(c=>(
-                          <Slide>
-                                  <img  src={process.env.PUBLIC_URL + c.ruta} alt=""/>
+                          <Slide key={c.id}>
+                                  <img src={process.env.PUBLIC_URL + c.ruta} alt=""/>
                           </Slide>
                      ))
                   }  
