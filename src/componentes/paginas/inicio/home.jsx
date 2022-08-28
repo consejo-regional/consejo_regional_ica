@@ -48,7 +48,7 @@ const Home = ()=> {
                   {
                      informacion.map(c=>(
                           <Slide key={c.id}>
-                                  <img src={process.env.PUBLIC_URL + c.ruta} alt=""/>
+                                  <img src={process.env.PUBLIC_URL+`/`+ c.ruta} alt=""/>
                           </Slide>
                      ))
                   }  

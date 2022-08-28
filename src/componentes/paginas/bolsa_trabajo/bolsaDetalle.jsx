@@ -44,7 +44,7 @@ const informacion=BolsaInformacion
                   <div className="detalle-grid-contenido-imagenes">
                     {
                       imagen.map(c=>(
-                            <img className="detalle-grid-contenido-imagem" src={c} alt={c}></img> 
+                            <img className="detalle-grid-contenido-imagem" src={process.env.PUBLIC_URL+`/`+ c} alt={c}></img> 
 
                       ))
                     }

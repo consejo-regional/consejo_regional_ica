@@ -4,8 +4,8 @@ const BolsaInformacion=[
     
     {
       id:'1',
-      imagen:process.env.PUBLIC_URL + `/noticias/img4.jpg`,
-      imgenDetalles:[process.env.PUBLIC_URL + `/noticias/img4.jpg`],
+      imagen:`noticias/img4.jpg`,
+      imgenDetalles:[`noticias/img4.jpg`],
       description:"BOLSATRABAJO",
       contenido:"",
       fecha:"2022/08/06",

@@ -56,7 +56,7 @@ const SericiosGrid = ()=> {
     return(
       <>
       <a href={enlace} target="_blank" rel="noreferrer" className="contenedor_servicios_item" data-aos="zoom-in">
-        <img className="servicios imagen" src={imagen} alt={imagen}></img>
+        <img className="servicios imagen" src={process.env.PUBLIC_URL+`/`+ imagen} alt={nombre}></img>
         <div className="servicios-nombre">{nombre}</div>
         <div className="servicios-description">{description}</div>
       </a>

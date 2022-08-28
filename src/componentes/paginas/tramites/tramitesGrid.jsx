@@ -31,7 +31,7 @@ const TramitesGrid = ()=> {
     return(
       <>
       <a href={enlace} rel="noreferrer" target="_blank" className="contenedor_servicios_item">
-        <img className="servicios imagen" src={imagen} alt={imagen}></img>
+        <img className="servicios imagen" src={process.env.PUBLIC_URL+`/`+imagen} alt={nombre}></img>
         <div className="servicios-nombre">{nombre}</div>
         <div className="servicios-description">{description}</div>
       </a>

@@ -48,7 +48,7 @@ const informacion=BolsaInformacion
            <div className="contenedor_separador">
 
             <Link className="page-clase"  to={`/bolsatrabajo/${id}`} >
-              <img className="imagen-page" src={imagen} alt={imagen}></img>
+              <img className="imagen-page" src={process.env.PUBLIC_URL+`/`+ imagen} alt={imagen}></img>
               {/* <div className="colors">{tipo}</div> */}
               <div className="page">
                 <div className="page-descripccion">{description}</div>

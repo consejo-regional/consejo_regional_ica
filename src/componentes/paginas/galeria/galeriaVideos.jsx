@@ -1,23 +1,31 @@
 import React from "react"
 import ReactPlayer from "react-player"
-import Galeriavideos from "../../../data/galeriaVideos"
+import {useEffect,useState} from "react"
 
 
+const GaleriaVideos = ()=>{
 
-const informacion=Galeriavideos
+    const[informacion,setInformacion]=useState([])
+    useEffect(()=>{
+        fetch("https://api.cmpica.org.pe/api/galery/read.php")
+        .then((res) => res.json())
+        .then(
+            // data=>console.log(data)
+            data=>setInformacion(data)
+        );
+    },[])
 
 
-const GaleriaVideos = ()=>(
+return(
     <>
-       
         <div className="contenedor_videos_central">
-        <div className="contenedor_videos_central_titulo">
-            <h1>GALERÍA: CURSO</h1>
-        </div>
+            <div className="contenedor_videos_central_titulo">
+                <h1>GALERÍA: CURSO</h1>
+            </div>
             <div className="contenedor_videos">
 
                 {informacion.map(c=>(
-                    <div className="contenedor_videos_individual">
+                    <div className="contenedor_videos_individual" key={c.id}>
                     <ReactPlayer
                         className='react-player'
                         url={c.url}
@@ -30,11 +38,11 @@ const GaleriaVideos = ()=>(
                     </div>
                 ))
                 }
-                </div>
-
+            </div>
         </div>
-
     </>
-)
+    )
+}
+
 
 export default  GaleriaVideos

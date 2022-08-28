@@ -1,6 +1,6 @@
 const AnunciosInicio=
     {
-      imagen:'img3.png',
+      imagen:'pronunciamiento/img3.png',
       orientacion:'horizontal',
     
     }
