@@ -224,6 +224,9 @@ const MenuItem = ()=> {
                 <li className="item">
                     <Link to="/bolsatrabajo"  onClick={click}  className="link">BOLSA DE TRABAJO</Link>
                 </li>
+                {/* <li className="item">
+                    <Link to="/biblioteca"  onClick={click}  className="link">BIBLIOTECA</Link>
+                </li> */}
 
 
                  {/* <li className="item-cmpDiguital">

@@ -13,7 +13,9 @@ const GaleriaVideos = ()=>{
             // data=>console.log(data)
             data=>setInformacion(data)
         );
-    },[])
+    }
+    
+    ,[])
 
 
 return(

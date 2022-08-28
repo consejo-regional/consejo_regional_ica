@@ -10,35 +10,32 @@ import PalabrasDecano from './palabrasDecano'
 import NoticiasDestacadas from './noticiasDestacadas'
 import AnimatedNumbers from "react-animated-numbers";
 import {Slideshow, Slide} from '../../componente/slider/sliderautoplayinicio'
-import SliderPrincipal from '../../../data/sliderPrincipal';
 import GaleriaVideosInicio from './galeriaVideosInicio';
 
-// import ReactImageVideoLightbox from "react-image-video-lightbox";
-
-
-// import FsLightbox from 'fslightbox-react';
-
-
-
-
-const informacion=SliderPrincipal
 
 
 const Home = ()=> {
 
-  const[contador,setContador]=useState()
-
-
-  // const [toggler, setToggler] = useState(false);
-
+  const[contador,setContador]=useState([])
+  const[informacion,setInformacion]=useState([])
 
    useEffect(()=>{
    AOS.init({duration: 1000})
+
    fetch("https://api.countapi.xyz/update/cmpica.org.pe/llavereact/?amount=1")
    .then(response=>response.json())
    .then(
     data=>setContador(data.value)
-   )},[])
+   )
+
+   fetch("https://api.cmpica.org.pe/api/slider_principal/read.php")
+   .then((res) => res.json())
+   .then(
+       // data=>console.log(data)
+       data=>setInformacion(data)
+   );
+
+  },[])
 
       return(
         <>

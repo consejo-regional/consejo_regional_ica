@@ -3,8 +3,7 @@ let noticiasDestacadasDatos = [
     id: '225',
     title: "OLIMPIADAS CONREDES 2022",
     location: "ICA",
-    description:
-      "FUTBITO MUJERES",
+    description:"FUTBITO MUJERES",
     buttonText: "LEER MAS",
     date: "2022/07/15",
     icon: "work",
@@ -15,8 +14,7 @@ let noticiasDestacadasDatos = [
     id: '12',
     title: "JORNADA DE VACUNACION",
     location: "ICA",
-    description:
-      "",
+    description:"",
     buttonText: "LEER MAS",
     date: "2022/05/13  | 2022/05/27",
     icon: "work",
@@ -27,8 +25,7 @@ let noticiasDestacadasDatos = [
     id: '1',
     title: "Reunion distrito tate",
     location: "ICA",
-    description:
-      "",
+    description:"",
     buttonText: "LEER MAS",
     date: "2022/05/09",
     icon: "work",

@@ -1,16 +1,22 @@
-import React,{useEffect} from 'react'
+import React,{useEffect,useState} from 'react'
 
-import Servicios from '../../../data/servicios'
 import AOS from "aos";
 import "aos/dist/aos.css";
 
-const servicios=Servicios
 
 
 const SericiosGrid = ()=> {
 
+    const[informacion,setInformacion]=useState([])
+
       useEffect(()=>{
         AOS.init({duration:1500})
+        fetch("https://api.cmpica.org.pe/api/servicios/read.php")
+        .then((res) => res.json())
+        .then(
+            // data=>console.log(data)
+            data=>setInformacion(data)
+        );
       },[])
 
       return(
@@ -41,7 +47,7 @@ const SericiosGrid = ()=> {
 
           <div className="contenedor_servicios_grid">
             {
-              servicios.map(c=>(
+              informacion.map(c=>(
                 <SericiosItem key={c.id} imagen={c.imagen} nombre={c.nombre} description={c.description} enlace={c.enlace}></SericiosItem>
               ))
             }

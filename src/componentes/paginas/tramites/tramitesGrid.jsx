@@ -1,12 +1,21 @@
 import React from 'react'
-
-import Tramites from '../../../data/tramites'
-
-
-const servicios=Tramites
+import {useEffect,useState} from "react"
 
 
 const TramitesGrid = ()=> {
+
+
+    const[informacion,setInformacion]=useState([])
+      useEffect(()=>{
+          fetch("https://api.cmpica.org.pe/api/tramites/read.php")
+          .then((res) => res.json())
+          .then(
+              // data=>console.log(data)
+              data=>setInformacion(data)
+          );
+      },[])
+
+
       return(
         <>
         <div className="contenedor_servicios_grid_conteiner">
@@ -16,7 +25,7 @@ const TramitesGrid = ()=> {
         </div>
           <div className="contenedor_servicios_grid">
             {
-              servicios.map(c=>(
+              informacion.map(c=>(
                 <SericiosItem imagen={c.imagen} nombre={c.nombre} description={c.description} enlace={c.enlace}></SericiosItem>
               ))
             }

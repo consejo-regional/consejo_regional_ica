@@ -1,10 +1,21 @@
 import React from 'react'
-import BibliotecaLibros from '../../../data/biblioteca'
+// import BibliotecaLibros from '../../../data/biblioteca'
+import {useEffect,useState} from "react"
 
-const biblioteca=BibliotecaLibros
+
+// const biblioteca=BibliotecaLibros
 
 const Biblioteca = ()=> {
 
+  const[informacion,setInformacion]=useState([])
+    useEffect(()=>{
+        fetch("https://api.cmpica.org.pe/api/biblioteca/read.php")
+        .then((res) => res.json())
+        .then(
+            // data=>console.log(data)
+            data=>setInformacion(data)
+        );
+    },[])
     
     return(
         <>
@@ -19,9 +30,8 @@ const Biblioteca = ()=> {
 
         {
 
-        biblioteca.map(c=>(
+        informacion.map(c=>(
           <Libro titulo={c.titulo} fecha={c.fecha} autor={c.autor} recurso={c.recurso} enlace={c.enlace}></Libro>
-
         ))
         }      
 
