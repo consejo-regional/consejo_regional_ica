@@ -72,7 +72,7 @@ const NoticiasDestacadas=()=>(
 
               <p id="description">{element.description}</p>
 
-              <img className="imagen_noticias_timeline" src={element.imagen} alt={''}></img>
+              <img className="imagen_noticias_timeline" src={process.env.PUBLIC_URL+`/` +  element.imagen} alt={''}></img>
 
 
               {showButton && (

@@ -64,7 +64,7 @@ const informacion=Eventos
             <div className="contenedor_separador">
 
             <Link className="page-clase" to={`/eventos/${id}`} >
-              <img className="imagen-page" src={imagen} alt={imagen}></img>
+              <img className="imagen-page" src={process.env.PUBLIC_URL+`/`+ imagen} alt={description}></img>
               <div className="page">
                 <div className="page-descripccion colors">{tipo}</div>
                 <div className="page-descripccion">{description}</div>

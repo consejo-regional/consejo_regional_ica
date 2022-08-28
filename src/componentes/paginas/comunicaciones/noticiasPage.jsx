@@ -14,35 +14,19 @@ function ScrollToTopOnMount() {
 
 
 
-// import AOS from "aos";
-// import "aos/dist/aos.css";
-
 const informacion=Informacion
 
   const Comunicaciones = ()=> {
   
-
-
-    // useEffect(()=>{
-    //  // AOS.init({duration: 400  })
-
-    //  },[])
-
         return(
-  
-         
           <>
-
-                      <ScrollToTopOnMount />
+          <ScrollToTopOnMount />
 
           <div className="contenedor-page"  >
               <div className="contenedor-page-titulo">
                   <h4>Consejo Regional IX – ICA </h4>
                   <h1>NOTICIAS</h1>
            </div>
-           
-{/* 
-           <SliderNoticias></SliderNoticias> */}
            <br/>
            <br/>
            <br/>
@@ -51,12 +35,9 @@ const informacion=Informacion
             </div>
               <div className="contenedor_page_grid">
                   {
-  
                     informacion.map(c=>(
                       <NoticiasItem id={c.id} imagen={c.imagen} description={c.description} fecha={c.fecha} tipo={c.tipo} ></NoticiasItem>
                       ))
-  
-                    
                   }   
               </div>
           </div>
@@ -64,27 +45,22 @@ const informacion=Informacion
         )  
     }
   
-  
     const NoticiasItem = ({id,imagen,description,fecha,tipo})=> {
-  
   
         if(tipo==="NOTICIA"){
           return(
             <>
             <div className="contenedor_separador">
-            <Link className="page-clase"  to={`/noticias/${id}`}   >
-              <img className="imagen-page" src={imagen} alt={imagen}></img>
-              <div className="page">
-                <div className="colors">{tipo}</div>
-                <div className="page-descripccion">{description}</div>
-                <div className="page-descripccion">{fecha}</div>
-                <div className="page-estado">Leer Mas</div>
+              <Link className="page-clase"  to={`/noticias/${id}`}   >
+                <img className="imagen-page" src={process.env.PUBLIC_URL+`/`+imagen} alt={description}></img>
+                <div className="page">
+                  <div className="colors">{tipo}</div>
+                  <div className="page-descripccion">{description}</div>
+                  <div className="page-descripccion">{fecha}</div>
+                  <div className="page-estado">Leer Mas</div>
 
-              </div>
-            </Link>
-
-
-           
+                </div>
+              </Link>
               <hr className="separador"></hr> 
             </div>
             </>   
@@ -94,13 +70,6 @@ const informacion=Informacion
         }
          
   }
-  
-  
-  
-  
-  
-  
-   
     
     export default Comunicaciones;
     

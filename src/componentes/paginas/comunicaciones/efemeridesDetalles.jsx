@@ -1,4 +1,4 @@
-import React , {useEffect} from 'react'
+import React  from 'react'
 
 import {useParams} from 'react-router-dom'
 import EfemeridesInformacion from  "../../../data/efemerides"
@@ -17,7 +17,7 @@ const informacion=EfemeridesInformacion
           <>
             {
             informacion.map(c=>(     
-                id==c.id? <EfemerideItem  imagen={c.imgenDetalles}  tipo={c.tipo} description={c.description} contenido={c.contenido} fecha={c.fecha} ></EfemerideItem>:null
+                id===c.id? <EfemerideItem  imagen={c.imgenDetalles}  tipo={c.tipo} description={c.description} contenido={c.contenido} fecha={c.fecha} ></EfemerideItem>:null
             )) 
             }  
           </>   
@@ -29,7 +29,7 @@ const informacion=EfemeridesInformacion
     const EfemerideItem = ({imagen,description, tipo,contenido,fecha})=> {
   
   
-        if(tipo=="EFEMERIDES"){
+        if(tipo==="EFEMERIDES"){
           return(
             <>
             <div className="detalle-grid">
@@ -44,7 +44,7 @@ const informacion=EfemeridesInformacion
                   <div className="detalle-grid-contenido-imagenes">
                     {
                       imagen.map(c=>(
-                            <img className="detalle-grid-contenido-imagem" src={c} alt={c}></img> 
+                            <img className="detalle-grid-contenido-imagem" src={process.env.PUBLIC_URL+`/`+ c} alt={c}></img> 
 
                       ))
                     }

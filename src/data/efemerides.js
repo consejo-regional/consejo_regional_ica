@@ -4,8 +4,8 @@ const EfemeridesInformacion=[
     
     {
       id:'1',
-      imagen:process.env.PUBLIC_URL + `/noticias/img4.jpg`,
-      imgenDetalles:[process.env.PUBLIC_URL + `/noticias/img4.jpg`],
+      imagen:`noticias/img4.jpg`,
+      imgenDetalles:[`noticias/img4.jpg`],
       description:"EFEMERIDES",
       contenido:"",
       fecha:"2022/08/06",
@@ -13,8 +13,8 @@ const EfemeridesInformacion=[
     },
     {
       id:'2',
-      imagen:process.env.PUBLIC_URL + `/noticias/img3.jpg`,
-      imgenDetalles:[process.env.PUBLIC_URL + `/noticias/img3.jpg`],
+      imagen:`noticias/img3.jpg`,
+      imgenDetalles:[`noticias/img3.jpg`],
       description:"EFEMERIDES",
       contenido:"",
       fecha:"2022/08/06",
@@ -22,8 +22,8 @@ const EfemeridesInformacion=[
     },
     {
       id:'3',
-      imagen:process.env.PUBLIC_URL + `/noticias/WhatsApp Image 2022-06-14 at 10.48 2.png`,
-      imgenDetalles:[process.env.PUBLIC_URL + `/noticias/WhatsApp Image 2022-06-14 at 10.48 2.png`],
+      imagen:`noticias/WhatsApp Image 2022-06-14 at 10.48 2.png`,
+      imgenDetalles:[`noticias/WhatsApp Image 2022-06-14 at 10.48 2.png`],
       description:"EFEMERIDES",
       contenido:"",
       fecha:"2022/06/14",
@@ -31,8 +31,8 @@ const EfemeridesInformacion=[
     },
     {
       id:'4',
-      imagen:process.env.PUBLIC_URL + `/noticias/efemerides.png`,
-      imgenDetalles:[process.env.PUBLIC_URL + `/noticias/efemerides.png`],
+      imagen:`noticias/efemerides.png`,
+      imgenDetalles:[`noticias/efemerides.png`],
       description:"EFEMERIDES",
       contenido:"",
       fecha:"2022/06/10",

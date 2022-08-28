@@ -46,7 +46,7 @@ const informacion=Eventos
 
                   
                   </div>
-                  <img className="detalle-grid-contenido-imagem detalle-noticias-contenido-imagem1" src={imagen} alt={imagen}></img>
+                  <img className="detalle-grid-contenido-imagem detalle-noticias-contenido-imagem1" src={process.env.PUBLIC_URL+`/`+ imagen} alt={imagen}></img>
                   
                 </div>
             </div>

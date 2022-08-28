@@ -3,8 +3,8 @@ const Eventos=[
    
   {
     id:"9",
-    imagen:process.env.PUBLIC_URL + `/eventos/ACTUALIZACION EN ENDOCRINOLOGIA1.jpg`,
-    imgenDetalle:process.env.PUBLIC_URL + `/eventos/ACTUALIZACION EN ENDOCRINOLOGIA.jpg`,
+    imagen: `eventos/ACTUALIZACION EN ENDOCRINOLOGIA1.jpg`,
+    imgenDetalle: `eventos/ACTUALIZACION EN ENDOCRINOLOGIA.jpg`,
     description:"MODULO DE ENDOCRINOLOGIA",
     contenido:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia,molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborumnumquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentiumoptio, eaque rerum! Provident similique accusantium nemo autem. Veritatisobcaecati tenetur iure eius earum ut molestias architecto voluptate aliquamnihil, eveniet aliquid culpa officia aut! Impedit sit sunt quaerat, odit, tenetur error, harum nesciunt ipsum debitis quas aliquid. Reprehenderit, quia. Quo neque error repudiandae fuga? Ipsa laudantium molestias eos  sapiente officiis modi at sunt excepturi expedita sint? Sed quibusdamrecusandae alias error harum maxime adipisci amet laborum. Perspiciatis  minima nesciunt dolorem! Officiis iure rerum voluptates a cumque velit quibusdam sed amet tempora. Sit laborum ab, eius fugit doloribus tenetur  ",
     enlace:"https://us06web.zoom.us/j/87260889988",
@@ -15,8 +15,8 @@ const Eventos=[
 
   {
     id:"8",
-    imagen:process.env.PUBLIC_URL + `/eventos/WhatsApp Image 2022-06-08 at 3.02.40 PM.jpeg`,
-    imgenDetalle:process.env.PUBLIC_URL + `/eventos/WhatsApp Image 2022-06-08 at 3.02.40 PM.jpeg`,
+    imagen: `eventos/WhatsApp Image 2022-06-08 at 3.02.40 PM.jpeg`,
+    imgenDetalle: `eventos/WhatsApp Image 2022-06-08 at 3.02.40 PM.jpeg`,
     description:"ISGLT2 MAS ALLA DE LA DIABETES LOGRANDO CARDIO PROTECCION",
     contenido:" ",
     enlace:"",
@@ -27,8 +27,8 @@ const Eventos=[
 
   {
     id:"7",
-    imagen:process.env.PUBLIC_URL + `/eventos/WhatsApp Image 2022-06-08 at 3.02.40 PM.jpeg`,
-    imgenDetalle:process.env.PUBLIC_URL + `/eventos/WhatsApp Image 2022-06-08 at 3.02.40 PM.jpeg`,
+    imagen: `eventos/WhatsApp Image 2022-06-08 at 3.02.40 PM.jpeg`,
+    imgenDetalle: `eventos/WhatsApp Image 2022-06-08 at 3.02.40 PM.jpeg`,
     description:"ISGLT2 MAS ALLA DE LA DIABETES LOGRANDO CARDIO PROTECCION",
     contenido:" CUALQUIER ENLACE ",
     enlace:"",
@@ -38,8 +38,8 @@ const Eventos=[
   },
   {
     id:"6",
-    imagen:process.env.PUBLIC_URL + `/eventos/WhatsApp Image 2022-06-08 at 3.02.39 PM (2).jpeg`,
-    imgenDetalle:process.env.PUBLIC_URL + `/eventos/WhatsApp Image 2022-06-08 at 3.02.39 PM (2).jpeg`,
+    imagen: `eventos/WhatsApp Image 2022-06-08 at 3.02.39 PM (2).jpeg`,
+    imgenDetalle: `eventos/WhatsApp Image 2022-06-08 at 3.02.39 PM (2).jpeg`,
     description:"OPIOIDES EN EL MANEJO DEL DOLOR POST-OPERATORIO",
     contenido:"",
     enlace:"",
@@ -50,8 +50,8 @@ const Eventos=[
   
   {
     id:"5",
-    imagen:process.env.PUBLIC_URL + `/eventos/WhatsApp Image 2022-06-08 at 3.02.39 PM (1).jpeg`,
-    imgenDetalle:process.env.PUBLIC_URL + `/eventos/WhatsApp Image 2022-06-08 at 3.02.39 PM (1).jpeg`,
+    imagen: `eventos/WhatsApp Image 2022-06-08 at 3.02.39 PM (1).jpeg`,
+    imgenDetalle: `eventos/WhatsApp Image 2022-06-08 at 3.02.39 PM (1).jpeg`,
     description:"ROL DE LOS GLP1 EN LAS GUIAS DE MANEJO DE DM2",
     contenido:"",
     enlace:"",
@@ -61,8 +61,8 @@ const Eventos=[
   },
   {
     id:"4",
-    imagen:process.env.PUBLIC_URL + `/eventos/OZONOTERAPIA (1).png`,
-    imgenDetalle:process.env.PUBLIC_URL + `/eventos/OZONOTERAPIA1.png`,
+    imagen: `eventos/OZONOTERAPIA (1).png`,
+    imgenDetalle: `eventos/OZONOTERAPIA1.png`,
     description:"OZONOTERAPIA EN MEDICINA",
     contenido:"",
     enlace:"",
@@ -72,8 +72,8 @@ const Eventos=[
     },
     {
     id:"3",
-    imagen:process.env.PUBLIC_URL+`/eventos/CARDIOLOGIA.png`,
-    imgenDetalle:process.env.PUBLIC_URL+`/eventos/CARDIOLOGIA1.png`,
+    imagen:`eventos/CARDIOLOGIA.png`,
+    imgenDetalle:`eventos/CARDIOLOGIA1.png`,
     description:"MODULO DE CARDIOLOGIA",
     contenido:"",
     enlace:"",
@@ -83,8 +83,8 @@ const Eventos=[
     },
     {
     id:"2",
-    imagen:process.env.PUBLIC_URL+`/eventos/LA BIOETICA Y EL CASO TUSKEE.png`,
-    imgenDetalle:process.env.PUBLIC_URL+`/eventos/LA BIOETICA Y EL CASO TUSKEE1.png`,
+    imagen:`eventos/LA BIOETICA Y EL CASO TUSKEE.png`,
+    imgenDetalle:`eventos/LA BIOETICA Y EL CASO TUSKEE1.png`,
     contenido:"",
     enlace:"",
     description:"Teleconferencia Bioetica y el caso Tuskegee",
@@ -94,8 +94,8 @@ const Eventos=[
     },
     {
     id:"1",
-    imagen:process.env.PUBLIC_URL+`/eventos/Group 32.png`,
-    imgenDetalle:process.env.PUBLIC_URL+`/eventos/Group 321.png`,
+    imagen:`eventos/Group 32.png`,
+    imgenDetalle:`eventos/Group 321.png`,
     description:"Seminario Busqueda Eficiencia de Informacion Cientifica en Medicina",
     contenido:"",
     enlace:"",

@@ -8,7 +8,7 @@ let noticiasDestacadasDatos = [
     buttonText: "LEER MAS",
     date: "2022/07/15",
     icon: "work",
-    imagen:process.env.PUBLIC_URL + `/noticias/292592382_1101297600500437_3815529889352148646_n.jpg`,
+    imagen:`noticias/292592382_1101297600500437_3815529889352148646_n.jpg`,
 
   },
   {
@@ -20,7 +20,7 @@ let noticiasDestacadasDatos = [
     buttonText: "LEER MAS",
     date: "2022/05/13  | 2022/05/27",
     icon: "work",
-    imagen:process.env.PUBLIC_URL + `/noticias/vacunacion.png`,
+    imagen:`noticias/vacunacion.png`,
 
   },
   {
@@ -32,7 +32,7 @@ let noticiasDestacadasDatos = [
     buttonText: "LEER MAS",
     date: "2022/05/09",
     icon: "work",
-    imagen:process.env.PUBLIC_URL + `/noticias/EVENTO1.png`,
+    imagen:`noticias/EVENTO1.png`,
 
   }
 ];

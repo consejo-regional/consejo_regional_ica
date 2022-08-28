@@ -67,8 +67,11 @@ const Comite = ()=> {
                     <br />
                     <br />
                     <div className="contenedor_comite_grid">
-                        <ComiteItem imagen={process.env.PUBLIC_URL + `/imagenes/hombre.png`} nombre={c.presidente} description="PRESIDENTE"></ComiteItem>
 
+                        {c.presidente? 
+                        <ComiteItem imagen={c.presidente.foto} nombre={c.presidente.nombre} description="MIEMBRO"></ComiteItem>
+                       :null
+                       }
                        {c.miembro1? 
                         <ComiteItem imagen={c.miembro1.foto} nombre={c.miembro1.nombre} description="MIEMBRO"></ComiteItem>
                        :null
@@ -145,7 +148,7 @@ const Comite = ()=> {
     return(
       <>
       <div className="contenedor_comite_item">
-        <img className="comite imagen" src={imagen} alt={imagen}></img>
+        <img className="comite imagen" src={process.env.PUBLIC_URL+`/`+  imagen} alt={nombre}></img>
         <div className="">{nombre}</div>
         <div className="">{description}</div>
       </div>

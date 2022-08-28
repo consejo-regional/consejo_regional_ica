@@ -27,7 +27,7 @@ const informacion=EfemeridesInformacion
                   {
   
                     informacion.map(c=>(
-                      <SericiosItem id={c.id} imagen={c.imagen} description={c.description} fecha={c.fecha} tipo={c.tipo} ></SericiosItem>
+                      <EfemeridesItem id={c.id} imagen={c.imagen} description={c.description} fecha={c.fecha} tipo={c.tipo} ></EfemeridesItem>
                     ))
   
                     
@@ -39,7 +39,7 @@ const informacion=EfemeridesInformacion
     }
   
   
-    const SericiosItem = ({id,imagen,description,fecha,tipo})=> {
+    const EfemeridesItem = ({id,imagen,description,fecha,tipo})=> {
   
   
         if(tipo==="EFEMERIDES"){
@@ -48,7 +48,7 @@ const informacion=EfemeridesInformacion
            <div className="contenedor_separador">
 
             <Link className="page-clase"  to={`/comunicaciones/efemerides/${id}`} >
-              <img className="imagen-page" src={imagen} alt={imagen}></img>
+              <img className="imagen-page" src={process.env.PUBLIC_URL+`/`+ imagen} alt={description}></img>
               <div className="colors">{tipo}</div>
               <div className="page">
                 <div className="page-descripccion">{description}</div>
