@@ -3,14 +3,14 @@ import React from 'react'
 const PastDecanos = ()=> {
       return(
         <>
-        <div className="contenedor_colegio">
-            <div className="container-imagen-colegio">
-                <div className="logo-colegio">
-                    <div className="logo-colegio-svg"></div>
+        <div className="contenedor_banner">
+            <div className="container-imagen-banner">
+                <div className="logo-banner">
+                    <div className="logo-banner-svg"></div>
                 </div>
-                <div className="titulo-contenido-colegio">
-                    <div className="titulo-contenido-colegio1">PAST</div>
-                    <div className="titulo-contenido-colegio2">DECANOS</div>
+                <div className="titulo-contenido-banner">
+                    <div className="titulo-contenido-banner-izquierda">PAST</div>
+                    <div className="titulo-contenido-banner-derecha">DECANOS</div>
                 </div>
 
             </div>

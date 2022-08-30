@@ -6,7 +6,7 @@ const ConsejosDistritales = ()=> {
 
     const[informacion,setInformacion]=useState([])
     useEffect(()=>{
-        fetch("http://localhost/php_rest_myblog/api/consejo_distrital/read.php")
+        fetch("https://api.cmpica.org.pe/api/consejo_distrital/read.php")
         .then((res) => res.json())
         .then(
             // data=>console.log(data)
@@ -17,13 +17,13 @@ const ConsejosDistritales = ()=> {
       return(
         <>
         <div className="contenedor_colegio">
-            <div className="container-imagen-colegio">
-                <div className="logo-colegio">
-                    <div className="logo-colegio-svg"></div>
+            <div className="container-imagen-banner">
+                <div className="logo-banner">
+                    <div className="logo-banner-svg"></div>
                 </div>
-                <div className="titulo-contenido-colegio">
-                    <div className="titulo-contenido-colegio1">CONSEJOS</div>
-                    <div className="titulo-contenido-colegio2">DISTRITALES</div>
+                <div className="titulo-contenido-banner">
+                    <div className="titulo-contenido-banner-izquierda">CONSEJOS</div>
+                    <div className="titulo-contenido-banner-derecha">DISTRITALES</div>
                 </div>
 
             </div>

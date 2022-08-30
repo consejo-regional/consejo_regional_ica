@@ -10,16 +10,20 @@ const ColegioMedico = ()=> {
       return(
         <>
         <div className="contenedor_colegio">
-            <div className="container-imagen-colegio">
-                <div className="logo-colegio">
-                    <div className="logo-colegio-svg"></div>
+
+
+            <div className="container-imagen-banner">
+                <div className="logo-banner">
+                    <div className="logo-banner-svg"></div>
                 </div>
-                <div className="titulo-contenido-colegio">
-                    <div className="titulo-contenido-colegio1"> EL COLEGIO</div>
-                    <div className="titulo-contenido-colegio2">MEDICO</div>
+                <div className="titulo-contenido-banner">
+                    <div className="titulo-contenido-banner-izquierda"> EL COLEGIO</div>
+                    <div className="titulo-contenido-banner-derecha">MEDICO</div>
                 </div>
 
             </div>
+
+
 
             <div className="container-descripccion-colegio">
                 <h4>Nuestra Reseña Histórica</h4>

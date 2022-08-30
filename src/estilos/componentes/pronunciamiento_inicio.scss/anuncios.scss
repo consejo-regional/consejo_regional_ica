@@ -39,6 +39,9 @@
     // }
 }
 .anuncios_banner_vertical{
+    display: flex;
+    justify-content:center;
+    align-items: center;
     width: 50vw;
     height: 90vh;
     background-color: white;
@@ -58,6 +61,9 @@
 
 
 .anuncios_banner_horizontal{
+    display: flex;
+    justify-content:center;
+    align-items: center;
     width: 80vw;
     height: 90vh;
     background-color: white;

@@ -5,13 +5,13 @@ const QuienesSomos = ()=> {
       return(
         <>
         <div className="contenedor_colegio">
-            <div className="container-imagen-colegio">
-                <div className="logo-colegio">
-                    <div className="logo-colegio-svg"></div>
+            <div className="container-imagen-banner">
+                <div className="logo-banner">
+                    <div className="logo-banner-svg"></div>
                 </div>
-                <div className="titulo-contenido-colegio">
-                    <div className="titulo-contenido-colegio1">¿QUIENES</div>
-                    <div className="titulo-contenido-colegio2">SOMOS?</div>
+                <div className="titulo-contenido-banner">
+                    <div className="titulo-contenido-banner-izquierda">¿QUIENES</div>
+                    <div className="titulo-contenido-banner-derecha">SOMOS?</div>
                 </div>
 
             </div>
@@ -27,13 +27,13 @@ const QuienesSomos = ()=> {
 
             <br></br>
 
-            <div className="container-imagen-colegio container-imagen-colegio1">
-                <div className="logo-colegio">
-                    <div className="logo-colegio-svg"></div>
+            <div className="container-imagen-banner container-imagen-colegio1">
+                <div className="logo-banner">
+                    <div className="logo-banner-svg"></div>
                 </div>
-                <div className="titulo-contenido-colegio1">
-                    <div className="titulo-contenido-colegio1 titulo-contenido-colegio11"> COMITÉ EJECUTIVO NACIONAL</div>
-                    <div className="titulo-contenido-colegio2">PERIODO 2022-2024</div>
+                <div className="titulo-contenido-banner">
+                    <div className="titulo-contenido-banner-izquierda titulo-contenido-colegio11"> COMITÉ EJECUTIVO NACIONAL</div>
+                    <div className="titulo-contenido-banner-derecha">PERIODO 2022-2024</div>
                 </div>
 
             </div>

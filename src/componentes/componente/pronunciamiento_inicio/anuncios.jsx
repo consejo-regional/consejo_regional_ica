@@ -1,5 +1,8 @@
 import React,{useRef} from 'react'
 import {useEffect,useState} from "react"
+import { Triangle } from  'react-loader-spinner'
+// import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
+
 
 
 const Anuncios = ()=> {
@@ -24,9 +27,37 @@ const Anuncios = ()=> {
         <>
         <div className="contenedor_anuncios" ref={botonEsconder}>
              <div className="anuncios_conteiner">
+
                 <div className="anuncios_banner_boton"  onClick={clickAnuncio}  ></div> 
-                <img alt='' className={(informacion[0].orientacion==='vertical')?'anuncios_banner_vertical':'anuncios_banner_horizontal'} src={process.env.PUBLIC_URL+`/`+ informacion[0].imagen}></img>
+
+                {
+                    (informacion[0].imagen==='')?(
+                     
+
+                        <div  className="anuncios_banner_vertical" >
+                        <Triangle
+                        height="80"
+                        width="80"
+                        color="#808080"
+                        ariaLabel="triangle-loading"
+                        wrapperStyle={{}}
+                        wrapperClassName=""
+                        visible={true}
+                        />
+                    </div>
+
+                    ) :
+                    (
+                        <img alt='' className={(informacion[0].orientacion==='vertical')?'anuncios_banner_vertical':'anuncios_banner_horizontal'} src={process.env.PUBLIC_URL+`/`+ informacion[0].imagen}></img>
+               
+                    )
+                }
+               
+
+                
+           
             </div> 
+           
         </div>
         </>   
       )  
