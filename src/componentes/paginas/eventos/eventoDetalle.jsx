@@ -1,24 +1,28 @@
 import React  from 'react'
 
 import {useParams} from 'react-router-dom'
+import {useEffect,useState} from "react"
 
 
-import Eventos from  "../../../data/eventos"
-
-const informacion=Eventos
-
-
-  
-  
   const EventoDetalle = ()=> {
 
     const {id}=useParams()
+
+    const[informacion,setInformacion]=useState([])
+    useEffect(()=>{
+        fetch("https://api.cmpica.org.pe/api/eventos/read.php")
+        .then((res) => res.json())
+        .then(
+            // data=>console.log(data)
+            data=>setInformacion(data)
+        );
+    },[])
   
         return(
           <>
             {
             informacion.map(c=>(     
-                id===c.id? <SericiosItem  imagen={c.imgenDetalle}  tipo={c.tipo} description={c.description} contenido={c.contenido} fecha={c.fecha}  enlace={c.enlace}></SericiosItem>:null
+                id===c.id? <SericiosItem  imagen={c.imagenDetalle}  tipo={c.tipo} description={c.description} contenido={c.contenido} fecha={c.fecha}  enlace={c.enlace}></SericiosItem>:null
             )) 
             }  
           </>   

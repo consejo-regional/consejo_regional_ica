@@ -1,11 +1,25 @@
 import React  from 'react'
 
 import {Link} from 'react-router-dom'
-import EfemeridesInformacion from  "../../../data/efemerides"
+// import EfemeridesInformacion from  "../../../data/efemerides"
+import {useEffect,useState} from "react"
 
-const informacion=EfemeridesInformacion
+// const informacion=EfemeridesInformacion
 
   const Efemerides = ()=> {
+
+
+
+
+    const[informacion,setInformacion]=useState([])
+    useEffect(()=>{
+        fetch("https://api.cmpica.org.pe/api/efemerides/read.php")
+        .then((res) => res.json())
+        .then(
+            // data=>console.log(data)
+            data=>setInformacion(data)
+        );
+    },[])
   
         return(
   

@@ -1,15 +1,23 @@
 import React  from 'react'
 
 import {Link} from 'react-router-dom'
-import BolsaInformacion from  "../../../data/bolsaTrabajo"
+import {useEffect,useState} from "react"
 
-const informacion=BolsaInformacion
 
-  const BolsaTrabajo = ()=> {
+const BolsaTrabajo = ()=> {
+
+  const[informacion,setInformacion]=useState([])
+  useEffect(()=>{
+      fetch("https://api.cmpica.org.pe/api/bolsa_trabajo/read.php")
+      .then((res) => res.json())
+      .then(
+          // data=>console.log(data)
+          data=>setInformacion(data)
+      );
+  },[])
+
   
         return(
-  
-         
           <>
           <div className="contenedor-page"  >
               <div className="contenedor-page-titulo">

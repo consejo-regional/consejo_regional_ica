@@ -1,15 +1,28 @@
 import React  from 'react'
 
 import {useParams} from 'react-router-dom'
-import EfemeridesInformacion from  "../../../data/efemerides"
+// import EfemeridesInformacion from  "../../../data/efemerides"
+import {useEffect,useState} from "react"
 
 
 
-const informacion=EfemeridesInformacion
+// const informacion=EfemeridesInformacion
 
   
   
   const EfemeridesDetalle = ()=> {
+
+
+    const[informacion,setInformacion]=useState([])
+    useEffect(()=>{
+        fetch("https://api.cmpica.org.pe/api/efemerides/read.php")
+        .then((res) => res.json())
+        .then(
+            // data=>console.log(data)
+            data=>setInformacion(data)
+        );
+    },[])
+
 
     const {id}=useParams()
   
@@ -17,7 +30,7 @@ const informacion=EfemeridesInformacion
           <>
             {
             informacion.map(c=>(     
-                id===c.id? <EfemerideItem  imagen={c.imgenDetalles}  tipo={c.tipo} description={c.description} contenido={c.contenido} fecha={c.fecha} ></EfemerideItem>:null
+                id===c.id? <EfemerideItem  key={c.id} imagenes={c.imagenDetalle}  tipo={c.tipo} description={c.description} contenido={c.contenido} fecha={c.fecha} ></EfemerideItem>:null
             )) 
             }  
           </>   
@@ -26,7 +39,7 @@ const informacion=EfemeridesInformacion
  
 
 
-    const EfemerideItem = ({imagen,description, tipo,contenido,fecha})=> {
+    const EfemerideItem = ({imagenes,description, tipo,contenido,fecha})=> {
   
   
         if(tipo==="EFEMERIDES"){
@@ -43,7 +56,7 @@ const informacion=EfemeridesInformacion
                   </div>
                   <div className="detalle-grid-contenido-imagenes">
                     {
-                      imagen.map(c=>(
+                        imagenes.split(';').map(c=>(
                             <img className="detalle-grid-contenido-imagem" src={process.env.PUBLIC_URL+`/`+ c} alt={c}></img> 
 
                       ))

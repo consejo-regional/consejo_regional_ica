@@ -1,12 +1,6 @@
 import React  from 'react'
 import {Link} from 'react-router-dom'
-
-
-import Eventos from  "../../../data/eventos"
-import { useEffect } from "react";
-
-
-
+import { useEffect,useState } from "react";
 
 function ScrollToTopOnMount() {
   useEffect(() => {
@@ -16,20 +10,23 @@ function ScrollToTopOnMount() {
   return null;
 }
 
-
-
-const informacion=Eventos
-
-
-  
   const EventosPage = ()=> {
+
+    const[informacion,setInformacion]=useState([])
+    useEffect(()=>{
+        fetch("https://api.cmpica.org.pe/api/eventos/read.php")
+        .then((res) => res.json())
+        .then(
+            // data=>console.log(data)
+            data=>setInformacion(data)
+        );
+    },[])
   
+
         return(
-  
-         
           <>
 
-<ScrollToTopOnMount />
+          <ScrollToTopOnMount />
 
           <div className="contenedor-page"  >
               <div className="contenedor-page-titulo">
@@ -83,12 +80,7 @@ const informacion=Eventos
          
   }
   
-  
-  
-  
-  
-  
-   
+
     
     export default EventosPage;
 

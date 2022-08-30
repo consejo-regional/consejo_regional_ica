@@ -1,15 +1,20 @@
 import React  from 'react'
 
 import {useParams} from 'react-router-dom'
-import BolsaInformacion from  "../../../data/bolsaTrabajo"
+import {useEffect,useState} from "react"
 
 
-
-const informacion=BolsaInformacion
-
-  
-  
   const BolsaDetalle = ()=> {
+
+    const[informacion,setInformacion]=useState([])
+    useEffect(()=>{
+        fetch("https://api.cmpica.org.pe/api/bolsa_trabajo/read.php")
+        .then((res) => res.json())
+        .then(
+            // data=>console.log(data)
+            data=>setInformacion(data)
+        );
+    },[])
 
     const {id}=useParams()
   
@@ -17,7 +22,7 @@ const informacion=BolsaInformacion
           <>
             {
             informacion.map(c=>(     
-                id===c.id? <BolsaItem  imagen={c.imgenDetalles}  tipo={c.tipo} description={c.description} contenido={c.contenido} fecha={c.fecha} ></BolsaItem>:null
+                id===c.id? <BolsaItem  key={c.id} imagenes={c.imagenDetalle}  tipo={c.tipo} description={c.description} contenido={c.contenido} fecha={c.fecha} ></BolsaItem>:null
             )) 
             }  
           </>   
@@ -26,7 +31,7 @@ const informacion=BolsaInformacion
  
 
 
-    const BolsaItem = ({imagen,description, tipo,contenido,fecha})=> {
+    const BolsaItem = ({imagenes,description, tipo,contenido,fecha})=> {
   
   
         if(tipo==="BOLSATRABAJO"){
@@ -43,7 +48,10 @@ const informacion=BolsaInformacion
                   </div>
                   <div className="detalle-grid-contenido-imagenes">
                     {
-                      imagen.map(c=>(
+                       
+                        // console.log( imagenes.split(';'))
+
+                      imagenes.split(';').map(c=>(
                             <img className="detalle-grid-contenido-imagem" src={process.env.PUBLIC_URL+`/`+ c} alt={c}></img> 
 
                       ))

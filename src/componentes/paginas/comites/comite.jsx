@@ -1,11 +1,20 @@
 import React from 'react'
-//import Cart from '../moleculas/cart';
-import ComitesArray from '../../../data/comite';
-
-
-const comitesArray= ComitesArray
+import {useEffect,useState} from "react"
+// import utf8 from "utf8";
 
 const Comite = ()=> {
+
+    const[informacion,setInformacion]=useState([])
+    useEffect(()=>{
+        fetch("https://api.cmpica.org.pe/api/comites/read.php")
+        .then((res) => res.json())
+        .then(
+            // data=>console.log(data)
+            data=>setInformacion(data)
+        );
+    },[])
+
+    
 
     var contenido = {
         titulo: 'COMITÉS',
@@ -28,7 +37,7 @@ const Comite = ()=> {
 
 
         <div className="datos">
-        <h2>{contenido.titulo}</h2>
+        <h2>{  contenido.titulo }</h2>
         <div className="conteiner-datos">
             <h4 className="contenido_cart_descripccion">{contenido.descripccion}</h4> 
             <h2>COMITÉ DE VIGILANCIA ÉTICA Y DEONTOLÓGICA </h2>
@@ -54,30 +63,32 @@ const Comite = ()=> {
             <h4 className="contenido_cart_descripccion">72.10. Cumplir con los encargos del Comité Ejecutivo y del Consejo Nacional.</h4> 
             
             <div className="contenido-izquierda">
+
+
              
             </div>
 
             {
-                comitesArray.map(c=>(
+                informacion.map(c=>(
                     <div className="datos">
                     <div className="contenedor-evento-titulo">   
-                        <h2 >{c.titulo}</h2>
+                        <h2 >{ c.titulo }</h2>
                     </div>
                     <br />
                     <br />
                     <br />
                     <div className="contenedor_comite_grid">
-
+                    
                         {c.presidente? 
-                        <ComiteItem imagen={c.presidente.foto} nombre={c.presidente.nombre} description="MIEMBRO"></ComiteItem>
+                        <ComiteItem imagen={c.presidente.foto} nombre={c.presidente.nombre} description="PRESIDENTE"></ComiteItem>
                        :null
                        }
-                       {c.miembro1? 
-                        <ComiteItem imagen={c.miembro1.foto} nombre={c.miembro1.nombre} description="MIEMBRO"></ComiteItem>
+                       {c.mienbro1? 
+                        <ComiteItem imagen={c.mienbro1.foto} nombre={c.mienbro1.nombre} description="MIEMBRO"></ComiteItem>
                        :null
                        }
-                       {c.miembro2? 
-                        <ComiteItem imagen={c.miembro2.foto} nombre={c.miembro2.nombre} description="MIEMBRO"></ComiteItem>
+                       {c.mienbro2? 
+                        <ComiteItem imagen={c.mienbro2.foto} nombre={c.mienbro2.nombre} description="MIEMBRO"></ComiteItem>
                        :null
                        }
                        {c.miembro3? 
@@ -128,9 +139,6 @@ const Comite = ()=> {
                         <ComiteItem imagen={c.miembro14.foto} nombre={c.miembro14.nombre} description="MIEMBRO"></ComiteItem>
                        :null
                        }
-                       
-
-                        
                     </div>
                 </div>
 

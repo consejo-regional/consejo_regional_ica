@@ -12,7 +12,7 @@ import {ReactComponent as FlechaDerecha} from '../../../iconos/iconmonstr-angel-
 import styled from 'styled-components';
 
 const Slideshow = ({
-		children,
+		children= [],
 		controles = true,
 		autoplay = true,
 		velocidad="500",
@@ -54,8 +54,9 @@ const Slideshow = ({
 	}, [velocidad]);
 	
 	const anterior = () => {
-		// console.log('Anterior');
 		if(slideshow.current.children.length > 0){
+
+
 			// Obtenemos el ultimo elemento del slideshow.
 			const index = slideshow.current.children.length - 1;
 			const ultimoElemento = slideshow.current.children[index];

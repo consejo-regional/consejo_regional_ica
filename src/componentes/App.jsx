@@ -39,7 +39,7 @@ import SitioConstruccion from './componente/sitio_construccion/sitioConstruccion
 import NoEncontrado from './componente/404/noEncontrado'
 
 
-import Comunicaciones from './paginas/comunicaciones/noticiasPage';
+import Noticias from './paginas/comunicaciones/noticiasPage';
 import ComunicacionesDetalle from './paginas/comunicaciones/noticiasDetalle';
 import EventoDetalle from './paginas/eventos/eventoDetalle';
 import EventosPage from './paginas/eventos/eventosPage';
@@ -108,9 +108,9 @@ const App = ()=> {
             <Route path="/servicios/conoceAtuMedico" element={ <SericiosGrid/>}></Route>
 
 
-            <Route path="/comunicaciones" element={ <Comunicaciones/>}></Route>
+            <Route path="/comunicaciones" element={ <Noticias/>}></Route>
             <Route path="/noticias/:id" element={ <ComunicacionesDetalle/>}></Route>
-            <Route path="/comunicaciones/noticias" element={ <Comunicaciones/>}></Route>
+            <Route path="/comunicaciones/noticias" element={ <Noticias/>}></Route>
             <Route path="/comunicaciones/efemerides/:id" element={ <EfemeridesDetalle></EfemeridesDetalle>}></Route>
             <Route path="/comunicaciones/efemerides" element={ <Efemerides></Efemerides>}></Route>
             <Route path="/comunicaciones/pronunciamiento" element={ <OpinionPronunciamiento/>}></Route>

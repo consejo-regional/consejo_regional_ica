@@ -1,8 +1,10 @@
 import React from "react"
-import { ReactComponent as WorkIcon } from "../../../iconos/work.svg";
-import { ReactComponent as SchoolIcon } from "../../../iconos/school.svg";
+import { ReactComponent as CuadernoIcono } from "../../../iconos/cuaderno.svg";
+import { ReactComponent as PeriodicoIcono } from "../../../iconos/periodico.svg";
+import { useEffect,useState } from "react";
 
-import timelineElements from "../../../data/noticiasDestacadasDatos";
+
+
 
 import {
   VerticalTimeline,
@@ -15,19 +17,28 @@ import {Link} from 'react-router-dom'
 
 
 
-let workIconStyles = { background: "rgb(157, 97, 156)" };
-let schoolIconStyles = { background: "rgb(157, 97, 156)" };
+let periodicoEstiloIcono = { background: "rgb(157, 15, 156)" };
+let cuadernoEstiloIcono  = { background: "rgb(157, 97, 156)" };
 
 
 
 
-const NoticiasDestacadas=()=>(
+const NoticiasDestacadas=()=>{
 
- 
+  const[informacion,setInformacion]=useState([])
+    useEffect(()=>{
+        fetch("https://api.cmpica.org.pe/api/noticias/read.php")
+        .then((res) => res.json())
+        .then(
+            // data=>console.log(data)
+            data=>setInformacion(data)
+        );
+    },[])
+  
 
-    <>
-   
 
+  return(
+  <>
    <div className="contenedor-serviciosGrid-titulo">
                 <div className="contenedor-serviciosGrid-logo">
                     <div className="logo-colegio-svg"></div>
@@ -38,58 +49,61 @@ const NoticiasDestacadas=()=>(
                         <div className="contenedor-serviciosGrid-contenido2">DESTACADAS</div>
                     </div>
                 </div>
-
-
     </div>
 
     <div>
       <VerticalTimeline
         lineColor="rgb(189, 189, 189"
-
       >
-        {timelineElements.map((element) => {
-          let isWorkIcon = element.icon === "work";
+        {informacion.map((element) => {
+          let esIconoPeriodico = element.icono === "periodico";
           let showButton =
-            element.buttonText !== undefined &&
-            element.buttonText !== null &&
-            element.buttonText !== "";
+            element.textoBoton !== undefined &&
+            element.textoBoton !== null &&
+            element.textoBoton !== "";
 
           return (
+            element.esDestacado===1
+            ?
             <VerticalTimelineElement
-              key={element.id}
-              date={element.date}
-              dateClassName="date"
-              iconStyle={isWorkIcon ? workIconStyles : schoolIconStyles}
-              
-              icon={isWorkIcon ? <WorkIcon /> : <SchoolIcon />}
-            >
-              <h3 className="vertical-timeline-element-title">
-                {element.title}
-              </h3>
-              <h5 className="vertical-timeline-element-subtitle">
-                {element.location}
-              </h5>
+            key={element.id}
+            date={element.fecha}
+            dateClassName="date"
+            iconStyle={esIconoPeriodico ? periodicoEstiloIcono :cuadernoEstiloIcono }
+            
+            icon={esIconoPeriodico ? <PeriodicoIcono /> : <CuadernoIcono />}
+          >
+            <h3 className="vertical-timeline-element-title">
+              {element.titulo}
+            </h3>
+            <h5 className="vertical-timeline-element-subtitle">
+              {element.localizacion}
+            </h5>
 
-              <p id="description">{element.description}</p>
+            <p id="description">{element.description}</p>
 
-              <img className="imagen_noticias_timeline" src={process.env.PUBLIC_URL+`/` +  element.imagen} alt={''}></img>
-
-
-              {showButton && (
-                <Link 
-                target={"_top"}
-                  className={`button ${
-                    isWorkIcon ? "workButton" : "schoolButton"
-                  }`}
-                  to={`/noticias/${element.id}`} 
-         
-                >
-                  {element.buttonText}
-                </Link>
-              )}
-            </VerticalTimelineElement>
+            <img className="imagen_noticias_timeline" src={process.env.PUBLIC_URL+`/` +  element.imagen} alt={''}></img>
+            
+            {showButton && (
+              <Link 
+              target={"_top"}
+                className={`button ${
+                  esIconoPeriodico ? "workButton" : "schoolButton"
+                }`}
+                to={`/noticias/${element.id}`} 
+       
+              >
+                {element.textoBoton}
+              </Link>
+            )}
+          </VerticalTimelineElement>
+            :
+           null
           );
-        })}
+        })
+        
+        
+        }
       </VerticalTimeline>
     </div>
 
@@ -98,6 +112,7 @@ const NoticiasDestacadas=()=>(
 
 
     </>
-)
+  )
+}
 
 export default NoticiasDestacadas
