@@ -1,11 +1,15 @@
 import React from "react"
 import ReactPlayer from "react-player"
 import {useEffect,useState} from "react"
+import { ProgressBar } from  'react-loader-spinner'
+import { Wave } from "react-animated-text";
+
+
 
 
 const GaleriaVideos = ()=>{
 
-    const[informacion,setInformacion]=useState([])
+    const[informacion,setInformacion]=useState()
     useEffect(()=>{
         fetch("https://api.cmpica.org.pe/api/galery/read.php")
         .then((res) => res.json())
@@ -26,25 +30,45 @@ return(
             </div>
             <div className="contenedor_videos">
 
-                {informacion.map(c=>(
-                    <div className="contenedor_videos_individual" key={c.id}>
-                    <ReactPlayer
-                        className='react-player'
-                        url={c.url}
-                        width='100%'
-                        height='100%'
-                        controls={true}
+                {
+                  informacion
+                  ?
+                    informacion.map(c=>(
+                        <div className="contenedor_videos_individual" key={c.id}>
+                        <ReactPlayer
+                            className='react-player'
+                            url={c.url}
+                            width='100%'
+                            height='100%'
+                            controls={true}
+                            />
+                            <div className='contenedor_videos_individual_titulo'> {c.titulo}</div>
+                            <div className='contenedor_videos_individual_titulo'> {c.fecha}</div>
+                        </div>
+                    ))
+                    
+                  : 
+                    <div  className="contenedor_loader_central_contenido">
+                        <Wave text="CARGANDO CONTENIDO ..." effect="fadeOut" effectChange={2.0} /> 
+                        <ProgressBar
+                            height="80"
+                            width="80"
+                            ariaLabel="progress-bar-loading"
+                            wrapperStyle={{}}
+                            wrapperClass="progress-bar-wrapper"
+                            borderColor = '#D4D4D4'
+                            barColor = '#B7B7B7'
                         />
-                        <div className='contenedor_videos_individual_titulo'> {c.titulo}</div>
-                        <div className='contenedor_videos_individual_titulo'> {c.fecha}</div>
                     </div>
-                ))
                 }
+               
             </div>
         </div>
     </>
     )
 }
+
+
 
 
 export default  GaleriaVideos

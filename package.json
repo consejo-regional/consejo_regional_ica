@@ -13,6 +13,7 @@
     "google-map-react": "^2.1.10",
     "react": "^18.1.0",
     "react-animated-numbers": "^0.13.0",
+    "react-animated-text": "^0.1.4",
     "react-dom": "^18.1.0",
     "react-google-maps": "^9.4.5",
     "react-image-video-lightbox": "^3.0.0",

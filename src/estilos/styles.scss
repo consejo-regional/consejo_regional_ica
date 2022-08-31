@@ -41,12 +41,27 @@ p{
     
 }
 
-.separador-bloque{
-    width: 80vw;
-    background-color: rgb(140, 30, 30);
-    color: red;
-}
+// .separador-bloque{
+//     width: 80vw;
+//     background-color: rgb(140, 30, 30);
+//     color: red;
+// }
 
+
+.contenedor_loader_central_contenido{
+    // margin: 2rem;
+    // padding:2rem;
+    background-color:rgb(255, 255, 255);
+    width: inherit;
+    text-align: center;
+    height:40vh;
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    flex-direction:column;
+    // border: 1px solid red;
+
+}
 
 
 $puntosQuiebre:(

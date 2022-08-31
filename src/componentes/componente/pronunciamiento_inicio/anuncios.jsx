@@ -29,11 +29,8 @@ const Anuncios = ()=> {
              <div className="anuncios_conteiner">
 
                 <div className="anuncios_banner_boton"  onClick={clickAnuncio}  ></div> 
-
                 {
                     (informacion[0].imagen==='')?(
-                     
-
                         <div  className="anuncios_banner_vertical" >
                         <Triangle
                         height="80"
@@ -45,7 +42,6 @@ const Anuncios = ()=> {
                         visible={true}
                         />
                     </div>
-
                     ) :
                     (
                         <img alt='' className={(informacion[0].orientacion==='vertical')?'anuncios_banner_vertical':'anuncios_banner_horizontal'} src={process.env.PUBLIC_URL+`/`+ informacion[0].imagen}></img>

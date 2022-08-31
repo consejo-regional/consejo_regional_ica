@@ -12,7 +12,10 @@
 .contenedor_videos{
     display:grid;
     grid-template-columns: repeat(2,1fr);
-    
+    width: inherit;
+    // display:flex;
+    align-items:center;
+    justify-content:center;
     //border:1px solid red;
     align-items: center;
     gap: 3rem;
@@ -57,6 +60,9 @@
     text-align: center;
 
 }
+
+
+
 
 
 .contenedor_videos_individual_titulo{

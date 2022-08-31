@@ -1,11 +1,14 @@
 import React from 'react'
 import {useEffect,useState} from "react"
+import { ProgressBar } from  'react-loader-spinner'
+import { Wave } from "react-animated-text";
+
 
 
 const TramitesGrid = ()=> {
 
 
-    const[informacion,setInformacion]=useState([])
+    const[informacion,setInformacion]=useState()
       useEffect(()=>{
           fetch("https://api.cmpica.org.pe/api/tramites/read.php")
           .then((res) => res.json())
@@ -25,9 +28,25 @@ const TramitesGrid = ()=> {
         </div>
           <div className="contenedor_servicios_grid">
             {
+
+              informacion
+              ?
               informacion.map(c=>(
                 <SericiosItem imagen={c.imagen} nombre={c.nombre} description={c.description} enlace={c.enlace}></SericiosItem>
               ))
+              :
+              <div  className="contenedor_loader_central_contenido">
+                        <Wave text="CARGANDO CONTENIDO ..." effect="fadeOut" effectChange={2.0} /> 
+                        <ProgressBar
+                            height="80"
+                            width="80"
+                            ariaLabel="progress-bar-loading"
+                            wrapperStyle={{}}
+                            wrapperClass="progress-bar-wrapper"
+                            borderColor = '#D4D4D4'
+                            barColor = '#B7B7B7'
+                        />
+                    </div>
             }
             
           </div>
