@@ -28,8 +28,8 @@ const Institucion = ()=> {
             <h4 className="contenido_cart_descripccion">Brinda servicios sociales a los médicos y médicas en las áreas de atención de salud, bienestar social y asesoría legal, favorece el desarrollo de la infraestructura institucional a través de la construcción de sedes institucionales y recreacionales para los médicos y sus familias. Promueve en las instituciones de salud el desarrollo de oportunidades laborales y de capacitación para los médicos jóvenes.</h4> 
             <h2>INSTITUCIONAL ORGANIZATIVA</h2>
             <h4 className="contenido_cart_descripccion">Promueve la generación de capacidades de los integrantes de sus órganos directivos (Consejo Nacional y Consejos Regionales), así como de sus Comisiones Asesoras (Permanentes y Transitorias) para fortalecer la presencia política y técnica del CMP en asuntos de interés profesional, sanitario y nacional</h4> 
-            <h2></h2>
-            <h4 className="contenido_cart_descripccion"></h4> 
+            {/* <h2></h2> */}
+            {/* <h4 className="contenido_cart_descripccion"></h4>  */}
             <h2>ATENCIÓN DE SALUD DE CALIDAD Y SEGURIDAD DEL PACIENTE</h2>
             <h4 className="contenido_cart_descripccion">Vigilamos y exigimos que se cumplan las condiciones indispensables de infraestructura, equipamiento y recursos que garanticen la calidad y seguridad de los servicios de salud; promovemos una cultura de seguridad y calidad de atención en las organizaciones públicas y privadas de salud; promovemos el trato digno a los usuarios y pacientes, en el marco del respeto a sus derechos y del ejercicio ético de la profesión médica; y trabajamos por establecer un sistema de seguimiento y evaluación de la atención segura y de calidad en establecimientos de salud.</h4> 
             <h2>DESARROLLO SOCIO – SANITARIO</h2>

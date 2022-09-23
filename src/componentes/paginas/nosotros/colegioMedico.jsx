@@ -1,10 +1,6 @@
 import React from 'react'
 
 
-const informacion_colegio_grid=[
-
-]
-
 
 const ColegioMedico = ()=> {
       return(

@@ -32,7 +32,7 @@ const TramitesGrid = ()=> {
               informacion
               ?
               informacion.map(c=>(
-                <SericiosItem imagen={c.imagen} nombre={c.nombre} description={c.description} enlace={c.enlace}></SericiosItem>
+                <TramitesItem imagen={c.imagen} nombre={c.nombre} description={c.description} enlace={c.enlace}></TramitesItem>
               ))
               :
               <div  className="contenedor_loader_central_contenido">
@@ -55,7 +55,7 @@ const TramitesGrid = ()=> {
       )  
   }
 
-  const SericiosItem = ({imagen,nombre,description,enlace})=> {
+  const TramitesItem = ({imagen,nombre,description,enlace})=> {
     return(
       <>
       <a href={enlace} rel="noreferrer" target="_blank" className="contenedor_servicios_item">

@@ -35,7 +35,7 @@ Nota: El expediente será escaneado y archivado en formato digital. Los document
 </h4> 
             
 
-            <h4 className="contenido_cart_descripccion"></h4> 
+            {/* <h4 className="contenido_cart_descripccion"></h4>  */}
             <div className="contenido-izquierda">
 
             </div>

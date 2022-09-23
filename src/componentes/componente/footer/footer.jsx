@@ -8,7 +8,7 @@ const Footer = ()=> {
         <div className="contenedor_footer">
             
             <div className="item_contenedor_footer">
-                <img src={process.env.PUBLIC_URL + `iconos/doctor.png`}/>
+                <img alt=""  src={process.env.PUBLIC_URL + `iconos/doctor.png`}/>
                 <div className="item_contenedor_footer_bloque">
                     <h1 className="item_contenedor_texto">DECANO</h1>
                     <h1 className="item_contenedor_texto_color">Dr. Luis Felipe Muñante Aparcana.</h1>
@@ -17,7 +17,7 @@ const Footer = ()=> {
             </div>
 
             <div className="item_contenedor_footer">
-                <img src={process.env.PUBLIC_URL + `iconos/cuaderno-de-contactos.png`}/>
+                <img alt=""  src={process.env.PUBLIC_URL + `iconos/cuaderno-de-contactos.png`}/>
                 <div className="item_contenedor_footer_bloque">
                     <h1 className="item_contenedor_texto">SECRETARIA</h1>
                     <h1 className="item_contenedor_texto_color">Jesus Huamani Conislla.</h1>
@@ -31,7 +31,7 @@ const Footer = ()=> {
             </div>
 
             <div className="item_contenedor_footer">
-                <img src={process.env.PUBLIC_URL + `iconos/letra.png`}/>
+                <img alt=""  src={process.env.PUBLIC_URL + `iconos/letra.png`}/>
                 <div className="item_contenedor_footer_bloque">
 
                     <h1 className="item_contenedor_texto">SISTEMAS</h1>
@@ -41,7 +41,7 @@ const Footer = ()=> {
             </div>
 
             <div className="item_contenedor_footer">
-                <img src={process.env.PUBLIC_URL + `iconos/tarjeta.png`}/>
+                <img alt=""  src={process.env.PUBLIC_URL + `iconos/tarjeta.png`}/>
                 <div className="item_contenedor_footer_bloque">
 
                     <h1 className="item_contenedor_texto">COBRANZAS</h1>
@@ -58,7 +58,7 @@ const Footer = ()=> {
            
         </div>
         <div className='item_contenedor_footer_final'>
-                   <img className='logo_footer' src={process.env.PUBLIC_URL + `iconos/logo.png`}/>
+                   <img alt=""  className='logo_footer' src={process.env.PUBLIC_URL + `iconos/logo.png`}/>
 
 
            </div> 

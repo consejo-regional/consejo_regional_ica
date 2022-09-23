@@ -20,7 +20,7 @@ const ConstanciaEtica = ()=> {
             
             
 
-            <h4 className="contenido_cart_descripccion"></h4> 
+            {/* <h4 className="contenido_cart_descripccion"></h4>  */}
             <div className="contenido-izquierda">
                 
             </div>

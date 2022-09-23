@@ -1,6 +1,8 @@
 import React  from 'react'
 import {Link} from 'react-router-dom'
-// import Informacion from  "../../../data/noticia"
+import { ProgressBar } from  'react-loader-spinner'
+import { Wave } from "react-animated-text";
+
 
 import { useEffect,useState } from "react";
 
@@ -13,16 +15,8 @@ function ScrollToTopOnMount() {
 }
 
 
-
-// const informacion=Informacion
-
-
-
   const Noticias = ()=> {
-
-
-
-    const[informacion,setInformacion]=useState([])
+    const[informacion,setInformacion]=useState()
     useEffect(()=>{
         fetch("https://api.cmpica.org.pe/api/noticias/read.php")
         .then((res) => res.json())
@@ -35,7 +29,6 @@ function ScrollToTopOnMount() {
         return(
           <>
           <ScrollToTopOnMount />
-
           <div className="contenedor-page"  >
               <div className="contenedor-page-titulo">
                   <h4>Consejo Regional IX – ICA </h4>
@@ -49,10 +42,25 @@ function ScrollToTopOnMount() {
             </div>
               <div className="contenedor_page_grid">
                   {
+                    informacion
+                    ?
                     informacion.map(c=>(
                       <NoticiasItem  key={c.id} id={c.id} imagen={c.imagen} titulo={c.titulo} fecha={c.fecha} tipo={c.tipo} ></NoticiasItem>
                       ))
-                  }   
+                    :
+                    <div  className="contenedor_loader_central_contenido">
+                        <Wave text="CARGANDO CONTENIDO ..." effect="fadeOut" effectChange={2.0} /> 
+                        <ProgressBar
+                            height="80"
+                            width="80"
+                            ariaLabel="progress-bar-loading"
+                            wrapperStyle={{}}
+                            wrapperClass="progress-bar-wrapper"
+                            borderColor = '#D4D4D4'
+                            barColor = '#B7B7B7'
+                        />
+                    </div>
+                  }     
               </div>
           </div>
           </>   

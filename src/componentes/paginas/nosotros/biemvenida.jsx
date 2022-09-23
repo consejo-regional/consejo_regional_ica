@@ -14,7 +14,7 @@ const Biemvenida = ()=> {
         <div className="datos">
         <h2>{contenido.titulo}</h2>
 
-        <img className='bienvenida_decano ' src={process.env.PUBLIC_URL + `/directivos/DECANO.png`}/>
+        <img alt={contenido.titulo} className='bienvenida_decano ' src={process.env.PUBLIC_URL + `/directivos/DECANO.png`}/>
 
         <div className="conteiner-datos">
 
