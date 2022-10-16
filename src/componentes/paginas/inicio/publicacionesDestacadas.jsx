@@ -1,122 +1,272 @@
 import React from 'react'
+import 'bootstrap/dist/css/bootstrap.min.css';
+import {
+    CarouselControl,
+    Carousel,
+    CarouselItem,
+    CarouselIndicators,
+} from 'reactstrap';
 
-import {Slideshow, Slide, TextoSlide} from './SlidesAutoplay'
+import {useEffect,useState} from "react"
 import {Link} from 'react-router-dom'
-
-import styled from 'styled-components';
-
 
 
 
 const Publicaciones = ()=> {
       return(
         <>
+        <div className="contenedor-publicaciones">
 
+                <div className="contenedor-serviciosGrid-titulo">
+                        <div className="contenedor-serviciosGrid-logo">
+                            <div className="logo-colegio-svg"></div>
+                        </div>
+                        <div className="contenedor-serviciosGrid-contenido">
+                            <div className="contenedor-serviciosGrid-contenido-conteiner">
 
+                                <div className="contenedor-serviciosGrid-contenido1">PUBLICACIONES</div>
+                                <div className="contenedor-serviciosGrid-contenido2">DESTACADOS</div>
+                            </div>
+                        </div>
 
-
-<div className="contenedor-publicaciones">
-
-        <div className="contenedor-serviciosGrid-titulo">
-                <div className="contenedor-serviciosGrid-logo">
-                    <div className="logo-colegio-svg"></div>
-                </div>
-                <div className="contenedor-serviciosGrid-contenido">
-                    <div className="contenedor-serviciosGrid-contenido-conteiner">
-
-                        <div className="contenedor-serviciosGrid-contenido1">PUBLICACIONES</div>
-                        <div className="contenedor-serviciosGrid-contenido2">DESTACADOS</div>
                     </div>
-                </div>
 
+            <div className="contendor-slider-varios">
+                <main className="slider-comunicados">
+                    <p className="titulo">COMUNICADOS</p>
+                    <SliderComunicados></SliderComunicados>
+                </main>
+                <main className="slider-comunicados">
+                    <p className="titulo">CURSOS EVENTOS</p>
+                    <SliderEventos></SliderEventos>
+                </main>
+                <main className="slider-comunicados">
+                    <p className="titulo">NOTICIAS</p>
+                    <SliderNoticias></SliderNoticias>
+                </main>
             </div>
 
-<div className="contendor-slider-varios">
-
-<main>
-            <Titulo>COMUNICADOS</Titulo>
-
-			<Slideshow controles={true} autoplay={true} velocidad="3000" intervalo="5000">
-				<Slide>
-                    <Link to="/comunicaciones/pronunciamiento">
-                        <img alt="" src={process.env.PUBLIC_URL + `/opinion/COMUNICADO 1.jpeg`}></img>
-
-                    </Link>
-				</Slide>
-                <Slide>
-                    <Link to="/comunicaciones/pronunciamiento">
-                        <img alt=""  src={process.env.PUBLIC_URL + `/opinion/Pronunciamiento 6.jpeg`}></img>
-
-                    </Link>
-				</Slide>
-                <Slide>
-                    <Link to="/comunicaciones/pronunciamiento">
-                        <img alt=""  src={process.env.PUBLIC_URL + `/opinion/Pronunciamiento 5.jpeg`}></img>
-                    </Link>
-				</Slide>
-				
-				
-			</Slideshow>
-		</main>
-
-        <main>
-        <Titulo>CURSOS/EVENTOS</Titulo>
-
-			<Slideshow controles={true} autoplay={true} velocidad="3000" intervalo="5000">
-                <Slide>
-                    <Link to="/eventos">
-                        <img  src={process.env.PUBLIC_URL + `/eventos/ACTUALIZACION EN ENDOCRINOLOGIA1.jpg`} alt=""/>
-                    </Link>
-				</Slide>
-                <Slide>
-                    <Link to="/eventos">
-                        <img src={process.env.PUBLIC_URL + `/eventos/WhatsApp Image 2022-06-08 at 3.02.40 PM.jpeg`} alt=""/>
-                    </Link>
-				</Slide>
-				
-			</Slideshow>
-		</main>
-
-        <main>
-        <Titulo>NOTICIAS</Titulo>
-
-			<Slideshow controles={true} autoplay={true} velocidad="3000" intervalo="5000">
-                <Slide>
-                    <Link to="/comunicaciones/noticias">
-                        <img className="img" src={process.env.PUBLIC_URL + `/noticias/FUTBOL MUJERES IMG 1.jpg`} alt=""/>
-                    </Link>
-				</Slide>
-                <Slide>
-                    <Link to="/comunicaciones/noticias">
-                        <img className="img" src={process.env.PUBLIC_URL + `/noticias/vacunacion.png`} alt=""/>
-                    </Link>
-                    <TextoSlide>JORNADA DE VACUNACION</TextoSlide>
-				</Slide>
-			</Slideshow>
-		</main>
-
-</div>
-
-
-           
-
-</div>
-
-
-      
-
+        </div>
         </>   
       )  
   }
+
+  function SliderEventos() {
   
-
-  const Titulo = styled.p`
-  font-size: 1.3rem;
-  text-transform: uppercase;
-  margin-bottom: 1rem;
-`;
-
-
+    // State for Active index
+    const [activeIndex, setActiveIndex] = useState(0);
   
+    // State for Animation
+    const [animating, setAnimating] = useState(false);
+
+    const[informacion,setInformacion]=useState([])
+
+    useEffect(()=>{
+
+    fetch("https://api.cmpica.org.pe/api/eventos/read.php")
+    .then((res) => res.json())
+    .then(
+        data=>setInformacion(data)
+    );
+ 
+   },[])
+  
+    // Items array length
+    const itemLength = informacion.length - 1
+  
+    // Previous button for Carousel
+    const previousButton = () => {
+        if (animating) return;
+        const nextIndex = activeIndex === 0 ?
+            itemLength : activeIndex - 1;
+        setActiveIndex(nextIndex);
+    }
+  
+    // Next button for Carousel
+    const nextButton = () => {
+        if (animating) return;
+        const nextIndex = activeIndex === itemLength ?
+            0 : activeIndex + 1;
+        setActiveIndex(nextIndex);
+    }
+  
+    // Carousel Item Data
+    const carouselItemData = informacion.map((c) => {
+        return (
+            <CarouselItem
+                key={c.id}
+                onExited={() => setAnimating(false)}
+                onExiting={() => setAnimating(true)}
+            >
+                <Link to="/eventos">
+
+                   <img src={process.env.PUBLIC_URL+`/`+ c.imagen}  className="img-fluid" />
+                </Link>
+
+
+
+            </CarouselItem>
+        );
+    });
+  
+    return (
+       
+            <Carousel previous={previousButton} next={nextButton}
+
+            className="carousel-fade carrusuelComunicados"
+                activeIndex={activeIndex}>
+                {carouselItemData}
+                <CarouselControl directionText="Prev"
+                    direction="prev" onClickHandler={previousButton} />
+                <CarouselControl directionText="Next"
+                    direction="next" onClickHandler={nextButton} />
+            </Carousel>
+        
+    );
+}
+
+
+function SliderComunicados() {
+  
+    // State for Active index
+    const [activeIndex, setActiveIndex] = useState(0);
+  
+    // State for Animation
+    const [animating, setAnimating] = useState(false);
+
+    const[informacion,setInformacion]=useState([])
+
+    useEffect(()=>{
+
+    fetch("https://api.cmpica.org.pe/api/opinion_y_pronunciamiento/read.php")
+    .then((res) => res.json())
+    .then(
+        data=>setInformacion(data)
+    );
+ 
+   },[])
+  
+    // Items array length
+    const itemLength = informacion.length - 1
+  
+    // Previous button for Carousel
+    const previousButton = () => {
+        if (animating) return;
+        const nextIndex = activeIndex === 0 ?
+            itemLength : activeIndex - 1;
+        setActiveIndex(nextIndex);
+    }
+  
+    // Next button for Carousel
+    const nextButton = () => {
+        if (animating) return;
+        const nextIndex = activeIndex === itemLength ?
+            0 : activeIndex + 1;
+        setActiveIndex(nextIndex);
+    }
+  
+    // Carousel Item Data
+    const carouselItemData = informacion.map((c) => {
+        return (
+            <CarouselItem
+                key={c.id}
+                onExited={() => setAnimating(false)}
+                onExiting={() => setAnimating(true)}
+            >
+            <Link to="/comunicaciones/pronunciamiento">
+                <img src={process.env.PUBLIC_URL+`/`+ c.ruta}  className="img-fluid" />
+            </Link>
+            
+            </CarouselItem>
+        );
+    });
+  
+    return (
+       
+            <Carousel previous={previousButton} next={nextButton}
+
+            className="carousel-fade carrusuelComunicados"
+                activeIndex={activeIndex}>
+                {carouselItemData}
+                <CarouselControl directionText="Prev"
+                    direction="prev" onClickHandler={previousButton} />
+                <CarouselControl directionText="Next"
+                    direction="next" onClickHandler={nextButton} />
+            </Carousel>
+        
+    );
+}
+
+
+function SliderNoticias() {
+  
+    // State for Active index
+    const [activeIndex, setActiveIndex] = useState(0);
+  
+    // State for Animation
+    const [animating, setAnimating] = useState(false);
+
+    const[informacion,setInformacion]=useState([])
+
+    useEffect(()=>{
+
+    fetch("https://api.cmpica.org.pe/api/noticias/read.php")
+    .then((res) => res.json())
+    .then(
+        data=>setInformacion(data)
+    );
+ 
+   },[])
+  
+    // Items array length
+    const itemLength = informacion.length - 1
+  
+    // Previous button for Carousel
+    const previousButton = () => {
+        if (animating) return;
+        const nextIndex = activeIndex === 0 ?
+            itemLength : activeIndex - 1;
+        setActiveIndex(nextIndex);
+    }
+  
+    // Next button for Carousel
+    const nextButton = () => {
+        if (animating) return;
+        const nextIndex = activeIndex === itemLength ?
+            0 : activeIndex + 1;
+        setActiveIndex(nextIndex);
+    }
+  
+    // Carousel Item Data
+    const carouselItemData = informacion.map((c) => {
+        return (
+            <CarouselItem
+                key={c.id}
+                onExited={() => setAnimating(false)}
+                onExiting={() => setAnimating(true)}
+            >
+                <Link to="/comunicaciones/noticias">
+                    <img src={process.env.PUBLIC_URL+`/`+ c.imagen}  className="img-fluid" />
+                </Link>
+            </CarouselItem>
+        );
+    });
+  
+    return (
+       
+            <Carousel previous={previousButton} next={nextButton}
+
+            className="carousel-fade carrusuelComunicados"
+                activeIndex={activeIndex}>
+                {carouselItemData}
+                <CarouselControl directionText="Prev"
+                    direction="prev" onClickHandler={previousButton} />
+                <CarouselControl directionText="Next"
+                    direction="next" onClickHandler={nextButton} />
+            </Carousel>
+        
+    );
+}
+   
   export default Publicaciones;
   

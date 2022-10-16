@@ -11,6 +11,9 @@ import NoticiasDestacadas from './noticiasDestacadas'
 import AnimatedNumbers from "react-animated-numbers";
 import {Slideshow, Slide} from '../../componente/slider/sliderautoplayinicio'
 import GaleriaVideosInicio from './galeriaVideosInicio';
+// import { Container } from 'reactstrap';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import SliderPrincipal from './sliderPrincipal'
 
 
 
@@ -40,19 +43,9 @@ const Home = ()=> {
       return(
         <>
 
-        <main className="slider-principal">
-          <Slideshow controles={true} autoplay={true} velocidad="6000" intervalo="3000">
-                  {
-                     informacion.map(c=>(
-                          <Slide key={c.id}>
-                                  <img src={process.env.PUBLIC_URL+`/`+ c.ruta} alt=""/>
-                          </Slide>
-                     ))
-                  }  
-          </Slideshow>
+       <main className="slider-principal">
+            <SliderPrincipal></SliderPrincipal>
 		   </main>
-
-      
  
         <div data-aos="fade-up">
           <SericiosGrid></SericiosGrid> 
@@ -72,8 +65,8 @@ const Home = ()=> {
             <hr className="separador-bloque"></hr>
         </div>
 
-      
-        <GaleriaVideosInicio></GaleriaVideosInicio>
+{/*       
+        <GaleriaVideosInicio></GaleriaVideosInicio> */}
 
 
         <div className="contenedor-separador-bloque">
