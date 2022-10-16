@@ -11,7 +11,7 @@
     grid-template-columns: repeat(3,1fr);
     gap: 1rem;
     @include rwd(tablet){     
-        grid-template-columns: repeat(2,1fr);
+        // grid-template-columns: repeat(2,1fr);
     }
     @include rwd(celular){
         grid-template-columns: repeat(1,1fr);
@@ -41,11 +41,11 @@
 	overflow: hidden;
 	// border: 1px solid red;
     display: flex;
-    // justify-content:center;
-    // align-items: center;
+    justify-content:center;
+    align-items: center;
     flex-direction: column;
     @include rwd(tablet){
-        max-width: 100%;
+        width: 100%;
     }
     @include rwd(celular){
     }
@@ -71,7 +71,7 @@
     position: absolute;
     top: 0;
     left: 0;
-    max-width: 30vw;
+    width: 100%;
     height: 35rem;
     // border: 1px solid red;
     @include rwd(tablet){
