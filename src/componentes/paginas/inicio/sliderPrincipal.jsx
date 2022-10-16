@@ -23,7 +23,7 @@ function SliderPrincipal() {
 
     useEffect(()=>{
 
-    fetch("http://localhost/php_rest_myblog/api/slider_principal/read.php")
+    fetch("https://api.cmpica.org.pe/api/slider_principal/read.php")
     .then((res) => res.json())
     .then(
         data=>setInformacion(data)
@@ -59,7 +59,7 @@ function SliderPrincipal() {
                 onExited={() => setAnimating(false)}
                 onExiting={() => setAnimating(true)}
             >
-                <img src={process.env.PUBLIC_URL+`/`+ c.src}  className="img-fluid" />
+                <img src={process.env.PUBLIC_URL+`/`+ c.src}  className="img-fluid" alt="" />
             </CarouselItem>
         );
     });

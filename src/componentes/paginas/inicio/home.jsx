@@ -9,9 +9,7 @@ import Publicaciones from './publicacionesDestacadas'
 import PalabrasDecano from './palabrasDecano'
 import NoticiasDestacadas from './noticiasDestacadas'
 import AnimatedNumbers from "react-animated-numbers";
-import {Slideshow, Slide} from '../../componente/slider/sliderautoplayinicio'
-import GaleriaVideosInicio from './galeriaVideosInicio';
-// import { Container } from 'reactstrap';
+// import GaleriaVideosInicio from './galeriaVideosInicio';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import SliderPrincipal from './sliderPrincipal'
 
@@ -20,7 +18,7 @@ import SliderPrincipal from './sliderPrincipal'
 const Home = ()=> {
 
   const[contador,setContador]=useState([])
-  const[informacion,setInformacion]=useState([])
+  // const[informacion,setInformacion]=useState([])
 
    useEffect(()=>{
    AOS.init({duration: 1000})
@@ -30,14 +28,6 @@ const Home = ()=> {
    .then(
     data=>setContador(data.value)
    )
-
-   fetch("https://api.cmpica.org.pe/api/slider_principal/read.php")
-   .then((res) => res.json())
-   .then(
-       // data=>console.log(data)
-       data=>setInformacion(data)
-   );
-
   },[])
 
       return(

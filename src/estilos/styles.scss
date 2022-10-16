@@ -85,7 +85,22 @@ $puntosQuiebre:(
     }
 }
 
-///////////////////////////////
+/////////////////////////////// progress scroll bar//////////////////
+
+.progressMainWrapper{
+    background-color:#f9ecf6;
+    position: sticky;
+    height: .2rem;
+    top: 0;
+    left: 0;
+    z-index: 10000;
+}
+
+.progressMainStyle{
+    height:.3rem;
+    background: linear-gradient(90deg, #F1C7FF 0%, #CA29FF 100%);
+}
+////////////////////////////// //////////////////////////////////////
 
 
 

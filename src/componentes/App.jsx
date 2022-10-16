@@ -56,6 +56,15 @@ import BolsaDetalle from './paginas/bolsa_trabajo/bolsaDetalle';
 const App = ()=> {
 
   const[loader,setLoader]=useState(false)
+  const[scrollTop,setScrollTop] =useState(0)
+  
+  const onScroll=()=>{
+    const winScroll = document.documentElement.scrollTop
+    const height =document.documentElement.scrollHeight -document.documentElement.clientHeight
+
+    const scrolled =(winScroll/height) * 100
+    setScrollTop(scrolled)
+  }
 
   useEffect(()=>{
 
@@ -63,6 +72,12 @@ const App = ()=> {
     setTimeout(()=>{
       setLoader(true)
     },1000)
+
+    //evento de scroll
+
+    window.addEventListener("scroll",onScroll)
+
+    return () => window.removeEventListener("scroll",onScroll)
 
   },[])
 
@@ -73,11 +88,19 @@ const App = ()=> {
           
           :
           <Router>
+
+          <div className="progressMainWrapper">
+            <div 
+              className="progressMainStyle"
+              style={{width:`${scrollTop}%`}}
+            ></div>
+          </div>
+
            <Anuncios></Anuncios>
            <Menu></Menu>
-          <RedesSociales></RedesSociales>
-          <Watsap></Watsap>
-          <MenuItem></MenuItem>
+           <RedesSociales></RedesSociales>
+           <Watsap></Watsap>
+           <MenuItem></MenuItem>
          
           < Routes>
             <Route path="/inicio" element={ <Home/>}></Route>

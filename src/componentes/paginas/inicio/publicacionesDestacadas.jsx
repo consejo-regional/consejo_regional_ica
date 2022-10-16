@@ -3,8 +3,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import {
     CarouselControl,
     Carousel,
-    CarouselItem,
-    CarouselIndicators,
+    CarouselItem
 } from 'reactstrap';
 
 import {useEffect,useState} from "react"
@@ -100,7 +99,7 @@ const Publicaciones = ()=> {
             >
                 <Link to="/eventos">
 
-                   <img src={process.env.PUBLIC_URL+`/`+ c.imagen}  className="img-fluid" />
+                   <img src={process.env.PUBLIC_URL+`/`+ c.imagen}  className="img-fluid"  alt=""/>
                 </Link>
 
 
@@ -174,7 +173,7 @@ function SliderComunicados() {
                 onExiting={() => setAnimating(true)}
             >
             <Link to="/comunicaciones/pronunciamiento">
-                <img src={process.env.PUBLIC_URL+`/`+ c.ruta}  className="img-fluid" />
+                <img src={process.env.PUBLIC_URL+`/`+ c.ruta}  className="img-fluid" alt="" />
             </Link>
             
             </CarouselItem>
@@ -246,7 +245,7 @@ function SliderNoticias() {
                 onExiting={() => setAnimating(true)}
             >
                 <Link to="/comunicaciones/noticias">
-                    <img src={process.env.PUBLIC_URL+`/`+ c.imagen}  className="img-fluid" />
+                    <img src={process.env.PUBLIC_URL+`/`+ c.imagen}  className="img-fluid" alt="" />
                 </Link>
             </CarouselItem>
         );
