@@ -1,10 +1,10 @@
 .container-palabras-decano{
 
 // height: 25rem ;
-background-image: url(../../../../public/imagenes/medical-563427_640.jpg);
-background-repeat: no-repeat;
-background-size: cover;
-background-position: center center;
+// background-image: url(../../../../public/imagenes/medical-563427_640.jpg);
+// background-repeat: no-repeat;
+// background-size: cover;
+// background-position: center center;
 display: flex;
 justify-content: center;
 align-items: center;
@@ -19,16 +19,21 @@ align-items: center;
     position: relative;
     display: grid;
     grid-template-columns: repeat(2,1fr);
-    width: 70%;
-    background-color: rgba(84, 84, 84, 0.459);
+    width: 90%;
+    // background-color: rgba(84, 84, 84, 0.459);
     height:90%;
-    color: rgb(255, 255, 255);
-    text-align:justify;
+    color: rgb(41, 41, 41);
+    text-align:center;
     border-radius:.5rem;
     // font-weight: bold;
     // border: 1px solid red;
+
+    background: #FFFFFF;
+    box-shadow: 83.205px 124.808px 80px rgba(61, 60, 60, 0.019376), 48.9911px 73.4867px 41.728px rgba(61, 60, 60, 0.030688), 25.1612px 37.7418px 19.584px rgba(61, 60, 60, 0.039312), 10.1177px 15.1766px 8.576px rgba(61, 60, 60, 0.050624), 2.26318px 3.39477px 3.712px rgba(61, 60, 60, 0.07);
+    padding:1rem;
+
     @include rwd(tablet){
-     
+        width: 95%;
         grid-template-columns: repeat(1,1fr);
 
 
@@ -51,7 +56,23 @@ align-items: center;
     // border: 1px solid red;
     align-self: center;
     justify-self: center;
-    padding:2rem;
+    padding:0rem 1.5rem;
+    font-family: 'Niconne';
+    line-height: 130%;
+
+    font-weight: 400;
+    font-size: 1.5rem;
+    flex-grow: 1;
+
+    @include rwd(tablet){
+        padding:0rem 1rem;
+    }
+    
+    @include rwd(celular){
+    
+
+    
+    }
 
 
 }
@@ -61,6 +82,6 @@ align-items: center;
     align-self: center;
     justify-self: center;
     width: 60%;
-    margin-left:2rem;
+    // margin-left:2rem;
 }
 

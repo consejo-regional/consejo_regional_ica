@@ -64,8 +64,7 @@
 
 .submenu{
     position: absolute;
-    background:rgb(232, 232, 232);
-    background:rgba(244, 244, 244, 0.812);
+    background:rgba(238, 238, 238, 0.812);
     z-index: 1000;
 
     flex-direction: column;
@@ -77,7 +76,7 @@
     opacity: 0;
     transition: transform  .2s,opacity .8s;
     //transition: opacity 2s;
-    border: 1px solid rgb(202, 202, 202);
+    // border: 1px solid rgb(202, 202, 202);
 
     ul{
         top: 0;
@@ -108,25 +107,20 @@
 
 }
 
-.link:hover{
-    background:#630460;
-    width: 100%;
-    color: white;
-   
 
-}
+
+
+
 
 .link{
     
     color: rgba(51, 51, 51, 1);
     height:100%;
     font-weight:400;
-    text-decoration: none;
+    text-decoration: none !important;
     padding-top: 1rem;
     padding-bottom: 1rem;
-
    // z-index: 1000;
-
     width: 100%;
     padding-left: 2rem;
     padding-right: 2rem;
@@ -134,16 +128,34 @@
     align-items: center;
     justify-content: center;
     white-space: pre-wrap;
+
+    // background:linear-gradient(to right,#f682d5 0%,#b537b1 100%);
+    background: linear-gradient(90deg, #F1C7FF 0%, #CA29FF 100%);
+
+    background-repeat: no-repeat;
+    background-position: left 100%;
+    transition-duration: .5s;
+    background-size: 0 6%;
+    &:hover{
+        background-size:100% 6%;
+        width: 100%;
+        color: #CA29FF;
+    }
+
+
     @include rwd(1288px){
         padding-left: 1rem;
         padding-right: 1rem;
         white-space: wrap;
 
     }
-
- ////////////////////////////////////////////   
-
 }
+
+
+
+
+
+
 
 @include rwd(tablet){
 
@@ -184,7 +196,7 @@
 
         .item:hover{
             //background-color: rgb(122, 20, 20);
-            background:rgb(183, 183, 183);
+            // background:rgb(183, 183, 183);
 
             display:block;
             .submenu{

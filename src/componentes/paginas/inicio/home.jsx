@@ -58,10 +58,10 @@ const Home = ()=> {
 {/*       
         <GaleriaVideosInicio></GaleriaVideosInicio> */}
 
-
+{/* 
         <div className="contenedor-separador-bloque">
             <hr className="separador-bloque"></hr>
-        </div>
+        </div> */}
 
         <PalabrasDecano></PalabrasDecano>
 

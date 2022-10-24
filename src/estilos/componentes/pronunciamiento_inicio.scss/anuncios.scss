@@ -1,7 +1,7 @@
 .contenedor_anuncios{
     width: 100vw;
     height: 100vh;
-    background: rgba(182, 182, 182, 0.35);
+    background: rgba(72, 72, 72, 0.35);
     backdrop-filter: blur(4px);
     position: fixed;
     top: 0;
@@ -23,9 +23,10 @@
     // background-repeat: no-repeat;
     // background-position: center center;
     border:.7rem solid white;
-    border:1px solid red;
+    // border:1px solid red;
     object-fit: contain;
     padding: 1rem;
+    border-radius: .5rem;
     // @include rwd(tablet){
      
 
@@ -39,6 +40,8 @@
     // }
 }
 .anuncios_banner_vertical{
+    border-radius: .5rem;
+
     display: flex;
     justify-content:center;
     align-items: center;
@@ -49,7 +52,8 @@
     object-fit: contain;
     padding: 1rem;
     @include rwd(tablet){
-    
+        width: 50vw;
+        height: 70vh;
     }
 
     @include rwd(celular){

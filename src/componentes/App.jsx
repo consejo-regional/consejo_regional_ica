@@ -61,41 +61,31 @@ const App = ()=> {
   const onScroll=()=>{
     const winScroll = document.documentElement.scrollTop
     const height =document.documentElement.scrollHeight -document.documentElement.clientHeight
-
     const scrolled =(winScroll/height) * 100
     setScrollTop(scrolled)
   }
-
   useEffect(()=>{
-
     AOS.init({duration: 2000})
     setTimeout(()=>{
       setLoader(true)
-    },1000)
-
+    },1200)
     //evento de scroll
-
     window.addEventListener("scroll",onScroll)
-
     return () => window.removeEventListener("scroll",onScroll)
-
   },[])
 
       return(
         <>
         {
           !loader ? <Loader></Loader>
-          
           :
           <Router>
-
           <div className="progressMainWrapper">
             <div 
               className="progressMainStyle"
               style={{width:`${scrollTop}%`}}
             ></div>
           </div>
-
            <Anuncios></Anuncios>
            <Menu></Menu>
            <RedesSociales></RedesSociales>

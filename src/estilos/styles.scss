@@ -7,6 +7,22 @@
     src: local('Raleway') ,local('Raleway'), url('../../public/fuentes/static/Raleway-Medium.ttf');
 }
 
+@font-face {
+    font-family: 'Niconne';
+    font-style: normal;
+    font-weight: 200;
+    font-display: swap;
+    src: local('Niconne') ,local('Niconne'), url('../../public/fuentes/Niconne-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'Pacifico';
+    font-style: normal;
+    font-weight: 200;
+    font-display: swap;
+    src: local('Pacifico') ,local('Pacifico'), url('../../public/fuentes/Pacifico-Regular.ttf');
+}
+
 *{
     box-sizing: border-box;
     margin: 0;
@@ -41,11 +57,11 @@ p{
     
 }
 
-// .separador-bloque{
-//     width: 80vw;
-//     background-color: rgb(140, 30, 30);
-//     color: red;
-// }
+.separador-bloque{
+    width: 80vw;
+    background-color: rgb(125, 125, 125);
+    // color: rgb(125, 125, 125);
+}
 
 
 .contenedor_loader_central_contenido{
@@ -88,21 +104,26 @@ $puntosQuiebre:(
 /////////////////////////////// progress scroll bar//////////////////
 
 .progressMainWrapper{
-    background-color:#f9ecf6;
+    background-color:#fdfdfd;
     position: sticky;
-    height: .2rem;
+    // height: .2rem;
     top: 0;
     left: 0;
     z-index: 10000;
 }
 
 .progressMainStyle{
+    position: fixed;
+    top: 0;
     height:.3rem;
     background: linear-gradient(90deg, #F1C7FF 0%, #CA29FF 100%);
 }
 ////////////////////////////// //////////////////////////////////////
 
+//////////////////
 
+ 
+/////////////////////// 
 
 
 ////////COMPONENTES
