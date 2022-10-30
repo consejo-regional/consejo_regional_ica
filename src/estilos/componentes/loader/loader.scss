@@ -1,5 +1,5 @@
 .loader {
-    background: white;
+    background: var(--blancoLogo);
     height: 100vh;
     width: 100%;
     display: flex;
@@ -22,8 +22,6 @@
     background-size: contain;
 }
 
-
-
 .heart-rate {
     width: 150px;
     height: 73px;
@@ -35,7 +33,7 @@
     position: absolute;
     width: 100%;
     height: 100%;
-    background-color: rgb(255, 255, 255);
+    background-color: var(--blancoLogo);
     top: 0;
     right: 0;
     animation: heartRateIn 1.5s linear infinite;
@@ -48,7 +46,7 @@
     top: 0;
     left: -120%;
     animation: heartRateOut 2.5s linear infinite;
-    background: rgb(255, 255, 255);
+    background: var(--blancoLogo);
    
   }
   

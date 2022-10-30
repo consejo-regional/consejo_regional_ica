@@ -23,30 +23,61 @@
     src: local('Pacifico') ,local('Pacifico'), url('../../public/fuentes/Pacifico-Regular.ttf');
 }
 
-*{
+
+:root{
+    --moradoDegradadoFuerte:#CA29FF;
+    --moradoDegradadoDevil:#F1C7FF;
+    --moradoLogo:#630460;
+    // --amarilloLogo:#e76add96;
+    --amarilloLogo:#D49607;
+    --grisLogo:#3A3A3A;
+    --colorTexto:rgb(101, 101, 101);
+    --blancoLogo:rgb(255, 255, 255);
+    --moradoBlur:rgba(139, 105, 137, 0.62);
+    --blancoBlur:rgba(238, 238, 238, 0.812);
+    //estilos de tablas
+    --colorHead:rgb(139, 103, 143);
+    --filaPar:#fcfcfc;
+    --filaImpar:#c3cdff;
+    --colorBorde:#c2c2c4;
+    --hover:rgb(236, 236, 236);
+    --fondo:rgb(255, 255, 255);
+
+}
+
+body.dark{
+    --moradoDegradadoDevil:#5c5c5c;
+    --moradoDegradadoFuerte:#878787;
+    --moradoLogo:#a7a7a7;
+    --amarilloLogo:#cdcdcd;
+    --grisLogo:#a7a7a7;
+    --colorTexto:rgb(202, 202, 202);
+    --blancoLogo:rgb(237, 237, 237);
+    --moradoBlur:rgba(103, 103, 103, 0.62);
+    --blancoBlur:rgba(81, 81, 81, 0.812);
+    //estilos de tablas
+    --colorHead:rgb(139, 103, 143);
+    --filaPar:#fcfcfc;
+    --filaImpar:#c3cdff;
+    --colorBorde:#c2c2c4;
+    --hover:rgb(236, 236, 236);
+    --fondo:rgb(84, 84, 84);
+}
+
+* :not(.vertical-timeline-element,svg,span,div,h3,h5,p,img,h1,ol)  {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
     font-family: 'Raleway';
+    background-color: var(--fondo);
+    // color: var(--colorTexto);
 }
+
+
+
 a{
     text-decoration: none;
-    color: #333333 ;
-
-}
-h1,h2 , h3, h4, h5, h6{
-        font-weight: normal;
-        color: #333333;
-}
-
-p{
-    color:#777777;
-}
-
-
-.marcador {
-    background-color: red;
-    padding: 10px;
+    color: var(--grisLogo) ;
 }
 
 .contenedor-separador-bloque{
@@ -59,24 +90,7 @@ p{
 
 .separador-bloque{
     width: 80vw;
-    background-color: rgb(125, 125, 125);
-    // color: rgb(125, 125, 125);
-}
-
-
-.contenedor_loader_central_contenido{
-    // margin: 2rem;
-    // padding:2rem;
-    background-color:rgb(255, 255, 255);
-    width: inherit;
-    text-align: center;
-    height:40vh;
-    display: flex;
-    align-items: center;
-    justify-content:center;
-    flex-direction:column;
-    // border: 1px solid red;
-
+    background-color: var(--colorTexto);
 }
 
 
@@ -104,9 +118,7 @@ $puntosQuiebre:(
 /////////////////////////////// progress scroll bar//////////////////
 
 .progressMainWrapper{
-    background-color:#fdfdfd;
     position: sticky;
-    // height: .2rem;
     top: 0;
     left: 0;
     z-index: 10000;
@@ -116,16 +128,9 @@ $puntosQuiebre:(
     position: fixed;
     top: 0;
     height:.3rem;
-    background: linear-gradient(90deg, #F1C7FF 0%, #CA29FF 100%);
+    background: linear-gradient(90deg, var(--moradoDegradadoDevil) 0%, var(--moradoDegradadoFuerte) 100%);
 }
-////////////////////////////// //////////////////////////////////////
-
-//////////////////
-
  
-/////////////////////// 
-
-
 ////////COMPONENTES
 @import "./componentes/404/noEncontrado.scss";
 @import "./componentes/footer/footerContacto.scss";
@@ -133,7 +138,6 @@ $puntosQuiebre:(
 @import "./componentes/loader/loader.scss";
 @import "./componentes/menu/menu.scss";
 @import "./componentes/menu/menuItem.scss";
-@import "./componentes/menu/cmpDiguital.scss";
 @import "./componentes/pronunciamiento_inicio.scss/anuncios.scss";
 @import "./componentes/redes_sociales/redesSociales.scss";
 @import "./componentes/redes_sociales/watsap.scss";

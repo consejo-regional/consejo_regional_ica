@@ -1,6 +1,6 @@
 .contenedor_footer{
     margin-top:2rem;
-    background-color: #630460;
+    background: linear-gradient(90deg, var(--moradoLogo) 0%, var(--moradoDegradadoFuerte) 100%);
     padding: 4rem;
     display:grid;
     grid-template-columns: repeat(4,1fr);
@@ -19,29 +19,6 @@
     }
 
 }
-.imagen_footer{
-    height:4rem;
-    width: 4rem;
-    margin:1rem;
-    border: 1px solid red;
-
-}
-.imagen_footer1{
-    height:4rem;
-    width: 5rem;
-    margin:1rem;
-
-}
-.contenedor_imagen_footer{
-    display:flex;
-
-    margin:1rem;
-
-
-}
-.description_footer{
-    color:white;
-}
 
 .item_contenedor_footer{
     display:flex;
@@ -56,17 +33,17 @@
 
 .item_contenedor_texto_titulo{
     font-size:1rem;
-    color:white;
+    color:var(--blancoLogo);
 
 }
 
 .item_contenedor_texto{
     font-size:.8rem;
-    color:white;
+    color:var(--blancoLogo);
 }
 .item_contenedor_texto_color{
     font-size:.8rem;
-    color:#ECBC13;
+    color:var(--amarilloLogo);
 }
 
 
@@ -77,7 +54,7 @@
 }
 
 .item_contenedor_footer_final{
-    background-color:rgb(48, 48, 48);
+    background-color:var(--grisLogo);
     display: flex;
     justify-content: center;
     align-items: center;

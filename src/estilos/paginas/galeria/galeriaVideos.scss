@@ -55,7 +55,9 @@
 .contenedor_videos_central_titulo{
     margin: 1rem;
     padding:1rem;
-    background-color:rgb(221, 221, 221);
+    // background-color:rgb(221, 221, 221);
+    background: linear-gradient(90deg, var(--moradoDegradadoDevil) 0%, var(--moradoDegradadoFuerte) 100%);
+    color: var(--blancoBlur);
     width: 100vw;
     text-align: center;
 
@@ -68,6 +70,7 @@
 .contenedor_videos_individual_titulo{
     margin: .5rem;
     font-size:.8rem;
-    color: gray;
+    // color: gray;
+    color: var(blancoLogo);
 
 }

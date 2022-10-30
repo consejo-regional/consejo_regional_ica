@@ -2,23 +2,27 @@
     font-size: 15em;
     text-align: center;
     font-family: "Bebas Neue", sans-serif;
+    color: var(--colorTexto);
+    background: transparent;
+
   }
   
-  h3 {
-    // padding-top: 0.25em;
-  }
+  // h3 {
+  //   // padding-top: 0.25em;
+  //   color: var(--colorTexto);
+
+  // }
   
   .vertical-timeline-element-content {
+    color: var(--colorTexto);
     box-shadow: 0 0.25em 0.5em 0 rgba(0, 0, 0, 0.25),
       0 0.4em 1.25em 0 rgba(0, 0, 0, 0.15) !important;
     padding: 2em 3em !important;
+    background: transparent;
   }
   
   .date {
-    // color: rgb(201, 251, 255);
-    color: rgba(139, 71, 137, 1);
-
-
+    color: var(--moradoLogo);
   }
   
   #description {
@@ -30,26 +34,26 @@
     padding: 0.5em 1em;
     // margin-top: .5rem;
     border-radius: 5px;
-    color: rgb(246, 246, 246);
+    color:var(--blancoLogo);
   }
   
   .workButton {
-    background-color: rgba(139, 71, 137, 1);
+    background-color: var(--moradoLogo);
 
   }
   
   .workButton:hover {
-    background-color: rgb(162, 83, 159);
+    background-color:var(--moradoLogo);
   }
   
   .schoolButton {
-    background-color: rgb(157, 97, 156);
+    background-color:var(--moradoLogo);
+
 
   }
   
   .schoolButton:hover {
-    background-color: rgb(162, 83, 159);
-
+    background-color:var(--moradoLogo);
 }
 .imagen_noticias_timeline{
   width: 100%;
@@ -64,7 +68,7 @@
     .vertical-timeline-element-date {
       display: block !important;
       float: none !important;
-      color: rgb(44, 44, 44);
+      color:var(--grisLogo);
       margin-top: 1.5em;
     }
   }

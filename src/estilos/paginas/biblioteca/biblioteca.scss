@@ -1,5 +1,4 @@
 .libros-biblioteca{
-   // border: 1px solid red;
     width: 20rem;
     height: 18rem;
     object-fit:cover;
@@ -7,7 +6,6 @@
 }
 
 .contenedor_biblioteca_grid{
-    //border: 1px solid rebeccapurple;
     display: grid;
     grid-template-columns: repeat(3,1fr);
     place-items: center;
@@ -35,11 +33,11 @@
 }
 
 .botonDescarga{
-    background-color: rgb(107, 107, 107);
+    background-color: var(--gris_logo);
     padding: .5rem; 
     text-align: center;
     border-radius:.3rem;
-    color:white;
+    color:var(--blancoLogo);
     margin-bottom:1rem;
     margin-top:1rem;
 

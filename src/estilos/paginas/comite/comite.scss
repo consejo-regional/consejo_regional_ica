@@ -1,18 +1,12 @@
 
-
-
 .datos{
     margin-top:2rem;
-   // border: 10px solid red;
    display: flex;
    flex-direction: column;
    justify-content: center;
    align-items: center;
-    
     @include rwd(tablet){
      
-
-  
     }
 
     @include rwd(celular){
@@ -21,29 +15,21 @@
         justify-content: center;
         align-items: center;
         padding-left: 0;
-
     }
 
 }
 .conteiner-datos{
     margin-top:1.5rem;
-
     display: flex;
     flex-direction: column;
     width: 80vw;
-
-    //grid-template-columns: 3fr 1fr;
     gap: 1.5rem;
-    //border: 1px solid red;
     @include rwd(tablet){
-     
-
-  
+    
     }
 
     @include rwd(celular){
         width: 80vw;
-    
     }
 
 }
@@ -53,11 +39,7 @@
     text-align: justify;
     line-height: 1.8rem;
     white-space:pre-wrap;
-    //color: red;
-
-
 }
-
 
 .contenedor_comite_grid{
 
@@ -65,7 +47,6 @@
     display: grid;
     grid-template-columns: repeat(3,1fr);
     grid-template-rows: 1fr;
-    //border: 1px solid red;
     gap:4rem;
     @include rwd(tablet){
         grid-template-columns: repeat(2,1fr);
@@ -85,7 +66,6 @@
 .comite{
     object-fit: contain;
     width: 100% !important;
-    // border: 1px solid red;
 }
 .contenedor_comite_item{
     flex-direction: column;

@@ -6,7 +6,7 @@
     display: flex;
     //background-color: red;
     flex-direction:column;
-    color: gray;
+    color: var(--grisLogo);
     justify-content:center;
     align-items:center;
     gap: .8rem;
@@ -17,25 +17,7 @@
 
 
 
-.contenedor-serviciosGrid-logo{
-    width: 4rem; 
-    height:4rem;
-    background-color:rgba(139, 71, 137, 1);
-    border-radius: 50%;
-    display:flex;
-    justify-content: center;
-    align-items: center;
-    .logo-colegio-svg{
-        width: 40%;
-        height: 40%;
-        background-image: url(../../../../public/iconos/temple.svg);
-        background-repeat: no-repeat;
-        background-position: center center;
-        background-size:contain;
-       
-    }
-    
-}
+
 
 .contenedor-serviciosGrid-contenido{
         //border: 1px solid red;
@@ -68,7 +50,7 @@
     display: relative;
     margin: auto .4rem auto .4rem;
     
-    background-color: rgb(40, 40, 40);
+    background-color: var(--grisLogo);
     border-radius:1px;
 }
 .contenedor-serviciosGrid-contenido::before{
@@ -78,7 +60,7 @@
     display: relative;
     margin: auto .4rem auto .4rem;
     border-radius:1px;
-    background-color: rgb(44, 44, 44);
+    background-color: var(--grisLogo);
 }
 
 
@@ -86,20 +68,11 @@
     display:flex;
     padding:.5rem;
     gap: .5rem;
-    color:rgb(66, 66, 66);
+    color:var(--grisLogo);
     font-weight: bold;
     font-size:1.9rem;
 }
-.contenedor-serviciosGrid-contenido2{
-    //border: 1px solid red;
-    font-size:1.9rem;
-    background-color: rgba(139, 71, 137, 1);
-    font-weight: bold;
 
-    color:white;
-    padding:.5rem;
-    border-radius: 3px;
-}
 
 
 /////////////////////////////
@@ -150,7 +123,7 @@
     align-items: center;
     flex-direction: column;
     gap: 1rem;
-    color: gray;
+    color: var(--grisLogo);
 }
 
 
@@ -159,3 +132,4 @@
     width: 100% !important;
     // border: 1px solid red;
 }
+

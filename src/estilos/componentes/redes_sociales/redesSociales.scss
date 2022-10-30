@@ -5,9 +5,6 @@
     position: fixed;
     top: 40%;
     gap: .2rem;
-
-    //border:1px solid red;
-    //height: 15rem;
     z-index: 1000;
     @include rwd(tablet){
         top:40%;

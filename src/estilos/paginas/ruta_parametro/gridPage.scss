@@ -29,7 +29,7 @@
 
     .separador{
         width: 80vw;
-        color: gray;
+        color: var(--grisLogo);
     }
 }
 
@@ -119,8 +119,8 @@
 
 .page-estado{
        // border: 1px solid red;
-        background-color:gray;
-        color: white;
+        background-color:var(--grisLogo);
+        color: var(--blancoLogo);
         padding: .5rem;
         border-radius:.4em;
         width: 6rem;

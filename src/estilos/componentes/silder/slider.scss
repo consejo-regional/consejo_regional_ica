@@ -1,18 +1,16 @@
 
 .titulo{
   font-size: 1.5rem;
-  // font-weight: bold;
   font-family: 'Raleway';
+  color: var(--colorTexto)
 
 }
 .contendor-slider-varios{
-    // margin: 2rem;
     display: grid;
     grid-template-columns: repeat(3,1fr);
     gap: 2rem;
-    // border:1px solid red;
-    @include rwd(tablet){     
-        // grid-template-columns: repeat(2,1fr);
+    @include rwd(tablet){   
+
     }
     @include rwd(celular){
         grid-template-columns: repeat(1,1fr);
@@ -24,15 +22,15 @@
 	width: 100%;
 	height:100%;
 	overflow: hidden;
-	// border: 1px solid red;
-    display: flex;
-    justify-content:center;
-    align-items: center;
-    @include rwd(tablet){
-        max-width: 100%;
-    }
-    @include rwd(celular){
-    }
+  display: flex;
+  justify-content:center;
+  align-items: center;
+  // border: 1px solid red;
+  @include rwd(tablet){
+      max-width: 100%;
+  }
+  @include rwd(celular){
+  }
     
 }
 
@@ -40,31 +38,27 @@
 	width: 100%;
 	height:100%;
 	overflow: hidden;
-	// border: 1px solid red;
-    display: flex;
-    justify-content:center;
-    align-items: center;
-    flex-direction: column;
-    @include rwd(tablet){
-        width: 100%;
-    }
-    @include rwd(celular){
-    }
+  display: flex;
+  justify-content:center;
+  align-items: center;
+  flex-direction: column;
+  @include rwd(tablet){
+      width: 100%;
+  }
+  @include rwd(celular){
+  }
     
 }
 
 .carousel {
     position: absolute;
+    // border: 1px solid red;
+
     top: 0;
     left: 0;
-    width: 80vw;
+    width: 98vw;
     height: 40rem;
-    // border: 1px solid red;
-    // margin: 1rem;
     padding: 1rem;
-    // box-shadow: 97.4391px 22.486px 80px rgba(0, 0, 0, 0.0274815), 37.5321px 8.66125px 25.4815px rgba(0, 0, 0, 0.0425185), 7.93948px 1.83219px 6.51852px rgba(0, 0, 0, 0.07);
-
-
 
     @include rwd(tablet){
       height: 25rem;
@@ -80,7 +74,6 @@
     left: 0;
     width: 100%;
     height: 35rem;
-    // border: 1px solid red;
     @include rwd(tablet){
       height: 25rem;
   
@@ -90,18 +83,15 @@
     }
   }
 
-
-
 .carousel-control-prev-icon {
     background-image: url("../../../iconos/prev.svg") !important;
-   }
+}
    
-  
-   .carousel-control-next-icon {
+.carousel-control-next-icon {
      background-image: url("../../../iconos/previous.svg")  !important;
-   }
+}
   
-   .carousel-control-next-icon, .carousel-control-prev-icon {
+.carousel-control-next-icon, .carousel-control-prev-icon {
       width: 40px !important;
       height: 45px !important;
       opacity: 1 !important;
@@ -113,14 +103,14 @@
     @include rwd(celular){
   
     }
-   }
+}
   
-   .carousel-indicators .active {
-    background-color: #de00f3 !important;
-  }
+.carousel-indicators .active {
+    background-color: var(--moradoLogo) !important;
+}
   
   .carousel-indicators li {
-    background-color: #515151ac !important;
+    background-color: var(--blancoBlur) !important;
   }
   
   h1, p {
@@ -151,16 +141,17 @@
   .carousel-inner{
     box-shadow: 97.4391px 22.486px 80px rgba(0, 0, 0, 0.0274815), 37.5321px 8.66125px 25.4815px rgba(0, 0, 0, 0.0425185), 7.93948px 1.83219px 6.51852px rgba(0, 0, 0, 0.07);
    padding:1rem;
+
   }
  
-  
-  .img-fluid{
+
+  .slider-principal .img-fluid{
     width: 100%;
     height: 100% !important;
-    object-fit: contain !important;
+    // object-fit: contain !important;
   
     @include rwd(tablet){
-      // object-fit: cover !important;
+      object-fit: cover !important;
   
   
     }
@@ -168,4 +159,20 @@
   
     }
   }
+
+
+  .slider-comunicados,.img-fluid{
+    width: 100%;
+    height: 100% !important;
+    object-fit: contain !important;
+  
+    @include rwd(tablet){
+      // object-fit: cover !important;
+    }
+    @include rwd(celular){
+  
+    }
+  }
+
+
   

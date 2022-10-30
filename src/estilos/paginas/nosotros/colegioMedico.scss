@@ -1,44 +1,4 @@
-// .container-imagen-colegio{
-//     width: 100%;
-//     height: 50vh;
-//     background-image: url(../../../public/imagenes/estetoscopio.jpg);
-//     background-repeat: no-repeat;
-//     background-position: center center;
-//     background-size:cover;
-//     display:flex;
-//     justify-content: center;
-//     align-items: center;
-//     flex-direction: column;
-//     gap:.9rem;
-// }
 
-
-// .logo-colegio{
-//     width: 3.5rem; 
-//     height:3.5rem;
-//     background-color:rgba(139, 71, 137, 1);
-//     border-radius: 50%;
-//     display:flex;
-//     justify-content: center;
-//     align-items: center;
-//     .logo-colegio-svg{
-//         width: 40%;
-//         height: 40%;
-//         background-image: url(../../../public/iconos/temple.svg);
-//         background-repeat: no-repeat;
-//         background-position: center center;
-//         background-size:contain;
-       
-//     }
-    
-// }
-
-// .titulo-contenido-colegio{
-//         //border: 1px solid red;
-//         display:flex;
-//         display:static
-
-// }
 .titulo-contenido-colegio::after{
     content: " ";
     height: .1rem;
@@ -46,7 +6,7 @@
     display: relative;
     margin: auto .4rem auto .4rem;
     
-    background-color: white;
+    background-color:var(--blancoLogo);
     border-radius:1px;
 }
 .titulo-contenido-colegio::before{
@@ -56,52 +16,29 @@
     display: relative;
     margin: auto .4rem auto .4rem;
     border-radius:1px;
-    background-color: white;
+    background-color: var(--blancoLogo);
 }
 
 
-// .titulo-contenido-colegio1{
-//     display:flex;
-//     padding:.5rem;
-//     gap: .5rem;
-//     color:white;
-//     //font-weight: bold;
-//     font-size:1.3rem;
-// }
-// .titulo-contenido-colegio2{
-//     //border: 1px solid red;
-//     font-size:1.3rem;
-//     background-color: rgba(139, 71, 137, 1);
-//     color:white;
-//     padding:.5rem;
-//     border-radius: 3px;
-// }
-
-
 .container-descripccion-colegio{
-    //border: 1px solid red;
-    //margin: 10rem;
     display: flex;
     gap:1rem;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     margin-top:4rem;
-
 }
 .container-descripccion-colegio h4{
-    //border: 1px solid red;
     width: 70vw;
     text-align: justify;
 }
 .container-descripccion-colegio h4:nth-child(1){
     font-size:1.8rem;
-    color:  rgba(105, 41, 102, 1);
-    //background-color:red
+    color: var(--moradoDegradadoFuerte);
 }
 .container-descripccion-colegio h2:nth-child(1){
     font-size:1.5rem;
-    color:  rgba(105, 41, 102, 1);
+    color: var(--moradoDegradadoFuerte);
 
     //background-color:red
 }
@@ -112,8 +49,8 @@
 }
 
 .contenedor_grid_colegio_titulo{
-    color: white;
-    background-color:rgba(139, 71, 137, 1);
+    color: var(--blancoLogo);
+    background-color:var(--moradoDegradadoFuerte);
     padding:1rem .5rem;
     border-radius:.2em;
     text-transform: uppercase;
@@ -122,9 +59,9 @@
 .contenedor_grid_colegio_descripccion{
     border-radius:.2em;
     padding: 1rem;
-    border-left: 1px solid rgba(105, 41, 102, 1);
-    border-right: 1px solid rgba(105, 41, 102, 1);
-    border-bottom: 1px solid rgba(105, 41, 102, 1);
+    border-left: 1px solid var(--moradoDegradadoFuerte);
+    border-right: 1px solid var(--moradoDegradadoFuerte);
+    border-bottom: 1px solid var(--moradoDegradadoFuerte);
     padding-bottom:3rem ;
 }
 
@@ -137,7 +74,7 @@
 
 }
 .titulo-contenido-colegio11{
-    color: rgb(59, 59, 59);
+    color: var(--grisLogo);
 
 }
 

@@ -16,32 +16,14 @@
 .anuncios_banner{
     width: 50vw;
     height: 50vh;
-    background-color: white;
-    // position: relative;
-    // background-image: url(../../../public/imagenes/Pronunciamiento.jpg);
-    // background-size: contain;
-    // background-repeat: no-repeat;
-    // background-position: center center;
-    border:.7rem solid white;
-    // border:1px solid red;
+    background-color: var(--blancoLogo);
+    border:.7rem solid var(--blancoLogo);
     object-fit: contain;
     padding: 1rem;
     border-radius: .5rem;
-    // @include rwd(tablet){
-     
-
-  
-    // }
-
-    // @include rwd(celular){
-    //     width: 80vw;
-    //     height: 60vh;
-    
-    // }
 }
 .anuncios_banner_vertical{
     border-radius: .5rem;
-
     display: flex;
     justify-content:center;
     align-items: center;
@@ -70,14 +52,13 @@
     align-items: center;
     width: 80vw;
     height: 90vh;
-    background-color: white;
-    border:.7rem solid white;
+    background-color: var(--blancoLogo);
+    border:.7rem solid var(--blancoLogo);
     object-fit: contain;
     padding: 1rem;
     @include rwd(tablet){
     
     }
-
     @include rwd(celular){
         width: 90vw;
         height: 50vh;
@@ -85,16 +66,13 @@
     }
 }
 
-
-
 .anuncios_conteiner{
     position: relative;
-
 }
 
 .anuncios_banner_boton{
         display: block;
-        background-color: white;
+        background-color: var(--blancoLogo);
         width: 3.3rem;
         height: 3.3rem;
         border-radius:50%;
@@ -103,10 +81,9 @@
         right: 0;
         transform: translate(50%,-50%);
         background-image: url(../../../../public/iconos/cerrar.png);
-        border: .7rem solid white;
+        border: .7rem solid var(--blancoLogo);
         background-size: contain;
         align-self: flex-start;
-
 }
 .esconder{
     display: none;

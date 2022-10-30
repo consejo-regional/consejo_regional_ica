@@ -1,3 +1,38 @@
+
+//estilos de la cabezera de cada seccion
+.contenedor-serviciosGrid-logo{
+    width: 4rem; 
+    height:4rem;
+    background-color:var(--moradoLogo);
+    border-radius: 50%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    .logo-colegio-svg{
+        width: 40%;
+        height: 40%;
+        background-image: url(../../../public/iconos/temple.svg);
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size:contain;
+        background-color:transparent;
+       
+    }
+    
+}
+
+.contenedor-serviciosGrid-contenido2{
+    //border: 1px solid red;
+    font-size:1.9rem;
+    background-color: var(--moradoLogo);
+    font-weight: bold;
+
+    color:var(--blancoLogo);
+    padding:.5rem;
+    border-radius: 3px;
+}
+
+
 .container-imagen-banner{
     width: 100%;
     height: 50vh;
@@ -15,7 +50,7 @@
 .logo-banner{
     width: 3.5rem; 
     height:3.5rem;
-    background-color:rgba(139, 71, 137, 1);
+    background-color:var(--blancoLogo);
     border-radius: 50%;
     display:flex;
     justify-content: center;
@@ -44,15 +79,15 @@
     display:flex;
     padding:.5rem;
     gap: .5rem;
-    color:white;
+    color:var(--blancoLogo);
     //font-weight: bold;
     font-size:1.3rem;
 }
 .titulo-contenido-banner-derecha{
     //border: 1px solid red;
     font-size:1.3rem;
-    background-color: rgba(139, 71, 137, 1);
-    color:white;
+    background-color: var(--blancoLogo);
+    color:var(--blancoLogo);
     padding:.5rem;
     border-radius: 3px;
 }

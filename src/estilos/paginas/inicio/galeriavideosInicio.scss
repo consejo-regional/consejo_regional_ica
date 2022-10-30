@@ -86,7 +86,7 @@
      margin-top: 30px;
 }
 .contenedor-video-inicio figure .capa p{
-    color: #fff;
+    color: var(--blancoLogo);
     font-size: 15px;
     line-height: 1.5;
     width: 100%;
@@ -106,10 +106,9 @@
     width: 10rem;
     height: 2.5rem;
     margin: 1rem;
-    color: white;
-    // font-weight: bold;
+    color:var(--blancoLogo);
     padding: .5rem;
-    background-color: rgb(147, 66, 137);
+    background-color:var(--moradoDegradadoDevil);
     border: none;
 
     

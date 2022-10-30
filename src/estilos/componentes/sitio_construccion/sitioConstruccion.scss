@@ -5,9 +5,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    //background-color:red;
     pointer-events: none;
-    //border: 1px solid red;
     @include rwd(tablet){
 
     }

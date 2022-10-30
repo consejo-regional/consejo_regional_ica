@@ -1,22 +1,16 @@
 .grid-documentos-contenidos{
-    border: 1px solid rgba(105, 41, 102, 1);
+    border: 1px solid var(--moradoDegradadoFuerte);
     padding: 2rem;
     border-radius:.5rem;
-
 }
 
 .imagen-grid-contenidos-contenidos{
     margin-top: .5rem;
     width: 6rem;
     height: 4rem;
-    //border: 1px solid red;
     background-image: url(../../../../public/iconos/icono.svg);
     background-repeat: no-repeat;
-    background-size: contain;
-
-    // padding: 2rem;
-    // border-radius:.5rem;
-    
+    background-size: contain;   
 }
 
 .grid-documentos{
@@ -26,11 +20,11 @@
 }
 
 .consejoDistritalConteiner{
-    background-color:rgba(105, 41, 102, 1) ;
-    color: white;
+    background-color:var(--moradoDegradadoFuerte) ;
+    color: var(--blancoLogo);
     padding:1rem 2rem
 }
 .descrip{
-    color: white;
+    color: var(--blancoLogo);
     font-size: 1rem;
 }

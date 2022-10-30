@@ -21,6 +21,7 @@
 }
 
 .footerContactoDescripccion{
+    color: var(--colorTexto);
     width: 70%;
     //border: 2px solid blue;
     text-align: justify;
@@ -67,5 +68,6 @@
     align-items: center;
     flex-direction: column;
     margin: 1rem;
+    color: var(--colorTexto);
   }
   
