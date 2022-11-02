@@ -12,10 +12,10 @@ const JuntaDirectiva = ()=> {
         <>
         <div className="datos">
      
-        <h2>{contenido.titulo}</h2>
+        <h4>{contenido.titulo}</h4>
         <div className="conteiner-datos">
-            {/* <h4></h4> */}
-            <h4 className="contenido_cart_descripccion">{contenido.descripccion}</h4> 
+            <h4></h4>
+            <p className="contenido_cart_descripccion">{contenido.descripccion}</p> 
             <div className="contenido-izquierda">
                
             </div>

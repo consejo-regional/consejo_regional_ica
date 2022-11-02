@@ -5,12 +5,15 @@ const PastDecanos = ()=> {
         <>
         <div className="contenedor_banner">
             <div className="container-imagen-banner">
-                <div className="logo-banner">
-                    <div className="logo-banner-svg"></div>
-                </div>
-                <div className="titulo-contenido-banner">
-                    <div className="titulo-contenido-banner-izquierda">PAST</div>
-                    <div className="titulo-contenido-banner-derecha">DECANOS</div>
+                <div className="conteiner-imagen-banner-blur">
+                    
+                    <div className="logo-banner">
+                        <div className="logo-banner-svg"></div>
+                    </div>
+                    <div className="titulo-contenido-banner">
+                        <div className="titulo-contenido-banner-izquierda">PAST</div>
+                        <div className="titulo-contenido-banner-derecha">DECANOS</div>
+                    </div>
                 </div>
 
             </div>

@@ -4,8 +4,18 @@
 }
 .header{
     z-index: 100;
-    // padding: .5rem 0 .5rem 0;
+    padding: 1rem 0 1rem 0;
     // background:var(--blancoLogo);
+    // border: 1px solid red;
+    @include rwd(1484px){
+        padding: 0rem 0 0rem 0;
+
+
+    }
+    @include rwd(celular){
+      
+
+    }
 
 }
 

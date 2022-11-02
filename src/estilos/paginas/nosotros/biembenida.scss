@@ -4,3 +4,13 @@
     width: 15rem;
     margin: 1rem;
 }
+
+.container-descripccion-colegio p{
+    width: 70vw;
+    text-align: justify;
+    font-family: 'Raleway';
+}
+.container-descripccion-colegio h4:nth-child(1){
+    font-size:var(--titulos);
+    color: var(--moradoLogo);
+}

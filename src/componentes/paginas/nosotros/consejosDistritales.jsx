@@ -18,12 +18,15 @@ const ConsejosDistritales = ()=> {
         <>
         <div className="contenedor_colegio">
             <div className="container-imagen-banner">
-                <div className="logo-banner">
-                    <div className="logo-banner-svg"></div>
-                </div>
-                <div className="titulo-contenido-banner">
-                    <div className="titulo-contenido-banner-izquierda">CONSEJOS</div>
-                    <div className="titulo-contenido-banner-derecha">DISTRITALES</div>
+                <div className="conteiner-imagen-banner-blur">
+                    <div className="logo-banner">
+                        <div className="logo-banner-svg"></div>
+                    </div>
+                    <div className="titulo-contenido-banner">
+                        <div className="titulo-contenido-banner-izquierda">CONSEJOS</div>
+                        <div className="titulo-contenido-banner-derecha">DISTRITALES</div>
+                    </div>
+                    
                 </div>
 
             </div>

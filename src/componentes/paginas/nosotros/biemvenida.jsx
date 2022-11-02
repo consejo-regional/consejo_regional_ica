@@ -12,18 +12,16 @@ const Biemvenida = ()=> {
         
         <>
         <div className="datos">
-        <h2>{contenido.titulo}</h2>
+     
+          <div className="container-descripccion-colegio">
+          <h4>{contenido.titulo}</h4>
+              <img alt={contenido.titulo} className='bienvenida_decano ' src={process.env.PUBLIC_URL + `/directivos/DECANO.png`}/>
+              <p className="contenido_cart_descripccion">{contenido.descripccion}</p> 
+              <div className="contenido-izquierda">
+                
+              </div>
 
-        <img alt={contenido.titulo} className='bienvenida_decano ' src={process.env.PUBLIC_URL + `/directivos/DECANO.png`}/>
-
-        <div className="conteiner-datos">
-
-            <h4 className="contenido_cart_descripccion">{contenido.descripccion}</h4> 
-            <div className="contenido-izquierda">
-              
-            </div>
-
-        </div>
+          </div>
         </div>
         
         </>   

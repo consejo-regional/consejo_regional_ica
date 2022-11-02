@@ -42,6 +42,9 @@
     --colorBorde:#c2c2c4;
     --hover:rgb(236, 236, 236);
     --fondo:rgb(255, 255, 255);
+    //tamaños de fuente
+    --titulos:2rem;
+    --contenido:1rem;
 
 }
 
@@ -62,9 +65,12 @@ body.dark{
     --colorBorde:#c2c2c4;
     --hover:rgb(236, 236, 236);
     --fondo:rgb(84, 84, 84);
+     //tamaños de fuente
+     --titulos:2rem;
+     --contenido:1rem;
 }
 
-* :not(.vertical-timeline-element,svg,span,div,h3,h5,p,img,h1,ol)  {
+* :not(.vertical-timeline-element,svg,span,div,h3,h5,p,img,h1,ol,a)  {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -75,9 +81,9 @@ body.dark{
 
 
 
-a{
+a,p{
     text-decoration: none;
-    color: var(--grisLogo) ;
+    color: var(--colorTexto) ;
 }
 
 .contenedor-separador-bloque{
@@ -171,8 +177,8 @@ $puntosQuiebre:(
 @import "./paginas/inicio/bannerPrincipal.scss";
 
 
-@import "./paginas/nosotros/biembenida.scss";
 @import "./paginas/nosotros/colegioMedico.scss";
+@import "./paginas/nosotros/biembenida.scss";
 @import "./paginas/nosotros/juntaDirectiva.scss";
 @import "./paginas/nosotros/documentoNormativo.scss";
 

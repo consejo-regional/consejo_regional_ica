@@ -28,17 +28,18 @@
     align-items: center;
     margin-top:4rem;
 }
-.container-descripccion-colegio h4{
+.container-descripccion-colegio p{
     width: 70vw;
     text-align: justify;
+    font-family: 'Raleway';
 }
 .container-descripccion-colegio h4:nth-child(1){
-    font-size:1.8rem;
-    color: var(--moradoDegradadoFuerte);
+    font-size:var(--titulos);
+    color: var(--moradoLogo);
 }
 .container-descripccion-colegio h2:nth-child(1){
-    font-size:1.5rem;
-    color: var(--moradoDegradadoFuerte);
+    font-size:var(--titulos);
+    color: var(--moradoLogo);
 
     //background-color:red
 }
@@ -50,7 +51,7 @@
 
 .contenedor_grid_colegio_titulo{
     color: var(--blancoLogo);
-    background-color:var(--moradoDegradadoFuerte);
+    background-color:var(--moradoLogo);
     padding:1rem .5rem;
     border-radius:.2em;
     text-transform: uppercase;
@@ -59,9 +60,9 @@
 .contenedor_grid_colegio_descripccion{
     border-radius:.2em;
     padding: 1rem;
-    border-left: 1px solid var(--moradoDegradadoFuerte);
-    border-right: 1px solid var(--moradoDegradadoFuerte);
-    border-bottom: 1px solid var(--moradoDegradadoFuerte);
+    border-left: 1px solid var(--moradoLogo);
+    border-right: 1px solid var(--moradoLogo);
+    border-bottom: 1px solid var(--moradoLogo);
     padding-bottom:3rem ;
 }
 
