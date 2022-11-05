@@ -7,6 +7,12 @@ const MenuItem = ()=> {
     const boton=useRef()
     const togle_animation=useRef()
 
+
+
+    const [isActive, setActive] = useState(false);
+
+  
+
     const [color,establecerColor]=useState(false)
     const cambiarColor=()=>{
 
@@ -20,16 +26,22 @@ const MenuItem = ()=> {
 
     const click=()=>{
         
-        const prueba=boton.current
-        prueba.classList.toggle('show')
+        const Boton=boton.current
+        Boton.classList.toggle('show')
+
+        const Togle_animation=togle_animation.current
+        Togle_animation.classList.toggle('opened')
+        Togle_animation.setAttribute('aria-expanded', Togle_animation.classList.contains('opened'))
+        
+
     }
 
-    const prueba=()=>{
-        const Togle_animation=togle_animation.current
-        Togle_animation.classList.toggle('opened');
-        Togle_animation.setAttribute('aria-expanded', this.classList.contains('opened'))
+    // const prueba=()=>{
+    //     // const Togle_animation=togle_animation.current
+    //     // Togle_animation.classList.toggle('opened')
+    //     // Togle_animation.setAttribute('aria-expanded', this.classList.contains('opened'))
         
-    }
+    // }
 
     useEffect(()=>{
         // const prueba=boton.current
@@ -54,7 +66,7 @@ const MenuItem = ()=> {
                 
                 <div   onClick={click} className="boton-menu-hamburguesa">
                     <div className="menu-togle-animation" 
-                                onClick={prueba}
+                                // onClick={prueba}
                                 ref={togle_animation}
                                 aria-label="Main Menu">
                                     <svg width="100" height="100" viewBox="0 0 100 100" >

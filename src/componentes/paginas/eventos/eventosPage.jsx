@@ -31,11 +31,25 @@ function ScrollToTopOnMount() {
 
           <ScrollToTopOnMount />
 
+          <div className="container-imagen-banner">
+                <div className="conteiner-imagen-banner-blur">
+                    <div className="logo-banner">
+                        <div className="logo-banner-svg"></div>
+                    </div>
+                    <div className="titulo-contenido-banner">
+                        <div className="titulo-contenido-banner-izquierda">NUESTROS</div>
+                        <div className="titulo-contenido-banner-derecha">EVENTOS</div>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+
           <div className="contenedor-page"  >
-              <div className="contenedor-page-titulo">
-                  <h4>Consejo Regional IX – ICA </h4>
-                  <h1>EVENTO</h1>
-              </div>
+              
               <div className="contenedor_separador">
               <hr className="separador"></hr> 
               </div>

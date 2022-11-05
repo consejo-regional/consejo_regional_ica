@@ -24,6 +24,20 @@ const Condolencias = ()=> {
         <>
         <ScrollToTopOnMount />
 
+        <div className="container-imagen-banner">
+                <div className="conteiner-imagen-banner-blur">
+                    <div className="logo-banner">
+                        <div className="logo-banner-svg"></div>
+                    </div>
+                    <div className="titulo-contenido-banner">
+                        <div className="titulo-contenido-banner-izquierda"></div>
+                        <div className="titulo-contenido-banner-derecha">CONDOLENCIAS</div>
+                    </div>
+
+                </div>
+
+            </div>
+
          <div className="contenedor_condolencia">
             <div className="contenedor_condolencia-grid">
             {

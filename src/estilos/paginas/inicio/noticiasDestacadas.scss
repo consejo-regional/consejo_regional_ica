@@ -1,3 +1,34 @@
+
+
+.conteiner-destacado{
+  width: 100%;
+  height: 20rem;
+  // border: 1px solid red;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+}
+
+.conteiner-destacado-item{
+  display: flex;
+  gap:.3rem;
+  flex-direction: column;
+  flex-basis: 0;
+  flex-grow: 1;
+  width: 100%;
+ height: 5rem;
+
+}
+
+// .conteiner-destacado-contenido{
+//   flex-grow: 1;
+// }
+
+
+
+
 .title {
     font-size: 15em;
     text-align: center;
@@ -13,6 +44,22 @@
 
   // }
   
+.contenido_destacado_titulo{
+  color: var(--moradoLogo);
+  text-transform: uppercase;
+  margin-top: .7rem;
+}
+
+.contenido_destacado_descripccion{
+  color: var(--colorTexto);
+  text-transform: lowercase;
+}
+.conteiner-destacado-boton{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+
   .vertical-timeline-element-content {
     color: var(--colorTexto);
     box-shadow: 0 0.25em 0.5em 0 rgba(0, 0, 0, 0.25),
@@ -33,6 +80,7 @@
     text-decoration: none;
     padding: 0.5em 1em;
     // margin-top: .5rem;
+    // width: 8rem;
     border-radius: 5px;
     color:var(--blancoLogo);
   }
@@ -57,11 +105,13 @@
 }
 .imagen_noticias_timeline{
   width: 100%;
-  height: 10rem;
-  object-fit:contain;
+  height: 100%;
   // border: 1px solid red;
-  object-position: center;
-  padding-bottom: .5rem;
+  object-fit:cover;
+  // border: 1px solid red;
+  // object-position: center;
+  // padding-bottom: .5rem;
+  // flex-grow: .5;
 }
   
   @media only screen and (max-width: 1700px) {

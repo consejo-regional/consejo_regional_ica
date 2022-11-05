@@ -24,7 +24,7 @@ const PalabrasDecano = ()=> {
                  <div className="container-palabras-decano-contenido">
                        <ReactPlayer
                             className='react-player'
-                            url="https://www.youtube.com/watch?v=jU0gv7LW7V0&t=19s"
+                            url="https://www.youtube.com/watch?v=TJnhFyFqtA0"
                             width='100%'
                             height='100%'
                             controls={true}

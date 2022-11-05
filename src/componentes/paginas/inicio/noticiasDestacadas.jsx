@@ -73,29 +73,36 @@ const NoticiasDestacadas=()=>{
             
             icon={esIconoPeriodico ? <PeriodicoIcono /> : <CuadernoIcono />}
           >
-            <h3 className="vertical-timeline-element-title">
-              {element.titulo}
-            </h3>
-            <h5 className="vertical-timeline-element-subtitle">
-              {element.localizacion}
-            </h5>
 
-            <p id="description">{element.description}</p>
-
-            <img className="imagen_noticias_timeline" src={process.env.PUBLIC_URL+`/` +  element.imagen} alt={''}></img>
+            <div className="conteiner-destacado">
+               
+               <div className="conteiner-destacado-item">
+                <img className="imagen_noticias_timeline" src={process.env.PUBLIC_URL+`/` +  element.imagen} alt={''}></img>
+               </div>
             
-            {showButton && (
-              <Link 
-              target={"_top"}
-                className={`button ${
-                  esIconoPeriodico ? "workButton" : "schoolButton"
-                }`}
-                to={`/noticias/${element.id}`} 
-       
-              >
-                {element.textoBoton}
-              </Link>
-            )}
+               <div className="conteiner-destacado-item">
+                  <h4 className="contenido_destacado_titulo">{element.titulo}</h4>
+                  <div className="contenido_destacado_descripccion" >{element.description}</div>
+                  <div>{element.localizacion}</div>
+                  {showButton && (
+                    <div className="conteiner-destacado-boton" >
+
+                      <Link 
+                      target={"_top"}
+                      className={`button ${
+                      esIconoPeriodico ? "workButton" : "schoolButton"
+                      }`}
+                      to={`/noticias/${element.id}`} 
+                      >
+                        {element.textoBoton}
+                      </Link>
+                    </div>
+                  )}
+               </div>
+
+            </div>
+
+                 
           </VerticalTimelineElement>
             :
            null

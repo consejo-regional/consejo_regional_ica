@@ -11,10 +11,25 @@ const Biemvenida = ()=> {
       return(
         
         <>
+
+
+       <div className="container-imagen-banner">
+                <div className="conteiner-imagen-banner-blur">
+                    <div className="logo-banner">
+                        <div className="logo-banner-svg"></div>
+                    </div>
+                    <div className="titulo-contenido-banner">
+                        <div className="titulo-contenido-banner-izquierda"></div>
+                        <div className="titulo-contenido-banner-derecha">BIENVENIDA</div>
+                    </div>
+
+                </div>
+
+            </div>
         <div className="datos">
      
           <div className="container-descripccion-colegio">
-          <h4>{contenido.titulo}</h4>
+          {/* <h4>{contenido.titulo}</h4> */}
               <img alt={contenido.titulo} className='bienvenida_decano ' src={process.env.PUBLIC_URL + `/directivos/DECANO.png`}/>
               <p className="contenido_cart_descripccion">{contenido.descripccion}</p> 
               <div className="contenido-izquierda">

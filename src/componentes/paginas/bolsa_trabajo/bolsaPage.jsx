@@ -21,12 +21,28 @@ const BolsaTrabajo = ()=> {
   
         return(
           <>
+
+          <div className="container-imagen-banner">
+                <div className="conteiner-imagen-banner-blur">
+                    <div className="logo-banner">
+                        <div className="logo-banner-svg"></div>
+                    </div>
+                    <div className="titulo-contenido-banner">
+                        <div className="titulo-contenido-banner-izquierda">BOLSA DE</div>
+                        <div className="titulo-contenido-banner-derecha">TRABAJO</div>
+                    </div>
+
+                </div>
+
+            </div>
+
+
           <div className="contenedor-page"  >
-              <div className="contenedor-page-titulo">
+              {/* <div className="contenedor-page-titulo">
                   <h4>Consejo Regional IX – ICA </h4>
                   <h1>BOLSA DE TRABAJO</h1>
 
-           </div>
+               </div> */}
          
            <br/>
            <br/>

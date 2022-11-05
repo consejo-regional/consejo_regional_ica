@@ -25,6 +25,19 @@ const Condolencias = ()=> {
     },[])
       return(
         <>
+        <div className="container-imagen-banner">
+                <div className="conteiner-imagen-banner-blur">
+                    <div className="logo-banner">
+                        <div className="logo-banner-svg"></div>
+                    </div>
+                    <div className="titulo-contenido-banner">
+                        <div className="titulo-contenido-banner-izquierda"></div>
+                        <div className="titulo-contenido-banner-derecha">PRONUNCIAMIENTOS</div>
+                    </div>
+
+                </div>
+
+            </div>
        <ScrollToTopOnMount />
         <div className="contenedor_promunciamiento">
             <div className="contenedor_promunciamiento-grid">

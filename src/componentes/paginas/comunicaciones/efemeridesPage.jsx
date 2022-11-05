@@ -25,15 +25,23 @@ import {useEffect,useState} from "react"
   
          
           <>
-          <div className="contenedor-page"  >
-              <div className="contenedor-page-titulo">
-                  <h4>Consejo Regional IX – ICA </h4>
-                  <h1>NOTICIAS</h1>
 
-           </div>
-         
-           <br/>
-           <br/>
+
+<div className="container-imagen-banner">
+                <div className="conteiner-imagen-banner-blur">
+                    <div className="logo-banner">
+                        <div className="logo-banner-svg"></div>
+                    </div>
+                    <div className="titulo-contenido-banner">
+                        <div className="titulo-contenido-banner-izquierda"></div>
+                        <div className="titulo-contenido-banner-derecha">EFEMERIDES</div>
+                    </div>
+
+                </div>
+
+            </div>
+
+          <div className="contenedor-page"  >
            <div className="contenedor_separador">
               <hr className="separador"></hr> 
             </div>

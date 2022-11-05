@@ -25,9 +25,21 @@ const GaleriaVideos = ()=>{
 return(
     <>
         <div className="contenedor_videos_central">
-            <div className="contenedor_videos_central_titulo">
-                <h1>GALERÍA: CURSO</h1>
+
+        <div className="container-imagen-banner">
+                <div className="conteiner-imagen-banner-blur">
+                    <div className="logo-banner">
+                        <div className="logo-banner-svg"></div>
+                    </div>
+                    <div className="titulo-contenido-banner">
+                        <div className="titulo-contenido-banner-izquierda">GALERIA</div>
+                        <div className="titulo-contenido-banner-derecha">CURSOS</div>
+                    </div>
+
+                </div>
+
             </div>
+
             <div className="contenedor_videos">
 
                 {
