@@ -1,6 +1,6 @@
 import React,{useEffect,useRef,useState} from 'react'
 import {Link} from 'react-router-dom'
-import {FlechaArriba,FlechaAbajo} from './menuItemComponente';
+// import {FlechaArriba,FlechaAbajo} from './menuItemComponente';
 
 
 function getWindowSize() {
@@ -8,17 +8,33 @@ function getWindowSize() {
     return {innerWidth, innerHeight};
   }
 
+//   function estados() {
+//     const {nosotros,tramites} = false;
+//     return {tramites,nosotros};
+//   }
+
 
 const MenuItem = ()=> {
 
     const boton=useRef()
     const togle_animation=useRef()
-    const boton_desplegar_submenu=useRef()
-    const boton_desplegar_submenu1=useRef()
+    const boton_desplegar_submenu_nosotros=useRef()
+    const boton_desplegar_submenu_tramites=useRef()
+    const boton_desplegar_submenu_servicios=useRef()
+    const boton_desplegar_submenu_comunicaciones=useRef()
+    const boton_desplegar_submenu_galeria=useRef()
 
 
-    const [isActive, setActive] = useState(false);
-    const [isActive1, setActive1] = useState(false);
+
+
+
+    const [isActive, setActive] = useState({
+        "nosotros":false,
+        "tramites":false,
+        "servicios":false,
+        "comunicaciones":false,
+        "galeria":false
+    });
 
 
     const [windowSize, setWindowSize] = useState(getWindowSize());
@@ -48,18 +64,39 @@ const MenuItem = ()=> {
     }
 
 
- const click_deplegar_menu=()=>{
-     const Boton_desplegar_submenu=boton_desplegar_submenu.current
-     Boton_desplegar_submenu.classList.toggle("active")
-     setActive(isActive => !isActive)
+ const click_deplegar_menu=(data)=>{
+        if(data=="nosotros"){
+            const Boton_desplegar_submenu_nosotros=boton_desplegar_submenu_nosotros.current
+            Boton_desplegar_submenu_nosotros.classList.toggle("active")
+             setActive({...isActive,nosotros:!isActive.nosotros})
+        }
+        if(data=="tramites"){
+            const Boton_desplegar_submenu_tramites=boton_desplegar_submenu_tramites.current
+            Boton_desplegar_submenu_tramites.classList.toggle("active")
+            setActive({...isActive,tramites:!isActive.tramites})
+        }
+        if(data=="servicios"){
+            const Boton_desplegar_submenu_servicios=boton_desplegar_submenu_servicios.current
+            Boton_desplegar_submenu_servicios.classList.toggle("active")
+            setActive({...isActive,servicios:!isActive.servicios})
+        }
+        if(data=="comunicaciones"){
+            const Boton_desplegar_submenu_comunicaciones=boton_desplegar_submenu_comunicaciones.current
+            Boton_desplegar_submenu_comunicaciones.classList.toggle("active")
+            setActive({...isActive,comunicaciones:!isActive.comunicaciones})
+        }
+    
+        if(data=="galeria"){
+            const Boton_desplegar_submenu_galeria=boton_desplegar_submenu_galeria.current
+            Boton_desplegar_submenu_galeria.classList.toggle("active")
+            setActive({...isActive,galeria:!isActive.galeria})
+        }
+    
+    
+    
     }
 
-    const click_deplegar_menu1=()=>{
-        const Boton_desplegar_submenu1=boton_desplegar_submenu1.current
-        Boton_desplegar_submenu1.classList.toggle("active")
-        setActive1(isActive1 => !isActive1)
-      }
-    
+   
 
       const [color,establecerColor]=useState(false)
       const cambiarColor=()=>{
@@ -102,17 +139,48 @@ const MenuItem = ()=> {
                             <li className="item itemMenu">
                                 <Link to="/inicio"  onClick={click}  className="link">INICIO </Link>
                             </li>
-                            <li className="item" ref={boton_desplegar_submenu}   >
+                            <li className="item" ref={boton_desplegar_submenu_nosotros}   >
                                 <Link to="/nosotros"  onClick={click}  className="link">NOSOTROS </Link>
                                {(windowSize.innerWidth<1080) 
                                ?
-                                        isActive?
-                                             <FlechaArriba funcion={click_deplegar_menu}></FlechaArriba>
+                                        isActive.nosotros?
+                                        <section className="flecha_animacion" onClick={()=>click_deplegar_menu("nosotros")}   >
+                                                <p>
+                                                    <span class="arrow-animated arrow-up">
+                                                        <svg viewBox="0 0 33.63 36.95">
+                                                            <polyline points="14.13 1.03 31.57 18.47 14.13 35.92"/>
+                                                            <polyline points="7.58 7.57 18.48 18.47 7.58 29.38"/>
+                                                            <polyline points="1.03 14.11 5.39 18.47 1.03 22.84"/>
+                                                        </svg>
+                                                    </span>
+                                                </p>
+                                        </section>  
                                         :
-                                             <FlechaAbajo funcion={click_deplegar_menu}></FlechaAbajo>
+                                        <section className="flecha_animacion"  onClick={()=>click_deplegar_menu("nosotros")}   >
+                                            <p>
+                                                <span class="arrow-animated arrow-down">
+                                                    <svg viewBox="0 0 33.63 36.95">
+                                                        <polyline points="14.13 1.03 31.57 18.47 14.13 35.92"/>
+                                                        <polyline points="7.58 7.57 18.48 18.47 7.58 29.38"/>
+                                                        <polyline points="1.03 14.11 5.39 18.47 1.03 22.84"/>
+                                                    </svg>
+                                                </span>
+                                            </p>
+                                        </section> 
                                :
-                                   <FlechaAbajo funcion={click_deplegar_menu}></FlechaAbajo>
-                               }
+                                
+                                        <section className="flecha_animacion" >
+                                                <p>
+                                                    <span class="arrow-animated arrow-down">
+                                                        <svg viewBox="0 0 33.63 36.95">
+                                                            <polyline points="14.13 1.03 31.57 18.47 14.13 35.92"/>
+                                                            <polyline points="7.58 7.57 18.48 18.47 7.58 29.38"/>
+                                                            <polyline points="1.03 14.11 5.39 18.47 1.03 22.84"/>
+                                                        </svg>
+                                                    </span>
+                                                </p>
+                                            </section>
+                                }
                                 <ul className="menuu submenu" >
                                     <li className="item">
                                         <Link to="/nosotros/colegioMedico" onClick={click} className="link linkSubmenu">EL COLEGIO MEDICO</Link>
@@ -145,16 +213,46 @@ const MenuItem = ()=> {
                                     </li>
                                 </ul>
                             </li>
-                            <li className="item" ref={boton_desplegar_submenu1}>
+                            <li className="item" ref={boton_desplegar_submenu_tramites}>
                                 <Link to="/tramites"   className="link">TRAMITES</Link>
                                 {(windowSize.innerWidth<1080) 
                                ?
-                                        isActive1?
-                                             <FlechaArriba funcion={click_deplegar_menu1}></FlechaArriba>
+                                        isActive.tramites?
+                                        <section className="flecha_animacion" onClick={()=>click_deplegar_menu("tramites")}   >
+                                                <p>
+                                                    <span class="arrow-animated arrow-up">
+                                                        <svg viewBox="0 0 33.63 36.95">
+                                                            <polyline points="14.13 1.03 31.57 18.47 14.13 35.92"/>
+                                                            <polyline points="7.58 7.57 18.48 18.47 7.58 29.38"/>
+                                                            <polyline points="1.03 14.11 5.39 18.47 1.03 22.84"/>
+                                                        </svg>
+                                                    </span>
+                                                </p>
+                                        </section>  
                                         :
-                                             <FlechaAbajo funcion={click_deplegar_menu1}></FlechaAbajo>
+                                        <section className="flecha_animacion"  onClick={()=>click_deplegar_menu("tramites")}   >
+                                            <p>
+                                                <span class="arrow-animated arrow-down">
+                                                    <svg viewBox="0 0 33.63 36.95">
+                                                        <polyline points="14.13 1.03 31.57 18.47 14.13 35.92"/>
+                                                        <polyline points="7.58 7.57 18.48 18.47 7.58 29.38"/>
+                                                        <polyline points="1.03 14.11 5.39 18.47 1.03 22.84"/>
+                                                    </svg>
+                                                </span>
+                                            </p>
+                                        </section>
                                :
-                                   <FlechaAbajo funcion={click_deplegar_menu1}></FlechaAbajo>
+                               <section className="flecha_animacion" >
+                               <p>
+                                   <span class="arrow-animated arrow-down">
+                                       <svg viewBox="0 0 33.63 36.95">
+                                           <polyline points="14.13 1.03 31.57 18.47 14.13 35.92"/>
+                                           <polyline points="7.58 7.57 18.48 18.47 7.58 29.38"/>
+                                           <polyline points="1.03 14.11 5.39 18.47 1.03 22.84"/>
+                                       </svg>
+                                   </span>
+                               </p>
+                                </section>
                                }
                                 <ul className="menuu submenu">
                                     <li className="item">
@@ -176,8 +274,50 @@ const MenuItem = ()=> {
                                 
                                 </ul>
                             </li>
-                            <li className="item">
+                            <li className="item" ref={boton_desplegar_submenu_servicios} >
                                 <Link to="/servicios"    className="link">SERVICIOS</Link>
+                                {(windowSize.innerWidth<1080) 
+                               ?
+                                        isActive.servicios?
+                                        <section className="flecha_animacion" onClick={()=>click_deplegar_menu("servicios")}   >
+                                                <p>
+                                                    <span class="arrow-animated arrow-up">
+                                                        <svg viewBox="0 0 33.63 36.95">
+                                                            <polyline points="14.13 1.03 31.57 18.47 14.13 35.92"/>
+                                                            <polyline points="7.58 7.57 18.48 18.47 7.58 29.38"/>
+                                                            <polyline points="1.03 14.11 5.39 18.47 1.03 22.84"/>
+                                                        </svg>
+                                                    </span>
+                                                </p>
+                                        </section>  
+                                        :
+                                        <section className="flecha_animacion"  onClick={()=>click_deplegar_menu("servicios")}   >
+                                            <p>
+                                                <span class="arrow-animated arrow-down">
+                                                    <svg viewBox="0 0 33.63 36.95">
+                                                        <polyline points="14.13 1.03 31.57 18.47 14.13 35.92"/>
+                                                        <polyline points="7.58 7.57 18.48 18.47 7.58 29.38"/>
+                                                        <polyline points="1.03 14.11 5.39 18.47 1.03 22.84"/>
+                                                    </svg>
+                                                </span>
+                                            </p>
+                                        </section>
+                               :
+                               
+                               <section className="flecha_animacion" >
+                                                <p>
+                                                    <span class="arrow-animated arrow-down">
+                                                        <svg viewBox="0 0 33.63 36.95">
+                                                            <polyline points="14.13 1.03 31.57 18.47 14.13 35.92"/>
+                                                            <polyline points="7.58 7.57 18.48 18.47 7.58 29.38"/>
+                                                            <polyline points="1.03 14.11 5.39 18.47 1.03 22.84"/>
+                                                        </svg>
+                                                    </span>
+                                                </p>
+                                            </section> 
+
+                               }
+
                                 <ul className="menuu submenu">
                                     
                                     <li className="item">
@@ -198,8 +338,49 @@ const MenuItem = ()=> {
                                     
                                 </ul>
                                 </li>
-                            <li className="item">
+                            <li className="item" ref={boton_desplegar_submenu_comunicaciones}>
                                 <Link to="/comunicaciones"   className="link">COMUNICACIONES</Link>
+                                {(windowSize.innerWidth<1080) 
+                               ?
+                                        isActive.comunicaciones?
+                                        <section className="flecha_animacion" onClick={()=>click_deplegar_menu("comunicaciones")}   >
+                                                <p>
+                                                    <span class="arrow-animated arrow-up">
+                                                        <svg viewBox="0 0 33.63 36.95">
+                                                            <polyline points="14.13 1.03 31.57 18.47 14.13 35.92"/>
+                                                            <polyline points="7.58 7.57 18.48 18.47 7.58 29.38"/>
+                                                            <polyline points="1.03 14.11 5.39 18.47 1.03 22.84"/>
+                                                        </svg>
+                                                    </span>
+                                                </p>
+                                        </section>  
+                                        :
+                                        <section className="flecha_animacion"  onClick={()=>click_deplegar_menu("comunicaciones")}   >
+                                            <p>
+                                                <span class="arrow-animated arrow-down">
+                                                    <svg viewBox="0 0 33.63 36.95">
+                                                        <polyline points="14.13 1.03 31.57 18.47 14.13 35.92"/>
+                                                        <polyline points="7.58 7.57 18.48 18.47 7.58 29.38"/>
+                                                        <polyline points="1.03 14.11 5.39 18.47 1.03 22.84"/>
+                                                    </svg>
+                                                </span>
+                                            </p>
+                                        </section>
+                               :
+                               <section className="flecha_animacion" >
+                                                <p>
+                                                    <span class="arrow-animated arrow-down">
+                                                        <svg viewBox="0 0 33.63 36.95">
+                                                            <polyline points="14.13 1.03 31.57 18.47 14.13 35.92"/>
+                                                            <polyline points="7.58 7.57 18.48 18.47 7.58 29.38"/>
+                                                            <polyline points="1.03 14.11 5.39 18.47 1.03 22.84"/>
+                                                        </svg>
+                                                    </span>
+                                                </p>
+                                            </section>
+
+                               }
+
                                 <ul className="menuu submenu">
 
                                     <li className="item">
@@ -226,8 +407,48 @@ const MenuItem = ()=> {
                             <li className="item">
                                 <Link to="/comite"  onClick={click}  className="link">COMITES</Link>
                             </li>
-                            <li className="item">
+                            <li className="item" ref={boton_desplegar_submenu_galeria}>
                                 <Link to="/galeriaVideos"  onClick={click}  className="link">GALERIA</Link>
+                                {(windowSize.innerWidth<1080) 
+                               ?
+                                        isActive.galeria?
+                                        <section className="flecha_animacion" onClick={()=>click_deplegar_menu("galeria")}   >
+                                                <p>
+                                                    <span class="arrow-animated arrow-up">
+                                                        <svg viewBox="0 0 33.63 36.95">
+                                                            <polyline points="14.13 1.03 31.57 18.47 14.13 35.92"/>
+                                                            <polyline points="7.58 7.57 18.48 18.47 7.58 29.38"/>
+                                                            <polyline points="1.03 14.11 5.39 18.47 1.03 22.84"/>
+                                                        </svg>
+                                                    </span>
+                                                </p>
+                                        </section>  
+                                        :
+                                        <section className="flecha_animacion"  onClick={()=>click_deplegar_menu("galeria")}   >
+                                            <p>
+                                                <span class="arrow-animated arrow-down">
+                                                    <svg viewBox="0 0 33.63 36.95">
+                                                        <polyline points="14.13 1.03 31.57 18.47 14.13 35.92"/>
+                                                        <polyline points="7.58 7.57 18.48 18.47 7.58 29.38"/>
+                                                        <polyline points="1.03 14.11 5.39 18.47 1.03 22.84"/>
+                                                    </svg>
+                                                </span>
+                                            </p>
+                                        </section>
+                               :
+                               <section className="flecha_animacion" >
+                               <p>
+                                   <span class="arrow-animated arrow-down">
+                                       <svg viewBox="0 0 33.63 36.95">
+                                           <polyline points="14.13 1.03 31.57 18.47 14.13 35.92"/>
+                                           <polyline points="7.58 7.57 18.48 18.47 7.58 29.38"/>
+                                           <polyline points="1.03 14.11 5.39 18.47 1.03 22.84"/>
+                                       </svg>
+                                   </span>
+                               </p>
+                           </section>
+                               }
+
                                 <ul className="menuu submenu">
                                     <li className="item">
                                         <Link to="/galeriavideos" onClick={click} className="link linkSubmenu">CURSOS                        </Link>

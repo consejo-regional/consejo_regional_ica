@@ -3,7 +3,7 @@ import React from 'react';
 const FlechaArriba = ({funcion}) => {
     return (
         <>
-            <section className="flecha_animacion" onClick={funcion}   >
+            <section className="flecha_animacion" onClick={()=>funcion()}   >
                  <p>
                      <span class="arrow-animated arrow-up">
                          <svg viewBox="0 0 33.63 36.95">
