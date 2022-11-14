@@ -1,24 +1,30 @@
 .nav{
     //background-color: red;
-    
+    @include rwd(tablet){
+        position: fixed;
+        top: 11rem;
+        top: 0rem;
+        right: -90vw;
+        height: 100vh;
+        width: 60vw;
+        z-index: 1000;
+        background: var(--blancoLogo);
+        transition: right .3s;         
+        &.show{
+          right: 0;
+        }
+    }
 }
 .header{
     z-index: 100;
     padding: 1rem 0 1rem 0;
-    // background:var(--blancoLogo);
-    // border: 1px solid red;
     @include rwd(1484px){
         padding: 0rem 0 0rem 0;
-
-
     }
-    @include rwd(celular){
-      
-
+    @include rwd(tablet){
+        padding: .1rem 0 .1rem 0;
     }
-
 }
-
 
 .menuu{
     width: 100%;
@@ -27,13 +33,18 @@
     justify-content: stretch;
     list-style: none;
     min-width: 0;
+
+    @include rwd(tablet){
+        display:grid;
+        align-items:center;
+        justify-content:stretch;
+    }
     
 }
 
 .submenu{
     position: absolute;
     background:var(--blancoBlur);
-
     z-index: 1000;
     flex-direction: column;
     top: 100%;
@@ -45,37 +56,55 @@
         top: 0;
         left: 100%;
     }
-}
-.submenu .submenu{
-     left: 100%;
-     top: 0;
+
+    @include rwd(tablet){
+        display: none;
+        position: static;
+        list-style:none;
+    }
 }
 
-.item{
+
+.item {
     position: relative;
     background: transparent;
-
+    // border: 1px solid red;
+    
 }
+
+.item:hover {
+     .submenu{
+        transform: scale(1,1);
+        opacity: 1;
+    }
+//     @include rwd(tablet){
+//         // border: 1px solid red;
+//             .submenu{
+//                 display: block;
+//                 justify-content: right;
+//             }
+//    }
+}
+
 .itemMenu{
     margin-left: 3rem;
+    @include rwd(tablet){
+        margin-left: 0rem;
+    }
 }
 
-.item:hover > .submenu{
-    transform: scale(1,1);
-    opacity: 1;
-}
 
 .link{
-    
     color: var(--colorTexto);
     height:100%;
     font-weight:400;
     text-decoration: none !important;
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-    width: 100%;
+    padding-top: .7rem;
+    padding-bottom: .7rem;
+    width: inherit;
     padding-left: 2rem;
-    padding-right: 2rem;
+    padding-right: 3rem;
+    
     display: flex;
     align-items: center;
     justify-content: center;
@@ -90,78 +119,144 @@
         width: 100%;
         color: var(--moradoLogo);
     }
-
-
     @include rwd(1288px){
         padding-left: 1rem;
-        padding-right: 1rem;
+        padding-right: 2rem;
         white-space: wrap;
 
     }
 }
+
+.linkSubmenu{
+    @include rwd(tablet){
+            display: flex;
+            align-items: flex-start;
+            justify-content:flex-start;
+            padding-left: 2rem;
+    }
+
+}
+
+///////////////////
+
+.flecha_animacion{
+    position: absolute;
+    top: 30%;
+    right: 0;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    // border: 1px solid red;
+    width: 2.5rem;
+    height: inherit;
+    @include rwd(1288px){
+        top: 0;
+        right: 0%;
+
+    }
+
+}
+
+section {
+	margin: 0 auto;
+	// max-width: 62.5rem;
+	padding: 3rem 1rem;
+}
+
+.arrow-animated {
+	display: inline-block;
+	height: 30px;
+	width: 70px;
+}
+
+.arrow-animated svg {
+	height: 100%;
+	width: 100%;
+}
+
+.arrow-animated.arrow-left svg {
+	transform: rotate(180deg);
+}
+
+.arrow-animated.arrow-down svg {
+	transform: rotate(90deg);
+}
+
+.arrow-animated.arrow-up svg {
+	transform: rotate(270deg);
+}
+
+.arrow-animated polyline{
+		fill:none;
+		stroke:var(--moradoDegradadoFuerte);
+		stroke-miterlimit:10;
+		stroke-width:2.91px;
+}
+
+.arrow-animated:hover polyline:first-child {
+	opacity: 0;
+	animation: arrowFadeIn .3s ease .2s;
+	animation-fill-mode: forwards;
+}
+
+.arrow-animated polyline:nth-last-child(2){
+	opacity: 0;
+	stroke:var(--moradoDegradadoFuerte);
+}
+
+.arrow-animated:hover polyline:nth-last-child(2){
+	animation: arrowFadeIn .3s ease .1s;
+	animation-fill-mode: backwards;
+	stroke:var(--moradoDegradadoFuerte);
+}
+
+.arrow-animated polyline:last-child{
+	opacity: 0;
+	stroke:var(--moradoDegradadoFuerte);
+}
+
+.arrow-animated:hover polyline:last-child {
+	animation: arrowFadeIn .3s ease 0s;
+	animation-fill-mode: backwards;
+	stroke:var(--moradoDegradadoFuerte);
+}
+
+@keyframes arrowFadeIn {
+	from {opacity: 0;}
+	to {opacity: 1;}
+}
+/// 
+
+
+
+
 
 /////////////////
 .menu-togle-animation {
     display: none;
   }
 
+
 @include rwd(tablet){
 
-        .linkSubmenu{
-            display: flex;
-            align-items: flex-start;
-            justify-content:flex-start;
-            padding-left: 2rem;
-        }
 
-        .header{
-           padding: .1rem 0 .1rem 0;
-        }
-        .menuu{
 
-            display:grid;
-            align-items:center;
-            justify-content:stretch;
-        }
-        .itemMenu{
-  
-            margin-left: 0rem;
-        }
+    .active {
         .submenu{
-            display: none;
-            position: static;
-            list-style:none;
-        }
-        .item{
-            // position: static;
-        }
-
-        .item:hover{
-            display:block;
-            // background:var(--moradoBlur);
-            .submenu{
-                display: block;
-                justify-content: right;
-            }
-        }
-
-      .nav {
-          position: fixed;
-          top: 11rem;
-          top: 0rem;
-          right: -90vw;
-          height: 100vh;
-          width: 60vw;
-          z-index: 1000;
-          background: var(--blancoLogo);
-          transition: right .3s;         
-          &.show{
-            right: 0;
-          }
+           transform: scale(1,1);
+           opacity: 1;
+       }
+       @include rwd(tablet){
+           // border: 1px solid red;
+               .submenu{
+                   display: block;
+                   justify-content: right;
+               }
       }
+   }
+
       .boton-menu-hamburguesa{
           width: 4.5rem;
-        //   height: 4.5rem;
           cursor: pointer;
           margin-left:3rem ;         
       }
