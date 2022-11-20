@@ -5,13 +5,13 @@ import FooterContacto from '../../componente/footer/footerContacto'
 import {useEffect,useState} from "react"
 import AOS from "aos";
 import "aos/dist/aos.css";
-import Publicaciones from './publicacionesDestacadas'
+import Publicaciones from '../../componente/slider/publicacionesDestacadas'
 import PalabrasDecano from './palabrasDecano'
 import NoticiasDestacadas from './noticiasDestacadas'
 import AnimatedNumbers from "react-animated-numbers";
 // import GaleriaVideosInicio from './galeriaVideosInicio';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import SliderPrincipal from './sliderPrincipal'
+import SliderPrincipal from '../../componente/slider/sliderPrincipal'
 
 
 
