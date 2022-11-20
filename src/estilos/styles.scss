@@ -70,7 +70,7 @@ body.dark{
      --contenido:1rem;
 }
 
-* :not(.vertical-timeline-element,svg,span,div,h3,h5,p,img,h1,ol,a)  {
+* :not(.vertical-timeline-element,svg,span,div,h3,h5,p,img,h1,ol,a,nav,ul,svg,section)  {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
