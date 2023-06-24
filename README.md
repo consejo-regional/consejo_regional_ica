@@ -3,8 +3,9 @@
 npx kill-port 8080
 
 # instalar sass
-npm install -D node-sass
-npm i -D sass
+
+npm install -D node-sass@latest
+
 
 # ejecutar api
 json-server --watch db.json --port 3050
