@@ -13,7 +13,7 @@ import {useEffect,useState} from "react"
 
     const[informacion,setInformacion]=useState([])
     useEffect(()=>{
-        fetch("https://api.cmpica.org.pe/api/efemerides/read.php")
+        fetch(`${process.env.REACT_APP_URL_API}efemerides/read.php`)
         .then((res) => res.json())
         .then(
             // data=>console.log(data)

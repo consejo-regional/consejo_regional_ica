@@ -26,7 +26,7 @@ function ScrollToTopOnMount() {
     const[informacion,setInformacion]=useState([])
 
     useEffect(()=>{
-        fetch("https://api.cmpica.org.pe/api/noticias/read.php")
+        fetch(`${process.env.REACT_APP_URL_API}noticias/read.php`)
         .then((res) => res.json())
         .then(
             // data=>console.log(data)
@@ -46,7 +46,7 @@ function ScrollToTopOnMount() {
 
             {
             informacion.map(c=>(     
-                id===c.id ? <NoticiasDetalle  key={c.id} imagen={c.imagenDetalles}  tipo={c.tipo} titulo={c.titulo} contenido={c.contenido} fecha={c.fecha} ></NoticiasDetalle>:null
+                id===(c.id).toString() ? <NoticiasDetalle  key={c.id} imagen={c.imagenDetalles}  tipo={c.tipo} titulo={c.titulo} contenido={c.contenido} fecha={c.fecha} ></NoticiasDetalle>:null
             )) 
             }  
           </>   

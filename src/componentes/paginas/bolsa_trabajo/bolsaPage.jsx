@@ -10,7 +10,7 @@ const BolsaTrabajo = ()=> {
 
   const[informacion,setInformacion]=useState()
   useEffect(()=>{
-      fetch("https://api.cmpica.org.pe/api/bolsa_trabajo/read.php")
+      fetch(`${process.env.REACT_APP_URL_API}bolsa_trabajo/read.php`)
       .then((res) => res.json())
       .then(
           // data=>console.log(data)

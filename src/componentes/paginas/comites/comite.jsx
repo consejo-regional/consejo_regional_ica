@@ -6,7 +6,7 @@ const Comite = ()=> {
 
     const[informacion,setInformacion]=useState([])
     useEffect(()=>{
-        fetch("https://api.cmpica.org.pe/api/comites/read.php")
+        fetch(`${process.env.REACT_APP_URL_API}comites/read.php`)
         .then((res) => res.json())
         .then(
             // data=>console.log(data)

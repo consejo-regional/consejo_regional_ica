@@ -62,7 +62,7 @@ const Publicaciones = ()=> {
 
     useEffect(()=>{
 
-    fetch("https://api.cmpica.org.pe/api/eventos/read.php")
+    fetch(`${process.env.REACT_APP_URL_API}eventos/read.php`)
     .then((res) => res.json())
     .then(
         data=>setInformacion(data)
@@ -137,7 +137,7 @@ function SliderComunicados() {
 
     useEffect(()=>{
 
-    fetch("https://api.cmpica.org.pe/api/opinion_y_pronunciamiento/read.php")
+    fetch(`${process.env.REACT_APP_URL_API}opinion_y_pronunciamiento/read.php` ) 
     .then((res) => res.json())
     .then(
         data=>setInformacion(data)
@@ -209,7 +209,7 @@ function SliderNoticias() {
 
     useEffect(()=>{
 
-    fetch("https://api.cmpica.org.pe/api/noticias/read.php")
+    fetch(`${process.env.REACT_APP_URL_API}noticias/read.php`)
     .then((res) => res.json())
     .then(
         data=>setInformacion(data)

@@ -11,7 +11,7 @@ const GaleriaVideos = ()=>{
 
     const[informacion,setInformacion]=useState()
     useEffect(()=>{
-        fetch("https://api.cmpica.org.pe/api/galery/read.php")
+        fetch(`${process.env.REACT_APP_URL_API}galery/read.php`)
         .then((res) => res.json())
         .then(
             // data=>console.log(data)

@@ -11,7 +11,7 @@ const Anuncios = ()=> {
 
     const[informacion,setInformacion]=useState([{imagen:'',orientacion:''}])
     useEffect(()=>{
-        fetch("https://api.cmpica.org.pe/api/pronunciamiento_inicio/read.php")
+        fetch( `${process.env.REACT_APP_URL_API}pronunciamiento_inicio/read.php`)
         .then((res) => res.json())
         .then(
             // data=>console.log(data)

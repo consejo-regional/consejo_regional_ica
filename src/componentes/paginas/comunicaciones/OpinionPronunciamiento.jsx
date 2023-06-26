@@ -16,7 +16,7 @@ const Condolencias = ()=> {
 
     const[informacion,setInformacion]=useState()
     useEffect(()=>{
-        fetch("https://api.cmpica.org.pe/api/opinion_y_pronunciamiento/read.php")
+        fetch(`${process.env.REACT_APP_URL_API}opinion_y_pronunciamiento/read.php`)
         .then((res) => res.json())
         .then(
             // data=>console.log(data)

@@ -10,7 +10,7 @@ import {useEffect,useState} from "react"
 
     const[informacion,setInformacion]=useState([])
     useEffect(()=>{
-        fetch("https://api.cmpica.org.pe/api/eventos/read.php")
+        fetch(`${process.env.REACT_APP_URL_API}eventos/read.php`)
         .then((res) => res.json())
         .then(
             // data=>console.log(data)
@@ -22,7 +22,7 @@ import {useEffect,useState} from "react"
           <>
             {
             informacion.map(c=>(     
-                id===c.id? <SericiosItem  imagen={c.imagenDetalle}  tipo={c.tipo} description={c.description} contenido={c.contenido} fecha={c.fecha}  enlace={c.enlace}></SericiosItem>:null
+                id === (c.id).toString()? <SericiosItem  imagen={c.imagenDetalle}  tipo={c.tipo} description={c.description} contenido={c.contenido} fecha={c.fecha}  enlace={c.enlace}></SericiosItem>:null
             )) 
             }  
           </>   

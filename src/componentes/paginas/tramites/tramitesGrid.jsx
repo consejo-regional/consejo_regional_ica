@@ -10,7 +10,7 @@ const TramitesGrid = ()=> {
 
     const[informacion,setInformacion]=useState()
       useEffect(()=>{
-          fetch("https://api.cmpica.org.pe/api/tramites/read.php")
+          fetch(`${process.env.REACT_APP_URL_API}tramites/read.php`)
           .then((res) => res.json())
           .then(
               // data=>console.log(data)

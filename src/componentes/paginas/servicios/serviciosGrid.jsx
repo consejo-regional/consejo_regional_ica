@@ -15,7 +15,7 @@ const SericiosGrid = ()=> {
 
       useEffect(()=>{
         AOS.init({duration:1500})
-        fetch("https://api.cmpica.org.pe/api/servicios/read.php")
+        fetch(`${process.env.REACT_APP_URL_API}/servicios/read.php`)
         .then((res) => res.json())
         .then(
             // data=>console.log(data)

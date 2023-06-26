@@ -17,7 +17,7 @@ function ScrollToTopOnMount() {
 
     const[informacion,setInformacion]=useState()
     useEffect(()=>{
-        fetch("https://api.cmpica.org.pe/api/eventos/read.php")
+        fetch(`${process.env.REACT_APP_URL_API}eventos/read.php`)
         .then((res) => res.json())
         .then(
             // data=>console.log(data)

@@ -23,7 +23,7 @@ function SliderPrincipal() {
 
     useEffect(()=>{
 
-    fetch("https://api.cmpica.org.pe/api/slider_principal/read.php")
+    fetch(`${process.env.REACT_APP_URL_API}slider_principal/read.php`)
     .then((res) => res.json())
     .then(
         data=>setInformacion(data)
