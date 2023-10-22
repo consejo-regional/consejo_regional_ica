@@ -9,7 +9,7 @@ const Biblioteca = ()=> {
 
   const[informacion,setInformacion]=useState([])
     useEffect(()=>{
-        fetch("https://api.cmpica.org.pe/api/biblioteca/read.php")
+        fetch(`${process.env.REACT_APP_URL_API}biblioteca/read.php`)
         .then((res) => res.json())
         .then(
             // data=>console.log(data)

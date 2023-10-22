@@ -17,17 +17,17 @@ import SliderPrincipal from '../../componente/slider/sliderPrincipal'
 
 const Home = ()=> {
 
-  const[contador,setContador]=useState([])
+  // const[contador,setContador]=useState([])
   // const[informacion,setInformacion]=useState([])
 
    useEffect(()=>{
    AOS.init({duration: 1000})
 
-   fetch("https://api.countapi.xyz/update/cmpica.org.pe/llavereact/?amount=1")
-   .then(response=>response.json())
-   .then(
-    data=>setContador(data.value)
-   )
+  //  fetch("https://api.countapi.xyz/update/cmpica.org.pe/llavereact/?amount=1")
+  //  .then(response=>response.json())
+  //  .then(
+  //   data=>setContador(data.value)
+  //  )
   },[])
 
       return(
@@ -71,7 +71,7 @@ const Home = ()=> {
 
         <NoticiasDestacadas></NoticiasDestacadas>
 
-        <div className="contenedorContadorVisitas">
+        {/* <div className="contenedorContadorVisitas">
               <div className="countdown">
                       <div className="box">
                           <span className="text">Esta pagina ha sido vista</span>
@@ -88,7 +88,7 @@ const Home = ()=> {
                           <span className="text">VECES</span>
                       </div> 
               </div>
-        </div>
+        </div> */}
 
 
         {/* <div data-aos="fade-up"> */}
