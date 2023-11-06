@@ -87,7 +87,7 @@ const App = ()=> {
             ></div>
           </div>
            <Anuncios></Anuncios>
-           <Menu></Menu>
+           {/* <Menu></Menu> */}
            <RedesSociales></RedesSociales>
            <Watsap></Watsap>
            <MenuItem></MenuItem>
@@ -154,7 +154,7 @@ const App = ()=> {
               }/>
           </Routes>
 
-            <Footer></Footer>
+          <Footer></Footer>
 
         </Router>   
         }

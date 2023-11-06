@@ -1,6 +1,10 @@
 .nav{
+
+    width: 100vw;
+
     @include rwd(tablet){
         position: fixed;
+        
         top: 11rem;
         top: 0rem;
         right: -90vw;
@@ -14,11 +18,23 @@
         }
     }
 }
+
+///modificando el la posicion del menu
 .header{
     z-index: 1000;
     padding: 1rem 0 1rem 0;
-    top: 0rem;
-    
+    top: 0;
+    position: absolute;
+    left: 0;
+    border-radius: 0.5rem;
+
+    // border: 1px solid red;
+
+
+    // display: flex;
+    // align-items: center;
+    // justify-content: center;
+
     @include rwd(1484px){
         padding: 0rem 0 0rem 0;
     }
@@ -29,16 +45,21 @@
 }
 
 .header-color{
-    background-color: var(--blancoBlur);
+                // display: flex;
+                // align-items: center;
+                // justify-content: center;
+    background-color: transparent;
     border-bottom: 1px solid rgb(199, 199, 199);
     // backdrop-filter: blur(4px);
 }
 
 .menuu{
+    border-radius: 0.5rem;
+    // border: 1px solid red;
     width: 100%;
     display: flex;
-    align-items:stretch;
-    justify-content: stretch;
+    align-items:center;
+    justify-content: center;
     list-style: none;
     min-width: 0;
     border-left: 1px solid rgb(199, 199, 199);
@@ -79,7 +100,6 @@
 .item {
     position: relative;
     background: transparent;
-    // border: 1px solid red;
     
 }
 
@@ -98,7 +118,12 @@
 }
 
 .itemMenu{
-    margin-left: 2rem;
+    margin-left: 0rem;
+    // border: 1px solid red;
+    height: 50%;
+    background-color: var(--blancoBlur);
+
+
     @include rwd(tablet){
         margin-left: 0rem;
     }
@@ -107,14 +132,16 @@
 
 .link{
     color: var(--colorTexto);
+    font-size: 0.8rem;
+
     height:100%;
     font-weight:400;
     text-decoration: none !important;
     padding-top: .7rem;
     padding-bottom: .7rem;
     width: inherit;
-    padding-left: 2rem;
-    padding-right: 3rem;
+    padding-left: 1rem;
+    padding-right: 2rem;
     
     display: flex;
     align-items: center;

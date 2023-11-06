@@ -12,6 +12,7 @@ import AnimatedNumbers from "react-animated-numbers";
 // import GaleriaVideosInicio from './galeriaVideosInicio';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import SliderPrincipal from '../../componente/slider/sliderPrincipal'
+import Footer from '../../componente/footer/footer';
 
 
 
@@ -94,7 +95,7 @@ const Home = ()=> {
         {/* <div data-aos="fade-up"> */}
         <FooterContacto></FooterContacto> 
         {/* </div> */}
-        
+       
 
         </>   
       )  

@@ -1,9 +1,23 @@
 import React from 'react'
 import ReactPlayer from "react-player"
 
-
+import {useEffect,useState} from "react"
 
 const PalabrasDecano = ()=> {
+
+    const[informacion,setInformacion]=useState([{url:'',descripccion:''}])
+    useEffect(()=>{
+        fetch( `${process.env.REACT_APP_URL_API}palabras_decano/read.php`)
+        .then((res) => res.json())
+        .then(
+            // data=>console.log(data)
+            data=>setInformacion(data)
+        );
+    },[])
+
+
+
+
       return(
         <>
 
@@ -24,7 +38,7 @@ const PalabrasDecano = ()=> {
                  <div className="container-palabras-decano-contenido">
                        <ReactPlayer
                             className='react-player'
-                            url="https://www.youtube.com/watch?v=TJnhFyFqtA0"
+                            url={informacion[0].url}
                             width='100%'
                             height='100%'
                             controls={true}
@@ -32,8 +46,8 @@ const PalabrasDecano = ()=> {
                         <div className="container-palabras-decano-blur">
                             <img src={process.env.PUBLIC_URL +'/imagenes/pngegg.png'} style={{width: 'auto', height: '5rem'}}></img>
                             <p  className="container-palabras-decano-blur">
-
-                            Agradecer a todos los colegas el honor concedido al elegirnos como representantes de la orden médica a nivel de Ica. Prometemos no decepcionarlos , junto al Consejo Directivo de la Región Ica trabajaremos para lograr mejores beneficios para nuestros médicos colegiados en la región Durante el periodo 2022-2024, desarrollaremos una gestión democrática, transparente, moderna y accesible para los médicos, poniendo por delante siempre el bienestar de la orden, bajo la sola exigencia de dar un mejor servicio, estar a disposición del médico y defender siempre el honor e integridad.El Consejo Regional IX de Ica es un órgano directivo del Colegio Médico del Perú en Ica de los médicos colegiados de todo el país, que actualmente cuenta con un local en sesión en uso
+                                {informacion[0].descripccion}
+                           
                             </p>
                         </div>
                 </div>

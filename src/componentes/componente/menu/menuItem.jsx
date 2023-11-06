@@ -1,5 +1,6 @@
 import React,{useEffect,useRef,useState} from 'react'
 import {Link} from 'react-router-dom'
+import { DarkModeSwitch } from 'react-toggle-dark-mode';
 
 
 function getWindowSize() {
@@ -9,6 +10,18 @@ function getWindowSize() {
 
 
 const MenuItem = ()=> {
+
+
+
+    const [isDarkMode, setDarkMode] = React.useState(false);
+
+    const toggleDarkMode = (checked) => {
+      setDarkMode(checked);
+      console.log('hola mundo')
+      document.body.classList.toggle('dark');
+
+
+    };
 
     const boton=useRef()
     const togle_animation=useRef()
@@ -141,7 +154,7 @@ const MenuItem = ()=> {
     window.addEventListener("scroll",cambiarColor)
       return(
         <>
-            <header className={color?"header header-color ":"header" }>
+            <header className={"header header-color "}>
                 <div className="header-conteiner">
                     <div   onClick={click} className="boton-menu-hamburguesa">
                         <div className="menu-togle-animation" 
@@ -155,11 +168,17 @@ const MenuItem = ()=> {
                         </div>
                     </div>
                     <nav className="nav " ref={boton}>
+
+                        
                         <ul className="menuu ">
+
+                            <li className="item ">
+                                <img src={process.env.PUBLIC_URL + `imagenes/logo.png`} alt="" />
+                            </li>
                             <li className="item itemMenu">
                                 <Link to="/inicio"  onClick={click}  className="link">INICIO </Link>
                             </li>
-                            <li className="item" ref={boton_desplegar_submenu_nosotros}   >
+                            <li className="item itemMenu" ref={boton_desplegar_submenu_nosotros}   >
                                 <Link to="/nosotros"  onClick={click}  className="link">NOSOTROS </Link>
                                 <MenuComponente variable={isActive.nosotros} data="nosotros"></MenuComponente>
                                 <ul className="menuu submenu" >
@@ -194,7 +213,7 @@ const MenuItem = ()=> {
                                     </li>
                                 </ul>
                             </li>
-                            <li className="item" ref={boton_desplegar_submenu_tramites}>
+                            <li className="item itemMenu" ref={boton_desplegar_submenu_tramites}>
                                 <Link to="/tramites"   className="link">TRAMITES</Link>
                                 <MenuComponente variable={isActive.tramites} data="tramites"></MenuComponente>
                                 <ul className="menuu submenu">
@@ -217,7 +236,7 @@ const MenuItem = ()=> {
                                 
                                 </ul>
                             </li>
-                            <li className="item" ref={boton_desplegar_submenu_servicios} >
+                            <li className="item itemMenu" ref={boton_desplegar_submenu_servicios} >
                                 <Link to="/servicios"    className="link">SERVICIOS</Link>
                                 <MenuComponente variable={isActive.servicios} data="servicios"></MenuComponente>
 
@@ -241,49 +260,60 @@ const MenuItem = ()=> {
                                     
                                 </ul>
                                 </li>
-                            <li className="item" ref={boton_desplegar_submenu_comunicaciones}>
+                            <li className="item itemMenu" ref={boton_desplegar_submenu_comunicaciones}>
                                 <Link to="/comunicaciones"   className="link">COMUNICACIONES</Link>
                                 <MenuComponente variable={isActive.comunicaciones} data="comunicaciones"></MenuComponente>
 
 
                                 <ul className="menuu submenu">
 
-                                    <li className="item">
+                                    <li className="">
                                         <Link to="/comunicaciones/pronunciamiento" onClick={click} className="link linkSubmenu">OPINION Y PRONUNCIAMIENTO</Link>
                                     </li>
-                                    <li className="item">
+                                    <li className="">
                                         <Link to="/comunicaciones/condolencias" onClick={click} className="link linkSubmenu">CONDOLENCIAS       </Link>
                                     </li>
                                 
-                                    <li className="item">
+                                    <li className="">
                                         <Link to="/comunicaciones/noticias" onClick={click} className="link linkSubmenu">NOTICIAS                      </Link>
                                     </li>
-                                    <li className="item">
+                                    <li className="">
                                         <Link to="/comunicaciones/efemerides" onClick={click} className="link linkSubmenu">EFEMERIDES                     </Link>
                                     </li>
-                                    <li className="item">
+                                    <li className="">
                                         <Link to="/comunicaciones/normativo" onClick={click} className="link linkSubmenu">NORMATIVO                     </Link>
                                     </li>
                                 </ul>
                             </li>
-                            <li className="item">
+                            <li className="itemMenu">
                                 <Link to="/eventos"    className="link">EVENTOS</Link>
                             </li>
-                            <li className="item">
+                            <li className="itemMenu">
                                 <Link to="/comite"  onClick={click}  className="link">COMITES</Link>
                             </li>
-                            <li className="item" ref={boton_desplegar_submenu_galeria}>
+                            <li className="itemMenu" ref={boton_desplegar_submenu_galeria}>
                                 <Link to="/galeriaVideos"  onClick={click}  className="link">GALERIA</Link>
-                                <MenuComponente variable={isActive.galeria} data="galeria"></MenuComponente>
+                                {/* <MenuComponente variable={isActive.galeria} data="galeria"></MenuComponente>
 
                                 <ul className="menuu submenu">
                                     <li className="item">
                                         <Link to="/galeriavideos" onClick={click} className="link linkSubmenu">CURSOS                        </Link>
                                     </li>
-                                </ul>
+                                </ul> */}
                             </li>
-                            <li className="item">
+                            <li className="itemMenu">
                                 <Link to="/bolsatrabajo"  onClick={click}  className="link">BOLSA DE TRABAJO</Link>
+                            </li>
+                            <li className="itemMenu">
+                              <div className='switch-dark-mode'>
+                                <DarkModeSwitch
+                                    style={{ marginRight: '2rem' }}
+                                    checked={isDarkMode}
+                                    onChange={toggleDarkMode}
+                                    size={40}
+                                    sunColor={'yellow'}
+                                />
+                              </div>
                             </li>
                         </ul>
                         
