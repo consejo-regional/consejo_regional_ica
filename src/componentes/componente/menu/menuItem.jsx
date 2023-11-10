@@ -172,7 +172,7 @@ const MenuItem = ()=> {
                         
                         <ul className="menuu ">
 
-                            <li className="item ">
+                            <li className=" item-logo">
                                 <img src={process.env.PUBLIC_URL + `imagenes/logo.png`} alt="" />
                             </li>
                             <li className="item itemMenu">
@@ -285,13 +285,13 @@ const MenuItem = ()=> {
                                     </li>
                                 </ul>
                             </li>
-                            <li className="itemMenu">
+                            <li className="item itemMenu">
                                 <Link to="/eventos"    className="link">EVENTOS</Link>
                             </li>
-                            <li className="itemMenu">
+                            <li className="item itemMenu">
                                 <Link to="/comite"  onClick={click}  className="link">COMITES</Link>
                             </li>
-                            <li className="itemMenu" ref={boton_desplegar_submenu_galeria}>
+                            <li className="item itemMenu" ref={boton_desplegar_submenu_galeria}>
                                 <Link to="/galeriaVideos"  onClick={click}  className="link">GALERIA</Link>
                                 {/* <MenuComponente variable={isActive.galeria} data="galeria"></MenuComponente>
 
@@ -301,19 +301,22 @@ const MenuItem = ()=> {
                                     </li>
                                 </ul> */}
                             </li>
-                            <li className="itemMenu">
+                            <li className="item itemMenu">
                                 <Link to="/bolsatrabajo"  onClick={click}  className="link">BOLSA DE TRABAJO</Link>
                             </li>
-                            <li className="itemMenu">
-                              <div className='switch-dark-mode'>
-                                <DarkModeSwitch
-                                    style={{ marginRight: '2rem' }}
-                                    checked={isDarkMode}
-                                    onChange={toggleDarkMode}
-                                    size={40}
-                                    sunColor={'yellow'}
-                                />
-                              </div>
+                            <li className="item itemMenu">
+                              <div className='conteiner-toggle-cambio-tema'>
+                                
+                                <div className='switch-dark-mode'>
+                                    <DarkModeSwitch
+                                        style={{ marginRight: '2rem' }}
+                                        checked={isDarkMode}
+                                        onChange={toggleDarkMode}
+                                        size={40}
+                                        sunColor={'yellow'}
+                                    />
+                                </div>
+                             </div>  
                             </li>
                         </ul>
                         

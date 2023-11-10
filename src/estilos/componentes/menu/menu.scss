@@ -69,3 +69,31 @@
 
 }
 
+
+.conteiner-toggle-cambio-tema{
+    // border: solid 1px red;
+    width: 100%;
+    height: 100%;
+    // display: grid;
+    // align-items: center;
+    // justify-items: center;
+
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.item-logo{
+    // width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: transparent;
+
+    
+    @include rwd(tablet){
+       display: none;
+    }
+}
