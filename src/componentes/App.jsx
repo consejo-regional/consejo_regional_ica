@@ -13,7 +13,6 @@ import SericiosGrid from './paginas/servicios/serviciosGrid';
 
 import RedesSociales from './componente/redes_sociales/redesSociales'
 import MenuItem from '../componentes/componente/menu/menuItem'
-import Menu from '../componentes/componente/menu/menu'
 import Footer from './componente/footer/footer'
 import Loader from './componente/loader/loader'
 

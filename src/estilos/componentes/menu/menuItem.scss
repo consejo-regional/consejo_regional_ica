@@ -1,11 +1,38 @@
-.nav{
+//HEADER CONTENEDOR PRINCIPAL DEL MENU
+.header{
+    z-index: 1000;
+    padding: 1rem 0 1rem 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    border-radius: 0.5rem;
+    background-color: transparent;
+    transition: background .5s ease-in-out;
+    border-bottom: 1px solid var(--moradoLogo);
 
-
-    width: 100vw;
-
+    @include rwd(1484px){
+        padding: 0rem 0 0rem 0;
+    }
     @include rwd(tablet){
+        padding: .1rem 0 .1rem 0;
+    }
+}
+
+.header-color{
+    background-color: var(--blancoBlurMenu);
+    border-bottom: 1px solid transparent;
+}
+
+
+.boton-menu-hamburguesa{
+
+}
+
+.conteiner-elementos-menu{
+    width: 100vw;
+    @include rwd(tablet){
+        display: flex;
         position: fixed;
-        
         top: 11rem;
         top: 0rem;
         right: -90vw;
@@ -20,54 +47,17 @@
     }
 }
 
-///modificando el la posicion del menu
-.header{
-    z-index: 1000;
-    padding: 1rem 0 1rem 0;
-    top: 0;
-    position: absolute;
-    left: 0;
+.menu{
     border-radius: 0.5rem;
-
-    // border: 1px solid red;
-
-
-    // display: flex;
-    // align-items: center;
-    // justify-content: center;
-
-    @include rwd(1484px){
-        padding: 0rem 0 0rem 0;
-    }
-    @include rwd(tablet){
-        position:sticky;
-        padding: .1rem 0 .1rem 0;
-    }
-}
-
-.header-color{
-                // display: flex;
-                // align-items: center;
-                // justify-content: center;
-    background-color: transparent;
-    border-bottom: 1px solid rgb(199, 199, 199);
-    // backdrop-filter: blur(4px);
-}
-
-.menuu{
-    border-radius: 0.5rem;
-    // border: 1px solid red;
     width: 100%;
     display: flex;
     align-items:center;
     justify-content: center;
     list-style: none;
     min-width: 0;
-    border-left: 1px solid rgb(199, 199, 199);
     padding:0;
     margin: 0;
-    // background-color: var(--blancoBlurMenu);
-
+    border-left: 1px solid rgb(199, 199, 199);
     @include rwd(tablet){
 
 
@@ -78,9 +68,22 @@
     
 }
 
+.item-logo{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: transparent;
+
+    
+    @include rwd(tablet){
+       display: none;
+    }
+}
+
 .submenu{
+    list-style: none;
     position: absolute;
-    // background:var(--blancoBlur);
     z-index: 1000;
     flex-direction: column;
     top: 100%;
@@ -88,6 +91,8 @@
     transform: scale(1,0);
     opacity: 0;
     transition: transform  .2s,opacity .8s;
+    padding: 0;
+    margin: 0;
     ul{
         top: 0;
         left: 100%;
@@ -96,18 +101,28 @@
     @include rwd(tablet){
         display: none;
         position: static;
-        list-style:none;
+        background-color: var(--blancoBlurMenu);
     }
 }
 
+//////////inicio clase mas importante
+.active {
+    @include rwd(tablet){
+            .submenu{
+                display: block;
+                justify-content: right;
+            }
+   }
+ }
+//////////fin clase mas importante
+
 
 .item {
+    padding: 0.5rem;
     position: relative;
     background-color: var(--blancoBlurMenu);
-
-
     @include rwd(tablet){
-       
+
         background: transparent;
     }
     
@@ -118,42 +133,30 @@
         transform: scale(1,1);
         opacity: 1;
     }
-//     @include rwd(tablet){
-//         // border: 1px solid red;
-//             .submenu{
-//                 display: block;
-//                 justify-content: right;
-//             }
-//    }
+
 }
 
 
-
-//////////////area de trabajo
-.itemMenu{
-    margin-left: 0rem;
-    // border: 1px solid red;
-    height: 50%;
-    // background-color: var(--blancoBlurMenu);
-
-
+.item-submenu{
+    background-color:var(--blancoBlurMenu);
     @include rwd(tablet){
-        height: auto;
-
-        margin-left: 0rem;
-        background: transparent;
+        background-color:var(--moradoDegradadoDevil);
     }
-
-
-
-
 }
 
+.conteiner-toggle-cambio-tema{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+//////inicio linea movil menu hover item menu//////
 
 .link{
     color: var(--colorTexto);
     font-size: 0.8rem;
-
     height:100%;
     font-weight:400;
     text-decoration: none !important;
@@ -201,7 +204,11 @@
 
 }
 
-///////////////////
+//////fin linea movil menu//////
+
+
+//////inicio flecha animada hover submenu//////
+
 
 .flecha_animacion{
     position: absolute;
@@ -216,26 +223,19 @@
     height: inherit;
     @include rwd(tablet){
         position: absolute;
-
         top: 0%;
         transform: translateY(30%);
-        // top: 0;
         right: 0%;
-            // border: 1px solid red;
-
-
     }
 
 }
 
 section {
 	margin: 0 auto;
-	// max-width: 62.5rem;
 	padding: 3rem 1rem;
     @include rwd(tablet){
        padding: 0;
        margin :0;
-
     }
 }
 
@@ -301,88 +301,60 @@ section {
 	from {opacity: 0;}
 	to {opacity: 1;}
 }
-/// 
+
+//////fin flecha animada hover submenu//////
 
 
 
-
-
-/////////////////
+//////inicio toggle animacion menu sanwich/////
 .menu-togle-animation {
     display: none;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    outline: none;
+
+    @include rwd(tablet){
+        display: flex;
+    }
     
   }
 
-
-@include rwd(tablet){
-
-
-
-    .active {
-        .submenu{
-           transform: scale(1,1);
-           opacity: 1;
-       }
-       @include rwd(tablet){
-           // border: 1px solid red;
-               .submenu{
-                   display: block;
-                   justify-content: right;
-               }
-      }
-   }
-
-      .boton-menu-hamburguesa{
-          width: 4.5rem;
-          cursor: pointer;
-          margin-left:3rem ;         
-      }
- 
-/////////////////togle animation///////////////
-        .menu-togle-animation {
-            background-color: transparent;
-            border: none;
-            cursor: pointer;
-            display: flex;
-            padding: 0;
-            outline: none;
-        }
-        .line {
-            fill: none;
-            stroke: var(--moradoLogo);
-            stroke-width: 4;
-            transition: stroke-dasharray 600ms cubic-bezier(0.4, 0, 0.2, 1),
-            stroke-dashoffset 600ms cubic-bezier(0.4, 0, 0.2, 1);
-        }
-        .line1 {
-            stroke-dasharray: 60 207;
-            stroke-width: 4;
-        }
-        .line2 {
-            stroke-dasharray: 60 60;
-            stroke-width: 4;
-        }
-        .line3 {
-            stroke-dasharray: 60 207;
-            stroke-width: 4;
-        }
-        .opened .line1 {
-            stroke-dasharray: 90 207;
-            stroke-dashoffset: -134;
-            stroke-width: 4;
-        }
-        .opened .line2 {
-            stroke-dasharray: 1 60;
-            stroke-dashoffset: -30;
-            stroke-width: 4;
-        }
-        .opened .line3 {
-            stroke-dasharray: 90 207;
-            stroke-dashoffset: -134;
-            stroke-width: 4;
-        }
-////////////////////////// 
+.line {
+    fill: none;
+    stroke: var(--moradoLogo);
+    stroke-width: 4;
+    transition: stroke-dasharray 600ms cubic-bezier(0.4, 0, 0.2, 1),
+    stroke-dashoffset 600ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.line1 {
+    stroke-dasharray: 60 207;
+    stroke-width: 4;
+}
+.line2 {
+    stroke-dasharray: 60 60;
+    stroke-width: 4;
+}
+.line3 {
+    stroke-dasharray: 60 207;
+    stroke-width: 4;
+}
+.opened .line1 {
+    stroke-dasharray: 90 207;
+    stroke-dashoffset: -134;
+    stroke-width: 4;
+}
+.opened .line2 {
+    stroke-dasharray: 1 60;
+    stroke-dashoffset: -30;
+    stroke-width: 4;
+}
+.opened .line3 {
+    stroke-dasharray: 90 207;
+    stroke-dashoffset: -134;
+    stroke-width: 4;
 }
 
-
+/////fin toggle animacion menu sanwich/////
     

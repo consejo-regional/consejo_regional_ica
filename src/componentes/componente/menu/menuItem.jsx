@@ -11,16 +11,12 @@ function getWindowSize() {
 
 const MenuItem = ()=> {
 
-
-
     const [isDarkMode, setDarkMode] = React.useState(false);
 
     const toggleDarkMode = (checked) => {
       setDarkMode(checked);
       console.log('hola mundo')
       document.body.classList.toggle('dark');
-
-
     };
 
     const boton=useRef()
@@ -138,24 +134,22 @@ const MenuItem = ()=> {
     }
 
 
-
-
       const [color,establecerColor]=useState(false)
       const cambiarColor=()=>{
-          if(window.scrollY >= 50){
+          if(window.scrollY >= 100){
               establecerColor(true)
           }else{
               establecerColor(false)
           }
       }
 
-   
 
     window.addEventListener("scroll",cambiarColor)
       return(
         <>
-            <header className={"header header-color "}>
-                <div className="header-conteiner">
+            <header className={color?"header header-color ":"header"}>
+
+                <div>
                     <div   onClick={click} className="boton-menu-hamburguesa">
                         <div className="menu-togle-animation" 
                                     ref={togle_animation}
@@ -167,34 +161,33 @@ const MenuItem = ()=> {
                                         </svg>
                         </div>
                     </div>
-                    <nav className="nav " ref={boton}>
+                    <nav className="conteiner-elementos-menu" ref={boton}>
 
-                        
-                        <ul className="menuu ">
+                        <ul className="menu">
 
                             <li className=" item-logo">
                                 <img src={process.env.PUBLIC_URL + `imagenes/logo.png`} alt="" />
                             </li>
-                            <li className="item itemMenu">
+                            <li className="item">
                                 <Link to="/inicio"  onClick={click}  className="link">INICIO </Link>
                             </li>
-                            <li className="item itemMenu" ref={boton_desplegar_submenu_nosotros}   >
+                            <li className="item" ref={boton_desplegar_submenu_nosotros}   >
                                 <Link to="/nosotros"  onClick={click}  className="link">NOSOTROS </Link>
                                 <MenuComponente variable={isActive.nosotros} data="nosotros"></MenuComponente>
-                                <ul className="menuu submenu" >
-                                    <li className="item">
+                                <ul className="submenu" >
+                                    <li className="item-submenu">
                                         <Link to="/nosotros/colegioMedico" onClick={click} className="link linkSubmenu">EL COLEGIO MEDICO</Link>
                                     </li>
-                                    <li className="item">
+                                    <li className="item-submenu">
                                         <Link to="/nosotros/quienesSomos" onClick={click} className="link linkSubmenu">QUIENES SOMOS</Link>
                                     </li>
-                                    <li className="item">
+                                    <li className="item-submenu">
                                         <Link to="/nosotros/documentoNormativo" onClick={click} className="link linkSubmenu">DOCUMENTO NORMATIVO</Link>
                                     </li>
-                                    <li className="item">
+                                    <li className="item-submenu">
                                         <Link to="/nosotros/consejosDistritales" onClick={click} className="link linkSubmenu">CONSEJOS DISTRITALES</Link>
                                     </li>
-                                    <li className="item">
+                                    <li className="item-submenu">
                                         <Link to="/nosotros/pastDecanos" onClick={click} className="link linkSubmenu">PAST DECANOS</Link>
                                     </li>
                                     {/* <li className="item">
@@ -208,90 +201,90 @@ const MenuItem = ()=> {
                                     </li>
                                     */}
                                 
-                                    <li className="item">
+                                    <li className="item-submenu">
                                         <a  href={process.env.PUBLIC_URL+"documentos/POLITICA-DE-CALIDAD-Y-CERTIFICADO.pdf"} target="_blank" onClick={click}  rel="noopener noreferrer" className="link linkSubmenu">POLITICA DE CALIDAD</a>
                                     </li>
                                 </ul>
                             </li>
-                            <li className="item itemMenu" ref={boton_desplegar_submenu_tramites}>
+                            <li className="item" ref={boton_desplegar_submenu_tramites}>
                                 <Link to="/tramites"   className="link">TRAMITES</Link>
                                 <MenuComponente variable={isActive.tramites} data="tramites"></MenuComponente>
-                                <ul className="menuu submenu">
-                                    <li className="item">
+                                <ul className="submenu">
+                                    <li className="item-submenu">
                                         <Link to="/tramites/constanciahabilidad" onClick={click} className="link linkSubmenu">CONSTANCIA DE HABILIDAD</Link>
                                     </li>
                                 
-                                    <li className="item">
+                                    <li className="item-submenu">
                                         <a rel="noreferrer" href="https://200.48.13.39/prematricula/index.php" target="_blank" onClick={click} className="link linkSubmenu">INICIAR COLEGIATURA</a>
                                     </li>
-                                    <li className="item">
+                                    <li className="item-submenu">
                                         <a  rel="noreferrer" href="https://www.cmp.org.pe/registro-de-especialidad-o-sub-especialidad/"  target="_blank" onClick={click} className="link linkSubmenu">REGISTRO DE ESPECIALIDAD </a>
                                     </li>
-                                    <li className="item">
+                                    <li className="item-submenu">
                                         <a rel="noreferrer" href="https://www.cmp.org.pe/proceso-para-tramite-de-carne-de-colegiado/" target="_blank" onClick={click} className="link linkSubmenu">CARNET DE COLEGIADO</a>
                                     </li>
-                                    <li className="item">
+                                    <li className="item-submenu">
                                         <a rel="noreferrer" href="https://www.zona.cmp.org.pe/index.php/ayuda/101-actualizacion-de-datos" target="_blank" onClick={click} className="link linkSubmenu">ACTUALIZACION DE DATOS</a>
                                     </li>
                                 
                                 </ul>
                             </li>
-                            <li className="item itemMenu" ref={boton_desplegar_submenu_servicios} >
+                            <li className="item" ref={boton_desplegar_submenu_servicios} >
                                 <Link to="/servicios"    className="link">SERVICIOS</Link>
                                 <MenuComponente variable={isActive.servicios} data="servicios"></MenuComponente>
 
-                                <ul className="menuu submenu">
+                                <ul className="submenu">
                                     
-                                    <li className="item">
+                                    <li className="item-submenu">
                                         <a rel="noreferrer" href="https://www.cmp.org.pe/sistcere-2/"  target="_blank" onClick={click} className="link linkSubmenu">SISTCERE</a>
                                     </li>
-                                    <li className="item">
+                                    <li className="item-submenu">
                                         <a rel="noreferrer" href="https://www.cmp.org.pe/semefa/"  target="_blank" onClick={click} className="link linkSubmenu">SEMEFA</a>
                                     </li>
-                                    <li className="item">
+                                    <li className="item-submenu">
                                         <a rel="noreferrer" href="https://www.cmp.org.pe/defensoria-del-medico/"  target="_blank" onClick={click} className="link linkSubmenu">FOSEMED</a>
                                     </li>
-                                    <li className="item">
+                                    <li className="item-submenu">
                                         <a rel="noreferrer" href="https://www.cmp.org.pe/fosemed/"  target="_blank" onClick={click} className="link linkSubmenu">DEFENSORIA AL MEDICO</a>
                                     </li>
-                                    <li className="item">
+                                    <li className="item-submenu">
                                         <a rel="noreferrer" href="https://www.cmp.org.pe/conoce-a-tu-medico/"  target="_blank" onClick={click} className="link linkSubmenu">CONOCE A TU MEDICO</a>
                                     </li>
                                     
                                 </ul>
                                 </li>
-                            <li className="item itemMenu" ref={boton_desplegar_submenu_comunicaciones}>
+                            <li className="item" ref={boton_desplegar_submenu_comunicaciones}>
                                 <Link to="/comunicaciones"   className="link">COMUNICACIONES</Link>
                                 <MenuComponente variable={isActive.comunicaciones} data="comunicaciones"></MenuComponente>
 
 
-                                <ul className="menuu submenu">
+                                <ul className="submenu">
 
-                                    <li className="">
+                                    <li className="item-submenu">
                                         <Link to="/comunicaciones/pronunciamiento" onClick={click} className="link linkSubmenu">OPINION Y PRONUNCIAMIENTO</Link>
                                     </li>
-                                    <li className="">
+                                    <li className="item-submenu">
                                         <Link to="/comunicaciones/condolencias" onClick={click} className="link linkSubmenu">CONDOLENCIAS       </Link>
                                     </li>
                                 
-                                    <li className="">
+                                    <li className="item-submenu">
                                         <Link to="/comunicaciones/noticias" onClick={click} className="link linkSubmenu">NOTICIAS                      </Link>
                                     </li>
-                                    <li className="">
+                                    <li className="item-submenu">
                                         <Link to="/comunicaciones/efemerides" onClick={click} className="link linkSubmenu">EFEMERIDES                     </Link>
                                     </li>
-                                    <li className="">
+                                    <li className="item-submenu">
                                         <Link to="/comunicaciones/normativo" onClick={click} className="link linkSubmenu">NORMATIVO                     </Link>
                                     </li>
                                 </ul>
                             </li>
-                            <li className="item itemMenu">
+                            <li className="item">
                                 <Link to="/eventos"    className="link">EVENTOS</Link>
                             </li>
-                            <li className="item itemMenu">
+                            <li className="item">
                                 <Link to="/comite"  onClick={click}  className="link">COMITES</Link>
                             </li>
-                            <li className="item itemMenu" ref={boton_desplegar_submenu_galeria}>
+                            <li className="item" ref={boton_desplegar_submenu_galeria}>
                                 <Link to="/galeriaVideos"  onClick={click}  className="link">GALERIA</Link>
                                 {/* <MenuComponente variable={isActive.galeria} data="galeria"></MenuComponente>
 
@@ -301,10 +294,10 @@ const MenuItem = ()=> {
                                     </li>
                                 </ul> */}
                             </li>
-                            <li className="item itemMenu">
+                            <li className="item">
                                 <Link to="/bolsatrabajo"  onClick={click}  className="link">BOLSA DE TRABAJO</Link>
                             </li>
-                            <li className="item itemMenu">
+                            <li className="item">
                               <div className='conteiner-toggle-cambio-tema'>
                                 
                                 <div className='switch-dark-mode'>
@@ -323,7 +316,6 @@ const MenuItem = ()=> {
                     </nav>
                 </div>
                 
-
             </header>
 
         </>   
