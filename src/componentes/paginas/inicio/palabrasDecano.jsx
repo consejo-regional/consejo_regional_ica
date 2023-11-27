@@ -39,8 +39,8 @@ const PalabrasDecano = ()=> {
                        <ReactPlayer
                             className='react-player'
                             url={informacion[0].url}
-                            width='100%'
-                            height='100%'
+                            width='auto'
+                            height='50vh'
                             controls={true}
                         />
                         <div className="container-palabras-decano-blur">

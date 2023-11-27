@@ -9,7 +9,7 @@ import {
 import "../estilos/styles.scss"
 
 import Home from './paginas/inicio/home'
-import SericiosGrid from './paginas/servicios/serviciosGrid';
+import SericiosGrid from './paginas/servicios/serviciosGrid/serviciosGridEncabezadoMenu';
 
 import RedesSociales from './componente/redes_sociales/redesSociales'
 import MenuItem from '../componentes/componente/menu/menuItem'

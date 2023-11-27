@@ -1,6 +1,6 @@
 import React  from 'react'
 
-import SericiosGrid from '../servicios/serviciosGrid'
+import SericiosGridEncabezadoInicio from '../servicios/serviciosGrid/serviciosGridEncabezadoInicio'
 import FooterContacto from '../../componente/footer/footerContacto'
 import {useEffect,useState} from "react"
 import AOS from "aos";
@@ -39,7 +39,7 @@ const Home = ()=> {
 		   </main>
  
         <div data-aos="fade-up">
-          <SericiosGrid></SericiosGrid> 
+          <SericiosGridEncabezadoInicio></SericiosGridEncabezadoInicio> 
         </div>
 
 

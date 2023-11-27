@@ -26,7 +26,7 @@ const SericiosGrid = ()=> {
       return(
         <>
         <div className="contenedor_servicios_grid_conteiner">
-          <div className="contenedor-serviciosGrid-titulo">
+          {/* <div className="contenedor-serviciosGrid-titulo">
                 <div className="contenedor-serviciosGrid-logo">
                     <div className="logo-colegio-svg"></div>
                 </div>
@@ -36,7 +36,7 @@ const SericiosGrid = ()=> {
                     <div className="contenedor-serviciosGrid-contenido2">DESTACADOS</div>
                   </div>
                 </div>
-            </div>
+            </div> */}
 
           <div className="contenedor_servicios_grid">
 

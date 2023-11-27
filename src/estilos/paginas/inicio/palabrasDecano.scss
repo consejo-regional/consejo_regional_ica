@@ -2,9 +2,12 @@
 display: flex;
 justify-content: center;
 align-items: center;
+// border: 1px solid red;
 }
 
 .container-palabras-decano-contenido{
+    // border: 1px solid blue;
+
     position: relative;
     display: grid;
     grid-template-columns: repeat(2,1fr);
@@ -28,6 +31,8 @@ align-items: center;
 }
 
 .container-palabras-decano-blur{
+    // border: 1px solid red;
+
     z-index: 100;
     align-self: center;
     justify-self: center;
@@ -47,6 +52,8 @@ align-items: center;
 }
 
 .bienvenida_decano-palabras-imagen{
+    // border: 1px solid red;
+
     align-self: center;
     justify-self: center;
     width: 60%;
