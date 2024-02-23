@@ -279,6 +279,9 @@ const MenuItem = ()=> {
                                 </ul>
                             </li>
                             <li className="item">
+                                <Link to="/convenios"    className="link">CONVENIOS</Link>
+                            </li>
+                            <li className="item">
                                 <Link to="/eventos"    className="link">EVENTOS</Link>
                             </li>
                             <li className="item">

@@ -52,6 +52,11 @@ import BolsaTrabajo from './paginas/bolsa_trabajo/bolsaPage';
 import BolsaDetalle from './paginas/bolsa_trabajo/bolsaDetalle';
 
 
+
+import ConveniosPage from './paginas/comunicaciones/conveniosPage';
+import ConveniosDetalle from './paginas/comunicaciones/conveniosDetalles';
+
+
 const App = ()=> {
 
   const[loader,setLoader]=useState(false)
@@ -128,6 +133,11 @@ const App = ()=> {
             <Route path="/comunicaciones/pronunciamiento" element={ <OpinionPronunciamiento/>}></Route>
             <Route path="/comunicaciones/normativo" element={ <Normativo></Normativo>}></Route>
             <Route path="/comunicaciones/condolencias" element={ <Condolencias/>}></Route>
+
+
+            <Route path="/convenios/:id" element={ <ConveniosDetalle/>}></Route>
+            <Route path="/convenios" element={ <ConveniosPage/>}></Route>
+
 
 
             <Route path="/comite" element={ <Comite/>}></Route>

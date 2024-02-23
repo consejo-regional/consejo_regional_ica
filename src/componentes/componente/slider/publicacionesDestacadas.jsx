@@ -36,12 +36,12 @@ const Publicaciones = ()=> {
                     <SliderComunicados></SliderComunicados>
                 </main>
                 <main className="slider-comunicados">
-                    <p className="titulo">CURSOS EVENTOS</p>
+                    <p className="titulo">CURSOS / EVENTOS</p>
                     <SliderEventos></SliderEventos>
                 </main>
                 <main className="slider-comunicados">
-                    <p className="titulo">NOTICIAS</p>
-                    <SliderNoticias></SliderNoticias>
+                    <p className="titulo">CONVENIOS</p>
+                    <SliderConvenios></SliderConvenios>
                 </main>
             </div>
 
@@ -196,8 +196,9 @@ function SliderComunicados() {
     );
 }
 
+////////
 
-function SliderNoticias() {
+function SliderConvenios() {
   
     // State for Active index
     const [activeIndex, setActiveIndex] = useState(0);
@@ -209,7 +210,7 @@ function SliderNoticias() {
 
     useEffect(()=>{
 
-    fetch(`${process.env.REACT_APP_URL_API}noticias/read.php`)
+    fetch(`${process.env.REACT_APP_URL_API}convenios/read.php`)
     .then((res) => res.json())
     .then(
         data=>setInformacion(data)
@@ -244,7 +245,7 @@ function SliderNoticias() {
                 onExited={() => setAnimating(false)}
                 onExiting={() => setAnimating(true)}
             >
-                <Link to="/comunicaciones/noticias">
+                <Link to="/convenios">
                     <img src={process.env.PUBLIC_URL+`/`+ c.imagen}  className="img-fluid" alt="" />
                 </Link>
             </CarouselItem>
@@ -266,6 +267,10 @@ function SliderNoticias() {
         
     );
 }
-   
+ 
+
+
+////////////
+
   export default Publicaciones;
   
