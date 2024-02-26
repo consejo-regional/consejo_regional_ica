@@ -29,7 +29,10 @@ import QuienesSomos from './paginas/nosotros/quienesSomos';
 import DocumentoNormativo from './paginas/nosotros/documentoNormativo';
 import ConsejosDistritales from './paginas/nosotros/consejosDistritales';
 import PastDecanos from './paginas/nosotros/pastDecanos';
-import OpinionPronunciamiento from './paginas/comunicaciones/OpinionPronunciamiento';
+
+
+
+import OpinionPronunciamiento from './paginas/comunicaciones/opinionPronunciamiento'
 import Condolencias from './paginas/comunicaciones/condolencias';
 import GaleriaFotos from './paginas/galeria/galeriaFotos';
 import GaleriaVideos from './paginas/galeria/galeriaVideos';

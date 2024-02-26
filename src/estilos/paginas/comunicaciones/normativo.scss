@@ -1,81 +1,73 @@
-// *{
-//     font-family:sans-serif;
-//   }
-  
+
+// .imagen-grid-contenidos-contenidos{
+//   border: 1px solid red;
+// }
+
+.contenedor-descarga{
+  // border: 1px solid red;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
 
 .contenedor-table{
 display: flex;
+flex-direction: column;
 justify-content: center;
 align-items: center;
 }
-  
-  table tr td,th:not(.th-head){
-    border-right: 1px solid var(--colorBorde);
-  }
-  
-  table,tfoot{
-    border:1px solid var(--colorBorde);
-    word-break: break-all;
-  
-  }
-  
-  table:nth-of-type(1) caption {
-    font-weight: 800;
-  }
-  
-  
-caption{
-padding-bottom: 1rem;
-font-weight: normal;
 
+
+table {
+  border-collapse: collapse;
+  border-spacing:1rem 0.1rem;
+  table-layout:fixed;/*auto viene por defecto*/
+  width: 80%;
+  empty-cells: hide;
 }
 
-table:nth-of-type(1) caption {
-    font-weight: normal;
+thead{
+  color:white;
+  background:var(--colorHead) ;
 }
 
-
-  table {
-    border-collapse: collapse;
-    border-spacing:1rem 0.1rem;
-    table-layout:fixed;/*auto viene por defecto*/
-    width: 50%;
-    empty-cells: hide;
-  }
-  
-  thead{
-    color:white;
-    background:var(--colorHead) ;
-  }
-  thead th{
-    /* border: none; */
-  }
-  
-  table tbody tr:not(tfoot):nth-child(odd) {
-      background: var(--filaPar);
-  }
-  table tbody tr:nth-child(even) {
-      background: var(--filaImpar);
-  }
-  
-  tr:not(.tr-head):hover{
-    background:var(--hover);
-  }
-  td:hover{
-    background:var(--hover);
-  
-  }
-  
-  td{
+td{
   text-align: center;
-  }
+  align-items: center;
+  align-content: center;
+}
 
-  th{
-    text-align:center;
-    padding: .4rem;
-    font-weight: normal;
-  }
-  .letras{
-    text-align:center;
+th{
+  text-align:center;
+  padding: .4rem;
+  font-weight: normal;
+}
 
-  }
+//color de lineas de columnas a partir de la segunda linea
+table tr td,th:not(.th-head){
+  border-right: 1px solid var(--colorBorde);
+}
+
+
+//color y bordes de tabla
+table,tfoot{
+  border:1px solid var(--colorBorde);
+  word-break: break-all;
+
+}
+///colores de fila impar y
+table tbody tr:not(tfoot):nth-child(odd) {
+    background: var(--filaPar);
+}
+table tbody tr:nth-child(even) {
+    background: var(--filaImpar);
+}
+ 
+table tr:not(th ,thead):hover{
+   background:var(--hover);
+ 
+}
+  
+
+  

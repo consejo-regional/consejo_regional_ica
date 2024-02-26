@@ -40,7 +40,7 @@
     //estilos de tablas
     --colorHead:rgb(139, 103, 143);
     --filaPar:#fcfcfc;
-    --filaImpar:#c3cdff;
+    --filaImpar:rgba(167, 126, 171, 0.388);
     --colorBorde:#c2c2c4;
     --hover:rgb(236, 236, 236);
     --fondo:rgb(255, 255, 255);
@@ -65,7 +65,7 @@ body.dark{
     //estilos de tablas
     --colorHead:rgb(139, 103, 143);
     --filaPar:#fcfcfc;
-    --filaImpar:#c3cdff;
+    --filaImpar:rgb(117, 107, 118);
     --colorBorde:#c2c2c4;
     --hover:rgb(236, 236, 236);
     --fondo:rgb(84, 84, 84);
@@ -74,7 +74,7 @@ body.dark{
      --contenido:1rem;
 }
 
-* :not(.vertical-timeline-element,svg,span,div,h3,h5,p,img,h1,ol,a,nav,ul,svg,section)  {
+* :not(table,thead,td,tr,th,caption,.vertical-timeline-element,svg,span,div,h3,h5,p,img,h1,ol,a,nav,ul,svg,section)  {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -185,6 +185,8 @@ $puntosQuiebre:(
 @import "./paginas/nosotros/documentoNormativo.scss";
 
 @import "./paginas/servicios/serviciosGrig.scss";
+
+@import "./paginas/comunicaciones/flotante.scss";
 
 
 

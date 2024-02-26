@@ -1,4 +1,4 @@
-import React from 'react'
+import React ,{useRef}  from 'react'
 import { useEffect,useState } from "react";
 import { ProgressBar } from  'react-loader-spinner'
 import { Wave } from "react-animated-text";
@@ -12,7 +12,24 @@ function ScrollToTopOnMount() {
 }
 
 
-const Condolencias = ()=> {
+
+const OpinionPronunciamiento = ()=> {
+
+    const [mostrarHTML, setMostrarHTML] = React.useState(false);
+    const [parametro, setParametro] = React.useState('');
+
+    const botonEsconderFlotanteOpinion=useRef()
+
+    const clickFlotanteEsconder=()=>{
+        const BotonEsconder_1=botonEsconderFlotanteOpinion.current
+        BotonEsconder_1.classList.add('esconder_1')
+        setMostrarHTML(false);
+    }
+
+    const clickFlotante = (param) => {
+        setParametro(param);
+        setMostrarHTML(true);
+      };
 
     const[informacion,setInformacion]=useState()
     useEffect(()=>{
@@ -46,7 +63,9 @@ const Condolencias = ()=> {
                     ?
                     informacion.map(c=>(
                         <div className="contenedor_promunciamiento_cart">
-                            <img alt="" src={process.env.PUBLIC_URL + "/" + c.ruta}></img>
+
+                            <img alt="" src={process.env.PUBLIC_URL + "/" + c.ruta } onClick={() => clickFlotante(c.ruta)} ></img>
+
                         </div>
                       ))
                     :
@@ -65,10 +84,18 @@ const Condolencias = ()=> {
                   }  
             </div> 
         </div>
+        {mostrarHTML && (
+        <div className="Flotante_contenedor" ref={botonEsconderFlotanteOpinion}>
+            <div className="Flotante_tarjeta">
+                <div className="anuncios_banner_boton_1" onClick={clickFlotanteEsconder} ></div> 
+                <img className={`Flotante_imagen`} alt="" src={process.env.PUBLIC_URL + "/" + parametro }  ></img>
+            </div>
+        </div>
+        )}
         </>   
       )  
   }
   
   
-  export default Condolencias;
+  export default OpinionPronunciamiento;
   

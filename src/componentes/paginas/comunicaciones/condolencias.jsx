@@ -1,4 +1,4 @@
-import React from 'react'
+import React ,{useRef}  from 'react'
 import { useEffect,useState } from "react";
 import { ProgressBar } from  'react-loader-spinner'
 import { Wave } from "react-animated-text";
@@ -11,6 +11,24 @@ function ScrollToTopOnMount() {
     return null;
   }
 const Condolencias = ()=> {
+
+    const [mostrarHTML, setMostrarHTML] = React.useState(false);
+    const [parametro, setParametro] = React.useState('');
+
+    const botonEsconderFlotanteCondolencias=useRef()
+
+    const clickFlotanteEsconder=()=>{
+        const BotonEsconder_1=botonEsconderFlotanteCondolencias.current
+        BotonEsconder_1.classList.add('esconder_1')
+        setMostrarHTML(false);
+    }
+
+    const clickFlotante = (param) => {
+        setParametro(param);
+        setMostrarHTML(true);
+      };
+
+
     const[informacion,setInformacion]=useState()
     useEffect(()=>{
         fetch(`${process.env.REACT_APP_URL_API}condolencias/read.php`)
@@ -45,7 +63,7 @@ const Condolencias = ()=> {
                     ?
                     informacion.map(c=>(
                         <div className="contenedor_condolencia_cart">
-                            <img alt="" src={process.env.PUBLIC_URL + "/" + c.ruta}></img>
+                            <img alt="" src={process.env.PUBLIC_URL + "/" + c.ruta } onClick={() => clickFlotante(c.ruta)} ></img>
                         </div>
                       ))
                     :
@@ -64,6 +82,14 @@ const Condolencias = ()=> {
                   }  
             </div>
         </div>
+        {mostrarHTML && (
+        <div className="Flotante_contenedor" ref={botonEsconderFlotanteCondolencias}>
+            <div className="Flotante_tarjeta">
+                <div className="anuncios_banner_boton_1" onClick={clickFlotanteEsconder} ></div> 
+                <img className={`Flotante_imagen`} alt="" src={process.env.PUBLIC_URL + "/" + parametro }  ></img>
+            </div>
+        </div>
+        )}
         </>   
       )  
   }
