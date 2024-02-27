@@ -54,7 +54,7 @@ function ScrollToTopOnMount() {
                     informacion
                     ?
                     informacion.map(c=>(
-                      <ConveniosItem  key={c.id} id={c.id} imagen={c.imagen} titulo={c.titulo} fecha={c.fecha} tipo={c.tipo} estado={c.estado} ></ConveniosItem>
+                      <ConveniosItem  key={c.id} id={c.id} imagen={c.imagen} titulo={c.description} fecha={c.fecha} tipo={c.tipo} estado={c.estado} ></ConveniosItem>
                       ))
                     :
                     <div  className="contenedor_loader_central_contenido">
@@ -88,7 +88,8 @@ function ScrollToTopOnMount() {
                   <div className="colors">{tipo}</div>
                   <div className="page-descripccion">{titulo}</div>
                   <div className="page-descripccion">{fecha}</div>
-                  <div className="page-estado">{estado}</div>
+                  <div className="page-descripccion">{estado}</div>
+                  <div className="page-estado">VER MAS</div>
 
                 </div>
               </Link>

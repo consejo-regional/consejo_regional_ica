@@ -46,7 +46,7 @@ import {useEffect,useState} from "react"
           return(
             <>
             <div className="detalle-grid">
-                <h2>NOTICIAS</h2>
+                <h2>NUESTROS CONVENIOS</h2>
                 <div className="detalle-grid-contenido" >
                 <div className="detalle-cart-contenido">
                     <div className="detalle-cart-contenido-titulo">{description}</div>

@@ -26,7 +26,7 @@ const Biemvenida = ()=> {
                 </div>
 
             </div>
-        <div className="datos">
+        <div className=".conteiner_biemvenida">
      
           <div className="container-descripccion-colegio">
           {/* <h4>{contenido.titulo}</h4> */}

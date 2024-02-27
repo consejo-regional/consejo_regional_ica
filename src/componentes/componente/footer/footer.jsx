@@ -49,9 +49,7 @@ const Footer = ()=> {
                             barColor = '#B7B7B7'
                         />
                     </div>
-                }
-               
-
+            }
             </div>
         </>
       )  

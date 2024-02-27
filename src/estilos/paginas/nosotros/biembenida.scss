@@ -1,4 +1,25 @@
 
+.conteiner_biemvenida{
+    // margin-top:12rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+     @include rwd(tablet){
+      
+     }
+ 
+     @include rwd(celular){
+         display: flex;
+         flex-direction: column;
+         justify-content: center;
+         align-items: center;
+         padding-left: 0;
+     }
+ 
+ }
+
+
 .bienvenida_decano{
     height: 15rem;
     width: 15rem;
@@ -14,3 +35,4 @@
     font-size:var(--titulos);
     color: var(--moradoLogo);
 }
+
