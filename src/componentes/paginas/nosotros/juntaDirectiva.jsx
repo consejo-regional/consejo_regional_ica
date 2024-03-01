@@ -1,51 +1,56 @@
 import React from 'react'
-
+import {useEffect,useState} from "react"
 
 const JuntaDirectiva = ()=> {
 
-    var contenido = {
-        titulo: 'JUNTA DIRECTIVA',
-        descripccion: 'La gestión para el periodo 2022-2024 está liderada por el Dr. Luis Felipe Muñante Aparcana, Decano del Consejo Regional de Ica del Colegio Médico del Peru y su Junta Directiva está conformada por un grupo de médicos profesionales de gran trayectoria entre académicos y gremiales.'
-    }
+
+    const[informacion,setInformacion]=useState([])
+    useEffect(()=>{
+        fetch( `${process.env.REACT_APP_URL_API}junta_directiva/read.php`)
+        .then((res) => res.json())
+        .then(
+            // data=>console.log(data)
+            data=>setInformacion(data)
+        );
+    },[])
+
+
+
+    console.log( typeof(informacion[0].decano.nombre))
       return(
         
         <>
         <div className="datos">
      
-        <h4>{contenido.titulo}</h4>
+        <h4>DIRECTIVA</h4>
         <div className="conteiner-datos">
             <h4></h4>
-            <p className="contenido_cart_descripccion">{contenido.descripccion}</p> 
+            <p className="contenido_cart_descripccion">La gestión para el periodo 2022-2024 está liderada por el Dr. Luis Felipe Muñante Aparcana, Decano del Consejo Regional de Ica del Colegio Médico del Peru y su Junta Directiva está conformada por un grupo de médicos profesionales de gran trayectoria entre académicos y gremiales.</p> 
             <div className="contenido-izquierda">
                
             </div>
 
         </div>
         <div className="contenedor_junta_grid">
-              <SericiosItem imagen={process.env.PUBLIC_URL + `/directivos/DECANO.png`} nombre="Dr. Luis Felipe Muñante Aparcana." description="Decano"></SericiosItem>
+              <ItemAutoridad imagen={process.env.PUBLIC_URL + informacion[0].decano.foto} nombre={informacion[0].decano.nombre} description="Decano"></ItemAutoridad>
 
               
           </div>
          <div className="contenedor_junta1_grid">
-
-              <SericiosItem imagen={process.env.PUBLIC_URL + `/directivos/DSC_7045.png`} nombre="Dra. FLor Elizabeth Aviles Bonifaz" description="Tesorero"></SericiosItem>
-              <SericiosItem imagen={process.env.PUBLIC_URL + `/directivos/DSC_7052.png`} nombre="Dr. ALexander Humberto Pecho Peche" description="Secretario"></SericiosItem>
+              <ItemAutoridad imagen={process.env.PUBLIC_URL +informacion[0].tesorero.foto} nombre={informacion[0].tesorero.nombre} description="Tesorero"></ItemAutoridad>
+              <ItemAutoridad imagen={process.env.PUBLIC_URL + informacion[0].secretario.foto} nombre={informacion[0].secretario.nombre} description="Secretario"></ItemAutoridad>
               
           </div>
           <div className="contenedor_junta1_grid">
-              <SericiosItem imagen={process.env.PUBLIC_URL + `/imagenes/hombre.png`} nombre="Dr.Audias Josué Pérez Aguirre" description="Vocal I"></SericiosItem>
-              <SericiosItem imagen={process.env.PUBLIC_URL + `/directivos/DSC_7042.png`} nombre="Dra. Flor de Maria Mejia Escate" description="Vocal II"></SericiosItem>
+              <ItemAutoridad imagen={process.env.PUBLIC_URL + informacion[0].vocal_01.foto} nombre={informacion[0].vocal_01.nombre} description="Vocal I"></ItemAutoridad>
+              <ItemAutoridad imagen={process.env.PUBLIC_URL + informacion[0].vocal_02.foto} nombre={informacion[0].vocal_02.nombre} description="Vocal II"></ItemAutoridad>
               
           </div>
           <div className="contenedor_junta1_grid">
-              <SericiosItem imagen={process.env.PUBLIC_URL + `/directivos/DSC_7035.png`} nombre="Dr. Roberto Augusto Laos Olaechea" description="Accesitario I"></SericiosItem>
-              <SericiosItem imagen={process.env.PUBLIC_URL + `/directivos/DSC_7048.png`} nombre="Dr. Carlos Fernando Cagna Puppi" description="Accesitario II"></SericiosItem>
+              <ItemAutoridad imagen={process.env.PUBLIC_URL + informacion[0].accesitario_01.foto} nombre={informacion[0].accesitario_01.nombre} description="Accesitario I"></ItemAutoridad>
+              <ItemAutoridad imagen={process.env.PUBLIC_URL + informacion[0].accesitario_02.foto} nombre={informacion[0].accesitario_02.nombre}description="Accesitario II"></ItemAutoridad>
       
           </div>
-
-
-          
-
         </div>
         
         </>   
@@ -53,7 +58,7 @@ const JuntaDirectiva = ()=> {
   }
 
 
-  const SericiosItem = ({imagen,nombre,description})=> {
+  const ItemAutoridad = ({imagen,nombre,description})=> {
     return(
       <>
       <div className="contenedor_servicios_item">
