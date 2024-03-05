@@ -1,3 +1,25 @@
+
+.datos_directiva{
+    // margin-top:12rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+     @include rwd(tablet){
+      
+     }
+ 
+     @include rwd(celular){
+         display: flex;
+         flex-direction: column;
+         justify-content: center;
+         align-items: center;
+         padding-left: 0;
+     }
+ 
+ }
+
+
 .imagen{
     //border: 1px solid red;
     width:10rem;
