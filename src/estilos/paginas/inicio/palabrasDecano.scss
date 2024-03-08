@@ -1,27 +1,40 @@
 .container-palabras-decano{
-display: flex;
-justify-content: center;
-align-items: center;
-// border: 1px solid red;
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+    // border: 1px solid red;
+    height: auto;
+
+    @include rwd(tablet){
+        flex-direction: column;
+    }
+
+    @include rwd(celular){
+        
+    }
 }
 
 .container-palabras-decano-contenido{
+    align-self: stretch;
     // border: 1px solid blue;
 
     position: relative;
     display: grid;
-    grid-template-columns: repeat(2,1fr);
-    width: 90%;
-    height:90%;
+    // grid-auto-flow: revert;
+    grid-template-columns: repeat(1fr,1fr);
+    max-width: 80%;
+    height:auto;
     color: var(--grisLogo);
     text-align:center;
     border-radius:.5rem;
     background: var(--blancoLogo);
     box-shadow: 83.205px 124.808px 80px rgba(61, 60, 60, 0.019376), 48.9911px 73.4867px 41.728px rgba(61, 60, 60, 0.030688), 25.1612px 37.7418px 19.584px rgba(61, 60, 60, 0.039312), 10.1177px 15.1766px 8.576px rgba(61, 60, 60, 0.050624), 2.26318px 3.39477px 3.712px rgba(61, 60, 60, 0.07);
     margin:1rem;
+    // padding: 1rem;
 
     @include rwd(tablet){
-        width: 95%;
+        width: 100%;
         grid-template-columns: repeat(1,1fr);
     }
     
@@ -36,7 +49,7 @@ align-items: center;
     z-index: 100;
     align-self: center;
     justify-self: center;
-    padding:0rem 1.5rem;
+    // padding:0rem 1.5rem;
     font-family: 'Niconne';
     line-height: 130%;
     font-weight: 400;
@@ -44,11 +57,37 @@ align-items: center;
     flex-grow: 1;
 
     @include rwd(tablet){
-        padding:0rem 1rem;
+        // padding:0rem 1rem;
     }
     @include rwd(celular){
     
     }
+}
+
+
+
+
+.react-player{
+    // border: 1px solid blue;
+      min-height: 40vh;
+      
+
+    @include rwd(tablet){
+        min-width: 80vw;
+        max-height: 50vh;
+        margin: auto;
+        padding: auto;
+    }
+    
+    @include rwd(celular){
+        // border: 1px solid pink;
+        // min-width: 40vw;
+        // min-height: 60vh;
+        // margin: auto;
+        // padding: auto;
+       
+    }
+    
 }
 
 .bienvenida_decano-palabras-imagen{
@@ -56,6 +95,6 @@ align-items: center;
 
     align-self: center;
     justify-self: center;
-    width: 60%;
+    // width: 60%;
 }
 
