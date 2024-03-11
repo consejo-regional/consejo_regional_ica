@@ -2,16 +2,25 @@
 .header{
     z-index: 1000;
     padding: 1rem 0 1rem 0;
-    position: sticky;
+    min-height: 12rem;
+    position: fixed;
     top: 0;
     left: 0;
     border-radius: 0.5rem;
-    background-color: var(--moradoDegradadoDevil);
-    // background-image: url(../../../../public/imagenes/estetoscopio.jpg);
+    background-color: transparent;
+    // background-image: url(../../../../public/imagenes/estetoscopio_1.png);
+    background-repeat: no-repeat;
+    background-position: bottom center;
+    background-size:cover;
     transition: background .5s ease-in-out;
     border-bottom: 1px solid var(--moradoLogo);
 
     @include rwd(1484px){
+        position: fixed;
+        min-height: 6rem;
+        background-repeat: no-repeat;
+        background-position: bottom center;
+        background-size:cover;
         padding: 0rem 0 0rem 0;
     }
     @include rwd(tablet){
@@ -20,7 +29,9 @@
 }
 
 .header-color{
-    background-color: var(--blancoBlurMenu);
+    background-color: var(--moradoBlur);
+    // background-image: url(../../../../public/imagenes/blur.png);
+
     border-bottom: 1px solid transparent;
 }
 

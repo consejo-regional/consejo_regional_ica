@@ -27,7 +27,7 @@ const NoticiasDestacadas=()=>{
 
   const[informacion,setInformacion]=useState([])
     useEffect(()=>{
-        fetch( `${process.env.REACT_APP_URL_API}noticias/read.php`)
+        fetch( `${process.env.REACT_APP_URL_API}noticias/read.php?limit=5`)
         .then((res) => res.json())
         .then(
             // data=>console.log(data)

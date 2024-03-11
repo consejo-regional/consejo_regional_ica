@@ -36,10 +36,10 @@
 .container-imagen-banner{
     // padding-top: 10%;
     width: 100%;
-    height: 12rem + 12rem;
+    height: 10rem + 10rem;
     background-image: url(../../../public/imagenes/estetoscopio.jpg);
     background-repeat: no-repeat;
-    background-position: center center;
+    background-position: top center;
     background-size:cover;
 
     display:flex;
@@ -49,7 +49,10 @@
     gap:.9rem;
 
     @include rwd(tablet){
-        height: 12rem;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size:cover;
+        max-height: 8rem;
     }
 
     @include rwd(celular){
@@ -71,25 +74,25 @@
     padding: 3rem;
 }
 
-.logo-banner{
-    width: 3.5rem; 
-    height:3.5rem;
-    background-color:var(--moradoLogo);
-    border-radius: 50%;
-    display:flex;
-    justify-content: center;
-    align-items: center;
-    .logo-banner-svg{
-        width: 40%;
-        height: 40%;
-        background-image: url(../../../public/iconos/temple.svg);
-        background-repeat: no-repeat;
-        background-position: center center;
-        background-size:contain;
+// .logo-banner{
+//     width: 3rem; 
+//     height:3rem;
+//     background-color:var(--moradoLogo);
+//     border-radius: 50%;
+//     display:flex;
+//     justify-content: center;
+//     align-items: center;
+//     .logo-banner-svg{
+//         width: 40%;
+//         height: 40%;
+//         background-image: url(../../../public/iconos/temple.svg);
+//         background-repeat: no-repeat;
+//         background-position: center center;
+//         background-size:contain;
        
-    }
+//     }
     
-}
+// }
 
 
 .titulo-contenido-banner{

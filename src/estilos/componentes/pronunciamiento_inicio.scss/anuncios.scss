@@ -9,8 +9,21 @@
     display:flex;
     justify-content: center;
     align-items: center;
-    
+}
 
+
+.contenedor_anuncios_1{
+    display:none;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(72, 72, 72, 0.35);
+    backdrop-filter: blur(4px);
+    position: fixed;
+    top: 0;
+    z-index: 1000000;
+    
 }
 
 .anuncios_banner{
@@ -45,7 +58,6 @@
     }
 }
 
-
 .anuncios_banner_horizontal{
     display: flex;
     justify-content:center;
@@ -71,6 +83,7 @@
 }
 
 .anuncios_banner_boton{
+        z-index: 1;
         display: block;
         background-color: var(--blancoLogo);
         width: 3.3rem;

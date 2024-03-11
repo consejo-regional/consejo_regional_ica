@@ -35,8 +35,8 @@ function ScrollToTopOnMount() {
                         <div className="logo-banner-svg"></div>
                     </div>
                     <div className="titulo-contenido-banner">
-                        <div className="titulo-contenido-banner-izquierda"></div>
-                        <div className="titulo-contenido-banner-derecha">NUESTROS CONVENIOS</div>
+                        <div className="titulo-contenido-banner-izquierda">NUESTROS</div>
+                        <div className="titulo-contenido-banner-derecha">CONVENIOS</div>
                     </div>
 
                 </div>
