@@ -1,6 +1,5 @@
 import React from 'react'
 import { ReactComponent as CuadernoIcono } from "../../../iconos/cuaderno.svg";
-import { ReactComponent as PeriodicoIcono } from "../../../iconos/periodico.svg";
 import { useEffect,useState } from "react";
 import {
     VerticalTimeline,

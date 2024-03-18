@@ -1,13 +1,11 @@
 
 .contenedor-page{
-    margin-top: 5em;
+    // margin-top: 5em;
    //border: 1px solid red;
 }
 .contenedor-page-titulo{
     display: flex;
     flex-direction: column;
-    // width: 100vw;
-    
     justify-content:center;
     align-items: center;
     margin: 2rem;
@@ -17,9 +15,13 @@
 .contenedor_page_grid{
     display: grid;
     grid-template-columns: 1fr 1fr;
-    //border: 1px solid red;
-    //height:60rem;
-    gap:.5rem;
+    gap: 2rem;
+    @include rwd(tablet){
+        grid-template-columns: 1fr;
+    }
+    @include rwd(celular){
+
+    }
 
 }
 
@@ -31,9 +33,15 @@
 
     .separador{
         width: 40vw;
-        height: 2px;
-        color: var(--grisLogo);
+        height: 1px;
+        background-color: var(--gris);
         // border: 1px solid blue;
+        @include rwd(tablet){
+            height: 2px;
+            width: 90vw;
+        }
+        @include rwd(celular){
+        }
 
     }
 }
@@ -46,64 +54,54 @@
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
-//     height:12rem;
     width: auto;
+    padding: auto;
     margin: 1rem;
     position:relative;
-    gap: 2rem;
+    gap: 1rem;
     @include rwd(tablet){
-       
-
-  
+        flex-direction: column;
     }
-
     @include rwd(celular){
-        //border: 10px solid rgb(50, 161, 6);
-
         margin: auto auto 1.5rem auto;
-        //margin-bottom: 1.5rem;
-
-        display: grid;
- 
-    
     }
     
 }
 
 .page{
-    //border: 1px solid red;
+    // border: 1px solid red;
      height: 10rem;
      width: 20rem;
      object-fit: cover;
      @include rwd(tablet){
          
-     }
- 
-     @include rwd(celular){
          height: 85%;
          width: 100%;
          margin-bottom: .5rem
+     }
+ 
+     @include rwd(celular){
   
      }
  }
 
 .imagen-page{
-   //border: 1px solid red;
+//    border: 1px solid red;
     height: 10rem;
     width: 20rem;
     object-fit: cover;
     @include rwd(tablet){
-        
-    }
+        height: 80%;
+        width: 80%;
+        margin-bottom: .5rem
 
+    }
     @include rwd(celular){
-        height: 85%;
+        height: 100%;
         width: 100%;
         margin-bottom: .5rem
- 
     }
 }
-
 
 .evento-page{
     margin-left: 2em;

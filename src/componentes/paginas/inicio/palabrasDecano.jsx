@@ -2,6 +2,8 @@ import React from 'react'
 import ReactPlayer from "react-player"
 
 import {useEffect,useState} from "react"
+import { ProgressBar } from  'react-loader-spinner'
+import { Wave } from "react-animated-text";
 
 const PalabrasDecano = ()=> {
 
@@ -10,7 +12,6 @@ const PalabrasDecano = ()=> {
         fetch( `${process.env.REACT_APP_URL_API}palabras_decano/read.php`)
         .then((res) => res.json())
         .then(
-            // data=>console.log(data)
             data=>setInformacion(data)
         );
     },[])
@@ -31,23 +32,40 @@ const PalabrasDecano = ()=> {
 
             <div className="container-palabras-decano">
                     {
-                        informacion.map(c=>(
-                            <div className="container-palabras-decano-contenido">
-                                <ReactPlayer
-                                    className='react-player'
-                                    url={c.url}
-                                    width='100%'
-                                    height='auto'
-                                    controls={true}
-                                />
-                                <div className="container-palabras-decano-blur">
-                                    <img src={process.env.PUBLIC_URL +'/imagenes/pngegg.png'} style={{width: 'auto', height: '5rem'}}></img>
-                                    <p  className="container-palabras-decano-blur">
-                                        {c.descripccion}
-                                    </p>
-                                </div>
+                       
+                    !informacion
+                    ?
+                    <div  className="contenedor_loader_central_contenido">
+                        <Wave text="CARGANDO CONTENIDO ..." effect="fadeOut" effectChange={2.0} /> 
+                        <ProgressBar
+                            height="80"
+                            width="80"
+                            ariaLabel="progress-bar-loading"
+                            wrapperStyle={{}}
+                            wrapperClass="progress-bar-wrapper"
+                            borderColor = '#D4D4D4'
+                            barColor = '#B7B7B7'
+                        />
+                    </div>
+                    :
+                    informacion.map(c=>(
+                        <div className="container-palabras-decano-contenido">
+                            <ReactPlayer
+                                className='react-player'
+                                url={c.url}
+                                width='100%'
+                                height='auto'
+                                controls={true}
+                            />
+                            <div >
+                                <img src={process.env.PUBLIC_URL +'/imagenes/pngegg.png'} style={{width: 'auto', height: '5rem'}}></img>
+                                <p  className="container-palabras-decano-texto">
+                                    {c.descripccion}
+                                </p>
                             </div>
-                        ))
+                        </div>
+                    ))
+                        
                     }
             </div>
         </>  

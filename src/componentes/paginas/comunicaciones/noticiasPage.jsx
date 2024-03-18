@@ -45,10 +45,6 @@ function ScrollToTopOnMount() {
 
 
           <div className="contenedor-page"  >
-          
-           <div className="contenedor_separador">
-              <hr className="separador"></hr> 
-            </div>
               <div className="contenedor_page_grid">
                   {
                     informacion

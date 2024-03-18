@@ -77,9 +77,9 @@ function SliderPrincipal() {
                         setActiveIndex(newIndex);
                     }} />
                 {carouselItemData}
-                <CarouselControl directionText="Prev"
+                <CarouselControl directionText=" "
                     direction="prev" onClickHandler={previousButton} />
-                <CarouselControl directionText="Next"
+                <CarouselControl directionText=" "
                     direction="next" onClickHandler={nextButton} />
             </Carousel>
         

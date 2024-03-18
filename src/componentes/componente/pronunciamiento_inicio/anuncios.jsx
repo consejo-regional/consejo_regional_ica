@@ -1,7 +1,6 @@
 import React,{useRef} from 'react'
 import {useEffect,useState} from "react"
 import { Triangle } from  'react-loader-spinner'
-// import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
 
 
 
@@ -15,7 +14,6 @@ const Anuncios = ()=> {
         fetch( `${process.env.REACT_APP_URL_API}pronunciamiento_inicio/read.php`)
         .then((res) => res.json())
         .then(
-            // data=>console.log(data)
             data=>setInformacion(data)
         );
     },[])
@@ -61,7 +59,7 @@ const Anuncios = ()=> {
                     </div>
                     ) :
                     (
-                        <a href={(informacion[0].enlace!=="")?informacion[0].enlace:null}>
+                        <a href={(informacion[0].enlace!=="")?informacion[0].enlace:null} target='_blank'>
                             <img alt='' className={(informacion[0].orientacion==='vertical')?'anuncios_banner_vertical':'anuncios_banner_horizontal'} src={process.env.PUBLIC_URL+`/`+ informacion[0].imagen}></img>
                         </a>
                

@@ -36,32 +36,20 @@ const Normativo = ()=> {
         </div>
 
 
-        <div className="contenedor-table">
-            <caption>DOCUMENTOS NORMATIVOS</caption>
-            <table>
-                <thead>
-                    <tr>
-                        <th class="th-head">NOMBRE</th>
-                        <th class="th-head">FECHA</th>
-                        <th class="th-head">DESCARGAR</th>
-                    </tr>
-                </thead>
-                <tbody>
-
+        <div className="container-descripccion-colegio">
+                <div className="grid-documentos">
                 {
                   informacion
                   ?
                     informacion.map(c=>(
-                    <tr>
-                        <td className="letras">{c.nombre}</td>
-                        <td>{c.fecha}</td>
-                        <td>
-                            <a className='contenedor-descarga' href={process.env.PUBLIC_URL+c.enlace}>
-                                <div className="imagen-grid-contenidos-contenidos"></div>
-                            </a>
-                        </td>
-                        
-                    </tr>
+                    <div className="grid-documentos-contenidos">
+                        <div>{c.nombre}</div>
+                        <div>{c.fecha} </div>
+                        <h5>Descargar</h5>
+                        <a href={process.env.PUBLIC_URL+c.enlace} target='_blank'>
+                            <div className="imagen-grid-contenidos-contenidos"></div>
+                        </a>
+                    </div>
                     ))   
                   : 
                     <div  className="contenedor_loader_central_contenido">
@@ -76,12 +64,22 @@ const Normativo = ()=> {
                             barColor = '#B7B7B7'
                         />
                     </div>
-            }      
-                </tbody>
-                <tfoot>
-                </tfoot>
-            </table>
-        </div>
+            }
+
+
+
+
+
+
+
+
+
+                    
+                </div>
+            </div>
+
+
+
         </>   
       )  
   }

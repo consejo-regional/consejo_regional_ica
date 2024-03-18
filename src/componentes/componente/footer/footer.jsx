@@ -6,7 +6,6 @@ import { Wave } from "react-animated-text";
 
 const Footer = ()=> {
 
-
     const[informacion,setInformacion]=useState([])
     useEffect(()=>{
         fetch( `${process.env.REACT_APP_URL_API}footer/read.php`)
@@ -55,6 +54,4 @@ const Footer = ()=> {
       )  
   }
 
-
-  
 export default Footer;

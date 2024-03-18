@@ -30,7 +30,6 @@ const NoticiasDestacadas=()=>{
         fetch( `${process.env.REACT_APP_URL_API}noticias/read.php?limit=5`)
         .then((res) => res.json())
         .then(
-            // data=>console.log(data)
             data=>setInformacion(data)
         );
     },[])
@@ -39,85 +38,74 @@ const NoticiasDestacadas=()=>{
 
   return(
   <>
-   <div className="contenedor-serviciosGrid-titulo">
-                <div className="contenedor-serviciosGrid-logo">
-                    <div className="logo-colegio-svg"></div>
-                </div>
-                <div className="contenedor-serviciosGrid-contenido">
-                    <div className="contenedor-serviciosGrid-contenido-conteiner">
-                        <div className="contenedor-serviciosGrid-contenido1">NOTICIAS</div>
-                        <div className="contenedor-serviciosGrid-contenido2">DESTACADAS</div>
+      <div className="contenedor-serviciosGrid-titulo">
+                    <div className="contenedor-serviciosGrid-logo">
+                        <div className="logo-colegio-svg"></div>
                     </div>
-                </div>
-    </div>
-
-    <div>
-      <VerticalTimeline
-        lineColor="rgb(189, 189, 189"
-      >
-        {informacion.map((element) => {
-          let esIconoPeriodico = element.icono === "periodico";
-          let showButton =
-            element.textoBoton !== undefined &&
-            element.textoBoton !== null &&
-            element.textoBoton !== "";
-
-          return (
-            element.esDestacado===1
-            ?
-            <VerticalTimelineElement
-            key={element.id}
-            date={element.fecha}
-            dateClassName="date"
-            iconStyle={esIconoPeriodico ? periodicoEstiloIcono :cuadernoEstiloIcono }
-            
-            icon={esIconoPeriodico ? <PeriodicoIcono /> : <CuadernoIcono />}
+                    <div className="contenedor-serviciosGrid-contenido">
+                        <div className="contenedor-serviciosGrid-contenido-conteiner">
+                            <div className="contenedor-serviciosGrid-contenido1">NOTICIAS</div>
+                            <div className="contenedor-serviciosGrid-contenido2">DESTACADAS</div>
+                        </div>
+                    </div>
+        </div>
+        <div>
+          <VerticalTimeline
+            lineColor="rgb(189, 189, 189"
+            layout="1-column-left"
           >
+            {informacion.map((element) => {
+              let esIconoPeriodico = element.icono === "periodico";
+              let showButton =
+                element.textoBoton !== undefined &&
+                element.textoBoton !== null &&
+                element.textoBoton !== "";
 
-            <div className="conteiner-destacado">
-               
-               <div className="conteiner-destacado-item">
-                <img className="imagen_noticias_timeline" src={process.env.PUBLIC_URL+`/` +  element.imagen} alt={''}></img>
-               </div>
-            
-               <div className="conteiner-destacado-item">
-                  <h4 className="contenido_destacado_titulo">{element.titulo}</h4>
-                  <div className="contenido_destacado_descripccion" >{element.description}</div>
-                  <div>{element.localizacion}</div>
-                  {showButton && (
-                    <div className="conteiner-destacado-boton" >
+              return (
+                element.esDestacado===1
+                ?
+                <VerticalTimelineElement
+                key={element.id}
+                date={element.fecha}
+                dateClassName="date"
+                iconStyle={esIconoPeriodico ? periodicoEstiloIcono :cuadernoEstiloIcono }
+                
+                icon={esIconoPeriodico ? <PeriodicoIcono /> : <CuadernoIcono />}
+              >
 
-                      <Link 
-                      target={"_top"}
-                      className={`button ${
-                      esIconoPeriodico ? "workButton" : "schoolButton"
-                      }`}
-                      to={`/noticias/${element.id}`} 
-                      >
-                        {element.textoBoton}
-                      </Link>
-                    </div>
-                  )}
-               </div>
-
-            </div>
-
-                 
-          </VerticalTimelineElement>
-            :
-           null
-          );
-        })
-        
-        
-        }
-      </VerticalTimeline>
-    </div>
-
-
-
-
-
+                <div className="conteiner-destacado">
+                  
+                  <div className="conteiner-destacado-item">
+                    <img className="imagen_noticias_timeline" src={process.env.PUBLIC_URL+`/` +  element.imagen} alt={''}></img>
+                  </div>
+                
+                  <div className="conteiner-destacado-item">
+                      <h4 className="contenido_destacado_titulo">{element.titulo}</h4>
+                      <div className="contenido_destacado_descripccion" >{element.description}</div>
+                      <div>{element.localizacion}</div>
+                      {showButton && (
+                        <div className="conteiner-destacado-boton" >
+                          <Link 
+                          target={"_top"}
+                          className={`button ${
+                          esIconoPeriodico ? "workButton" : "schoolButton"
+                          }`}
+                          to={`/noticias/${element.id}`} 
+                          >
+                            {element.textoBoton}
+                          </Link>
+                        </div>
+                      )}
+                  </div>
+                </div>
+              </VerticalTimelineElement>
+                :
+              null
+              );
+            })
+            }
+          </VerticalTimeline>
+        </div>
     </>
   )
 }

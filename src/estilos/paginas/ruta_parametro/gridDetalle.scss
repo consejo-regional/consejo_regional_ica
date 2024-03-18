@@ -6,6 +6,11 @@
     align-items: center;
     flex-direction: column;
     gap: 1.5rem;
+    @include rwd(tablet){
+    }
+    @include rwd(celular){
+        margin-top:3rem;
+    }
 
 }
 .detalle-grid-contenido{

@@ -115,9 +115,9 @@ const Publicaciones = ()=> {
             className="carousel-fade carrusuelComunicados"
                 activeIndex={activeIndex}>
                 {carouselItemData}
-                <CarouselControl directionText="Prev"
+                <CarouselControl directionText=" "
                     direction="prev" onClickHandler={previousButton} />
-                <CarouselControl directionText="Next"
+                <CarouselControl directionText=" "
                     direction="next" onClickHandler={nextButton} />
             </Carousel>
         
@@ -187,9 +187,9 @@ function SliderComunicados() {
             className="carousel-fade carrusuelComunicados"
                 activeIndex={activeIndex}>
                 {carouselItemData}
-                <CarouselControl directionText="Prev"
+                <CarouselControl directionText=" "
                     direction="prev" onClickHandler={previousButton} />
-                <CarouselControl directionText="Next"
+                <CarouselControl directionText=" "
                     direction="next" onClickHandler={nextButton} />
             </Carousel>
         
@@ -259,9 +259,9 @@ function SliderConvenios() {
             className="carousel-fade carrusuelComunicados"
                 activeIndex={activeIndex}>
                 {carouselItemData}
-                <CarouselControl directionText="Prev"
+                <CarouselControl directionText=" "
                     direction="prev" onClickHandler={previousButton} />
-                <CarouselControl directionText="Next"
+                <CarouselControl directionText=" "
                     direction="next" onClickHandler={nextButton} />
             </Carousel>
         

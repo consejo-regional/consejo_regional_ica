@@ -23,14 +23,12 @@ const MenuItem = ()=> {
     const togle_animation=useRef()
     const boton_desplegar_submenu_nosotros=useRef()
     const boton_desplegar_submenu_tramites=useRef()
-    const boton_desplegar_submenu_servicios=useRef()
     const boton_desplegar_submenu_comunicaciones=useRef()
     const boton_desplegar_submenu_galeria=useRef()
 
     const [isActive, setActive] = useState({
         "nosotros":false,
         "tramites":false,
-        "servicios":false,
         "comunicaciones":false,
         "galeria":false
     });
@@ -68,11 +66,7 @@ const MenuItem = ()=> {
             Boton_desplegar_submenu_tramites.classList.toggle("active")
             setActive({...isActive,tramites:!isActive.tramites})
         }
-        if(data=="servicios"){
-            const Boton_desplegar_submenu_servicios=boton_desplegar_submenu_servicios.current
-            Boton_desplegar_submenu_servicios.classList.toggle("active")
-            setActive({...isActive,servicios:!isActive.servicios})
-        }
+        
         if(data=="comunicaciones"){
             const Boton_desplegar_submenu_comunicaciones=boton_desplegar_submenu_comunicaciones.current
             Boton_desplegar_submenu_comunicaciones.classList.toggle("active")
@@ -164,10 +158,11 @@ const MenuItem = ()=> {
                     <nav className="conteiner-elementos-menu" ref={boton}>
 
                         <ul className="menu">
-
                             <li className=" item-logo">
                                 <img src={process.env.PUBLIC_URL + `imagenes/logo.png`} alt="" />
                             </li>
+
+                            
                             <li className="item">
                                 <Link to="/inicio"  onClick={click}  className="link">INICIO </Link>
                             </li>
@@ -190,17 +185,9 @@ const MenuItem = ()=> {
                                     <li className="item-submenu">
                                         <Link to="/nosotros/pastDecanos" onClick={click} className="link linkSubmenu">PAST DECANOS</Link>
                                     </li>
-                                    {/* <li className="item">
-                                        <Link to="/nosotros/juntaDirectiva" onClick={click} className="link linkSubmenu">JUNTA DIRECTIVA</Link>
-                                        <ul className="menuu submenu">
-                                            <li className="item"><Link to="" className="link">subsubmenu1</Link></li>
-                                            <li className="item"><Link to="" className="link">subsubmenu1</Link></li>
-                                            <li className="item"><Link to="" className="link">sub submenu1</Link></li>
-                                            <li className="item"><Link to="" className="link">subsubmenu1</Link></li>
-                                        </ul>
+                                    <li className="item-submenu">
+                                        <Link to="/comite" onClick={click} className="link linkSubmenu">DIVERSOS COMITES</Link>
                                     </li>
-                                    */}
-                                
                                     <li className="item-submenu">
                                         <a  href={process.env.PUBLIC_URL+"documentos/POLITICA-DE-CALIDAD-Y-CERTIFICADO.pdf"} target="_blank" onClick={click}  rel="noopener noreferrer" className="link linkSubmenu">POLITICA DE CALIDAD</a>
                                     </li>
@@ -213,46 +200,11 @@ const MenuItem = ()=> {
                                     <li className="item-submenu">
                                         <Link to="/tramites/constanciahabilidad" onClick={click} className="link linkSubmenu">CONSTANCIA DE HABILIDAD</Link>
                                     </li>
-                                
-                                    <li className="item-submenu">
-                                        <a rel="noreferrer" href="https://200.48.13.39/prematricula/index.php" target="_blank" onClick={click} className="link linkSubmenu">INICIAR COLEGIATURA</a>
-                                    </li>
-                                    <li className="item-submenu">
-                                        <a  rel="noreferrer" href="https://www.cmp.org.pe/registro-de-especialidad-o-sub-especialidad/"  target="_blank" onClick={click} className="link linkSubmenu">REGISTRO DE ESPECIALIDAD </a>
-                                    </li>
-                                    <li className="item-submenu">
-                                        <a rel="noreferrer" href="https://www.cmp.org.pe/proceso-para-tramite-de-carne-de-colegiado/" target="_blank" onClick={click} className="link linkSubmenu">CARNET DE COLEGIADO</a>
-                                    </li>
-                                    <li className="item-submenu">
-                                        <a rel="noreferrer" href="https://www.zona.cmp.org.pe/index.php/ayuda/101-actualizacion-de-datos" target="_blank" onClick={click} className="link linkSubmenu">ACTUALIZACION DE DATOS</a>
-                                    </li>
-                                
                                 </ul>
                             </li>
-                            <li className="item" ref={boton_desplegar_submenu_servicios} >
+                            <li className="item">
                                 <Link to="/servicios"    className="link">SERVICIOS</Link>
-                                <MenuComponente variable={isActive.servicios} data="servicios"></MenuComponente>
-
-                                <ul className="submenu">
-                                    
-                                    <li className="item-submenu">
-                                        <a rel="noreferrer" href="https://www.cmp.org.pe/sistcere-2/"  target="_blank" onClick={click} className="link linkSubmenu">SISTCERE</a>
-                                    </li>
-                                    <li className="item-submenu">
-                                        <a rel="noreferrer" href="https://www.cmp.org.pe/semefa/"  target="_blank" onClick={click} className="link linkSubmenu">SEMEFA</a>
-                                    </li>
-                                    <li className="item-submenu">
-                                        <a rel="noreferrer" href="https://www.cmp.org.pe/defensoria-del-medico/"  target="_blank" onClick={click} className="link linkSubmenu">FOSEMED</a>
-                                    </li>
-                                    <li className="item-submenu">
-                                        <a rel="noreferrer" href="https://www.cmp.org.pe/fosemed/"  target="_blank" onClick={click} className="link linkSubmenu">DEFENSORIA AL MEDICO</a>
-                                    </li>
-                                    <li className="item-submenu">
-                                        <a rel="noreferrer" href="https://www.cmp.org.pe/conoce-a-tu-medico/"  target="_blank" onClick={click} className="link linkSubmenu">CONOCE A TU MEDICO</a>
-                                    </li>
-                                    
-                                </ul>
-                                </li>
+                            </li>
                             <li className="item" ref={boton_desplegar_submenu_comunicaciones}>
                                 <Link to="/comunicaciones"   className="link">COMUNICACIONES</Link>
                                 <MenuComponente variable={isActive.comunicaciones} data="comunicaciones"></MenuComponente>
@@ -283,9 +235,6 @@ const MenuItem = ()=> {
                             </li>
                             <li className="item">
                                 <Link to="/eventos"    className="link">EVENTOS</Link>
-                            </li>
-                            <li className="item">
-                                <Link to="/comite"  onClick={click}  className="link">COMITES</Link>
                             </li>
                             <li className="item" ref={boton_desplegar_submenu_galeria}>
                                 <Link to="/galeriaVideos"  onClick={click}  className="link">GALERIA</Link>

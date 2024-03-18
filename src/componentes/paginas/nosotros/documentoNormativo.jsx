@@ -24,6 +24,7 @@ const DocumentoNormativo = ()=> {
                 <p>Siendo la colegiación un requisito indispensable, el CMP incorpora obligatoriamente a todos los médico-cirujanos que se encuentren legalmente aptos para ejercer la profesión.</p>
                 <p>El CMP tiene como misión fomentar el bienestar social y el trabajo decente de médicos y médicas, promover una reforma por el derecho a la salud y el acceso universal a la seguridad social, garantizar una formación y ejercicio profesional científica, humanista, basada en los principios ético-deontológicos de la profesión.</p>
             </div>
+            
             <div className="container-descripccion-colegio">
                 <div className="grid-documentos">
                     <div className="grid-documentos-contenidos">
