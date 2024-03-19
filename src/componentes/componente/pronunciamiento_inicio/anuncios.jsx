@@ -59,7 +59,7 @@ const Anuncios = ()=> {
                     </div>
                     ) :
                     (
-                        <a href={(informacion[0].enlace!=="")?informacion[0].enlace:null} target='_blank'>
+                        <a href={(informacion[0].enlace!=="")?informacion[0].enlace:null} target='_blank' rel='noreferrer'>
                             <img alt='' className={(informacion[0].orientacion==='vertical')?'anuncios_banner_vertical':'anuncios_banner_horizontal'} src={process.env.PUBLIC_URL+`/`+ informacion[0].imagen}></img>
                         </a>
                

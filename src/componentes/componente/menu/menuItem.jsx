@@ -56,24 +56,24 @@ const MenuItem = ()=> {
     }
 
     const click_deplegar_menu=(data)=>{
-        if(data=="nosotros"){
+        if(data==="nosotros"){
             const Boton_desplegar_submenu_nosotros=boton_desplegar_submenu_nosotros.current
             Boton_desplegar_submenu_nosotros.classList.toggle("active")
              setActive({...isActive,nosotros:!isActive.nosotros})
         }
-        if(data=="tramites"){
+        if(data==="tramites"){
             const Boton_desplegar_submenu_tramites=boton_desplegar_submenu_tramites.current
             Boton_desplegar_submenu_tramites.classList.toggle("active")
             setActive({...isActive,tramites:!isActive.tramites})
         }
         
-        if(data=="comunicaciones"){
+        if(data==="comunicaciones"){
             const Boton_desplegar_submenu_comunicaciones=boton_desplegar_submenu_comunicaciones.current
             Boton_desplegar_submenu_comunicaciones.classList.toggle("active")
             setActive({...isActive,comunicaciones:!isActive.comunicaciones})
         }
     
-        if(data=="galeria"){
+        if(data==="galeria"){
             const Boton_desplegar_submenu_galeria=boton_desplegar_submenu_galeria.current
             Boton_desplegar_submenu_galeria.classList.toggle("active")
             setActive({...isActive,galeria:!isActive.galeria})
