@@ -13,6 +13,20 @@ const MenuItem = ()=> {
 
     const [isDarkMode, setDarkMode] = React.useState(false);
 
+    const[informacion,setInformacion]=useState([])
+
+    useEffect(()=>{
+        fetch( `${process.env.REACT_APP_URL_API}menu/read.php`)
+
+        .then((res) => res.json())
+        .then(
+            // data=>console.log(data)
+            data=>setInformacion(data)
+        );
+    },[])
+
+
+
     const toggleDarkMode = (checked) => {
       setDarkMode(checked);
       console.log('hola mundo')
@@ -160,50 +174,70 @@ const MenuItem = ()=> {
                         <ul className="menu">
                             <li className=" item-logo">
                                 <img src={process.env.PUBLIC_URL + `imagenes/logo.png`} alt="" />
-                            </li>
-
-                            
+                            </li>                            
                             <li className="item">
-                                <Link to="/inicio"  onClick={click}  className="link">INICIO </Link>
+                                {
+                                    (informacion && informacion.length>=1)
+                                    ?
+                                    <Link to={informacion[0]["INICIO"][0].enlace} onClick={click}  className="link">{informacion[0]["INICIO"][0].nombre}</Link>
+                                    :
+                                    null
+                                }
                             </li>
                             <li className="item" ref={boton_desplegar_submenu_nosotros}   >
                                 <Link to="/nosotros"  onClick={click}  className="link">NOSOTROS </Link>
                                 <MenuComponente variable={isActive.nosotros} data="nosotros"></MenuComponente>
                                 <ul className="submenu" >
-                                    <li className="item-submenu">
-                                        <Link to="/nosotros/colegioMedico" onClick={click} className="link linkSubmenu">EL COLEGIO MEDICO</Link>
-                                    </li>
-                                    <li className="item-submenu">
-                                        <Link to="/nosotros/quienesSomos" onClick={click} className="link linkSubmenu">QUIENES SOMOS</Link>
-                                    </li>
-                                    <li className="item-submenu">
-                                        <Link to="/nosotros/documentoNormativo" onClick={click} className="link linkSubmenu">DOCUMENTO NORMATIVO</Link>
-                                    </li>
-                                    <li className="item-submenu">
-                                        <Link to="/nosotros/consejosDistritales" onClick={click} className="link linkSubmenu">CONSEJOS DISTRITALES</Link>
-                                    </li>
-                                    <li className="item-submenu">
-                                        <Link to="/nosotros/pastDecanos" onClick={click} className="link linkSubmenu">PAST DECANOS</Link>
-                                    </li>
-                                    <li className="item-submenu">
-                                        <Link to="/comite" onClick={click} className="link linkSubmenu">DIVERSOS COMITES</Link>
-                                    </li>
-                                    <li className="item-submenu">
-                                        <a  href={process.env.PUBLIC_URL+"documentos/POLITICA-DE-CALIDAD-Y-CERTIFICADO.pdf"} target="_blank" onClick={click}  rel="noopener noreferrer" className="link linkSubmenu">POLITICA DE CALIDAD</a>
-                                    </li>
+                                {
+                                    (informacion && informacion.length>=1)
+                                    ?
+                                    informacion[1]["NOSOTROS"].map(c=>(
+                                        <li className="item-submenu">
+                                            {
+                                            c.esDocumento==="SI"
+                                            ?
+                                            <a  href={process.env.PUBLIC_URL+ c.enlace} target="_blank" onClick={click}  rel="noopener noreferrer" className="link linkSubmenu">{c.nombre}</a>
+                                            :
+                                            <Link to={c.enlace} target={c.esExterno==="SI"?"_blank":null} onClick={click} className="link linkSubmenu">{c.nombre}</Link>
+                                            }
+                                        </li>
+                                        ))
+                                    :
+                                    null
+                                }
                                 </ul>
                             </li>
                             <li className="item" ref={boton_desplegar_submenu_tramites}>
                                 <Link to="/tramites"   className="link">TRAMITES</Link>
                                 <MenuComponente variable={isActive.tramites} data="tramites"></MenuComponente>
                                 <ul className="submenu">
-                                    <li className="item-submenu">
-                                        <Link to="/tramites/constanciahabilidad" onClick={click} className="link linkSubmenu">CONSTANCIA DE HABILIDAD</Link>
-                                    </li>
+                                {
+                                    (informacion && informacion.length>=1)
+                                    ?
+                                    informacion[2]["TRAMITES"].map(c=>(
+                                        <li className="item-submenu">
+                                            {
+                                            c.esDocumento==="SI"
+                                            ?
+                                            <a  href={process.env.PUBLIC_URL+ c.enlace} target="_blank" onClick={click}  rel="noopener noreferrer" className="link linkSubmenu">{c.nombre}</a>
+                                            :
+                                            <Link to={c.enlace} target={c.esExterno==="SI"?"_blank":null} onClick={click} className="link linkSubmenu">{c.nombre}</Link>
+                                            }
+                                        </li>
+                                        ))
+                                    :
+                                    null
+                                }
                                 </ul>
                             </li>
                             <li className="item">
-                                <Link to="/servicios"    className="link">SERVICIOS</Link>
+                                {
+                                    (informacion && informacion.length>=1)
+                                    ?
+                                    <Link to={informacion[3]["SERVICIOS"][0].enlace} onClick={click}  className="link">{informacion[3]["SERVICIOS"][0].nombre}</Link>
+                                    :
+                                    null
+                                }
                             </li>
                             <li className="item" ref={boton_desplegar_submenu_comunicaciones}>
                                 <Link to="/comunicaciones"   className="link">COMUNICACIONES</Link>
@@ -211,43 +245,60 @@ const MenuItem = ()=> {
 
 
                                 <ul className="submenu">
-
-                                    <li className="item-submenu">
-                                        <Link to="/comunicaciones/pronunciamiento" onClick={click} className="link linkSubmenu">OPINION Y PRONUNCIAMIENTO</Link>
-                                    </li>
-                                    <li className="item-submenu">
-                                        <Link to="/comunicaciones/condolencias" onClick={click} className="link linkSubmenu">CONDOLENCIAS       </Link>
-                                    </li>
-                                
-                                    <li className="item-submenu">
-                                        <Link to="/comunicaciones/noticias" onClick={click} className="link linkSubmenu">NOTICIAS                      </Link>
-                                    </li>
-                                    <li className="item-submenu">
-                                        <Link to="/comunicaciones/efemerides" onClick={click} className="link linkSubmenu">EFEMERIDES                     </Link>
-                                    </li>
-                                    <li className="item-submenu">
-                                        <Link to="/comunicaciones/normativo" onClick={click} className="link linkSubmenu">NORMATIVO                     </Link>
-                                    </li>
+                                {
+                                    (informacion && informacion.length>=1)
+                                    ?
+                                    informacion[4]["COMUNICACIONES"].map(c=>(
+                                        <li className="item-submenu">
+                                            {
+                                            c.esDocumento==="SI"
+                                            ?
+                                            <a  href={process.env.PUBLIC_URL+ c.enlace} target="_blank" onClick={click}  rel="noopener noreferrer" className="link linkSubmenu">{c.nombre}</a>
+                                            :
+                                            <Link to={c.enlace} target={c.esExterno==="SI"?"_blank":null} onClick={click} className="link linkSubmenu">{c.nombre}</Link>
+                                            }
+                                        </li>
+                                        ))
+                                    :
+                                    null
+                                }
                                 </ul>
                             </li>
                             <li className="item">
-                                <Link to="/convenios"    className="link">CONVENIOS</Link>
+                               {
+                                    (informacion && informacion.length>=1)
+                                    ?
+                                    <Link to={informacion[5]["CONVENIOS"][0].enlace} onClick={click}  className="link">{informacion[5]["CONVENIOS"][0].nombre}</Link>
+                                    :
+                                    null
+                                }
                             </li>
                             <li className="item">
-                                <Link to="/eventos"    className="link">EVENTOS</Link>
+                            {
+                                    (informacion && informacion.length>=1)
+                                    ?
+                                    <Link to={informacion[6]["EVENTOS"][0].enlace} onClick={click}  className="link">{informacion[6]["EVENTOS"][0].nombre}</Link>
+                                    :
+                                    null
+                                }
                             </li>
                             <li className="item" ref={boton_desplegar_submenu_galeria}>
-                                <Link to="/galeriaVideos"  onClick={click}  className="link">GALERIA</Link>
-                                {/* <MenuComponente variable={isActive.galeria} data="galeria"></MenuComponente>
-
-                                <ul className="menuu submenu">
-                                    <li className="item">
-                                        <Link to="/galeriavideos" onClick={click} className="link linkSubmenu">CURSOS                        </Link>
-                                    </li>
-                                </ul> */}
+                              {
+                                    (informacion && informacion.length>=1)
+                                    ?
+                                    <Link to={informacion[7]["GALERIA"][0].enlace} onClick={click}  className="link">{informacion[7]["GALERIA"][0].nombre}</Link>
+                                    :
+                                    null
+                                }
                             </li>
                             <li className="item">
-                                <Link to="/bolsatrabajo"  onClick={click}  className="link">BOLSA DE TRABAJO</Link>
+                            {
+                                    (informacion && informacion.length>=1)
+                                    ?
+                                    <Link to={informacion[8]["BOLSA DE TRABAJO"][0].enlace} onClick={click}  className="link">{informacion[8]["BOLSA DE TRABAJO"][0].nombre}</Link>
+                                    :
+                                    null
+                                }
                             </li>
                             <li className="item">
                               <div className='conteiner-toggle-cambio-tema'>
